@@ -1,0 +1,3 @@
+2014_08_07
+
+- Change table structure of "photo_promo"

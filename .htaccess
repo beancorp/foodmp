@@ -1,0 +1,89 @@
+#php_flag magic_quotes_gpc On
+
+Order allow,deny 
+
+Allow from all 
+Satisfy any
+
+Options FollowSymLinks
+
+RewriteEngine on
+
+# Australian Site
+RewriteCond %{ENV:REDIRECT_MYFLAG} ^$
+RewriteCond %{HTTP_HOST} ^([A-Za-z0-9]*)\.foodmarketplace\.com\.au$
+RewriteCond %{HTTP_HOST} !^www\.foodmarketplace\.com\.au$ [NC]
+RewriteCond %{HTTP_HOST} !^foodmarketplace\.com\.au$ [NC]
+RewriteRule ^(.+) %{HTTP_HOST}$1 [E=MYFLAG:1]
+RewriteRule ^([A-Za-z0-9]*)\.foodmarketplace\.com\.au(.*) https://foodmarketplace.com.au/$1 [L]
+
+# US Site
+RewriteCond %{ENV:REDIRECT_MYFLAG} ^$
+RewriteCond %{HTTP_HOST} ^([A-Za-z0-9]*)\.foodmarketplace\.com$
+RewriteCond %{HTTP_HOST} !^www\.foodmarketplace\.com$ [NC]
+RewriteCond %{HTTP_HOST} !^foodmarketplace\.com$ [NC]
+RewriteRule ^(.+) %{HTTP_HOST}$1 [E=MYFLAG:1]
+RewriteRule ^([A-Za-z0-9]*)\.foodmarketplace\.com(.*) http://foodmarketplace.com/$1 [L]
+
+#RewriteRule ^theultimaterace?$ /ultimaterace.php [L]
+#RewriteRule ^ultimaterace?$ /ultimaterace.php [L]
+#RewriteRule ^race?$ /ultimaterace.php [L]
+
+RewriteRule ^referaretailer?$ /referralrewards.php [L]
+RewriteRule ^myrewards?$ /commissionpanel.php [L]
+RewriteRule ^fanpromotion?$ /fanpromotion.php [L]
+RewriteRule ^moneyback?$ /money_back.php [L]
+
+
+RewriteRule ^fanfrenzy?$ /fanpromo/list.php [L]
+RewriteRule ^entry?$ /fanpromo/enter1.php [L]
+RewriteRule ^photo_([0-9]*).html$ /fanpromo/view.php?image=$1 [L]
+RewriteRule ^fanfrenzy_tnc.html$ /fanpromo/terms_n_conditions.php [L]
+
+# Australian Site
+RewriteCond %{ENV:REDIRECT_MYFLAG} ^$
+RewriteCond %{HTTP_HOST} ^([A-Za-z0-9]*)\.foodmp\.com\.au$
+RewriteRule ^(.+) %{HTTP_HOST}$1 [E=MYFLAG:1]
+RewriteRule ^([A-Za-z0-9]*)\.foodmp\.com\.au(.*) https://foodmarketplace.com.au/$1 [L]
+
+RewriteCond %{ENV:REDIRECT_MYFLAG} ^$
+RewriteCond %{HTTP_HOST} ^www\.([A-Za-z0-9]*)\.foodmp\.com\.au$
+RewriteRule ^(.+) %{HTTP_HOST}$1 [E=MYFLAG:1]
+RewriteRule ^www\.([A-Za-z0-9]*)\.foodmp\.com\.au(.*) https://foodmarketplace.com.au/$1 [L]
+
+# US Site
+RewriteCond %{ENV:REDIRECT_MYFLAG} ^$
+RewriteCond %{HTTP_HOST} ^([A-Za-z0-9]*)\.fmpus\.com$
+RewriteRule ^(.+) %{HTTP_HOST}$1 [E=MYFLAG:1]
+RewriteRule ^www\.fmpus\.com(.*) http://foodmarketplace.com/ [L]
+RewriteRule ^([A-Za-z0-9]*)\.fmpus\.com(.*) https://foodmarketplace.com/$1 [L]
+
+RewriteCond %{ENV:REDIRECT_MYFLAG} ^$
+RewriteCond %{HTTP_HOST} ^www\.([A-Za-z0-9]*)\.fmpus\.com$
+RewriteRule ^(.+) %{HTTP_HOST}$1 [E=MYFLAG:1]
+RewriteRule ^www\.([A-Za-z0-9]*)\.fmpus\.com(.*) https://foodmarketplace.com/$1 [L]
+
+# Local test
+RewriteCond %{ENV:REDIRECT_MYFLAG} ^$
+RewriteCond %{HTTP_HOST} ^([A-Za-z0-9]*)\.foodmp\.local$
+RewriteRule ^(.+) %{HTTP_HOST}$1 [E=MYFLAG:1]
+RewriteRule ^([A-Za-z0-9]*)\.foodmp\.local(.*) http://foodmarketplace.local/$1 [L]
+
+RewriteRule ^foodreport /soc.php?cp=report [L]
+RewriteRule ^([a-zA-Z0-9]+)$ /home_soc.php?name=$1&%{QUERY_STRING} [L]
+RewriteRule ^([a-zA-Z0-9]+)/([a-zA-Z0-9]+)$ /item_soc.php?site=$1&item=$2 [L]
+RewriteRule ^([a-zA-Z0-9]+)/([w|W][i|I][s|S][h|H][l|L][i|I][s|S][t|T])/([a-zA-Z0-9]+)$ /item_soc.php?site=$1&item=$2&wish=$3 [L]
+RewriteRule ^([a-zA-Z0-9]+)/([g|G][a|A][l|L][l|L][e|E][r|R][y|Y])/([a-zA-Z0-9]+)(/([0-9]+)){0,1}(/([0-9]+)){0,1}$ /gallery.php?site=$1&item=$2&gallery=$3&p=$5&l=$7 [L]
+
+# Australian WWW
+RewriteCond %{HTTP_HOST} ^www.foodmarketplace.com.au$ [NC]
+RewriteRule ^(.*)$ http://foodmarketplace.com.au/$1 [R=301,L]
+
+# US WWW
+RewriteCond %{HTTP_HOST} ^www.foodmarketplace.com$ [NC]
+RewriteRule ^(.*)$ http://foodmarketplace.com/$1 [R=301,L]
+
+RewriteRule ^index.html foodwine/index.php?cp=home [L]
+RewriteRule ^index.php foodwine/index.php?cp=home [L]
+
+ErrorDocument 404 /soc.php?cp=error404

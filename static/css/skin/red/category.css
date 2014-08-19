@@ -1,0 +1,9 @@
+/* Category style */
+div.all-categories 						{ width:246px; float:left; list-style:none; margin:0 2px;}
+.all-categories h3					{ background:url(../images/bg-catt.gif) no-repeat top ; display:block; padding:27px 10px 10px 10px; margin-bottom:0; position:relative; }
+.all-categories h3 a					{ text-decoration:none; border-bottom:solid 1px #ccc; display:block; padding:5px 0; font-size:14px; color:#666; font-weight:bold; }
+.all-categories h3 img.cat-icon							{ position:absolute; right:8px; top:2px; border:0; }
+
+ul.categorylist							{ width:226px; list-style:none; margin:0; padding:0 10px 10px 10px; background:url(../images/bg-catb.gif) no-repeat bottom center;  }
+ul.categorylist	li						{ line-height:1em }
+ul.categorylist	li a					{ font-size:11px; text-decoration:none; line-height:14px; }

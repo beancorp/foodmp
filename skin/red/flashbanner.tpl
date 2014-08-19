@@ -1,0 +1,1 @@
+<!--<div><embed width="192" height="130" align="middle" flashvars="" wmode="opaque" quality="high" bgcolor="#F0F0F0" allowscriptaccess="sameDomain" src="/skin/red/images/home_banner_girl_AU.swf"/></div>-->

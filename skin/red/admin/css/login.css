@@ -1,0 +1,73 @@
+BODY {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 11px; PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: #333; PADDING-TOP: 0px; FONT-FAMILY: Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #fff
+}
+
+#wrapper {
+	BORDER-RIGHT: 0px; PADDING-RIGHT: 0px; BORDER-TOP: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px auto; BORDER-LEFT: 0px; PADDING-TOP: 0px; BORDER-BOTTOM: 0px
+}
+
+#header {
+	BACKGROUND-POSITION: right top; BORDER-BOTTOM: #80b5d7 4px solid; BACKGROUND-COLOR: #fff
+}
+
+#mambo {
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	BACKGROUND: url(../images/header_blue.jpg) #30569d no-repeat right top;
+	PADDING-BOTTOM: 0px;
+	MARGIN: 0px;
+	WIDTH: 100%;
+	PADDING-TOP: 0px;
+	POSITION: relative;
+	background-color: #30569d;
+}
+
+#break {
+	HEIGHT: 50px
+}
+
+FORM {
+	MARGIN: 0px
+}
+
+.button {
+	BORDER-RIGHT: #cccccc 1px solid; PADDING-RIGHT: 4px; BORDER-TOP: #cccccc 1px solid; PADDING-LEFT: 4px; FONT-WEIGHT: bold; FONT-SIZE: 11px; BACKGROUND: #e9ecef; PADDING-BOTTOM: 4px; BORDER-LEFT: #cccccc 1px solid; COLOR: #666666; PADDING-TOP: 4px; BORDER-BOTTOM: #cccccc 1px solid
+}
+
+.login {
+	BORDER-RIGHT: #cccccc 1px solid; PADDING-RIGHT: 15px; BORDER-TOP: #cccccc 1px solid; MARGIN-TOP: 6em; PADDING-LEFT: 15px; BACKGROUND: #f1f3f5; PADDING-BOTTOM: 15px; MARGIN-LEFT: auto; BORDER-LEFT: #cccccc 1px solid; WIDTH: 429px; MARGIN-RIGHT: auto; PADDING-TOP: 15px; BORDER-BOTTOM: #cccccc 1px solid
+}
+
+.login H1 {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 50px; FONT-SIZE: 1.5em; BACKGROUND: url(../images/login_header.png) no-repeat left top; PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: #333; PADDING-TOP: 15px; HEIGHT: 50px; TEXT-ALIGN: left
+}
+
+.login P {
+	PADDING-RIGHT: 1em; PADDING-LEFT: 1em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+
+.form-block {
+	BORDER-RIGHT: #cccccc 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: #cccccc 1px solid; PADDING-LEFT: 10px; BACKGROUND: #e9ecef; PADDING-BOTTOM: 10px; BORDER-LEFT: #cccccc 1px solid; PADDING-TOP: 15px; BORDER-BOTTOM: #cccccc 1px solid
+}
+
+.login-form {
+	FLOAT: right; WIDTH: 60%; TEXT-ALIGN: left
+}
+
+.login-text {
+	FLOAT: left; WIDTH: 40%; TEXT-ALIGN: left
+}
+
+.inputlabel {
+	FONT-WEIGHT: bold; TEXT-ALIGN: left
+}
+
+.inputbox {
+	BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; MARGIN: 0px 0px 1em; BORDER-LEFT: #cccccc 1px solid; WIDTH: 150px; BORDER-BOTTOM: #cccccc 1px solid
+}
+
+.clr { CLEAR: both}
+
+.ctr { TEXT-ALIGN: center}
+
+.version { FONT-SIZE: 0.8em}

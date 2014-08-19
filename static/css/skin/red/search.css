@@ -1,0 +1,88 @@
+/* SEARCH RESULTS PAGES */
+
+#searchresults 							{ float:right; width:750px;_width:760px; padding:0;_padding-left:10px; margin-top:10px;padding-right: 10px;_padding-right:0; _display:inline;}
+#searchresults h2 						{ background:#3c3380; color:#fff; padding:4px; margin-top:0; position:relative; width:742px; }
+
+#searchresults2 						{ float:right; width:750px; padding:0; margin-top:0px;}
+#searchresults2 h2 						{ background:#3c3380; color:#fff; padding:4px; margin-top:0; position:relative; width:742px; }
+
+strong.keywordresult					{ padding:10px 0; display:block;}
+
+ul#search-list							{ list-style:none; margin:0;  width:750px; overflow: hidden;}
+#search-list li 						{ border-top:solid 1px #ccc; _height:159px;min-height:159px; clear:left; }
+#search-list img 						{ float:left; margin-right:10px;}
+#search-list img.sold					{ width:40px;height:28px;}
+#search-list img#space					{ margin:0; padding:0px;}
+#search-list div#context				{ float:left;  width:350px; margin:0;}
+#search-list div#context a 				{ display:block; font-weight:bold; color:#352c7b; padding:10px 0 5px 0; text-decoration:none;}
+#search-list div#context a.search_list	{ display:block; font-weight:normal; color:#777; text-decoration: underline; padding:10px 0 5px 0;}
+#search-list div#context a.arrowgrey	{ background:url(../images/li-orange.gif) no-repeat 0 6px; padding-left:15px; color:#777; padding-top:4px;}
+
+#search-list strong 					{ float:left; margin-left:30px; font-size:16px; font-weight:bold; padding-top:10px; }
+#search-list strong.estate				{ float:left; margin-left:30px; font-size:16px; font-weight:bold; padding-top:10px; }
+#search-list strong.sold				{ position:relative;float:left; margin-left:-40px; font-size:16px; font-weight:bold; padding-top:30px; }
+#search-list strong.soon				{ position:relative;float:left; margin-left:-80px; font-size:16px; font-weight:bold; padding-top:30px; }
+#search-list span 						{ float:right; margin-right:30px; font-size:12px; font-weight:bold; padding-top:12px; }
+#search-list a.arrow 					{ float:left; margin-left:40px; font-size:12px; font-weight:bold; padding-top:12px; }
+
+
+ul#search-foodwine-list							{ list-style:none; margin:0;  width:750px; }
+#search-foodwine-list li 						{ border-bottom:solid 1px #ccc; _height:159px;min-height:159px; clear:left; }
+#search-foodwine-list img 						{ float:left; margin-right:10px;}
+#search-foodwine-list img.item					{ float:right;}
+#search-foodwine-list img.sold					{ width:40px;height:28px;}
+#search-foodwine-list img#space					{ margin:0; padding:0px;}
+#search-foodwine-list div#context				{ float:left;  width:350px; margin:0;}
+#search-foodwine-list div#context a 				{ display:block; font-weight:bold; color:#352c7b; padding:10px 0 5px 0; text-decoration:none;}
+#search-foodwine-list div#context a.search_list	{ display:block; font-weight:normal; color:#777; text-decoration: underline; padding:10px 0 5px 0;}
+#search-foodwine-list div#context a.arrowgrey	{ background:url(../images/li-orange.gif) no-repeat 0 6px; padding-left:15px; color:#777; padding-top:4px; float:left;width:auto;}
+
+#search-foodwine-list strong 					{ float:left; margin-left:30px; font-size:16px; font-weight:bold; padding-top:10px; }
+#search-foodwine-list strong.estate				{ float:left; margin-left:30px; font-size:16px; font-weight:bold; padding-top:10px; }
+#search-foodwine-list strong.sold				{ position:relative;float:left; margin-left:-40px; font-size:16px; font-weight:bold; padding-top:30px; }
+#search-foodwine-list strong.soon				{ position:relative;float:left; margin-left:-80px; font-size:16px; font-weight:bold; padding-top:30px; }
+#search-foodwine-list span 						{ float:right; margin-right:30px; font-size:12px; font-weight:bold;  }
+#search-foodwine-list a.arrow 					{ float:left; margin-left:40px; font-size:12px; font-weight:bold; padding-top:12px; }
+
+
+ul#search-foodwine-popularize-list							{ list-style:none; margin:0;  width:750px; }
+#search-foodwine-popularize-list li 						{ border-bottom:solid 1px #ccc; clear:left; padding:15px 0;}
+#search-foodwine-popularize-list div#context				{ float:left;  width:350px; margin:0;}
+#search-foodwine-popularize-list div#context a 				{ display:block; font-weight:bold; color:#352c7b; padding:10px 0 5px 0; text-decoration:none;}
+#search-foodwine-popularize-list div#context a.search_list	{ display:block; font-weight:normal; color:#777; text-decoration: underline; padding:10px 0 5px 0;}
+#search-foodwine-popularize-list div#context a.arrowgrey	{ background:url(../images/li-orange.gif) no-repeat 0 6px; padding-left:15px; color:#777; padding-top:4px; float:left; width:auto;}
+#search-foodwine-popularize-list span 						{ float:right; margin-right:30px; font-size:12px; font-weight:bold;  }
+#search-foodwine-popularize-list li ul li 					{ display:block; border:none; padding:0; margin:0;  _height:25px;min-height:25px;}
+
+
+div#paging-wide								{ background:#352c7b; clear:left; width:740px; padding:5px; font-size:11px; text-align:right; color:#fff; clear:both; margin:0 0 20px 0; }
+div#paging-wide a 							{ color:#fff; font-size:11px; }
+div#paging-wide a.arrows-next				{ background:url(../images/arrow-next.gif) no-repeat center right; padding-right:15px; }
+div#paging-wide strong 						{ padding-right:20px; color:#fff; font-size:11px; }
+
+#search-list img                        { float:left; margin-right:10px; margin-top:10px;}
+#search-list img.item                   { float:right;}
+
+
+/*search adv pages*/
+ul#search-adv-list					{ list-style:none; margin:0; width:540px;}
+#search-adv-list li 				{ border-top:solid 1px #ccc; min-height:100px; clear:left; padding-top:10px; padding-bottom:15px}
+#search-adv-list img 				{ float:left; margin-right:10px; }
+#search-adv-list img.item			{ float:right; }
+#search-adv-list img.sold			{ width:40px;height:28px;}
+#search-adv-list img#space			{ margin:0; padding:0px;}
+#search-adv-list div#context 		{ float:left;  width:265px; margin:0;}
+#search-adv-list div#context a 		{ display:block; font-weight:bold; color:#352c7b; padding:10px 0 5px 0; text-decoration:none;}
+#search-adv-list div#context a.arrowgrey		{ background:url(../images/li-orange.gif) no-repeat 0 6px; padding-left:15px; color:#777; padding-top:5px;}
+#search-adv-list strong 			{ float:left; margin-left:20px; font-size:16px; font-weight:bold; margin-top::10px; }
+#search-adv-list strong.sold		{ position:relative;float:left; margin-left:-40px; font-size:16px; font-weight:bold; padding-top:30px; }
+#search-adv-list strong.soon		{ position:relative;float:left; margin-left:-80px; font-size:16px; font-weight:bold; padding-top:30px; }
+#search-adv-list span 				{ float:right; margin-right:20px; font-size:12px; font-weight:bold; padding-top:5px; }
+#search-adv-list a.arrow 			{ float:left; margin-left:20px; font-size:12px; font-weight:bold; padding-top:10px; }
+
+
+ul#search-rss-list				{ list-style:none; margin:0;}
+#search-rss-list li				{ border-bottom:solid 1px #ccc; clear:left;}
+#search-rss-list li span 		{ color:#333399; font-weight:bold; font-size:12px;}
+#search-rss-list li#title	     { color:#333399; font-weight:bold; font-size:16px;}
+#search-rss-list li samp a 		{ font-weight:bold; color:#333399; text-decoration:none; font-size:12px;}

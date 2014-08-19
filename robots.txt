@@ -1,0 +1,15 @@
+Sitemap: http://socexchange.com.au/sitemap.xml
+User-agent: *
+
+Disallow: /upload/
+
+Disallow: /caches/
+Disallow: /css/
+
+Disallow: /caches
+
+Disallow: /skin/red/images/
+
+Disallow: /skin/red/js/
+
+Disallow: /skin/red/css/

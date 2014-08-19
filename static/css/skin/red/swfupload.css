@@ -1,0 +1,30 @@
+@charset "utf-8";
+/**upload css**/
+DIV#MainContents 
+{
+    background-color: White;
+    padding: 2em;
+    border: 1px solid gray;
+}
+span.asyncUploader{
+	height: 29px;
+	float: left;
+}
+span#photo_completedMessage{
+	display:none;
+}
+H1 { margin-top: 0; padding-top: 0; }
+
+
+DIV.ProgressBar { width: 100px; padding: 0; border: 1px solid black;  height:.75em; display:-moz-inline-stack; display:inline-block; zoom:1; *display:inline; margin: 8px 8px 8px 0px; float:left;}
+DIV.ProgressBar DIV { background-color: Green; font-size: 1pt; height:100%; float:left; }
+SPAN.asyncUploader OBJECT { position: relative; }
+
+.submitbut{background:url(/skin/red/images/buttons/or-submit.gif) no-repeat;width:81px;height:29px; cursor:pointer;}
+.submitbut:disabled{background:url(/skin/red/images/buttons/gray-submit.gif) no-repeat;}
+
+.savebut{background:url(/skin/red/images/buttons/bu_save.gif) no-repeat;width:65px;height:28px; cursor:pointer;}
+.savebut:disabled{background:url(/skin/red/images/buttons/bu_save_gray.gif) no-repeat;}
+
+.uploadcancel{height:29px; background:url(/skin/red/images/cancelButton.png) no-repeat; width:75px; cursor:pointer;}
+.class_uploadding{height:29px; float:left;}

@@ -1,0 +1,16 @@
+
+#startselling li a.helpicon				{ position:absolute; top:1px; left:262px; }
+#startselling div.tohide				{ position:absolute; left:294px; top:1px; width:100px; }
+
+img {
+		background-position: -1000px;
+		behavior: url("iepngfix.htc");
+} 
+
+#startselling li a.helpicon				{ position:absolute; top:1px; left:262px; }
+#startselling div.tohide				{ position:absolute; left:294px; top:1px; width:100px; }
+
+/*#products							{ position:relative; padding-top:77px;}*/
+/*ul#icons							{  width:800px; position:absolute; left:-250px; top:0px;}*/
+
+.categoryCMSRightTop		{ list-style:none; padding-bottom:8px; background-image: url(../images/advert-bottom.gif); background-repeat: no-repeat; background-position: bottom; color:#000000}

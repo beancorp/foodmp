@@ -1,0 +1,2092 @@
+/* #Media Queries
+================================================== */
+ 
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {}
+ 
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {}
+ 
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {}
+ 
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {}
+ 
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+
+@media only screen and (max-width: 767px), screen and (max-device-width: 720px) {
+
+	* {
+		color: #000000;
+	}
+	
+	#footerlinks * {
+		color: #000000 !important;
+	}
+	
+	#top_spacer_div {
+		display: none !important;
+	}
+	
+	table#shipping {
+		width: 280px !important;
+	}
+	
+	#allow_online_shopping td:nth-of-type(1) {
+		width: auto !important;
+	}
+	
+	#step2_shipping_details {
+		clear: both !important;
+		float: left !important;
+		margin-left: 15px;
+		overflow: hidden;
+		width: 270px !important;
+	}
+	
+	#step2_other_details {
+		width: 310px !important;
+		clear: both !important;
+		float: left !important;
+		padding-left: 10px !important;
+	}
+	
+	form.st-connecticut {
+		background: none !important;
+	}
+	
+	
+	#account_holders td div {
+		padding: 0px !important;
+		width: 270px !important;
+	}
+	
+	#allow_online_shopping td {
+		padding-right: 10px !important;
+	}
+	
+	#step2_other_details > fieldset {
+		margin-right: 35px !important;
+	}
+	
+	#step_2_retailer_info_box {
+		padding-left: 10px !important;
+	}
+	
+	#step2_other_details  input[type="text"] {
+		width: 150px !important;
+	}
+	
+	#step2_other_details  textarea {
+		width: 150px !important;
+	}
+	
+	#deliver_suburbs td:nth-of-type(1) {
+		padding-right: 10px !important;
+	}
+	
+	#container h1 {
+		clear: both !important;
+		text-align: center;
+		width: 100% !important;
+	}
+	
+	#choosetemplate tr:nth-of-type(1) {
+		display: block !important;
+		float: left !important;
+	}
+	
+	.step3-ul li #step3_title_2  {
+		display: none !important;
+	}
+	
+	#image_selection > fieldset {
+		margin: 0px !important;
+		padding: 0px !important;
+		width: 300px !important;
+	}
+	
+	#category_define_paragraph {
+		display: none !important;
+	}
+	
+	#uploadsomething {
+		width: 320px !important;
+		overflow: hidden !important;
+		height: auto !important;
+	}
+	
+	.category-oper-addmore {
+		right: 0px !important;
+		left: 110px !important;
+		top: 25px !important;
+		float: left !important;
+	}
+	
+	.category-oper-changeorder {
+		display: none !important;
+	}
+	
+	#uploadsomething #uploadproduct {
+		float: left !important;
+		clear: both !important;
+		width: 300px !important;
+		padding: 10px !important;
+	}
+	
+	#save_to_website {
+		overflow: hidden !important;
+		display: block !important;
+		height: 10px !important;
+	}
+	
+	#myproducts thead > tr > th:nth-of-type(1) {
+		display: none !important;
+	}
+	
+	#myproducts thead > tr > th:nth-of-type(2) {
+		display: none !important;
+	}
+	
+	#myproducts thead > tr > th:nth-of-type(5) {
+		display: none !important;
+	}
+	
+	#myproducts thead > tr > th:nth-of-type(6) {
+		display: none !important;
+	}
+	
+	#myproducts thead > tr > th:nth-of-type(7) {
+		display: none !important;
+	}
+	
+	#myproducts thead > tr > th:nth-of-type(8) {
+		display: none !important;
+	}
+	
+	#myproducts thead > tr > th:nth-of-type(9) {
+		display: none !important;
+	}
+	
+	#myproducts thead > tr > th {
+		padding: 5px !important;
+	}
+	
+	#myproducts {
+		width: 320px !important;
+	}
+	
+	#icons-products li {
+		margin-right: 0px !important;
+	}
+	
+	#multform table:nth-of-type(2) {
+		display: none !important;
+	}
+	
+	#multform h3 {
+		padding-left: 10px !important;
+	}
+	
+	#myproducts colgroup {
+		display: none !important;
+	}
+	
+	#myproducts tbody > tr > td {
+		padding: 5px !important;
+	}
+	
+	#myproducts tbody > tr > td:nth-of-type(1) {
+		display: none !important;
+	}
+	
+	#myproducts tbody > tr > td:nth-of-type(2) {
+		display: none !important;
+	}
+	
+	#myproducts tbody > tr > td:nth-of-type(5) {
+		display: none !important;
+	}
+	
+	#myproducts tbody > tr > td:nth-of-type(6) {
+		display: none !important;
+	}
+	
+	#myproducts tbody > tr > td:nth-of-type(7) {
+		display: none !important;
+	}
+	
+	#myproducts tbody > tr > td:nth-of-type(8) {
+		display: none !important;
+	}
+	
+	#myproducts tbody > tr > td:nth-of-type(9) {
+		display: none !important;
+	}
+	
+	#save_to_website p {
+		display: none !important;
+	}
+	
+	#save_to_website_button {
+		position: absolute !important;
+		top: 2100px !important;
+		left: 50px !important;
+	}
+	
+	#uploadproduct textarea {
+		width: 225px !important;
+	}
+	
+	#uploadsomething #uploadimages {
+		float: left !important;
+		clear: both !important;
+		width: 320px !important;
+		margin-top: 0 !important;
+	}
+	
+	#uploadproduct > table > tbody> tr > td:nth-of-type(1) {
+		float: left !important;
+		clear: both !important;
+		display: block !important;
+		text-align: left !important;
+		font-weight: bold !important;
+	}
+	
+	#uploadproduct > table > tbody> tr > td:nth-of-type(2) {
+		float: left !important;
+		clear: both !important;
+		display: block !important;
+		margin-bottom: 15px !important;
+	}
+	
+	#youtubeline {
+		display: none !important;
+	}
+	
+	#category_ul {
+		margin-left: 0px !important;
+		width: 320px !important;
+	}
+	
+	#category_ul li input[type="text"] {
+		width: 100px !important;
+	}
+	
+	.category-list ul li {
+		width: 320px !important;
+	}
+	
+	#header {
+		position: relative !important;
+		min-height: 92px !important;
+		height: auto !important;
+	}
+	
+	#header_message > span {
+		display: none !important;
+	}
+	
+	#header_message #steps {
+		display: block !important;
+		width: 320px !important;
+		margin-top: 20px !important;
+	}
+	
+	form#mainForm {
+		overflow: hidden !important;
+		height: 325px !important;
+	}
+	
+	#mainForm table > tbody> tr > td:nth-of-type(1) {
+		display: block !important;
+		float: left !important;
+		clear: both !important;
+		height: auto !important;
+	}
+	
+	#mainForm table > tbody> tr > td:nth-of-type(2) {
+		display: block !important;
+		float: left !important;
+		clear: both !important;
+		height: auto !important;
+		margin-bottom: 10px !important;
+	}
+
+	.payment_box {
+		width: 100% !important;
+		padding-left: 5px !important;
+	}
+	
+	.payment_text {
+		font-size: 11px !important;
+		margin-left: 0px !important;
+		float: none !important;
+	}
+	
+	.payment_text font:nth-of-type(1) {
+		font-size: 14px !important;
+	}
+	
+	.payment_text font:nth-of-type(2) {
+		clear: both;
+		display: block;
+		font-size: 18px !important;
+		margin-top: 10px !important;
+	}
+	
+	#image_selection div div font {
+		margin-left: 10px !important;
+	}
+	
+	#image_selection div div table td {
+		padding: 10px !important;
+	}
+	
+	#choosetemplate {
+		display: block !important;
+		height: 1080px !important;
+		margin-left: auto !important;
+		margin-right: auto !important;
+		overflow: hidden !important;
+		width: 220px !important;
+	}
+	
+	#choosetemplate tr:nth-of-type(1) td {
+		clear: both !important;
+		display: block !important;
+		z-index: 1 !important;
+		float: left !important;
+	}
+	
+	#choosetemplate tr:nth-of-type(2) {
+		display: none !important;
+	}
+	
+	#choosetemplate tr:nth-of-type(3) {
+		display: block !important;
+		float: left !important;
+		margin-top: 270px !important;
+	}
+	
+	#choosetemplate tr:nth-of-type(3) td {
+		display: block !important;
+	    margin-left: 20px  !important;
+		height: 250px !important;
+	}
+	
+	#image_selection {
+		float: none !important;
+		margin-left: auto !important;
+		margin-right: auto !important;
+		width: 280px !important;
+	}
+	
+	.help {
+		display: none !important;
+	}
+	
+	#disfoodwine-a {
+		display: none !important;
+	}
+	
+	#disfoodwine-b {
+		display: none !important;
+	}
+	
+	#disfoodwine-c {
+		display: none !important;
+	}
+	
+	#disfoodwine-d {
+		display: none !important;
+	}
+	
+	#disfoodwine-e {
+		display: none !important;
+	}
+	
+	#disfoodwine-f {
+		display: none !important;
+	}
+	
+	#disfoodwine-g {
+		display: none !important;
+	}
+	
+	#disfoodwine-h {
+		display: none !important;
+	}
+	
+	.seller-setting-fieldset {
+		display: none !important;
+	}
+	
+	#step3_title_2 h3 label {
+		display: none !important;
+	}
+	
+	#step2_other_details > div:nth-of-type(1) {
+		display: none !important;
+	}
+	
+	#allow_online_shopping input[type="radio"] {
+		margin-left: 10px !important;
+	}
+	
+	ul.step3-ul > li:nth-of-type(1) {
+		display: none !important;
+	}
+	
+	textarea[name="bu_desc"] {
+		height: 50px !important;
+		width: 260px !important;
+	}
+
+	#steps {
+		clear: both !important;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 10px !important;
+		width: 250px !important;
+	}
+	
+	#steps_2 {
+		width: 320px !important;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	#steps_2 .step {
+		width: 100px !important;
+	}
+	
+	#submit_button {
+		margin-left: 0px !important;
+	}
+	
+	div.jquery-gdakram-tooltip div.down_arrow, div.jquery-gdakram-tooltip div.left_arrow, div.jquery-gdakram-tooltip div.up_arrow {
+		background: none !important;
+	}
+	
+	div.jquery-gdakram-tooltip { 
+		margin-top: 10px !important;
+	}
+	
+	.form_row { 
+		width: 320px !important;
+	}
+	
+	#registration_image_right {
+		display: none !important;
+	}
+	
+	#business_type_selection {
+		width: 285px !important;
+		margin-left: 10px !important;
+	}
+	
+	#step1_form { 
+		float: none !important;
+		margin-left: auto !important;
+		margin-right: auto !important;
+		width: 320px !important;
+	}
+	
+	#referral_id_registration {
+		margin-left: 0px !important;
+		width: 320px !important;
+		padding: 0px !important;
+		border: none !important;
+	}
+	
+	.form_field div {
+		clear: left !important;
+		width: 290px !important;
+	}
+	
+	.form_label {
+		text-align: left !important;
+		width: auto !important;
+		clear: right !important;
+		margin-right: 0px !important;
+	}
+	
+	.category3formError.parentFormregisterForm.formError {
+		left: 190px !important;
+	}
+	
+	.agreeformError.parentFormregisterForm.formError {
+		left: 190px !important;
+	}
+	
+	#registration_agree_tnc {
+		padding-left: 10px !important;
+	}
+	
+	#bu_suburb {
+		width: 274px !important;
+	}
+	
+	textarea {
+		width: 160px !important;
+	}
+	
+	.form_field {
+		clear: left !important;
+	}
+	
+	#registration_form .select {
+		width: 285px !important;
+	}
+	
+	#registration_form input[type="text"] {
+		width: 274px !important;
+	}
+	
+	.form_row div {
+		clear: both !important;
+		float: left;	
+	}
+	
+	#payment_box {
+		width: 320px !important;
+		padding: 0px !important;
+		margin: 0px !important;
+	}
+	
+	#business_type_selection {
+		padding: 5px !important;
+	}
+	
+	#business_type_selection .form_label {
+		clear: both !important;
+		width: auto !important;
+		margin-left: 10px !important;
+		width: 100px !important;
+		text-align: left !important;
+	}
+	
+	#business_type_selection .form_field {
+		clear: left !important;
+	}
+	
+	body {
+		background: none !important;
+		overflow-x: hidden !important;
+	}
+	#sidebar {
+		height: 0 !important;
+		overflow: hidden !important;
+		visibility: hidden !important;
+		width: 0 !important;
+	}
+
+	#slides {
+		height: 155px;
+		overflow: hidden;
+		position: relative !important;
+		width: 320px;
+	}
+	
+	#slides .slides_container {
+		width: 320px;
+		height: 155px;
+	}
+	
+	#slides .next, #slides .prev {
+		height: 154px !important;
+	}
+	
+	#slides .next img, #slides .prev img {
+		height: 154px !important;
+	}
+	
+	#slides .slides_container img {
+		width: 320px;
+		height: auto;
+	}
+	
+	#sidebar2 {
+		display: none !important;
+	}
+	
+	#wrapper {
+		width: 100% !important;
+	}
+	
+	#step1_form {
+		margin-bottom: 0px !important;
+	}
+	
+	/*
+	#rightCol > div:nth-last-child(1) {
+		width: 320px;
+		padding: 0px;
+	}*/
+	
+	
+	.inputBox {
+		width: 190px !important;
+	}
+	
+	#rightCol table td .anch {
+		width: 20px !important;
+	}
+	
+	#content {
+		width: 100% !important;
+		overflow: hidden !important;
+		float: left;
+	}
+	
+	#statesearch {
+		display: block !important;
+		overflow: hidden;
+		min-width: 320px !important;
+		max-width: 320px !important;
+		width: 320px !important;
+		margin-bottom: 0 !important;
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
+	
+	#statesearch div:nth-of-type(1) {
+		display: none !important;
+	}
+	
+	#statesearch div:nth-of-type(2) {
+		float: left !important;
+		width: auto !important;
+	}
+	
+	#search_estate {
+		width: 320px !important;
+		background-color: #FFF !important;
+	}
+	
+	#search_estate li {
+		float: left !important;
+		clear: none !important;
+		margin-right: 10px;
+	}
+	
+	
+	
+	
+	#statesearch fieldset {
+		margin-left: 0px !important;
+	}
+	
+	#bookmark_link {
+		display: none !important;
+	}
+	
+	.category table {
+		display: block;
+		overflow: hidden;
+		margin-left: 25px !important;
+	}
+	
+	.category table tr {
+		display: block;
+		overflow: hidden;
+		height: auto !important;
+	}
+	
+	.category table tr td.line {
+		border: none !important;
+	}
+	
+	.category table tr td {
+		display: block !important;
+		height: 36px !important;
+		margin-top: 5px !important;
+	}
+	
+	.category table a {
+		position: absolute !important;
+		z-index: 1000 !important;
+		color: #000000 !important;
+		font-size: 16px !important;
+	}
+	
+	#paging-wide div {
+		color: #FFFFFF !important;
+	}
+	
+	#search-foodwine-list div#context a.arrowgrey {
+		color: #000000 !important;
+		font-size: 15px !important;
+	}
+	
+	#search-foodwine-popularize-list div#context a.arrowgrey {
+		color: #000000 !important;
+		font-size: 13px !important;
+	}
+	
+	.items .loc a {
+		color: #000 !important;
+		font-size: 13px !important;
+	}
+	
+	.items .loc strong {
+		color: #000 !important;
+		font-size: 13px !important;
+	}
+	
+	.category table tr td:nth-of-type(1) {
+		float: left;
+	}
+	
+	.category table tr td:nth-of-type(2) {
+		float: left;
+	}
+	
+	.category table tr td:nth-of-type(3) {
+		display: none !important;
+	}
+	
+	.category table tr td:nth-of-type(4) {
+		clear: left;
+		float: left;
+		position: absolute;
+		padding-top: 210px;
+	}
+	
+	.category table tr td:nth-of-type(5) {
+		float: left;
+		position: absolute;
+		padding-top: 210px;
+		padding-left: 30px;
+	}
+	
+	#food_wine_homelist {
+		min-width: 320px !important;
+		max-width: 479px !important;
+		overflow: hidden !important;
+		display: block !important;
+	}
+	
+	.items {
+		float: left !important;
+	}
+	
+	.listFIXED {
+		float: left !important;
+		clear: left !important;
+		margin-left: 10px !important;
+	}
+	
+	.category {
+		width: 320px !important;
+		overflow: hidden !important;
+		display: block !important;
+		height: 375px !important;
+	}
+	
+	.category h2 { 
+		display: none;
+	}
+	
+	#content {
+		padding-top: 0px !important;
+	}
+	
+	#products {
+		width: 100% !important;
+	}
+	
+	#products h2 {
+		width: 100% !important;
+	}
+	
+	#content h1 {
+		display: block !important;
+		margin-bottom: 5px !important;
+		padding-bottom: 10px;
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-top: 0;
+		width: 300px !important;
+	}
+	
+	#header_logo {
+		margin-left: 10px;
+	}
+	
+	#header_logo img {
+		width: 150px !important;
+		height: auto !important;
+	}
+	
+	.footer_category {
+		display: none !important;
+	}
+	
+	#footerlinks {
+		width: 320px !important;
+		margin: 0px !important;
+	}
+	
+	#footerlinks li {
+		width: auto !important;
+		margin-top: 5px !important;
+	}
+	
+	#footerlinks li:nth-last-child(4) {
+		height: auto !important;
+	}
+	
+	#footerlinks li:nth-last-child(3) {
+		display: none !important;
+	}
+	
+	#footerlinks li:nth-last-child(2) {
+		display: none !important;
+	}
+	
+	#copyright {
+		width: 320px !important;
+		margin-top: 5px !important;
+	}
+	
+	#footer_top {
+		display: none !important;
+	}
+	
+	#copyright a {
+		width: auto !important;
+		height: auto !important;
+	}
+	
+	#container {
+		width: auto !important;
+		overflow: hidden !important;
+	}
+	
+	#rightCol {
+		float: left !important;
+		width: 100% !important;
+	}
+	
+	#rightCol h2 {
+		margin-left: 10px !important;
+		width: 100% !important;
+	}
+	
+	
+	ul#search-foodwine-popularize-list {
+		width: 320px !important;
+	}
+	
+	#foodwine_time_search div:nth-of-type(2) {
+		display: none !important;
+	}
+	
+	div#paging-wide {
+		width: 100% !important;
+	}
+	
+	.back_to_top {
+		position: absolute !important;
+		left: 250px !important;
+	}
+	
+	#rightCol .adminTitle {
+		margin-left: 0px !important;
+	}
+	
+	#search-foodwine-popularize-list li {
+		padding: 0px !important;
+	}
+	
+	#rightCol > div:nth-last-child(1) {
+		margin: 0px !important;
+	}
+	
+	#seller {
+		width: 100% !important;
+	}
+	
+	#paging-wide {
+		margin-bottom: 0px !important;
+	}
+	
+	#search-foodwine-popularize-list li span {
+		float: left !important;
+		text-align: left !important;
+		margin-left: 10px !important;
+		padding-top: 4px !important;
+		clear: both !important;
+		font-style: italic !important;
+		font-size: 11px !important;
+	}
+	
+	#rightCol > table{
+		margin-top: 30px !important;
+		text-align: left;
+		width: 320px !important;
+	}
+	
+	.summary .left {
+		margin-right: 10px !important;
+	}
+	
+	.preview {
+		right: 60px !important;
+	}
+	
+	.sec-summary {
+		width: 320px !important;
+	}
+	
+	.register_icon {
+		display: none !important;
+	}
+	
+	img[src="/skin/red/images/bg_login_newTop.gif"] {
+		display: none !important;
+	}
+	
+	img[src="/skin/red/images/bg_login_newBottom.gif"] {
+		display: none !important;
+	}
+	
+	
+	.register_row {
+		margin: 0px !important;
+	}
+	
+	.sec-website .bottom .top > div:nth-last-child(1) {
+		display: none !important;
+	}
+	
+	#error_message {
+		width: auto !important;
+		margin-bottom: 10px !important;
+		padding-top: 0px !important;
+	}
+	
+	#header_navigation_phone {
+		display: block !important;
+		position: absolute;
+		right: 20px;
+		top: 10px !important;
+	}
+	
+	#registration_sucessful {
+		margin-top: 0px !important;
+	}
+	
+	div#login_new {
+		border: none !important;
+	}
+	
+	#header_navigation_phone a {
+		display: block !important;
+		font-size: 12px !important;
+		font-weight: bold !important;
+		color: #463C8E !important;
+		text-decoration: underline !important;
+		padding-left: 10px !important;
+		clear: both !important;
+	}
+	
+	.sec-website {
+		clear: left !important;
+		float: left !important;
+		margin-top: 10px !important;
+	}
+	
+	.notices {
+		display: none !important;
+	}
+	
+	.sec-summary ul li {
+		clear: both !important;
+		border-right: 0px !important;
+		width: 320px !important;
+	}
+	
+	
+	#rightCol h1.soc-admin {
+		font-size: 14px !important;
+		padding-left: 35px !important;
+	}
+	
+	.dock-menu {
+		display: none !important;
+	}
+	
+	#not_activated {
+		display: none !important;
+	}
+	
+	#mid-content a[href="/myrewards"] {
+		display: none !important;
+	}
+	
+	#rightCol > table td div {
+		font-size: 11px !important;
+	}
+	
+	
+	#search-foodwine-popularize-list li ul li div {
+		margin-bottom: 15px !important;
+	}
+	
+	#searchresults .adminTitle a {
+		right: 0px !important;
+		left: 275px;
+	}
+	
+	#rightCol .adminTitle a {
+		background: none repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+		left: 275px;
+		right: 0 !important;
+	}
+	
+	#rightCol p {
+		margin-left: 10px;
+	}
+	
+	#rightCol p:nth-of-type(1) {
+		margin-top: 50px;
+	}
+	
+	#rightCol h2 em {
+		display: none !important;
+	}
+	
+	#products h2 {
+		margin-left: 0px !important;
+	}
+	
+	#paging-wide div a:nth-child(odd) {
+		display: none !important;
+	}
+	
+	#search-foodwine-list .moreImg0_css {
+		width: auto !important;
+		height: auto !important;
+	}
+	
+	#search-foodwine-list .moreImg0_css a img {
+		width: 100px !important;
+	}
+	
+	#search-foodwine-list #context {
+		width: 190px !important;
+	}
+	
+	#search-foodwine-list #context span {
+		float: left !important;
+		clear: both !important;
+		margin-right: 0px !important;
+		margin-top: 10px !important;
+		margin-left: 15px !important;
+	}
+	
+	#inside_header  {
+		width: 320px !important;
+		margin: 0px !important;
+	}
+	
+	#top_banner_store_image {
+		display: none !important;
+	}
+	
+	#head-main-menu {
+		display: none !important;
+	}
+	
+	ul.foodwine-seller-details.foodwine li:nth-of-type(1) {
+		display: none !important;
+	}
+	
+	ul.foodwine-seller-details.foodwine li:nth-last-child(2) {
+		display: none !important;
+	}
+	
+	ul.foodwine-seller-details.foodwine li:nth-last-child(1) {
+		display: none !important;
+	}
+	
+	#seller #store_logo {
+		width: 320px !important;
+		text-align: center !important;
+	}
+	
+	#seller #store_logo img {
+		width: 130px !important;
+		height: auto !important;
+	}
+	
+	#seller #youtube_video {
+		display: none !important;
+	}
+	
+	#seller-info2 {
+		display: none !important;
+	}
+	
+	#seller-info4 {
+		display: none !important;
+	}
+	
+	#products {
+		float: left !important;
+		clear: both !important;
+	}
+	
+	#products > img {
+		display: none !important;
+	}
+	
+	.sellerhome-announcement .foodwine-h3 {
+		width: 300px !important;
+	}
+	
+	h3.foodwine-h3 div {
+		display: none !important;
+	}
+	
+	div.sellerhome_items_list > ul:nth-of-type(2) {
+		display: block;
+	}
+	
+	div.sellerhome_items_list > ul:nth-of-type(2) > li:nth-of-type(1)  {
+		float: left !important;
+		clear: both !important;
+		display: block;
+	}
+	
+	ul#icons {
+		display: none !important;
+	}
+	
+	#stock_items_heading {
+		display: none !important;
+	}
+
+	#special_items_heading {
+		display: none !important;
+	}
+	
+	#basketform {
+		height: 300px !important;
+	}
+	
+	.basket-send-order {
+		float: left !important;
+		clear: both;
+		margin-left: 10px;
+	}
+	
+	#basketform  > div:nth-of-type(4) {
+		width: 300px !important;
+		padding: 10px !important;
+	}
+	
+	#basketform  > div:nth-of-type(4) > strong {
+		width: auto !important;
+		clear: both !important;
+	}
+	
+	#basketform  > div:nth-of-type(4) > div {
+		width: auto !important;
+	}
+	
+	div.sellerhome_items_list > ul:nth-of-type(2) > li:nth-of-type(2)  {
+		float: left !important;
+		clear: both !important;
+		display: block;
+	}
+	
+	#rightCol {
+		padding: 0px !important;
+	}
+	
+	#products h2 a {
+		display: block !important;
+		position: absolute !important;
+		right: 20px !important;
+	}
+	
+	#rightCol #icons {
+		display: block !important;
+		height: 130px;
+		margin-left: 5px !important;
+		margin-top: 5px !important;
+		overflow: hidden !important;
+		width: 300px !important;
+	}
+	
+	#rightCol #icons li:nth-of-type(5) {
+		display: none !important;
+	}
+	
+	#rightCol #icons li:nth-of-type(6) {
+		display: none !important;
+	}
+	
+	#rightCol #icons li:nth-of-type(7) {
+		display: none !important;
+	}
+	
+	#rightCol #icons li:nth-of-type(8) {
+		display: none !important;
+	}
+	
+	ul.foodwine-seller-details li:nth-of-type(3) {
+		padding-left: 85px !important;
+	}
+	
+	ul.foodwine-seller-details {
+		width: 300px !important;
+	}
+	
+	.box_align_right {
+		float: left !important;
+		text-align: left !important;
+		width: 200px !important;
+	}
+	
+	div#seller-info1 {
+		width: 100% !important;
+	}
+	
+	#container #rightCol div.sellerhome_items_list ul li {
+		width: 300px !important;
+	}
+	
+	#div_footer {
+		display: none !important;
+	}
+	
+	#footer_link_container {
+		overflow: hidden !important;
+		margin: 0 !important;
+	}
+	
+	ul#search-foodwine-list {
+		width: 320px !important;
+	}
+	
+	#search-foodwine-list li {
+		margin-left: 10px !important;
+		min-height: 115px !important;
+	}
+	
+	.stock_items_list {
+		width: 315px !important;
+		padding-left: 5px !important;
+	}
+	
+	.stock_items_list input.quantity {
+		width: 25px !important;
+	}
+	
+	
+	.basket-save span {
+		padding-left: 100px !important;
+	}
+	
+	.stock_items_list table th {
+		font-size: 10px !important;
+	}
+	
+	.stock_items_list a.del-item {
+		font-size: 10px !important;
+	}
+	
+	.stock_items_list table td:nth-of-type(1) img {
+		width: 25px !important;
+		height: auto !important;
+	}
+	
+	.stock_items_list .p-name {
+		width: auto !important;
+		padding-left: 5px !important;
+		font-size: 10px !important;
+	}
+	
+	.stock_items_list table th:nth-of-type(1) {
+		width: 60% !important;
+	}
+	
+	.stock_items_list table th:nth-of-type(3) {
+		display: none !important;
+	}
+	
+	.stock_items_list table td:nth-of-type(3) {
+		display: none !important;
+	}
+	
+	#searchresults {
+		width: 320px !important;
+		float: left !important;
+		margin: 0px !important;
+	}
+	
+	#container #rightCol div.stock_items_list ul li div.img {
+		margin-right: 10px !important;
+	}
+	
+	.show-basket {
+		color: #000000 !important;
+		font-size: 12px !important;
+		font-weight: bold !important;
+		margin-top: 40px !important;
+		left: 220px !important;
+		width: 80px !important;
+		
+	}
+	
+	#container #rightCol div.sellerhome_items_list ul li.left {
+		clear: both !important;
+	}
+	
+	#container #rightCol div.sellerhome_items_list ul li.right {
+		float: left !important;
+	}
+	
+	#view_all_link {
+		float: left !important;
+		margin-left: 10px !important;
+	}
+	
+	#paging {
+		width: 100% !important;
+	}
+	
+	.sellerhome_items_list ul li {
+		margin-left: 10px !important;
+	}
+	
+	.stock_items_list .img a img {
+		width: 80px !important;
+		height: auto !important;
+	}
+	
+	.stock_items_list .moreImg_css {
+		display: none !important;
+	}
+	
+	#container #rightCol div.stock_items_list ul li div.img {
+		width: 80px !important;
+		margin-left: 10px !important;
+	}
+	
+	#container #rightCol div.stock_items_list ul li {
+		overflow: hidden !important;
+		height: auto !important;
+		clear: both !important;
+		float: left !important;
+	}
+	
+	#container #rightCol div.stock_items_list ul li div.desc {
+		margin-left: 5px !important;
+	}
+	
+	#container #rightCol div.stock_items_list ul li div.add div.add_panel {
+		left: 176px !important;
+		top: 34px !important;
+	}
+	
+	#container #rightCol div.stock_items_list ul li div.add {
+		float: left !important;
+	}
+	
+	#container #rightCol div.stock_items_list ul li.right.top {
+		border-top: 1px solid #CCCCCC !important;
+	}
+	
+	div#paging {
+		text-align: left !important;
+		padding-left: 5px !important;
+	}
+	
+	#foodwine_time_search div:nth-of-type(2) {
+		float: left !important;
+		margin-left: 5px !important;
+		padding: 0px !important;
+	}
+	
+	.item-details ul li div:nth-of-type(1) {
+		float: left !important;
+	}
+	
+	.item-details ul li div:nth-of-type(2) {
+		float: left !important;
+		clear: both !important;
+		margin-left: 10px !important;
+	}
+	
+	.item-details ul li div:nth-of-type(3) {
+		display: none !important;
+	}
+	
+	.item-details .item-specs ul li p:nth-of-type(2) {
+		margin-left: 10px !important;
+	}
+	
+	.item-details .item-specs ul li p:nth-of-type(4) {
+		margin-left: 10px !important;
+	}
+	
+	.item-details .item-specs div a img {
+		width: 150px !important;
+		height: auto !important;
+		margin: 10px !important;
+	}
+	
+	div.TextFS14.TextJustify {
+		padding: 10px !important;
+	}
+	
+	div#login_new {
+		padding: 0px !important;
+		width: auto !important;
+	}
+	
+	#login_box_content {
+		width: 100% !important;
+		overflow: hidden !important;
+	}
+	
+	#fb-login-button {
+		display: none !important;
+	}
+	
+	#registration_button {
+		margin-left: 0px !important;
+	}
+	
+	#content img[src="skin/red/images/bg_login_newTop.gif"] {
+		display: none !important;
+	}
+	
+	#login_box_content {
+		margin: 0px !important;
+		margin-left: 10px !important;
+		margin-top: 10px !important;
+		width: 290px !important;
+	}
+	
+	#login_box_content > div {
+		display: none !important;
+	}
+	
+	#content img[src="skin/red/images/bg_login_newBottom.gif"] {
+		display: none !important;
+	}
+	
+	#content {
+		padding: 0px !important;
+	}
+	
+	#login_box { 
+		margin: 0px !important;
+		background: none !important;
+		height: auto !important;
+		background-color: #E3E3E3 !important;
+		width: 100% !important;
+	}
+	
+	#signup_form {
+		margin-left: 0px !important;
+	}
+	
+	#signup_form ul {
+		margin: 0px !important;
+		width: 320px !important;
+	}
+	
+	#signup_form fieldset {
+		padding: 0px !important;
+		border-radius: 0px !important;
+		padding: 5px !important;
+	}
+	
+	#signup_form label {
+		width: 80px !important;
+	}
+	
+	div#change_password {
+		margin-left: 0px !important;
+	}
+	
+	img[src="/skin/red/images/buyeradmin_bg_top.jpg"] {
+		display: none !important;
+	}
+	
+	img[src="/skin/red/images/buyeradmin_bg_bottom.jpg"] {
+		display: none !important;
+	}
+	
+	ul.buyeradminhomeinfo-top span {
+		width: 100px !important;
+	}
+	
+	a[href="/myrewards"] {
+		display: none !important;
+	}
+	
+	#formcc .bdr {
+		width: 300px !important;
+	}
+	
+	#formcc .bdr .inputBox, #formcc .bdr select{
+		width: 100px !important;
+	}
+	
+	.buyeradminhomeinfo {
+		margin-left: 0px !important;
+		padding: 10px !important;
+		background: none !important;
+	}
+	
+	#change_password_form label {
+		width: 115px !important;
+	}
+	
+	#change_password_form {
+		margin: 0px !important;
+	}
+	
+	#step1_form .question {
+		float: none !important;
+	}
+	
+	#signup_form .question {
+		display: none !important;
+	}
+	
+	.formError .formErrorArrow {
+		display: none !important;
+	}
+	
+	.formError .formErrorContent {
+		position: absolute !important;
+		left: -110px !important;
+		top: 0 !important;
+	}
+	
+	img[src="/skin/red/images/state-top.gif"] {
+		display: none !important;
+	}
+	
+	img[src="/skin/red/images/state-bottom.gif"] {
+		display: none !important;
+	}
+	
+	.banner_tr {
+		padding: 0px !important;
+	}
+	
+	#fan_button {
+		margin-left: 75px !important;
+		position: absolute;
+		top: 170px;
+		z-index: 1500 !important;
+	}	
+	
+	#fan_frame #fan_counter {
+		color: #3c3082 !important;
+	}
+	
+	#searchside {
+		background-color: #FFFFFF !important;
+		border: 2px solid #CCCCCC !important;
+		left: 0 !important;
+		right: 0 !important;
+		margin-left: auto !important;
+		margin-right: auto !important;
+		
+		overflow: hidden !important;
+		position: absolute !important;
+		height: 225px !important;
+		top: 0 !important;
+		visibility: hidden;
+		width: 315px !important;
+		z-index: 2000 !important;
+	}
+	
+	fieldset#search_estate input {
+		color: #000000 !important;
+		width: 137px !important;
+	}
+	
+	fieldset#search_estate select {
+		width: 145px !important;
+		color: #000000 !important;
+	}
+	
+	#searchside label {
+		color: #000000 !important;
+		display: block;
+	}
+	
+	#search_estate #suburb_id {
+		display: block !important;
+	}
+	
+	#search_estate .custom-combobox {
+		display: none !important;
+	}
+	
+	h2#location {
+		padding-top: 5px !important;
+		padding-bottom: 5px !important;
+	}
+	
+	#searchside fieldset#search {
+		left: 230px;
+		position: absolute;
+		top: 180px;
+		z-index: 2000 !important;
+	}
+	
+	.ui-autocomplete {
+		position: absolute !important;
+		z-index: 3000 !important;
+	}
+	
+	#find_close_button {
+		color: #000000 !important;
+		cursor: pointer;
+		display: block !important;
+		float: right;
+		font-weight: bold !important;
+		margin: 5px 20px 5px 5px;
+		text-decoration: underline;
+	}
+	
+	#open_search_panel {
+		position: absolute;
+		right: 55px;
+		top: 15px;
+		cursor: pointer;
+	}
+	
+	#open_search_panel img {
+		width: 40px !important;
+	}
+	
+	#startselling {
+		width: 320px !important;
+		margin-left: 5px !important;
+	}
+	
+	#startselling label{
+		clear: both !important;
+		text-align: left !important;
+		margin-right: 0 !important;
+	}
+	
+	#startselling textarea {
+		width: 275px !important;
+	}
+	
+	#blog-list {
+		width: 320px !important;
+		overflow: hidden;
+	}
+	
+	#blog-list table {
+		width: 320px !important;
+	}
+	
+	#blogpage_view_text {
+		width: 320px !important;
+	}
+	
+	#blogpage_view_text #divshow {
+		width: 280px !important;
+	}
+	
+	#blogpage_view_logos {
+		display: none !important;
+	}
+	
+	#blogpage_view_table tr:nth-of-type(2) {
+		display: none !important;
+	}
+	
+	#blogpage_view_table tr td {
+		clear: both !important;
+		display: block;
+		float: left !important;
+		height: auto !important;
+		width: 310px !important;
+		padding: 5px !important;
+	}
+	
+	#seller_recipes {
+		margin-left: 10px;
+		margin-top: 50px !important;
+		overflow: hidden;
+		width: 280px !important;
+	}
+	
+	#seller_recipes div {
+		width: 280px !important;
+		margin: 0px !important;
+	}
+	
+	#seller_recipes h1, #seller_recipes h2 {
+		padding-left: 0px !important;
+		margin-left: 0px !important;
+		width: 280px !important;
+	}
+	
+	b.niftycorners, b.niftyfill {
+		display: none !important;
+	}
+	
+	#paging {
+		padding: 5px !important;
+		height: 20px !important;
+	}
+	
+	#seller_recipes_method {
+		margin-left: 10px;
+		margin-top: 5px !important;
+		overflow: hidden;
+		width: 280px !important;
+		padding-top: 0px !important;
+	}
+	
+	#blog-list li {
+		width: 320px !important;
+	}
+	
+	#paging-wide {
+		height: 25px !important;
+	}
+	
+	#seller-info1 h2 {
+		font-size: 18px !important;
+		margin-bottom: 10px !important;
+		margin-left: 0 !important;
+		padding-top: 10px;
+		text-align: center;
+		width: 300px !important;
+		color: #000000 !important;
+	}
+	
+	ul#icons li a, ul#iconsc li a {
+		color: #000000 !important;
+	}
+	
+	#location_map {
+		margin-left: 5px !important;
+		width: 300px !important;
+	}
+	
+	#state-advertisers {
+		width: 300px !important;
+		padding: 5px !important;
+	}
+	
+	#page_heading {
+		margin-top: 25px !important;
+		padding-left: 5px !important;
+	}
+	
+	#container #rightCol div.sellerhome_items_list ul li div.desc div.name a {
+		color: #000000 !important;
+		font-size: 14px !important;
+	}
+	
+	#container #rightCol div.sellerhome_items_list ul li div.desc div.price-special {
+		color: #000000 !important;
+		font-size: 14px;
+	}
+	
+	#container #rightCol div.sellerhome_items_list ul li div.desc div.price {
+		color: #000000 !important;
+		font-size: 14px;
+	}
+	
+	#free_retailer_listing {
+		margin-left: 10px !important;
+	}
+	
+	#retailers_join_here {
+		clear: both !important;
+		display: block;
+		left: 0 !important;
+		margin-bottom: 25px !important;
+		position: relative !important;
+		right: 0 !important;
+	}
+	
+	#free_retailer_listing p {
+		margin-top: 0px !important;
+		margin-left: 0px !important;
+	}
+	
+	#free_retailer_listing h2 {
+		margin-left: 0 !important;
+		text-align: center;
+		width: 290px !important;
+	}
+	
+	#search_category_info {
+		color: #000000 !important;
+	}
+	
+	.home_page_listing_title {
+		font-size: 15px !important;
+	}
+	
+	.register_row {
+		padding-left: 15px !important;
+	}
+	
+	.register_button {
+		width: 90% !important;
+		margin-left: 0px !important;
+	}
+	
+	#wrapper_2col {
+		width: auto !important;
+	}
+	
+	#registration_form_step2 {
+		width: 300px !important;
+		overflow: hidden !important;
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
+	
+	#header_message {
+		margin-top: 70px !important;
+	}
+	
+	#review_bottom {
+		padding: 0px !important;
+	}
+	
+	#formcu {
+		width: 300px !important;
+		overflow: hidden !important;
+	}
+	
+	#formcu .inputB {
+		width: 160px !important;
+	}
+	
+	#formcu > table > tbody > tr > td:nth-of-type(1) {
+		display: block;
+		float: left;
+		clear: both;
+	}
+	
+	#formcu > table > tbody > tr > td:nth-of-type(2) {
+		display: none !important;
+	}
+	
+	#content > table {
+		width: 320px !important;
+		margin-left: auto !important;
+		margin-right: auto !important;		
+	}
+	
+	#content > table > tbody > tr > td > .pad10px {
+		width: 300px !important;
+	}
+	
+	#content > table > tbody > tr > td > .pad10px > p {
+		width: 300px !important;
+		padding-left: 5px;
+	}
+	
+	.sitemap_category_foodwine li {
+		clear: both !important;
+		margin-left: 0px !important;
+	}
+	
+	#retailer_stock_items {
+		display: block !important;
+		margin-top: 300px !important;
+		position: relative !important;
+	}
+	
+	#retailer_specials_list {
+		display: block !important;
+		position: absolute !important;
+	}
+	
+	.ui-dialog {
+		display: none !important;
+	}
+	
+	ul#icons-products {
+		width: 85px;
+		margin: 0 !important;
+	}
+	
+	img[src="/images/fan_banner.png"] {
+		width: 320px !important;
+	}
+	
+	#fan_promotion_content {
+		width: 300px !important;
+		padding-left: 7px;
+	}
+	
+	#fan_promotion_content img {
+		display: none;
+	}
+	
+	#terms_n_conds {
+		display: none;
+	}
+	
+	#page_content {
+		display: none !important;
+	}
+	
+	#tab_container .tab {
+		padding: 13px;
+	}
+	
+	#page_container {
+		position: relative !important;
+		top: 0px !important;
+	}
+	
+	#commission_window {
+		border-radius: 0 !important;
+		height: 560px;
+		left: 0 !important;
+		margin: 0 !important;
+		padding: 5px !important;
+		top: 92px !important;
+		width: 310px !important;
+	}
+	
+	#signup_box {
+		border-bottom-left-radius: 0px !important;
+		border-bottom-right-radius: 0px !important;
+	}
+	
+	.registration_divider {
+		display: none !important;
+	}
+	
+	.registration_right {
+		display: none !important;
+	}
+	
+	#fan_promotion_content h1 {
+		padding: 0px !important;
+	}
+	
+	.referral_heading {
+		font-size: 18px !important;
+	}
+	
+	.referral_heading a, .referral_heading strong {
+		font-size: 18px !important;
+	}
+	
+	.retailer_information {
+		font-size: 13px !important;
+	}
+	
+	.tab_content div p {
+		margin-left: 0px !important;
+	}
+	
+	.tab_content div p:nth-of-type(1) {
+		margin-top: 0px !important;
+		margin-left: 0px !important;
+	}
+	
+	.banner_tr_first td table {
+		background: none !important;
+	}
+	
+	.banner_tr td table {
+		background: none !important;
+	}
+	
+	.tab_content h1 {
+		margin-bottom: 10px !important;
+		padding-bottom: 10px !important;
+	}
+	
+	#signup_box #terms_link {
+		display: none !important;
+	}
+	
+	a#money_back_guarantee {
+		display: none !important;
+	}
+	
+	#page_container {
+		width: 100% !important;
+	}
+	
+	#booking_buttons {
+		height: 100% !important;
+		width: 100% !important;
+		overflow: hidden;
+	}
+	
+	#book_online_button {
+		float: none !important;
+		margin-left: auto !important;
+		margin-right: auto !important;
+		margin-bottom: 10px !important;
+		display: block;
+		width: 165px;
+	}
+	
+	#view_menu_button {
+		float: none !important;
+		margin-left: auto !important;
+		margin-right: auto !important;
+		margin-bottom: 10px !important;
+		display: block;
+		width: 165px;
+	}
+	
+	
+	#startselling table td {
+		clear: both;
+		display: block !important;
+		float: left !important;
+		text-align: left;
+		width: 320px;
+		margin-top: 10px !important;
+	}
+	
+	#startselling table tr td:nth-of-type(2) {
+		clear: both !important;
+	}
+	
+	#startselling table tr td:nth-of-type(4) {
+		clear: both !important;
+	}
+	
+	.sellerhome_wine_items_list li {
+		width: 320px !important;
+	}
+	
+	.sellerhome_wine_items_list li ul {
+		width: 320px !important;
+	}
+	
+	.sellerhome_wine_items_list li ul li{
+		width: 300px !important;
+		float: left !important;
+		clear: both !important;
+	}
+}

@@ -1,0 +1,392 @@
+@charset "utf-8";
+/* CSS Document */
+
+.float_l{float:left;}
+
+.soc-race-box{ width:930px; height:653px; padding-top:10px; position:relative;}
+.soc-race-box .map_banner{ position:absolute; padding-left:10px;}
+.soc-race-box .slideBody .soc-race-title{ padding:18px 0px 6px 28px;}
+.soc-race-box .slideBody .soc-race-title h1{ font-size:30px; font-weight:bold; color:#fefefe; margin:0px; float:left;}
+
+.soc-race-box .slideBody .soc-race-title a.sound{ float:left; margin-left:65px; width:32px; height:32px; display:block; background:url(../images/race/sound-img.png) no-repeat;}
+.soc-race-box .slideBody .soc-race-title a:hover{ background:url(../images/race/sound-img-close.png) no-repeat;}
+.soc-race-box .slideBody .soc-race-title a.close{ background:url(../images/race/sound-img-close.png) no-repeat;}
+.soc-race-box .slideBody .soc-race-title a.close:hover{ background:url(../images/race/sound-img.png) no-repeat;}
+
+.soc-race-box .slideBody{  position:absolute; top:227px; right:30px; width:595px; height:254px; background:url(../images/race/login-bg.png) no-repeat;}
+.soc-race-box .block-login{ background:url(../images/race/login-bg-top.png) no-repeat; padding:20px 0px 0px;}
+.soc-race-box .login-bg{ background:url(../images/race/login-bg-bottom.png) no-repeat left bottom; padding:0px 10px 30px 31px;}
+.soc-race-box .login-bg ul{ list-style:none; padding:0px; margin:0px;}
+.soc-race-box .login-bg .unstyled li{ display:block; width:100%; margin-bottom:31px;}
+.soc-race-box .login-bg .unstyled label{ display:none;}
+.soc-race-box .login-bg .unstyled li input{ float:left; width:150px; height:24px; padding:3px 9px; color:#bebebe; font-size:18px; font-weight:bold;}
+.soc-race-box .login-bg .unstyled li .input-bg{ float:left; background:url(../images/race/login-input-bg.png) no-repeat; width:171px; height:31px; padding:5px; margin-right:32px;}
+.soc-race-box .login-bg .unstyled li input.submit{ width:107px; height:41px; font-size:18px; font-weight:bold; color:#ffffff; background:url(../images/race/login-btn-bg.png) no-repeat; cursor:pointer;}
+.soc-race-box .login-bg .unstyled li p, .font-bold{ font-size:16px; line-height:20px; color:#fff; margin:0px;}
+.soc-race-box .login-bg .unstyled li a.red{ display:none;}
+.soc-race-box .login-bg .unstyled li.last{ margin-bottom:0px;}
+
+.font-bold{font-weight:bold}
+
+.soc-race-box button{height:41px; padding:0px; overflow:visible; width:auto; border:0; padding:0; margin:0; background:none; cursor:pointer; }
+.soc-race-box button span{ height:41px; line-height:41px; background:url(../images/race/btn-bg.png) no-repeat left top; display:block; padding:0px 0 0 10px; font-size:18px; color:#fff; font-weight:bold;}
+.soc-race-box button span span{ background:url(../images/race/btn-bg.png) no-repeat top right; line-height:41px; padding:0px 18px 0 8px; white-space: nowrap;}
+
+.soc-race-box .slideBody .soc-race-title .timer{ font-size:24px; color:#ffffff; padding:5px 0px 0px; float:right;}
+.soc-race-box .question-ul{list-style:none; padding:0px; margin:0px 0px 10px; }
+.soc-race-box .question-ul li{ width:269px; display:block; float:left; margin-bottom:10px;}
+.soc-race-box .question-title h2{ margin:0px 0px 15px 0px; font-size:16px; color:#fff; font-weight:bold;}
+.soc-race-box .question-title p{ font-size:20px; color:#fff; margin:0px; background:url(../images/race/red-line.png) no-repeat left bottom; padding-bottom:20px;}
+
+.soc-race-box .question-ul h2{ font-size:16px; font-weight:bold; color:#fff; }
+.soc-race-box .question-ul li span{ font-size:20px; color:#fff; }
+.soc-race-box .question-ul li span span{ font-size:16px; padding:0px 5px 0px; }
+
+.soc-race-box .login-bg .answer-ul{ padding:14px 0 0;}
+.soc-race-box .answer-ul li{ margin-bottom:40px;}
+.soc-race-box .answer-ul li label{ color:#fff; font-size:20px; line-height:30px; text-align:left; padding:0px;}
+.soc-race-box .answer-ul li .last{ margin:0px;}
+
+.soc-race-box .answer-ul .view-btn{ height:41px; float:left; text-decoration:none; line-height:41px; background:url(../images/race/btn-bg.png) no-repeat left top; display:block; padding:0px 0 0 10px; }
+.soc-race-box .answer-ul .view-btn span{ display:block; height:41px; background:url(../images/race/btn-bg.png) no-repeat top right; line-height:41px; padding:0px 18px 0 8px; font-size:18px; color:#fff; font-weight:bold;}
+
+.soc-scoreboard{ margin:10px 0px 0 9px; width:930px; height:100%; position:relative; background:url(../images/race/cart-img-bottom.png) no-repeat left bottom; border-left:1px solid #fff; padding-bottom:38px;}
+.soc-scoreboard .soc-score-bg-img{ height:100%; background:url(../images/race/cart-img-bg.png) repeat-y;}
+.soc-scoreboard .soc-score-bg-img .map_banner{ position:absolute}
+.soc-scoreboard .soc-back-admin{ top:10px; right:14px; position:absolute; display:block; width:107px; height:19px;}
+.soc-scoreboard .soc-scoreboard-bg{ padding:215px 20px 0;  background:url(../images/race/cart-image.jpg) no-repeat; min-height:400px;}
+.soc-scoreboard .facebook{ background:url(../images/race/cart-image-01.jpg) no-repeat;}
+.soc-scoreboard .you-decide{background:url(../images/race/cart-image-02.gif) 1px 0 no-repeat;  padding:484px 20px 0px 20px;}
+.soc-scoreboard .you-decide .soc-content{padding:7px 30px 24px;}
+
+
+
+
+.soc-scoreboard .soc-content{ background:url(../images/race/min-bg.png) repeat-y; position:relative; padding:17px 30px 24px; float:left; }
+.soc-scoreboard .soc-content .soc-top, .soc-content .soc-bottom{ display:block; width:890px; height:10px; position:absolute;}
+.soc-scoreboard .soc-content .soc-top{ background:url(../images/race/soc-min-top.png) no-repeat; left:0px; top:-10px;}
+.soc-scoreboard .soc-content .soc-bottom{ background:url(../images/race/soc-min-botton.png) no-repeat; left:0px; bottom:-10px;}
+
+.soc-scoreboard .facebook .soc-content{padding:8px 30px 24px;}
+
+.soc-scoreboard button{ position:relative; top:10px; width:160px; height:41px; padding:0px; overflow:visible; border:0; padding:0; margin:0; background:none; cursor:pointer;  }
+.soc-scoreboard button span{ height:41px; line-height:41px; display:block; padding:0px 0 0 10px; font-size:18px; color:#fff; font-weight:bold;}
+.soc-scoreboard button span span{ line-height:41px; padding:0px 18px 0 8px;  white-space: nowrap;}
+
+.soc-scoreboard button.button{ position:relative; top:0px; width:auto; height:41px; padding:0px; overflow:visible; border:0; padding:0; margin:0; background:none; cursor:pointer;  }
+.soc-scoreboard button.button span{ background:url(../images/race/btn-bg.png) no-repeat left top;height:41px; line-height:41px; display:block; padding:0px 0 0 10px; font-size:18px; color:#fff; font-weight:bold;}
+.soc-scoreboard button.button span span{ background:url(../images/race/btn-bg.png) no-repeat top right;line-height:41px; padding:0px 18px 0 8px;  white-space: nowrap;}
+.soc-scoreboard button.join-btn{ margin-right:15px;}
+
+.soc-scoreboard ul{ list-style:none; margin:0px; padding:0px; float:left; }
+.soc-scoreboard .tabtmp li{ width:415px; line-height:35px; padding:10px 0px; margin:0px; font-size:18px; color:#fff; text-align:center; float:left; display:block;}
+/*.soc-scoreboard .tabtmp li.soc-points{ background:url(../images/race/soc-points.png) no-repeat; cursor:pointer;}
+.soc-scoreboard .tabtmp li.soc-points:hover{ background:url(../images/race/soc-points-hover.png) no-repeat; font-size:20px; text-transform:uppercase; }
+.soc-scoreboard .tabtmp li.points{ background:url(../images/race/points.png) no-repeat; cursor:pointer;}
+.soc-scoreboard .tabtmp li.points:hover{ background:url(../images/race/points-hover.png) no-repeat;  font-size:20px; text-transform:uppercase;}
+.soc-scoreboard .tabtmp li.soc-points.active_tab{background:url(../images/race/soc-points-hover.png) no-repeat; font-size:20px; text-transform:uppercase; }
+.soc-scoreboard .tabtmp li.points.active_tab{background:url(../images/race/points-hover.png) no-repeat; font-size:20px;  text-transform:uppercase;}
+*/
+
+
+.soc-scoreboard .tabtmp li.soc-points{ background:url(../images/race/points-img.png) no-repeat top left; cursor:pointer;}
+.soc-scoreboard .tabtmp li.soc-points:hover{ background:url(../images/race/points-img.png) no-repeat bottom left; font-size:20px; text-transform:uppercase; }
+.soc-scoreboard .tabtmp li.points{ background:url(../images/race/points-img.png) no-repeat top right; cursor:pointer;}
+.soc-scoreboard .tabtmp li.points:hover{  background:url(../images/race/points-img.png) no-repeat bottom right;  font-size:20px; text-transform:uppercase;}
+.soc-scoreboard .tabtmp li.soc-points.active_tab{ background:url(../images/race/points-img.png) no-repeat bottom left; font-size:20px; text-transform:uppercase; }
+.soc-scoreboard .tabtmp li.points.active_tab{background:url(../images/race/points-img.png) no-repeat bottom right; font-size:20px;  text-transform:uppercase;}
+
+
+
+.soc-scoreboard .race-title{ margin:0; padding:0;}
+.soc-scoreboard .race-title h2{ float:left; margin:0px; height:26px; display:block; font-size:24px; font-weight:bold; text-transform:uppercase; color:#fff;}
+.soc-scoreboard .race-title .pagelist{ float:right;}
+.soc-scoreboard .race-title .pagelist span{ font-size:15px; color:#fff; line-height:27px; float:left;}
+.soc-scoreboard .race-title .pagelist .scores{ width:100px; text-align:center; height:27px; background:url(../images/race/scores-bg1.png) no-repeat; margin-left:5px; font-size:18px; color:#000000; display:block;}
+.soc-scoreboard .race-title .pagelist .nickname{font-size:15px; line-height:27px; text-decoration:none; background:url(../images/race/line-bg-ico.png) 0px 22px repeat-x; float:left; color:#fff; margin:0px 5px;}
+.soc-scoreboard .race-title .text{ float:left; font-size:14px; color:#fff; line-height:20px; padding:12px 0 16px;}
+.soc-scoreboard .race-title .text p{font-size:14px; color:#fff; line-height:12px;}
+
+
+
+
+.soc-scoreboard .race-seller-info{ margin-bottom:26px;background:url(../images/race/line-leng.png) no-repeat left bottom; padding:10px 0 30px; width:100%;}
+.soc-scoreboard .race-seller-info span{ float:left; margin:0px; height:26px; display:block; font-size:24px; font-weight:bold; color:#fff;}
+.soc-scoreboard .race-seller-info .pagelist{ float:right;}
+.soc-scoreboard .race-seller-info .pagelist span{ font-size:15px; color:#fff; line-height:27px; float:left;}
+.soc-scoreboard .race-seller-info .pagelist span.fields{ padding:0 10px;}
+.soc-scoreboard .race-seller-info .pagelist .scores{ width:100px; text-align:center; height:27px; background:url(../images/race/scores-bg1.png) no-repeat; margin-left:5px; font-size:18px; color:#000000; display:block;}
+.soc-scoreboard .race-seller-info .pagelist .point-total{ text-align:right}
+.soc-scoreboard .race-seller-info .nickname{font-size:24px; font-weight:bold; line-height:27px; text-decoration:none; background:url(../images/race/line-bg-ico.png) 0px 23px repeat-x; float:left; color:#fff; margin:0px 5px;}
+
+
+.soc-scoreboard .mainlist-bg{ padding:0px 9px 5px; width:812px; background:#838383 url(../images/race/mainlist-ul-bg.png) no-repeat left bottom; float:left;}
+.soc-scoreboard .mainlist li{ line-height:26px; height:26px; color:#fff; padding:0px 10px 0px 25px; margin:0px;} 
+.soc-scoreboard .mainlist > li{ width:100%; display:block; float:left; padding:0px;}
+.soc-scoreboard .mainlist li ul li{ float:left;}
+.soc-scoreboard .listhead li{ background:#d10d37;  border-right:1px solid #fff;}
+.soc-scoreboard .list li{border-right:1px solid #fff;}
+.soc-scoreboard .list li.button-op{border:none;}
+.soc-scoreboard .mainlist li.nickname{width:212px;}
+.soc-scoreboard .mainlist li.nickname a{ color:#FFFFFF; display:block; height:26px; line-height:26px;}
+.soc-scoreboard .mainlist li.item-listed{ width:436px; text-align:right}
+.soc-scoreboard .mainlist li.points{ width:57px; border-right:none;}
+.total-align-right{ text-align:right}
+
+.soc-scoreboard .mainlist li.partner{ width:330px;}
+.soc-scoreboard .mainlist li.answer{ width:195px;}
+.soc-scoreboard .mainlist li.r-points{ width:179px; border-right:none;}
+.soc-scoreboard .mainlist li.answer img{ float:left;}
+
+.soc-scoreboard .list-top li{ background:#ecac18; border-right:1px solid #fff;} 
+.soc-scoreboard .mainlist{ background:url(../images/race/ul-li-bg.png); float:left;}
+.soc-scoreboard .mainlist .ref-points{ width:122px; text-align:right}
+.soc-scoreboard .mainlist .ref-Joined{width:121px;}
+.soc-scoreboard .mainlist .ref-item-listed{width:121px; text-align:right}
+
+.soc-scoreboard .mainlist .list .li-none{ width:777px; border-right:none;}
+.soc-scoreboard .mainlist li.pagelist{ text-align:right; width:787px; background:#838383; padding:5px 0px 0px 25px; font-size:14px; font-weight:bold;}
+.soc-scoreboard .mainlist li.pagelist .sub{ width:67px; height:20px; padding:0 10px 0 15px; margin-left:10px; color:#fff; text-align:right;  font-weight:bold; line-height:20px; display:inline-block; background:#666565;}
+.soc-scoreboard .mainlist li.pagelist .sub1{ width:189px; height:20px; padding:0 10px 0 15px; margin-left:10px; color:#fff; text-align:right;  font-weight:bold; line-height:20px; display:inline-block; background:#666565;}
+
+
+
+
+.soc-scoreboard .refcontent-title{ width:100%;}
+.soc-scoreboard .refcontent-title h2{ height:24px; font-size:24px; font-weight:bold; text-transform:uppercase; color:#fff; display:block; margin:0px;}
+.soc-scoreboard .refcontent-title .award{ float:right;}
+.soc-scoreboard .refcontent-title .ref-left{ float:left; width:470px;}
+
+.soc-scoreboard .refcontent-title .text{ font-size:14px; color:#fff; line-height:20px; margin-bottom:10px;}
+.soc-scoreboard .refcontent-title .text p{font-size:14px; color:#fff; line-height:20px;}
+.soc-scoreboard .round-title{ margin:23px 0px;}
+.soc-scoreboard .round-title h2{ height:24px; font-size:24px; font-weight:bold; color:#fff; margin:0px; float:left; display:block;}
+.soc-scoreboard .round-title p{ float:right; line-height:27px; margin:0px; min-width:288px; display:block; }
+.soc-scoreboard .round-title p span{ float:left; font-size:11px; color:#fff; line-height:27px;}
+.soc-scoreboard .round-title p .timer{ background:url(../images/race/scores-bg.png) no-repeat top left; padding-left:10px; margin-left:30px;}
+.soc-scoreboard .round-title p .timer label{ background:url(../images/race/scores-bg.png) no-repeat top right; padding:0px 15px 0px 5px; line-height:27px; height:27px; display:inline-block;  text-align:center; font-size:15px; font-weight:bold; color:#3b3939; float:left;}
+.soc-scoreboard .mainlist-bg { position:relative;}
+.soc-scoreboard .mainlist-bg .mainlist-top{ position:absolute; display:block; top:-10px; left:0px; width:830px; height:10px; background:url(../images/race/mainlist-ul-bg-top.png) no-repeat;}
+
+.soc-scoreboard .mainlist li.rank{ width:88px;}
+.soc-scoreboard .mainlist li.nick-name{ width:98px;}
+.soc-scoreboard .mainlist li.suburb{ width:105px;}
+.soc-scoreboard .mainlist li.state{width:106px;}
+.soc-scoreboard .mainlist li.item{width:105px;}
+.soc-scoreboard .mainlist li.like{ width:95px; border-right:none;}
+.soc-scoreboard .mainlist .list-hover:hover{ background:#7db7f0;}
+.soc-scoreboard .mainlist .list-hover a{ color:#fff; line-height:26px; display:block; min-height:26px;}
+
+.soc-scoreboard .mainlist li.pagelist{ color:#FFF; font-size:12px; font-weight:normal;}
+.soc-scoreboard .mainlist li.pagelist a{ color:#fff; padding:0 2px;}
+.soc-scoreboard .mainlist li.pagelist label{ color:#fff; text-decoration:underline; cursor:pointer; font-size:12px}
+
+.soc-scoreboard .mainlist-bg li.pagelist li.button-op{ border:none; padding-left:0; width:355px;}
+.soc-scoreboard .mainlist-bg li.pagelist li.page-content{ border:none; width:765px; text-align:right; padding-right:0px;}
+.soc-scoreboard .page-facelikerace{ padding:15px 0 0; width:812px;}
+
+
+
+.soc-scoreboard .facelike-about-title{width:830px; background:url(../images/race/line-leng.png) no-repeat left bottom; width:100%; padding:43px 0 14px; margin-bottom:25px;}
+.soc-scoreboard .facelike-about-title h3{ font-size:24px; font-weight:bold; color:#fff; height:28px; margin:0px; float:left;}
+.soc-scoreboard  .facelike-about-title .tab_opt_extend{ background:url(../images/race/up-down.png) no-repeat; width:14px; height:14px; display:block; float:right; margin-top:10px; text-indent:-9999px;}
+.soc-scoreboard  .facelike-about-title .tab_opt_contract{ background:url(../images/race/up-ico.png) no-repeat;  width:14px; height:14px; display:block; float:right; margin-top:10px; text-indent:-9999px;}
+.soc-scoreboard  .facelike-about-title .li-button-opt{ padding-top:15px; height:25px;}
+
+.soc-scoreboard  .facelike-about-content{ padding:15px 0 10px}
+.soc-scoreboard  .facelike-about-content .col-5{ width:100%;}
+.soc-scoreboard  .facelike-about-content .col-5 p{ margin:0px; color:#fff; line-height:20px; font-size:14px;}
+.soc-scoreboard  .facelike-about-content .col-5 h2{ width:100%; margin:0; float:left;color:#fff;font-size:16px; font-weight:bold;}
+.soc-scoreboard  .facelike-about-content .col-5 p a{ margin:0px; color:#fff; line-height:20px; font-size:14px;}
+.soc-scoreboard  .facelike-about-content .col-5 p .strong{ margin:0px; color:#fff; line-height:20px; font-size:14px; font-weight:bold;}
+.soc-scoreboard  .facelike-about-content .col-5 p i{ margin:0px; color:#fff; line-height:20px; font-size:14px;}
+.soc-scoreboard  .facelike-about-content .col-5 p i strong{ margin:0px; color:#fff; line-height:20px; font-size:14px;}
+p i strong{ margin:0px; color:#fff; line-height:20px; font-size:14px;}
+
+
+.soc-scoreboard .pointlist-bg{ padding:0px 9px 20px; width:812px; background:#838383 url(../images/race/mainlist-ul-bg.png) no-repeat left bottom; float:left;}
+.soc-scoreboard .pointlist li{ line-height:26px; height:26px; color:#fff; padding:0px 10px 0px 25px; margin:0px;} 
+.soc-scoreboard .pointlist > li{ width:100%; display:block; float:left; padding:0px;}
+.soc-scoreboard .pointlist li ul li{ float:left;}
+/*.soc-scoreboard .pointlist li ul.listhead li{ background:#d10d37;  border-right:1px solid #fff; font-weight:bold;}*/
+.soc-scoreboard .pointlist li ul.listhead li{ background:#7db7f0; font-weight:normal;}
+.soc-scoreboard .pointlist li ul.list-title li{ background:#d10d37; font-weight:normal;}
+.soc-scoreboard .pointlist .list li{border-right:1px solid #fff;}
+.soc-scoreboard .pointlist li.nickname{width:212px;}
+.soc-scoreboard .pointlist li.item-listed{ width:436px;}
+.soc-scoreboard .pointlist li.points{ width:57px; border-right:none;}
+.soc-scoreboard .pointlist li.text{ width:787px; border-right:none; padding-right:0;}
+.soc-scoreboard .pointlist li.text span{float:left; display:block;line-height:20px; height:26px; color:#fff; padding:0; margin:0;}
+.soc-scoreboard .pointlist li.text a{float:left;line-height:20px; height:26px; color:#fff; padding:0; margin:0; padding-left:5px;}
+
+.soc-scoreboard .pointlist li.partner{ width:330px;}
+.soc-scoreboard .pointlist li.answer{ width:195px;}
+.soc-scoreboard .pointlist li.r-points{ width:179px; border-right:none;}
+.soc-scoreboard .pointlist li.answer img{ float:left;}
+
+.soc-scoreboard .list-top li{ background:#ecac18; border-right:1px solid #fff;} 
+.soc-scoreboard .pointlist{ background:url(../images/race/ul-li-bg.png); float:left;}
+.soc-scoreboard .pointlist .ref-points{ width:122px;}
+.soc-scoreboard .pointlist .ref-Joined{width:121px;}
+.soc-scoreboard .pointlist .ref-item-listed{width:121px;}
+
+.soc-scoreboard .pointlist .list .li-none{ width:777px; border-right:none;}
+.soc-scoreboard .pointlist li.pagelist{ text-align:right; width:787px; background:#838383; padding:20px 0px 0px 25px; font-size:14px; font-weight:bold;}
+.soc-scoreboard .pointlist li.pagelist .sub{ width:67px; height:20px; padding-left:25px; margin-left:10px; color:#fff; text-align:left;  font-weight:bold; line-height:20px; display:inline-block; background:#666565;}
+.soc-scoreboard .pointlist li.pagelist .sub1{ width:189px; height:20px; padding-left:25px; margin-left:10px; color:#fff; text-align:left;  font-weight:bold; line-height:20px; display:inline-block; background:#666565;}
+
+.soc-scoreboard .pointlist li.market{ width:190px;}
+.soc-scoreboard .pointlist li.desc{ width:400px;}
+.soc-scoreboard .pointlist li.amount{ width:115px;border-right:none;}
+.soc-scoreboard .pointlist li.state{width:106px;}
+.soc-scoreboard .pointlist li.item{width:105px;}
+.soc-scoreboard .pointlist li.like{ width:95px; border-right:none;}
+/*.soc-scoreboard .pointlist .list-hover:hover{ background:#7db7f0;}*/
+.soc-scoreboard .pointlist .list-hover a{ color:#fff; line-height:26px; display:block; min-height:26px;}
+.soc-scoreboard .pointlist .li-bg1{background:none repeat scroll 0 0 #666465}
+.soc-scoreboard .pointlist .li-bg2{background:none repeat scroll 0 0 #747474}
+.soc-scoreboard .pointlist .li-br{ height:20px;}
+.soc-scoreboard .pointlist .bp-point1{ padding-top:7px;}
+.soc-scoreboard .pointlist .bp-point2{ padding-bottom:7px;}
+
+.soc-scoreboard .pointlist li.pagelist{ color:#FFF; font-size:12px; font-weight:normal;}
+.soc-scoreboard .pointlist li.pagelist a{ color:#fff; padding:0 2px;}
+.soc-scoreboard .pointlist li.pagelist label{ color:#fff; text-decoration:underline; cursor:pointer; font-size:12px}
+
+
+
+
+.soc-scoreboard .product-ul{ padding:22px 20px 12px;}
+.soc-scoreboard .product-ul li{ width:235px; float:left; display:block; margin:0px 33px 0px 0px;}
+.soc-scoreboard .product-ul li a.img-box{ float:left; display:block; width:195px; height:121px; padding:9px 20px; text-align:center; background:url(../images/race/img-bg.png) no-repeat;}
+.soc-scoreboard .product-ul li.last{ margin:0px;}
+.soc-scoreboard .product-ul li .content{ width:100%; float:left;}
+.soc-scoreboard .product-ul li .content h2{ margin:15px 0 10px;}
+.soc-scoreboard .product-ul li .content h2 a{ font-size:14px; text-transform:uppercase; font-weight:bold; color:#fff; text-decoration:none;}
+.soc-scoreboard .product-ul li .content p{ margin:0px 0px 8px;} 
+.soc-scoreboard .product-ul li .conten p.last{margin:0px 0px 4px;}
+.soc-scoreboard .product-ul li .content p label{ font-weight:bold; color:#fff;}
+.soc-scoreboard .product-ul li .content p span{ padding-left:10px; color:#fff;}
+
+.soc-scoreboard .block-decide{ position:absolute; top:362px; right:20px; width:530px;}
+.soc-scoreboard .block-decide .block-title{ display:block; width:100%;}
+.soc-scoreboard .block-decide .block-title h2{ display:block; float:left; margin:3px 0px; font-size:22px; font-weight:bold; color:#fff; height:24px; }
+.soc-scoreboard .block-decide .block-title a.sound{ float:left; margin-left:323px; width:32px; height:32px; display:block; background:url(../images/race/sound-img.jpg) no-repeat;}
+.soc-scoreboard .block-decide .block-title a:hover{ background:url(../images/race/sound-img-close.jpg) no-repeat;}
+.soc-scoreboard .block-decide .block-title a.close{ background:url(../images/race/sound-img-close.jpg) no-repeat;}
+.soc-scoreboard .block-decide .block-title a.close:hover{ background:url(../images/race/sound-img.jpg) no-repeat;}
+
+.soc-scoreboard .block-decide .block-content{ padding-top:10px;}
+.soc-scoreboard .block-decide .block-content p{ width:355px; display:block; float:left; margin:0px; line-height:23px; font-size:13px; color:#e1e1e1;}
+.soc-scoreboard .block-decide .block-content button{ float:right;}
+
+.soc-scoreboard  .block-cash{ width:830px;}
+.soc-scoreboard  .block-cash .ul-title{ background:url(../images/race/line-leng.png) no-repeat left bottom; width:100%; padding:10px 0px 14px;}
+.soc-scoreboard  .block-cash .ul-title h3{ font-size:24px; font-weight:bold; color:#fff; height:28px; margin:0px; float:left;}
+.soc-scoreboard  .block-cash .ul-title h3.title-1{ font-size:25px; font-weight:normal;}
+.soc-scoreboard  .block-cash .ul-title .tab_opt_extend{ background:url(../images/race/up-down.png) no-repeat; width:14px; height:14px; display:block; float:right; margin-top:10px; text-indent:-9999px;}
+.soc-scoreboard  .block-cash .ul-title .tab_opt_contract{ background:url(../images/race/up-ico.png) no-repeat;  width:14px; height:14px; display:block; float:right; margin-top:10px; text-indent:-9999px;}
+
+.soc-scoreboard  .block-cash .li-button-opt{ padding-top:15px; height:25px;}
+.soc-scoreboard  .block-cash .li-button-opt span{ padding-right:5px;}
+
+.soc-scoreboard  .block-cash .ul-content{ padding:15px 0px 10px; }
+.soc-scoreboard  .block-cash .ul-content-1{padding:15px 0px 10px; *padding:15px 0px 0px;}
+.soc-scoreboard  .block-cash .ul-content-2{padding:28px 0px 30px; *padding:28px 0px 10px;}
+.soc-scoreboard  .block-cash .ul-content-4{padding:28px 0px 0px; *padding:28px 0px 0px;}
+.soc-scoreboard  .block-cash .ul-content .col-1{ width:345px; margin:5px 40px 0px 0px; float:left;}
+.soc-scoreboard  .block-cash .ul-content .col-2{ width:255px; float:left;}
+.soc-scoreboard  .block-cash .ul-content .col-3{ width:190px; float:left;}
+.soc-scoreboard  .block-cash .ul-content .col-1 p{ margin:0px 0px 15px; color:#fff; line-height:20px; font-size:14px;}
+.soc-scoreboard  .block-cash .ul-content .col-1 p a{ margin:0px; color:#fff; line-height:20px; font-size:14px;}
+
+.soc-scoreboard  .block-cash .ul-content .col-2 ul li{ line-height:40px; padding-left:33px; height:40px;}
+.soc-scoreboard  .block-cash .ul-content .col-2 ul li span{ font-size:18px; color:#fff; line-height:40px;}
+.soc-scoreboard  .block-cash .ul-content .col-2 ul li span strong{ font-size:18px; color:#fff; line-height:40px; font-weight:bold;}
+.soc-scoreboard  .block-cash .ul-content .col-2 ul li.st1{ background:url(../images/race/cup-big-1.png) 0px 5px no-repeat;}
+.soc-scoreboard  .block-cash .ul-content .col-2 ul li.nd2{ background:url(../images/race/cup-big-2.png) 0px 5px no-repeat;}
+.soc-scoreboard  .block-cash .ul-content .col-2 ul li.rd3{ background:url(../images/race/cup-big-3.png) 0px 5px no-repeat;}
+
+
+.soc-scoreboard  .block-cash .ul-content .col-3 ul li span{ font-size:18px; color:#fff;  line-height:40px;}
+.soc-scoreboard  .block-cash .ul-content .col-3 ul li{ line-height:40px; height:40px;}
+
+.soc-scoreboard  .block-cash .ul-content .col-5{ width:100%; margin:0px 40px 0px 0px; float:left;}
+.soc-scoreboard  .block-cash .ul-content .col-5 p{ margin:0px; color:#fff; line-height:20px; font-size:14px;}
+.soc-scoreboard  .block-cash .ul-content .col-5 h2{ width:100%; margin:0; float:left;color:#fff;font-size:16px; font-weight:bold;}
+.soc-scoreboard  .block-cash .ul-content .col-5 p a{ margin:0px; color:#fff; line-height:20px; font-size:14px;}
+
+.soc-scoreboard  .block-cash .ul-content .col-about-important{ width:100%; margin:20px 0px; float:left;}
+.soc-scoreboard  .block-cash .ul-content .col-about-important h2{ width:100%; margin:0; float:left;color:#fff;font-size:16px; font-weight:bold;}
+.soc-scoreboard  .block-cash .ul-content .col-about-important p{ margin:0px; color:#fff; line-height:20px; font-size:12px;}
+.soc-scoreboard  .block-cash .ul-content .col-about-important p a{ margin:0px; color:#fff; line-height:20px; font-size:12px;}
+
+.soc-scoreboard  .mainlist .li-rank{ width:44px;}
+.soc-scoreboard  .mainlist li.li-name{ width:206px;}
+.soc-scoreboard  .mainlist li.li-name a{ color:#FFFFFF; height:26px; line-height:26px; display:block;}
+.soc-scoreboard  .mainlist li.li-suburb{ width:119px;}
+.soc-scoreboard  .mainlist li.li-suburb .top-60{ background-color:#000000; color:#FFFFFF; font-size:14px;border:5px #FFFFFF solid; height:17px; left:-5px; top:-6px; padding:6px 0 6px 8px; position:relative; text-align:left; width:80px;}
+.soc-scoreboard  .mainlist li.li-state{ width:134px;}
+.soc-scoreboard  .mainlist li.li-total{ width:130px; border-right: none; text-align:right;}
+.soc-scoreboard .ul-content .listhead li{ background:#706E6E;}
+
+.soc-scoreboard .ul-content .mainlist li.li-bg1{ background:#d10d37;}
+.soc-scoreboard .ul-content .mainlist li.li-bg2{ background:#ecac18;}
+.soc-scoreboard .ul-content .mainlist li.li-bg3{ background:#7db7f0;}
+
+.soc-scoreboard .ul-content .mainlist li.li-bg1 .li-rank{ background:url(../images/race/cup-1.png) 5px 5px no-repeat;}
+.soc-scoreboard .ul-content .mainlist li.li-bg2 .li-rank{ background:url(../images/race/cup-2.png) 5px 5px no-repeat;}
+.soc-scoreboard .ul-content .mainlist li.li-bg3 .li-rank{ background:url(../images/race/cup-3.png) 5px 5px no-repeat;}
+
+.soc-scoreboard .ul-content .mainlist li.li-bg4{ background:#5f637a;}
+.soc-scoreboard .ul-content .mainlist li.li-bg5{ background:#54576a;}
+.soc-scoreboard .ul-content .mainlist li.li-bg6{ background:#5f637a;}
+.soc-scoreboard .ul-content .mainlist li.li-bg7{ background:#54576a;}
+
+.soc-scoreboard  .ul-content .mainlist li.pagelist{ margin:0px; padding:5px 0px 0; width:812px; background:#656565;}
+.soc-scoreboard  .ul-content .mainlist li.pagelist .prev{ float:left;}
+.soc-scoreboard  .ul-content .mainlist-bg{ padding:0px 9px 9px;}
+.soc-scoreboard  .ul-content .pointlist-bg{ padding:0px 9px 9px;}
+
+
+.soc-scoreboard  .ul-content .mainlist li.race-pagelist{ margin:0; padding:0; width:812px; background:#656565;}
+.soc-scoreboard  .ul-content .mainlist li.race-pagelist .li-rank{ margin:0; padding:0; width:79px;}
+.soc-scoreboard  .ul-content .mainlist li.race-pagelist .li-rank a{ margin:0; padding:4px 0 0; float:left; height:26px;}
+.soc-scoreboard  .ul-content .mainlist li.race-pagelist .li-total{ margin:0; padding:0; width:164px;}
+.soc-scoreboard  .ul-content .mainlist li.race-pagelist .li-total a{ margin:0; padding:4px 0 0; float:right; line-height:26px; height:26px;}
+
+.soc-scoreboard  .ul-content .mainlist li.race-pagelist .li-left{ width:39px;}
+.soc-scoreboard  .ul-content .mainlist li.race-pagelist .li-desc{ width:459px;}
+
+.soc-scoreboard  .ul-content .mainlist li.race-pagelist li{ border-right:none;}
+
+.soc-scoreboard  .block-cash .ul-title:after,
+.soc-scoreboard .block-decide .block-title:after,
+.soc-scoreboard .product-ul li .content:after,
+.soc-scoreboard .refcontent-title:after, 
+.soc-scoreboard .round-title:after, 
+.soc-scoreboard .soc-content:after,
+.soc-scoreboard:after, 
+.soc-scoreboard-bg:after, 
+.soc-scoreboard .mainlist-bg:after { display:block; content:"."; clear:both; font-size:0; line-height:0; height:0; overflow:hidden; }
+
+.soc-scoreboard .clear{ clear:both; overflow:hidden; height:0px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

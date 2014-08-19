@@ -1,0 +1,48 @@
+/* BUYING Specific */
+
+p.bigger 								{ font-size:14px; }
+p.bigger em								{ font-weight:bold; font-style:normal; color:#74ace1; font-size:14px; }
+p.bigger i								{ font-style:italic; }
+p.bigger strong i						{ font-weight:bold; font-style:italic;}
+p.bigger i	strong						{ font-weight:bold; font-style:italic;}
+p.bigger strong							{ font-weight:bold; font-size:14px; }
+p.bigger a								{ font-style:normal; font-size:14px; }
+
+p.lighter								{ color:#bbb; }
+
+p i								{ font-style:italic; }
+p strong i						{ font-weight:bold; font-style:italic;}
+p i	strong						{ font-weight:bold; font-style:italic;}
+
+
+h2.h-buying								{ background:url(../images/h2-buying.gif) no-repeat; width:227px; height:19px; }
+form#signupform							{ padding:10px 15px; margin:20px 0; background:url(../images/bg-signupform.gif) no-repeat; height:254px; width:511px; }
+h1.h-signupnow							{ background:url(../images/h1-signupnow.gif) no-repeat; height:25px; width:130px; margin:5px 0; +margin-top:15px;}
+#signupform ol							{ list-style:none; margin:0; width:510px; }
+#signupform li							{ float:left; width:250px; }
+#signupform li.half						{ float:left; width:125px; }
+#signupform label						{ display:block; font-size:12px; color:#777; }
+#signupform input.text					{ width:235px; }
+#signupform input.password				{ width:235px; }
+#signupform select						{ width:115px; }
+#signupform input.checkbox				{ float:left; margin-right:5px; }
+#signupform fieldset.submit				{ margin-top:10px;}
+#signupform input.register				{ padding:0; width:94px; height:29px; margin-right:10px; }
+
+h2.h-why-register						{ background:url(../images/h2-why-register.gif) no-repeat; width:190px; height:46px; margin:0; }
+ul#whyregister							{ list-style:none; margin:0 5px;  word-break: normal;}
+ul#whyregister li						{ padding: 3px 5px 3px 15px; line-height:16px; background:url(../images/li-o-dot.gif) no-repeat 2px 6px; }
+ul#whyregister em						{ font-weight:bold; color:#352c7b}
+
+div#buyeradminhome						{ background:#F8F8F8; display:block; width:750; margin:0px; padding:10px; border-left:#E2E2E2 1px solid; border-right:#E2E2E2 1px solid;}
+/*html*div#buyeradminhome					{ background:#F8F8F8; display:block; width:750; margin:0px; padding:10px; }*/
+
+div.buyeradminhomeinfo					{ background:#FFF; display:block; width:310px; margin:0px; padding:25px 50px 25px 70px;}
+
+ul.buyeradminhomeinfo-top				{ list-style:none; text-align:left; margin:0px; padding:0px;}
+ul.buyeradminhomeinfo-top li			{ padding-left:5px; margin-bottom:15px;}
+ul.buyeradminhomeinfo-top span			{ float:left; text-align:left; font-weight:bold; width:170px; padding-right:5px;}
+ul.buyeradminhomeinfo-top samp			{ float:left; text-align:left; width:130px;}
+
+div.countinfo							{ float:left; text-align:center; /*background:#9E99C1;*/background:#FF0000; color:#FFFFFF; font-weight:bold; width:30px;}
+

@@ -1,0 +1,157 @@
+<?php
+
+//chars limit or The SOC Exchange
+$templateSet	=	array(
+	'product-display'	=>	array(
+		'maxChars'	=>	0,
+		'product'	=>	1,
+		'productCol'=>	1,
+		'isSingerPro'=>	1,
+	),
+	'tmp-n-a'	=>	array(
+		'maxChars'	=>	0,
+		'product'	=>	4,
+		'productCol'=>	1,
+		'isSingerPro'=>	0,
+	),
+	'tmp-n-b'	=>	array(
+		'maxChars'	=>	0,
+		'product'	=>	6,
+		'productCol'=>	1,
+		'isSingerPro'=>	0,
+	),
+	'tmp-n-e'	=>	array(
+		'maxChars'	=>	0,
+		'product'	=>	1,
+		'productCol'=>	1,
+		'isSingerPro'=>	1,
+	),
+	'estate-a'	=>	array(
+		'product'	=>	6,
+		'productCol'=>	1
+	),
+	'estate-b'	=>	array(
+		'product'	=>	6,
+		'productCol'=>	1
+	),
+	'estate-c'	=>	array(
+		'product'	=>	1,
+		'productCol'=>	1
+	),
+	'auto-a'	=>	array(
+		'product'	=>	5,
+		'productCol'=>	1
+	),
+	'auto-b'	=>	array(
+		'product'	=>	6,
+		'productCol'=>	1
+	),
+	'auto-c'	=>	array(
+		'product'	=>	1,
+		'productCol'=>	1
+	),
+	'job-a'	=>	array(
+		'product'	=>	6,
+		'productCol'=>	1
+	),
+	'job-b'	=>	array(
+		'product'	=>	6,
+		'productCol'=>	1
+	),
+	'job-c'	=>	array(
+		'product'	=>	1,
+		'productCol'=>	1
+	),
+);
+
+$product_csv = array(
+'productCode'=>'p_code',
+'itemName'=>'item_name',
+'price'=>'price',
+'unit'=>'unit',
+'quantity'=>'stockQuantity',
+'OBO'=>'non',
+'onSale'=>'on_sale',
+'shippingCost'=>'postage',
+'shippingMethod'=>'deliveryMethod',
+'mainImage'=>'image_name',
+'image1'=>'moreImage1',
+'image2'=>'moreImage2',
+'image3'=>'moreImage3',
+'image4'=>'moreImage4',
+'image5'=>'moreImage5',
+'image6'=>'moreImage6',
+'description'=>'description',
+'featured'=>'isfeatured'
+);
+
+$auto_csv = array(
+'#'=>'#',
+'title'=>'item_name',
+'new/used'=>'category',
+'type'=>'carType',
+'make'=>'make',
+'model'=>'model',
+'year'=>'year',
+'mileage'=>'kms',
+'door'=>'door',
+'seat'=>'seat',
+'vechiclType'=>'pattern',
+'transmission'=>'transmission',
+'color'=>'color',
+'regNo'=>'regNo',
+'regExpiry'=>'regExpired', //2008-12-17
+'price'=>'price',
+'negotiable'=>'negotiable',
+'description'=>'content',
+'featureList'=>'featureList',
+'featured'=>'featured',
+'published'=>'enabled',
+'mainImage'=>'image_name',
+'image1'=>'moreImage1',
+'image2'=>'moreImage2',
+'image3'=>'moreImage3',
+'image4'=>'moreImage4',
+'image5'=>'moreImage5',
+'image6'=>'moreImage6',
+);
+
+$estate_csv = array(
+'#'=>'#',
+'propertyName'=>'item_name',
+'typeOfSale'=>'category',
+'typeOfProperty'=>'property',
+'bedrooms'=>'bedroom',
+'bathrooms'=>'bathroom',
+'parking'=>'carspaces',
+'openHouse'=>'inspect',
+'auction'=>'auction',
+'price'=>'price',
+'priceMethod'=>'priceMethod',
+'negotiable'=>'negotiable',
+'taxes'=>'transmission',
+'utilities'=>'color',
+'streetAddress'=>'regNo',
+'state'=>'regExpired', //2008-12-17
+'city'=>'price',
+'zipcode'=>'negotiable',
+'description'=>'content',
+'featureList'=>'featureList',
+'featured'=>'featured',
+'published'=>'enabled',
+'coAgentName'=>'',
+'coAgentAddress'=>'',
+'coAgentPhone'=>'',
+'mainImage'=>'image_name',
+'image1'=>'moreImage1',
+'image2'=>'moreImage2',
+'image3'=>'moreImage3',
+'image4'=>'moreImage4',
+'image5'=>'moreImage5',
+'image6'=>'moreImage6',
+);
+
+
+$blog_length = 200;
+ini_set('auto_detect_line_endings','1');
+?>

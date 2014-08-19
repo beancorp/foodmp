@@ -1,0 +1,129 @@
+/* START SELLING PAGE */
+
+form#startselling						{ clear:both; margin-bottom:40px; }
+#startselling ol						{ list-style:none; margin:0; }
+#startselling ol li						{ clear:left; position:relative; }
+#startselling label						{ display:block; float:left; width:150px; text-align:right; font-size:12px; margin-right:10px; }
+#startselling input						{ border:solid #ccc 1px;}
+#startselling input.text				{ padding:5px; width:275px;}
+#startselling input.textsm				{ padding:5px; width:138px;}
+#startselling li.help input.checkbox,
+#startselling input.checkbox			{ border:0; width:14px; height:14px; }
+#startselling input.submit				{ border:0; }
+#startselling li.help input				{  width:251px;}
+#startselling li a.helpicon				{ position:absolute; top:1px; left:428px; }
+#startselling li.terms					{ padding:10px 0 10px 170px; }
+#startselling li.terms input			{ float:left; }
+#startselling li.terms label			{ width:250px; text-align:left; }
+#startselling select					{ border:solid #ccc 1px; padding:5px; width:150px;}
+#startselling textarea					{ border:solid #ccc 1px; width:285px; height:70px;}
+#startselling p							{ font-size:10px; padding-left:170px; }
+
+#startselling fieldset.submit			{ padding-left:160px;}
+
+ul#steps								{ clear:both; list-style:none; margin:0;}
+ul#steps li								{ float:left; width:125px; text-align:center; }
+ul#steps li a							{ text-decoration:none; font-size:11px; height:50px; padding-top:25px; display:block; color:#ccc; }
+ul#steps li a.active					{ color:#777; }
+
+ul#steps li a.step1						{ background:url(../images/bg-step1.gif) no-repeat top center; }
+ul#steps li a.step2						{ background:url(../images/bg-step2.gif) no-repeat top center; }
+ul#steps li a.step3						{ background:url(../images/bg-step3.gif) no-repeat top center; }
+ul#steps li a.step4						{ background:url(../images/bg-step4.gif) no-repeat top center; }
+ul#steps li a.step5						{ background:url(../images/bg-step5.gif) no-repeat top center; }
+ul#steps li a.step6						{ background:url(../images/bg-step6.gif) no-repeat top center; }
+
+#startselling div.tohide				{ position:absolute; left:460px; top:1px; width:100px; }
+
+/* css for the step pages */
+table#costs						{ border-spacing:2px 5px; border-collapse:collapse; }
+#costs td						{ border:solid 1px #ccc; text-align:center; padding:5px; width:10%; height:30px; line-height:14px; }
+ul#creditcards					{ list-style:none; margin-left:0; float:left; }
+#creditcards li					{ float:left; margin-right:2px; }
+input.continuepayment			{ float:right; margin:10px 20px 0 0; background:url(../images/bu-continuepayment.gif) no-repeat; width:150px; height:28px; }
+
+input.launchsite				{ float:right; margin:10px 20px 0 0; background:url(../images/bu-launch-site.gif) no-repeat; width:150px; height:28px; }
+
+
+table#myproducts				{ }
+#myproducts thead th,#myauctions thead th,#unpaidproducts th,#paidproducts th,#expiredproducts th		{ border:solid 3px #eee; border-width:3px 0; padding:5px 0; color:#999; font-weight:bold; }
+#myproducts tbody td,#unpaidproducts tbody td,#paidproducts tbody td,#expiredproducts tbody td		{ border-bottom:solid 1px #eee; padding: 0;}
+
+ul#icons-products				{ list-style:none; }
+#icons-products li				{ float:left; }
+
+
+form#uploadsomething			{ width:750px; border-top:solid 1px #eee; padding-top:30px;}
+#uploadsomething ol				{ list-style:none; margin:0; }
+#uploadsomething li				{ clear:left; }
+#uploadsomething li li			{ clear:none; float:left; margin-right:5px; }
+#uploadsomething label			{ width:120px; display:block; float:left; text-align:right; margin-right:20px; font-size:12px; }
+#uploadsomething input.text		{ border:solid 1px #ccc; width:227px; margin-bottom:5px; padding:5px; }
+#uploadsomething input.price	{ border:solid 1px #ccc; width:50px; margin-bottom:5px; float:left; }
+#uploadsomething label.price	{ clear:none; float:left; width:50px; margin-right:0;  }
+#uploadsomething select.text	{ border:solid 1px #ccc; width:240px;margin-bottom:5px; font-size:11px;  }
+#uploadsomething textarea		{ border:solid 1px #ccc; width:238px; height:100px; }
+#uploadsomething td				{ vertical-align:middle; }
+
+fieldset#uploadproduct			{ float:left; width:400px; }
+fieldset#uploadimages			{ float:right; width:300px; }
+fieldset#uploadimages input		{ clear:left; }
+a.previewlink					{ clear:both; float:right; margin-bottom:15px; color:#3b307c; font-weight:bold; width:140px;}
+fieldset#bulkupload			{ float:left; width:700px;background:#fff;}
+a.sortheader					{ text-decoration:none;color:#999; font-weight:bold;  }
+button							{ background:#fff; margin:10px 0;}
+
+hr								{ background:#eee; height:1px; line-height:1px; border:0; margin:0 20px 30px 0; clear:both;}
+
+table#choosetemplate				{ list-style:none; margin:0; width:98% }
+#choosetemplate td				{ vertical-align:top; text-align:center;}
+#choosetemplate h3				{ text-align:center; }
+#choosetemplate 				{ text-align:center; }
+#choosetemplate p				{ text-align:left; }
+
+
+ul#choosecolor					{ list-style:none; margin:0; }
+#choosecolor li					{ float:left; margin-right:15px; text-align:center; }
+
+ul#chooseicon					{ list-style:none; margin:0; }
+#chooseicon li					{ float:left; margin-right:10px; text-align:center; }
+
+
+
+textarea#sellerinfo				{ border:solid 1px #ccc; width:230px; height:150px; margin-top:20px; }
+#shipping input.text			{ border:solid 1px #ccc; width:230px; padding:5px; }
+#shipping td					{ padding:10px 0; vertical-align:top; }
+#shipping td td					{ padding:0; }
+#otherdetails td				{ padding:10px 0; vertical-align:middle; width:auto; }
+#otherdetails td td				{ padding:0; }
+
+h1.h-step2-sellersinfo			{ background:url(../images/h-sellersinfo.gif) no-repeat; height:27px; width:225px; }
+h1.h-step2-addfeature			{ background:url(../images/h-addfeatureimage.gif) no-repeat; height:27px; width:225px; }
+h1.foodwine-h-step2-addfeature	{ height:27px; width:310px; }
+h1.foodwine-h-step2-addfeature span	{ display:block; font-size:18px; color:#000099; font-weight:bold }
+
+.step3-ul{ padding:0; margin:0; list-style:none;} 
+.step3-ul li{ display:block;} 
+.step3-ul li .li-title{ height:66px; border-bottom:1px solid #CCCCCC; border-top:1px solid #CCCCCC;} 
+.step3-ul li .title-text{ position:relative;}
+.step3-ul li .top .title-text{ background-color:#fdda92;} 
+/*.step3-ul li .open .title-text { background-color:#fdda92;} 
+.step3-ul li .close .title-text{ background:none;} */
+.step3-ul li .title-text h3{ padding:20px 0 20px 13px; margin:3px 0;} 
+.step3-ul li .title-text h3 strong{ font-size:16px; font-weight:bold;} 
+.step3-ul li .title-text h3 .italic{ font-style:italic;} 
+.step3-ul li .title-text .oper{ position:absolute; right:13px; top:12px; display:block; width:37px; height:35px; text-indent:-9999px;} 
+.step3-ul li .open .title-text .oper{ background:url(../images/tab-open.png) no-repeat;} 
+.step3-ul li .close .title-text .oper{ background:url(../images/tab-close.png) no-repeat;}
+
+.step3-ul li .li-content {padding-bottom:20px; display:none;}
+.step3-ul li .li-content .col-left{ float:left;} 
+.step3-ul li .li-content .col-left p{ line-height:20px;} 
+.step3-ul li .li-content .col-left h2{ font-weight:bold;} 
+.step3-ul li .li-content .col-left .left-middle{ height:35px; padding:20px 0 40px;} 
+.step3-ul li .li-content .col-left .left-bottom{ padding-top:10px;} 
+.step3-ul li .li-content .col-right{ float:right; width:325px;} 
+.step3-ul li .li-content .col-right label{ float:left; padding:33px 0 13px; font-style:italic;} 
+
+.banner-upload { padding:10px 0;}
+.banner-upload span.asyncUploader{ bottom:8px; height:37px; position:relative;}

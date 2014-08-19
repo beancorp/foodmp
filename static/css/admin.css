@@ -1,0 +1,93 @@
+
+
+.txt {
+	FONT-SIZE: 11px; 
+	COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; 
+	TEXT-DECORATION: none
+}
+
+.clsTextField {
+	BORDER-RIGHT: #666666 1px solid; BORDER-TOP: #666666 1px solid; FONT-WEIGHT: normal; FONT-SIZE: 11px; BORDER-LEFT: #666666 1px solid;
+	 COLOR: #000000; BORDER-BOTTOM: #666666 1px solid; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #ffffff }
+	 
+.textarea {
+	BORDER-RIGHT: #999999 1px solid; BORDER-TOP: #999999 1px solid; FONT-SIZE: 11px; BORDER-LEFT: #999999 1px solid; COLOR: #000000; BORDER-BOTTOM: #999999 1px solid; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; 
+}
+
+.file {
+	BORDER-RIGHT: #999999 1px solid; BORDER-TOP: #999999 1px solid; FONT-SIZE: 11px; BORDER-LEFT: #999999 1px solid; COLOR: #000000; BORDER-BOTTOM: #999999 1px solid; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif ; 
+}
+
+
+.hbutton {
+	BORDER-RIGHT: #999999 1px solid; BORDER-TOP: #999999 1px solid; FONT-SIZE: 11px; BORDER-LEFT: #999999 1px solid; WIDTH: auto; COLOR: #000000; BORDER-BOTTOM: #999999 1px solid; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; HEIGHT: 20px; BACKGROUND-COLOR: #ddebff
+}
+
+
+
+
+text {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #4B4B4B;
+	text-decoration: none;
+}
+.bluetext {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #005597;
+	text-decoration: none;
+}
+.smalltext {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #4B4B4B;
+	text-decoration: none;
+}
+.link {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #005597;
+	text-decoration: none;
+}
+.link:hover {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #4B4B4B;
+	text-decoration: underline;
+}
+
+.textarea {
+	BORDER-RIGHT: #999999 1px solid; BORDER-TOP: #999999 1px solid; FONT-SIZE: 11px; BORDER-LEFT: #999999 1px solid; COLOR: #000000; BORDER-BOTTOM: #999999 1px solid; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; 
+}
+
+.file {
+	BORDER-RIGHT: #999999 1px solid; BORDER-TOP: #999999 1px solid; FONT-SIZE: 11px; BORDER-LEFT: #999999 1px solid; COLOR: #000000; BORDER-BOTTOM: #999999 1px solid; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif ; 
+}
+
+.tdRow {
+	font-size: 11px;
+	background-color:#F2F2F2;
+	color:#000000;
+}
+.tdRow1 {
+	font-size: 11px;
+	background-color:#FFFFFF;
+	color:#000000;
+}
+
+.odd {
+	font-size: 11px;
+	background-color:#F2F2F2;
+	color:#000000;
+}
+.even {
+	font-size: 11px;
+	background-color:#FFFFFF;
+	color:#000000;
+}
+.listmenu {
+	font-size: 11px;
+	background-color:#FFFFFF;
+	color:#000000;
+}

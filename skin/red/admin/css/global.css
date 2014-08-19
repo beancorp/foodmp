@@ -1,0 +1,107 @@
+*					{ margin:0px;padding:0px;}
+body 				{ FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;}
+td					{ font-size:12px;}
+form				{margin:0px;padding:0px;border-width: 0px;}
+#ajaxmessage		{color:#0066FF; height:20px;}
+#body-top 			{ height:50px; margin-bottom:10px; background-color:#30559C;}
+#body-control-title	{ height:30px; font-size:18px; font-weight:bold;}
+#body-menu 			{ float:left; font-size:12px; width:20%; background-color:#FFFFeC}
+#body-menu ul		{ list-style: none; margin:3px; padding-left:10px; font-weight:bold;}
+#body-menu ul ul	{ list-style: circle; padding-left:20px; padding-bottom:2px;padding-top:2px;}
+
+a:link, a:visited	{
+	color: #0000FF;
+	text-decoration: underline;
+}
+
+a:active, a:hover{
+	color: #FF0000;
+	text-decoration: none;
+}
+
+
+#body-content 		{ float:left; width:78%; padding-left:10px;}
+
+input, select, textarea	{ border: 1px solid #D4D0C8; font-size:12px; background:#fafafa}
+.input-none-border	{ font-size:12px;border-top: 0px none;border-right: 0px none;border-bottom: 0px none;border-left: 0px none;}
+
+#input-table			{list-style:none;}
+#input-table #space		{border-bottom: 1px solid #D4D0C8; float:left; width:100%; padding:5px;}
+
+#input-table ul			{ list-style:none; font-size:12px; padding:0px; margin:0px;}
+#input-table li#lable	{ float:left; width:120px; height:25px; text-align: right; font-weight:bold; padding-right:10px; position:relative;}
+#input-table li#input	{ float:left; text-align:left; position:relative; height:25px;}
+
+#input-table li#input2	{ float:left; text-align:left; width:200px; height:25px;}
+
+.button				{ background-color:#CCCCCC; color:#006633; font-weight:bold; font-size:13px;}
+.hbutton 			{ BORDER-RIGHT: #999999 1px solid; BORDER-TOP: #999999 1px solid; FONT-SIZE: 11px; BORDER-LEFT: #999999 1px solid; WIDTH: auto; COLOR: #000000; BORDER-BOTTOM: #999999 1px solid; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; HEIGHT: 20px; BACKGROUND-COLOR: #ddebff; cursor:hand;}
+
+#ajaxmessage		{ font-family:Verdana; color:#FF0000; font-size:14px;}
+
+
+#list_sub			{ float:left; width:20%; position:relative; height:500px; overflow:scroll;}
+#list_sub ul		{ list-style:none; font-size:12px; padding:0px; margin:0px;}
+$list_input			{ float:left; width:80%; position:relative}
+#list_input ul		{ list-style:none; font-size:12px; padding:0px; margin:0px;}
+#list_input form	{ padding:0px; margin:0px;}
+
+
+/*table style*/
+#table 				{width:405px;}
+#table li,#table li.tabletop	{list-style-type:none;width:100px; height:30px;line-height:30px;text-align:center;float:left;margin-left:1px;margin-bottom:1px;background:#66ACCF;overflow:hidden; font-size:12px;}
+#table li			{height:22px;line-height:22px;background-color:#eeeeee; padding:2px;}
+#table li.tabletop	{ font-weight:bold;}
+/*****************/
+
+
+/*review style*/
+#review_table 				{width:405px;}
+#review_table li,#review_table li.tabletop	{list-style-type:none;width:100px; text-align:left;float:left;margin-left:1px;margin-bottom:1px; font-size:12px;}
+#review_table li			{line-height:130%; padding:2px;}
+#review_table li.tabletop	{ font-weight:bold;}
+#review_table #space		{border-bottom: 1px solid #D4D0C8; float:left; width:100%; padding:5px;}
+/*****************/
+
+
+#item_title				{font-weight:900; width:100%; font-size: 12px; text-align: center; height: 30px; padding: 10px;}
+div#content				{height:400px; margin:10px; width:100%;}
+#categoryList			{float:left;width:20%;height:400px; text-indent:inherit; font-weight:bold;padding: 5px;line-height: 120%;}
+#categoryRssSet			{float:left; width:70%;padding: 10px; border-left:1px solid #D4D0C8;}
+
+#categoryList ul		{list-style:none; margin:0px; font-size:12px;}
+
+#categoryRssSet ul		{list-style:none; margin-left:0px;}
+#categoryRssSet ul li#lable	{ float:left; font-size:12px; width:100px; text-align: right; font-weight:bold; margin-right:10px;}
+#categoryRssSet ul li#input	{ float:left; font-size:12px; text-align:left; width:560px;}
+
+
+#catagoryArticleList ul 	{list-style:none}
+#categoryRssSet ul li		{float:left;}
+#categoryRssSet ul#lable	{ font-weight:bold;border-top: 1px solid #D4D0C8;border-left: 1px solid #D4D0C8;}
+#categoryRssSet ul#record	{
+
+}
+
+.publc_clew 				{color: #FF0000; font-weight:bold}
+/* Message Center */
+
+#admin_msg { text-align:center; font-size:12px; }
+#admin_msg form { margin:0; }
+#admin_msg input { *margin:4px 0; }
+#admin_msg .wrap { margin:0 auto; text-align:left; width:750px; }
+#admin_msg .clear { clear:both; }
+#admin_msg .checkbox { border:none; }
+
+#admin_msg .row        { padding:5px; }
+#admin_msg .row .title { float:left; font-weight:bold; text-align:right; padding-right:10px; width:100px; }
+#admin_msg .row .data  { float:left; width:600px; }
+
+#admin_msg ul { margin:0; padding:0; }
+#admin_msg ul li { float:left; list-style:none; line-height:28px; margin-right:1px; padding:0 8px; }
+#admin_msg ul.title li { background:#66ACCF; }
+#admin_msg ul.data li { background:#EEE; margin-top:1px; }
+
+/*#admin_msg .action { margin:5px 15px 0 0; * margin:0 17px 0 0; text-align:right; }*/
+#admin_msg .action { margin:5px 0 0 0; }
+#admin_msg .page_nav { margin:10px 0 30px 0; text-align:center; }

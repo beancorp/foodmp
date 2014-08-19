@@ -1,0 +1,50 @@
+#products{position:relative;}
+div#rightCol ul#icons {position:static;}
+div.auction_item_title{font-size:18px;font-weight:bold;margin-bottom:5px;}
+div.soldwater{width:161px;height:161px;position:absolute;left:0;top:0;margin:0;}
+div.auction_timer{}
+div.auction_timer span.timmer{font-size:16px;color:#453c8b;font-weight:bold;margin:0 5px;}
+div.auction_timer span.timmer_red{font-size:16px;color:#dd0e3c;font-weight:bold;margin:0 5px;}
+div.auction_timer span.timmer_no{font-size:14px;color:#dd0e3c;font-weight:bold;margin:0;}
+div.auction_timer span.enddate{font-size:11px;}
+span.reserve_yes{color:#453c8d;margin-left:5px;background:url(../images/reserve_icon.gif) no-repeat;padding-left:20px;cursor:pointer;}
+span.reserve_no{color:#453c8d;margin-left:5px;background:url(../images/reserve_no_icon.gif) no-repeat;padding-left:20px;cursor:pointer;}
+div.auction_content{min-height:285px;_height:285px;padding-top:7px;}
+div.auction_content div.auction_mainimg{width:161px;height:161px;border:1px solid #ccc;overflow:hidden;float:left;margin-right:6px;}
+div.auction_content div.auction_price{width:330px;min-height:163px;_height:163px;background:#ebebeb;float:left;}
+div.auction_content div.auction_price table td.first{padding-left:10px;font-weight:bold;width:80px;}
+div.auction_content div.auction_price table td span.cur_price{font-size:20px;color:#ff7d01;font-weight:bold;}
+div.auction_content div.auction_price table td span.cur_person{color:#453c8d;padding-left:5px;cursor:pointer;}
+div.auction_content div.note{margin:15px 0;}
+div.auction_content div.tab{height:40px;background:url(../images/auction_tab.jpg); }
+div.auction_content div.tab a.tabs{float:left;height:39px;width:96px;}
+div.auction_content div.tab a.tabsDesc{background:url(../images/auctions/desc.jpg) no-repeat top;margin-right:5px;}
+div.auction_content div.tab a.tabsImg{background:url(../images/auctions/img.jpg) no-repeat top;margin-right:5px;}
+div.auction_content div.tab a.tabsShip{background:url(../images/auctions/shipping.jpg) no-repeat top;margin-right:5px;}
+div.auction_content div.tab a.tabsBid{background:url(../images/auctions/bider.jpg) no-repeat top;margin-right:5px;}
+div.auction_content div.tab a.tabsExtra{background:url(../images/auctions/extra.jpg) no-repeat top;}
+div.auction_content div.tab a.tabsActive{background-position:bottom;}
+div.img_content{position:absolute;width:750px;top:0px;padding-top:12px;background:#FFF; right:0;}
+div.des_content{padding:20px 0 0 15px}
+div.img_content{display:none;}
+div.bid_content{display:none;}
+div.ship_content{display:none; padding:10px 0 0 15px}
+div.extra_content{display:none;padding:20px 0 0 15px; }
+div.extra_content ol,div.ship_content ol{margin:0;padding:0;list-style:none;}
+div.extra_content ol li,div.ship_content ol li{padding:4px 0 0px 15px;background:transparent url(../images/li-orange.gif) no-repeat left 6px ;margin:0;line-height:15px;_height:15px;}
+
+div.img_left_list div.small_high{border:1px solid #463d8e;}
+div.small_normal{border:1px solid #CBCBCB;padding:1px;margin-bottom:5px;cursor:pointer;}
+table th.bid_header_first{padding-left:24px;font-weight:bold;border-bottom:1px solid #CBCBCB;height:30px;text-align:left;}
+table th.bid_header{font-weight:bold;border-bottom:1px solid #CBCBCB;height:30px;text-align:left;}
+table td.bid_line_first{height:30px;padding-left:24px;}
+div.ship_content table th.bid_header_first{padding-left:10px;}
+div.ship_content table td{padding-left:10px;}
+table td.tfirst{height:30px; color:#443b8c;font-weight:bold;}
+table td.bid_line{height:30px;}
+table tr.bid_high{background:#e8e8e8}
+div.autobidfuns{position:absolute;border:1px solid #ccc;padding:10px;background:#EBEBEB;right:10px;top:20px;display:none;}
+div.autobidfuns strong{padding:7px 0;float:left;}
+table.loadingbg{background:#FFFFFF url(../images/slideshow/loading.gif) no-repeat scroll center center;}
+
+div.bid_message{color:red;display:none;}

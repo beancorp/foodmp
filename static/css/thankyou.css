@@ -1,0 +1,233 @@
+#promo_page_container{
+	background-color:  #ffffff;
+}
+#promo_header_container {
+	height: 205px;
+	margin-top: 15px;
+	position: absolute;
+	width: 950px;
+}
+#promo_header_title {
+	background-image: url("/skin/red/fanpromo/fan_frenzy_heading.png");
+	float: left;
+	height: 127px;
+	width: 415px;
+	margin-top: 25px;
+	margin-left: 7px;
+}
+#promo_page_tabs {
+	margin-left: 45px;
+	margin-top: 195px;
+}
+#promo_header_container {
+	height: 195px;
+	margin-top: 15px;
+}
+.tab_button{
+	width: 143px;
+}
+.promo_icon {
+	margin-top: 10px;
+}
+.thankyou-content{
+	margin-left: 45px;
+	padding-bottom: 30px;
+}
+.thankyou-content h3{
+	color: #3f3586;
+	font-family:Arial, Helvetica, sans-serif;
+	margin-top: 46px;
+	font-size: 20px;
+}
+.thankyou-content p{
+	font-size: 14px;
+	color: #555555;
+	font-family:Arial, Helvetica, sans-serif;
+	width: 595px;
+}
+.btn-view{
+	background: url(/images/btn-view.png) no-repeat;
+	width: 195px;
+	height: 53px;
+	line-height: 53px;
+	padding-left: 49px;
+	font-size: 14px;
+	color: #555555;
+	cursor: pointer;
+	margin-top: 16px;
+}
+#promo_page_tab_content{
+	border-top: 2px solid #b2d3df;
+	padding-top: 30px;
+	margin-top: 0px;
+}
+#promo_page_tab_header {
+	border-bottom: 2px solid #eff5f6;
+}
+.thanks-shadow{
+	box-shadow: -25px 0px 24px 0px #f0f3fa, 14px 0 24px 0px #f0f3fa;
+}
+.ie9 .tab_button{
+	padding-top: 17px;
+	height: 50px;
+}
+.ie9 .text_box_1 input#text_box_1{
+	height: 18px;
+	width: 290px;
+	margin-left: 0px;
+}
+.ie9 .btn-browse input, .ie9 .btn-upload-1 input{
+	filter: alpha(opacity=0);
+	margin-left: -60px;
+}
+.ie9 .style-select select{
+	filter: alpha(opacity=0);
+}
+.ie9 input#retailer_name{
+	width: 290px;
+	height: 30px;
+}
+.ie9 input#entry_code{
+	width: 290px;
+	height: 30px;
+}
+.ie9 .text_box_1{
+	float: none;
+}
+.ie9 .text_box_1 input{
+	float: left;
+	width: 290px;
+}
+/*.ie9 #entry_button{
+	background: url(/images/img-btn-enter.png) no-repeat;
+	width: 201px;
+	height: 50px;
+}*/
+.ie9 .entry_field_text{
+	margin-top: 15px;
+}
+.ie9 #promo_header_photos{
+	margin-right: 52px;
+}
+
+/* entry page
+==================================================*/
+#promo_page_content{
+	margin-left: 45px;
+}
+.btn-browse, .btn-upload-1{
+	background: url(/images/btn-browse.png) no-repeat;
+	width: 94px;
+	height: 32px;
+	float: left;
+	margin-top: -2px;
+	margin-left: 14px;
+	margin-bottom: 18px;
+	cursor: pointer;
+	position: relative;
+}
+.ie9 .btn-browse input{
+	position: absolute;
+	left: 60px;
+	top: 0;
+}
+.ie9 #text_box_1{
+	height: 18px;
+}
+.btn-upload-1{
+	background: url(/images/btn-upload-1.png) no-repeat;
+}
+.btn-browse input, .btn-upload-1 input{
+	opacity: 0;
+	width: 94px;
+	height: 32px;
+	cursor: pointer;
+	font-size: 100px;
+	padding-right: 0;
+	overflow: hidden;
+}
+::-webkit-file-upload-button { cursor:pointer; }
+.text_box_1{
+	float: left;
+}
+.entry-field-text-box-1{
+	margin-bottom: 22px;
+	margin-top: 18px;
+}
+.entry-field-fl .question{
+	background: url(/images/questionmark.png) no-repeat;
+	cursor: pointer;
+	height: 19px;
+	width: 19px;
+	float: left;
+	margin-left: 14px;
+	margin-bottom: 4px;
+}
+.entry-field-fl label{
+	float: left;
+}
+.tooltip_description{
+	display: none;
+}
+#promo_page_entry_form textarea{
+	height: 145px;
+}
+.style-select{
+	 width: 290px;
+	 background: url(/images/arrow1.png) right no-repeat;
+	 height: 31px;
+	 position: relative;
+	 color: #132d59;
+	 /*overflow: hidden;*/
+	 border: 1px solid #dcdcdc;
+}
+.style-select span.select-1{
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 height: 31px;
+	 width: 290px;
+	 line-height: 31px;
+	 padding-left: 7px;
+	 font-size: 14px;
+	 color: #555555;
+}
+.style-select select{
+	 position: absolute;
+	 top: -3px;
+	 left: 0;
+	 opacity: 0;
+	 width: 35px;
+	 height: 31px;
+}
+#promo_page_entry_form input[type="text"], #promo_page_entry_form textarea{
+	width: 285px;
+	height: 19px;
+	border: 1px solid #dcdcdc;
+}
+
+#promo_page_entry_form select{
+	width: 292px;
+	height: 35px;
+	border: 1px solid #dcdcdc;
+}
+#promo_page_entry_form textarea{
+	height: 155px;
+}
+input.entry-btn{
+	width: 180px;
+	height: 50px;
+	font-weight: bold;
+	font-size: 16px;
+	margin-right: 11px;
+	cursor: pointer;
+	margin-bottom: 50px;
+}
+#promo_page_entry_form{
+}
+#promo_page_container{
+	/*box-shadow: -18px 0px 24px 0px #f0f3fa, 14px 0 24px 0px #f0f3fa;*/
+}
+.custom-combobox{
+	display: none;
+}

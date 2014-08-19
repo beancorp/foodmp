@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script language="javascript" src="/skin/red/js/jquery-1.js"></script>
+<script language="javascript" src="/skin/red/js/jquery.js"></script>
+<script language='javascript'>    
+    function getstring()
+    {
+        return "<input id=\"key\" type=text  ondblclick=\"showMenu()\" onkeydown=\"selectElement()\" value=\"请用鼠标双击击这里\"/>";
+    }
+    function getKeyCode()
+    {
+        //alert(window.event.keyCode);
+        //alert(document.getElementById("key").value);
+        document.getElementById("key").value+=window.event.keyCode;
+    }
+    //==========================================================================================================
+    function mouseOver(e)
+    {
+        e.style.background="#0080ff";
+    }
+    function mouseOut(e)
+    {
+        e.style.background="#ff8000";
+    }
+    function mouseClick(e)
+    {
+        document.getElementById("key").value=e.innerText;
+        e.parentNode.style.display="none";
+    }
+    var num=0;
+    var divObj;
+    function showMenu()
+    {
+        var arr=getOjbPosition();
+        var left=arr[0];
+        var top=arr[1];
+        //alert(left+" : "+top);
+        var obj=document.getElementById("key");
+        
+        var div=document.getElementById("Menu");
+        div.style.position="absolute";
+        div.style.background="#ff8000";
+        div.style.zIndex=2000; 
+        div.style.left=left;
+        div.style.top=top;
+        div.style.width=obj.offsetWidth;
+        div.style.display="";
+        divObj=div;
+        num=div.childNodes.length;
+    }
+    function getDiv()
+    {
+        var div=document.getElementById("Menu");
+        var num=div.childNodes.length;
+        for(var i=0;i<num;i++)
+        {
+            alert(div.childNodes[i].outerHTML);
+            div.childNodes[i].style.background="#0080ff";
+        }
+        
+    }
+    function getOjbPosition()
+    {
+        var arr=new Array();
+        var obj=document.getElementById("key");
+        var x=obj.offsetLeft;
+        var y=obj.offsetTop+obj.offsetHeight;
+        while(obj.offsetParent)
+        {
+            obj=obj.offsetParent;
+            x+=obj.offsetLeft;
+            y+=obj.offsetTop;
+        }
+        arr[0]=x;
+        arr[1]=y;
+        return arr;
+    }
+    var k=0;
+    var tag=0;
+    function selectElement()
+    {    
+        
+        var key=window.event.keyCode
+        if(divObj.style.display=="")
+        {
+            if(key==40)
+            {
+                //divObj.childNodes[k].style.background="#0080ff";    
+                if(tag==0)
+                {}
+                else
+                {                    
+                    k++;
+                    if(k>=num)
+                    {                
+                        k=0;                
+                    }    
+                }        
+            }
+            if(key==38)
+            {
+                //divObj.childNodes[k].style.background="#0080ff";
+                k--;
+                if(k<0)
+                {
+                    k=num-1;                
+                }
+            }
+            for(var i=0;i<num;i++)
+            {    
+                if(i==k)
+                {                
+                    divObj.childNodes[i].style.background="#0080ff";
+                    document.getElementById("key").value=divObj.childNodes[i].innerText;
+                }
+                else
+                {
+                    divObj.childNodes[i].style.background="";
+                    //document.getElementById("key").value=divObj.childNodes[i].innerText;
+                }
+            }        
+        }
+        tag=1;
+        if(key==13)
+        {
+            
+            if(divObj.style.display=="")
+            {
+                divObj.style.display="none";
+            }
+            else
+            {
+                divObj.style.display="";
+            }
+        }    
+    
+    }
+    //******************************************* 测试数组 ***********************************
+    var arr="A,B,C,D,E,F,H";
+    var t=0;
+    function getArray()
+    {
+    
+        var str=document.getElementById("AVG").value;
+        var alist=arr.split(',');
+        
+        for(var i=0;i<alist.length;i++)
+        {            
+            if(alist[i]==str)
+            {
+                t=1;
+            }
+        }
+        
+        if(t==1)
+        {
+            arr="";
+            for(var i=0;i<alist.length;i++)
+            {            
+                if(alist[i]!=str)
+                {
+                    arr+=alist[i]+",";
+                }
+            }
+            arr=arr.substring(0,arr.length-1);
+            t=0;
+        }
+        else
+        {
+            arr=arr+","+str;
+        }
+        alert(arr);
+        
+    }
+    </script>
+</head>
+
+<body>
+当一个字符数组含有某一个元素时删除它，如果没有该元素，则增加到数组中去<br>
+<input id="AVG" type=text value="输入字符" />
+<input type=button onclick="getArray()"  value="测试数组"/><p><p><p><p><p>
+<script language='javascript'>document.write(getstring())</script>
+双击显示下拉列表后可以用键盘的上下键选择,也可以用回车键显示下拉列表
+<div id="Menu" style="background:#008080;display:none;cursor:default">
+<div onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onclick="mouseClick(this)"><span style="width:100%">AAA</span></div>
+<div onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onclick="mouseClick(this)"><span>bbb</span></div>
+<div onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onclick="mouseClick(this)"><span>ccc</span></div>
+<div onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onclick="mouseClick(this)"><span>ddd</span></div>
+<div onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onclick="mouseClick(this)"><span>eee</span></div>
+<div onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onclick="mouseClick(this)"><span>fff</span></div>
+<div onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onclick="mouseClick(this)"><span>AAA</span></div>
+<div onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onclick="mouseClick(this)"><span>bbb</span></div>
+<div onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onclick="mouseClick(this)"><span>ccc</span></div>
+<div onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onclick="mouseClick(this)"><span>ddd</span></div>
+<div onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onclick="mouseClick(this)"><span>eee</span></div>
+</div>
+
+
+
+<form id="form1" name="form1" method="post" action="">
+  <label>
+  <select name="downList" id="downList">
+    <option value="1">aaaaaaaa---1</option>
+    <option value="2">bbbbbbbb---2</option>
+    <option value="3">cccccccc---3</option>
+  </select>
+  </label>
+</form>
+
+</body>
+</html>

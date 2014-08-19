@@ -1,0 +1,111 @@
+@charset "utf-8";
+/* CSS Document */
+ul.gallarylist{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+ul.gallarylist li{
+	padding:3px;
+	border:1px solid #ccc;
+	margin-right:10px;
+	text-align:center;
+	float:left;
+}
+.des_catname{
+	width:100px;
+	word-spacing:break;
+	height:15px;
+}
+.des_opts{
+	text-align:center;
+	border-top:1px solid #ccc;
+}
+.des_opts ul{
+    list-style: none;
+    margin: 0px;
+}
+.des_opts ul li{
+    float: left;
+    border-style:none;
+    margin: 0px;
+}
+.des_opts ul li.navigate img{
+    padding-top:4px;
+}
+.templatelist{
+	list-style:none;
+	margin-left:15px;
+	_margin-left:10px;
+	float:left;
+	width:730px;
+	overflow:hidden;
+}
+.templatelist li{
+	list-style:none;
+	float:left;
+	width:124px;
+	overflow:hidden;
+	margin-right:20px;
+	margin-bottom:20px;
+	text-align:center;
+}
+.tabtmp{
+	list-style:none;
+	margin:0;
+	float:left;
+}
+.tabtmp li{
+	list-style:none;
+	width:100px;
+	height:40px;
+	line-height:40px;
+	text-align:center;
+	float:left;
+	cursor:pointer;
+	font-weight:bold;
+}
+.tabtmp li.active_tab{
+	background-color:#FFF;
+}
+
+
+div.listimg {
+	width:100px;
+	height:100px;
+	overflow:hidden;
+	position:relative;
+	display:table-cell;
+	text-align:center;
+	vertical-align:middle;
+	padding-left:2px;
+	}
+div.listimg2{
+	width:110px;
+	height:100px;
+	overflow:hidden;
+	position:relative;
+	display:table-cell;
+	text-align:center;
+	vertical-align:middle
+}
+div.listimg span {
+	position:static;
+	+position:absolute;
+	top:50%
+	}
+div.listimg2 span {
+	position:static;
+	+position:absolute;
+	top:50%
+	}
+div.listimg a img {
+	position:static;
+	+position:relative;
+	top:-50%;left:-50%;
+}
+div.listimg2 a img {
+	position:static;
+	+position:relative;
+	top:-50%;left:-50%;
+}

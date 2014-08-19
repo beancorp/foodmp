@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* STATE SEARCH PAGES */
+
+form#statesearch						{ width:530px; height:90px; position:relative; padding:10px 0 0 10px; }
+form#nstatesearch						{ width:530px; height:70px; position:relative; padding:10px 0 0 10px; }
+form.st-connecticut						{ background:url(../images/h-state-cn.gif) no-repeat; }
+form.st-estate							{ background:url(../images/h-estate-cn.gif) no-repeat; }
+
+form#statesearch2						{ width:530px; height:108px; position:relative; padding:10px 0 0 10px; }
+form.st-connecticut2					{ background:url(../images/h-state-cn3.gif) no-repeat; }
+#statesearch2 fieldset					{ clear:left; }
+#statesearch2 ol							{ list-style:none; margin:0; }
+#statesearch2 li							{ float:left; padding-right:3px; }
+#statesearch2 select						{ border:1px solid #999; }
+#statesearch2 select.state				{ width:53px; }
+#statesearch2 select.region				{ width:115px; }
+#statesearch2 select.radius				{ width:115px; }
+
+#statesearch fieldset					{ clear:left; margin-left: 10px;}
+#statesearch ol							{ list-style:none; margin:0; }
+#statesearch li							{ float:left; padding-right:3px; }
+#statesearch select.region				{ width:115px; }
+#statesearch select.radius				{ width:115px; }
+
+#searchresults 							{ float:right; width:760px; padding:0; margin-top:10px; }
+#searchresults h2 						{ background:#3c3380; color:#fff; padding:4px; margin-top:0; position:relative; width:742px; }
+
+strong.keywordresult					{ padding:15px 0; display:block;}
+
+ul#state-advertisers					{ list-style:none; margin:0;  width:500px; }
+#state-advertisers li 					{ border-top:solid 1px #ccc; padding:10px 0 10px 0; clear:both;_width:100%;_float:left;_padding-bottom:0; }
+#state-advertisers p 					{ margin-top:0; color:#777; }
+#state-advertisers span 				{ font-weight:bold; }
+
+#state-advertisers a.title 				{ background:url(../images/li-orange.gif) no-repeat 0 1px; padding-left:15px; color:#3c3380; font-weight:bold; text-decoration:none; }
+fieldset.searchlocation					{ text-align:right; padding-right:8px; margin-left: 0 !important;}
+
+h1.h-state-cn							{ background:url(../images/h-state-cn.gif) no-repeat; width:158px; height:44px;}
+h2#location								{ font-size:11px; color:#fff; margin:0 0 5px 0;  background:#3c3380; padding:4px 6px; width:280px; display: block; }

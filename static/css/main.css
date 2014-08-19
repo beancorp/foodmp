@@ -1,0 +1,604 @@
+.text {
+
+    font-family:Tahoma;
+
+	font-size: 11px;
+
+	color: #4B4B4B;
+
+	text-align: justify;
+
+}
+
+.textRED {
+
+    font-family:Tahoma;
+
+	font-size: 11px;
+
+	color: #ff0000;
+
+	text-align: justify;
+
+}
+
+.top_small {
+
+    font-family:Tahoma;
+
+	font-size: 12px;
+
+	color: #0084C8;
+
+	text-decoration: none;
+
+	font-weight: bold;
+
+}
+
+.top_small:hover {
+
+    font-family:Tahoma;
+
+	font-size: 12px;
+
+	color: #0084C8;
+
+	text-decoration: none;
+
+}
+
+.textField {
+
+    font-family:Tahoma;
+
+	font-size: 11px;
+
+	color: #4C4C47;
+
+	text-decoration: none;
+
+	height:18px;
+
+	width:201px;
+
+}
+
+.text11 {
+
+    font-family:Tahoma;
+
+	font-size: 11px;
+
+	color: #4C4C47;
+
+	text-decoration: none;
+
+}
+
+.text11:hover {
+
+    font-family:Tahoma;
+
+	font-size: 11px;
+
+	color: #0084C8;
+
+	text-decoration: none;
+
+}
+
+.blue_link {
+
+	font-family: Tahoma;
+
+	font-size: 11px;
+
+	font-weight: bold;
+
+	color: #0084C8;
+
+	text-align: justify;
+
+	text-decoration: none;
+
+}
+
+.blue_link:hover {
+
+	font-family: Tahoma;
+
+	font-size: 11px;
+
+	font-weight: bold;
+
+	color: #4C4C47;
+
+	text-align: justify;
+
+	text-decoration: none;
+
+}
+
+
+
+.text9blue {
+
+	font-family: Tahoma;
+
+	font-size: 9px;
+
+	color: #0084C8;
+
+	text-align: justify;
+
+	text-decoration: none;
+
+}
+
+.text9blue:hover {
+
+	font-family: Tahoma;
+
+	font-size: 9px;
+
+	color: #646460;
+
+	text-align: justify;
+
+	text-decoration: none;
+
+}
+
+.whitetext {
+
+	font-family: Tahoma;
+
+	font-size: 11px;
+
+	color: #ffffff;
+
+	text-decoration: none;
+
+}
+
+
+
+.whitetext:hover {
+
+	font-family: Tahoma;
+
+	font-size: 11px;
+
+	color: #ffffff;
+
+	text-decoration: underline;
+
+}
+
+.newstext {
+
+	font-family: Tahoma;
+
+	font-size: 12px;
+
+	color: #0084C8;
+
+	text-decoration: none;
+
+}
+
+
+
+.newstext:hover {
+
+	font-family: Tahoma;
+
+	font-size: 12px;
+
+	color: #0084C8;
+
+	text-decoration: underline;
+
+}
+
+
+
+.text11blue {
+
+	font-family: Tahoma;
+
+	font-size: 11px;
+
+	color: #0084C8;
+
+	text-align: justify;
+
+	text-decoration: none;
+
+}
+
+
+
+.greysmalllink {
+
+	font-family: Tahoma;
+
+	font-size: 10px;
+
+	color: #555555;
+
+	text-decoration: none;
+
+}
+
+.wtext {
+
+	font-family: Tahoma;
+
+	font-size: 12px;
+
+	color: #ffffff;
+
+	text-decoration: none;
+
+}
+
+.greysmalllink:hover {
+
+	font-family: Tahoma;
+
+	font-size: 10px;
+
+	color: #555555;
+
+	text-decoration: underline;
+
+}
+
+
+
+.arial11bold {
+
+	font-family: Arial;
+
+	font-size: 11px;
+
+	color: #454545;
+
+	text-align: justify;
+
+	font-weight:bold;
+
+}
+
+.arial11 {
+
+	font-family: Arial;
+
+	font-size: 11px;
+
+	color: #454545;
+
+	text-align: justify;
+
+	
+
+}
+
+
+
+.bdr
+
+{
+
+border:1px solid #000000;
+
+}
+
+.arial11white {
+
+	font-family: Arial;
+
+	font-size: 11px;
+
+	color: #FFFFFF;
+
+	text-align: justify;
+
+	font-weight:bold;
+
+}
+
+.reps_hover
+
+{
+
+	font-family: Arial;
+
+	font-size: 11px;
+
+	color: #FFFFFF;
+
+	text-align: justify;
+
+	font-weight:bold;
+
+	text-decoration:none;
+
+}
+
+.reps_hover:hover
+
+{
+
+
+
+	font-family: Arial;
+
+	font-size: 11px;
+
+	color: #0084C8;
+
+	text-align: justify;
+
+	font-weight:bold;
+
+	text-decoration:none;
+
+}
+
+
+
+.link_small {
+
+	font-family: Arial, Helvetica, sans-serif;
+
+	font-size: 10px;
+
+	color: #5B5B5A;
+
+	text-decoration: none;
+
+}
+
+.link_small:hover {
+
+	font-family: Arial, Helvetica, sans-serif;
+
+	font-size: 10px;
+
+	color: #D25621;
+
+	text-decoration: underline;
+
+}
+
+.link_big {
+
+	font-family: Arial, Helvetica, sans-serif;
+
+	font-size: 11px;
+
+	color: #D25621;
+
+	text-decoration: none;
+
+}
+
+.link_big:hover {
+
+	font-family: Arial, Helvetica, sans-serif;
+
+	font-size: 11px;
+
+	color: #5B5B5A;
+
+	text-decoration: underline;
+
+}
+
+.Button {
+
+	PADDING-RIGHT: 0px;
+
+	PADDING-LEFT: 2px;
+
+	FONT-SIZE: 11px;
+
+	PADDING-BOTTOM: 0px;
+
+	COLOR: #333333;
+
+	PADDING-TOP: 2px;
+
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+
+	background-color: #FBFBFB;
+
+	border: 1px solid #BBBBBB;
+
+
+
+}
+
+.btnLogin
+
+{
+
+height:18px;
+
+widows:50px;
+
+font-family:Arial, Helvetica, sans-serif;
+
+font-size:11px;
+
+font-weight:bold;
+
+background-image:url(images/login_reps_26.jpg);
+
+border-style:none;
+
+border-collapse:collapse;
+
+
+
+}
+
+.field {
+
+	border: 1px solid #333333;
+
+	height: 18px;
+
+	width: auto;
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+
+	font-size: 11px;
+
+	color: #C60200;
+
+}
+
+
+
+.hbutton {
+
+	BORDER-RIGHT: #999999 1px solid; BORDER-TOP: #999999 1px solid; FONT-SIZE: 11px; BORDER-LEFT: #999999 1px solid; WIDTH: auto; COLOR: #000000; BORDER-BOTTOM: #999999 1px solid; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; HEIGHT: 20px; BACKGROUND-COLOR: #ddebff
+
+}
+
+.sp2_field {
+
+border:1px solid #999999; background-color:#ffffff; font-family:Arial; font-style:normal; color:#000000; font-size:12px; font-weight:normal; 
+
+	}
+
+.sp2_btn {
+
+	font-family:Arial; font-style:normal; color:#000000; font-size:12px; font-weight:normal; 
+
+	}
+
+.sp2_i_select {
+
+	background-color:#ffffff; font-family:Arial; font-style:normal; color:#000000; font-size:12px; font-weight:normal; 
+
+	}
+
+a.sp2_advanced:link,a.sp2_advanced:active,a.sp2_advanced:visited {
+
+	font-family:Arial; font-style:normal; text-decoration:none; color:#0084C8; font-size:11px; font-weight:normal; 
+
+	}
+
+a.sp2_advanced:hover {
+
+	font-family:Arial; font-style:normal; text-decoration:underline; color:#0084C8; font-size:11px; font-weight:normal;
+
+	}
+
+.sp2_info {
+
+	font-family:Arial; font-style:normal; text-decoration:none; color:#000000; font-size:13px; font-weight:bold; 
+
+	}
+
+a.sp2_title:link,a.sp2_title:active,a.sp2_title:visited {
+
+	font-family:Arial; font-style:normal; text-decoration:none; color:#0084C8; font-size:13px; font-weight:bold;
+
+	}
+
+a.sp2_title:hover {
+
+	font-family:Arial; font-style:normal; text-decoration:underline; color:#0084C8; font-size:13px; font-weight:bold;
+
+	}
+
+.sp2_result {
+
+	font-family:Arial; font-style:normal; text-decoration:none; color:#000000; font-size:12px; font-weight:normal; 
+
+	}
+
+.sp2_select {
+
+	font-family:Arial; font-style:normal; text-decoration:none; color:#990000; font-size:12px; font-weight:bold; 
+
+	}
+
+.sp2_address {
+
+	font-family:Arial; font-style:normal; text-decoration:none; color:#008000; font-size:12px; font-weight:normal; 
+
+	}
+
+.sp2_page {
+
+	font-family:Arial; font-style:normal; text-decoration:none; color:#000000; font-size:12px; font-weight:normal; 
+
+	}
+
+a.sp2_page:link,a.sp2_page:active,a.sp2_page:visited {
+
+	font-family:Arial; font-style:normal; text-decoration:underline; color:#000000; font-size:12px; font-weight:normal; 
+
+	}
+
+a.sp2_page:hover {
+
+font-family:Arial; font-style:normal; text-decoration:underline; color:#000000; font-size:12px; font-weight:normal; 
+
+	}
+
+.sp2_nowpage {
+
+font-family:Arial; font-style:normal; text-decoration:none; color:#a90a08; font-size:12px; font-weight:bold; 
+
+	}
+
+.font_verdana {font:12.5px "verdana";}
+
+.welcome_title {background:url(../site/images/login_resp_head_bg.jpg) repeat-x; padding:20px 0px 0px 10px; }
+
+.welcome_title_font {font:22px "verdana"; color:#FF7300; font-weight:bold;}
+
+.news_bg {background:url(../site/images/news_bg.gif) repeat-y; height:127px; font:12.5px "verdana"; padding:0px 20px 0px 20px;}
+
+.sheet_title_bg {background:url(../site/images/bg.gif) repeat-y; height:255px; font:12.5px "verdana";}
+
+.top_rtlinks {color:#2785E4; font:12.5px "verdana"; font-weight:bold;}
+
+.top_rtlinks a {color:#53595A; text-decoration:none;}
+
+.top_rtlinks a:hover {color:#2785E4; text-decoration:none;}
+
+.sheet_title {font:12.5px "verdana"; font-weight:bold; background-color:#fff;}
+
+
+
+.greenButt{
+
+	color:#009900;
+
+	font-weight:bold;
+
+	font-size:11px;
+
+}
+
+
+
+.redButt{
+
+	color:#FF0000;
+
+	font-weight:bold;
+
+	font-size:11px;
+
+}
+

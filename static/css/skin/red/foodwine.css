@@ -1,0 +1,175 @@
+/* CSS Document */
+#container #rightCol{position:relative}
+.foodwine-h3{font-size:15px; padding:4px 0; margin:0; color:#336699}
+#container #rightCol div.stock_items_list ul{margin:0; padding:0;}
+#container #rightCol div.stock_items_list ul li{ display:block;width:360px; margin:0; padding:0; height:100px; padding-top:12px; padding-bottom:12px; position:relative;}
+
+#container #rightCol div.stock_items_list ul li.top{}
+#container #rightCol div.stock_items_list ul li.ntop{ border:none;border-top-width:1px; border-top-style:solid; border-top-color:#CCCCCC;}
+
+#container #rightCol div.stock_items_list ul li.left{ float:left;}
+#container #rightCol div.stock_items_list ul li.right{ float:right; text-align:left;}
+
+#container #rightCol div.stock_items_list ul li div.img{ width:140px; height:100px; float:left;}
+#container #rightCol div.stock_items_list ul li div.desc{ width:120px; float:left; margin-left:12px; margin-top:7px;}
+#container #rightCol div.stock_items_list ul li div.desc div.name a{ color:#4e4e4e; font-weight:bold; font-size:12px; text-decoration:none}
+#container #rightCol div.stock_items_list ul li div.desc div.price{ padding-top:10px;}
+#container #rightCol div.stock_items_list ul li div.add{ width:85px; float:right; margin-top:30px; }
+#container #rightCol div.stock_items_list ul li div.onsale-soon{ width:105px; float:right;}
+#container #rightCol div.stock_items_list ul li div.add a{text-decoration:none; color:#6b6b6b; font-size:11px;}
+
+#container #rightCol div.stock_items_list ul li div.add div.add_panel{ background:url(/skin/red/images/foodwine/add_to_basket/add_panel.png) no-repeat top left; width:139px; height:62px; display:none; position:absolute; z-index:322; top:34px; left:226px;}
+#container #rightCol div.stock_items_list ul li div.add div.add_panel .add_to_basket{ margin-right:12px; margin-top:8px; float:right;}
+#container #rightCol div.stock_items_list ul li div.add div.add_panel .add_to_basket label{font-size:11px;}
+#container #rightCol div.stock_items_list ul li div.add div.add_panel .add_opera{ vertical-align:middle; margin-top:8px; margin-right:10px; float:right;}
+#container #rightCol div.stock_items_list ul li div.add div.add_panel .add_opera input.input_add{width:35px; padding:0; border-color:#d5d5d5; border-style:solid; border-width:1px; margin-left:8px; margin-right:8px; height:18px; float:left; margin-top:0px;}
+
+#container #rightCol div.stock_items_bottom { background:url(/skin/red/images/foodwine/stock_items_bottom.jpg) no-repeat top left; width:750px; height:22px;}
+#container #rightCol div.stock_items_bottom a.back_to_top{ float:right; margin-right:10px; margin-top:3px; color:#ffffff; font-size:11px;}
+#container #rightCol div.stock_items_list h2 { color:#ffffff;}
+#container #rightCol div.stock_items_list h2 a.back-top { background:url(../images/arrow-purple.gif) no-repeat 0 1px; float:right; margin-right:10px; margin-top:3px; color:#ffffff; font-size:11px; padding-left:15px;}
+
+#container #rightCol div.sellerhome_items_list{height:auto;}
+#container #rightCol div.sellerhome_items_list ul{margin:0; padding:0;}
+#container #rightCol div.sellerhome_items_list ul li{ display:block;width:230px; margin:0; padding:0; padding-top:12px; padding-bottom:12px; position:relative;}
+
+#container #rightCol div.sellerhome_items_list ul li{ border-bottom:1px solid #CCC;}
+
+#container #rightCol div.sellerhome_items_list ul li.left{ float:left; clear: left;}
+#container #rightCol div.sellerhome_items_list ul li.right{ float:right; text-align:left;}
+
+#container #rightCol div.sellerhome_items_list ul li div.img{ width:80px; height:58px; float:left;}
+#container #rightCol div.sellerhome_items_list ul li div.desc{ width:130px; float:left; margin-left:12px; margin-top:7px;}
+#container #rightCol div.sellerhome_items_list ul li div.desc div.name a{ color:#4e4e4e; font-weight:bold; font-size:12px; text-decoration:none;}
+#container #rightCol div.sellerhome_items_list ul li div.desc div.price{ padding-top:10px;}
+#container #rightCol div.sellerhome_items_list ul li div.desc div.price-special{ padding-top:10px; color:#FF9900}
+#container #rightCol div.sellerhome_items_list ul li div.add{ width:85px; float:right; margin-top:30px; }
+#container #rightCol div.sellerhome_items_list ul li div.add a{text-decoration:none; color:#6b6b6b; font-size:11px;}
+
+input.text {border:solid 1px #ccc;}
+.stock_items_list input.quantity	{  width:50px; margin-bottom:5px; float:left; }
+.stock_items_list table th{font-weight:bold; text-align:left; border-bottom:1px solid #CCCCCC; line-height:30px;}
+.stock_items_list table td{padding:10px 0; border-bottom:1px solid #CCCCCC;vertical-align:top; }
+.stock_items_list a.del-item{ background:url(../images/foodwine/del_basket_item.png) no-repeat; text-decoration:none; padding-left:13px;}
+.stock_items_list .p-name{ float: left; width: 200px; padding-left: 10px; font-weight:bold;}
+.stock_items_list .p-name a{ font-weight:bold; text-decoration:none}
+.basket-save{ padding:20px 0;}
+.basket-save a{ background:url(../images/foodwine/basket_save.png) no-repeat;text-decoration:none; font-size:11px; padding-left:10px}
+.basket-save span{ font-weight:bold; padding-left:442px;}
+.basket-send-order{padding-bottom:20px; float:right;}
+.basket-send-order span.customer-code{float: left; font-weight: bold; height: 30px; display: block; padding: 5px 7px 0 0;}
+
+
+#container #rightCol div.sellerhome_wine_items_list .foodwine-h3{color:#000099; font-weight:bold;}
+#container #rightCol div.sellerhome_wine_items_list{height:auto;}
+#container #rightCol div.sellerhome_wine_items_list ul{margin:0; padding:0; float:left;}
+#container #rightCol div.sellerhome_wine_items_list ul.level-1-1{background:url(/skin/red/images/foodwine/bg-menu-ul-1.png) no-repeat left bottom; width:497px;}
+#container #rightCol div.sellerhome_wine_items_list ul.level-1-2{background:url(/skin/red/images/foodwine/bg-menu-ul-2.png) no-repeat left bottom; width:497px;}
+#container #rightCol div.sellerhome_wine_items_list ul li{ display:block;width:230px; margin:0; padding:0; height:58px; padding-top:12px; padding-bottom:12px; position:relative;}
+#container #rightCol div.sellerhome_wine_items_list ul li{ padding-bottom:10px; height:auto; margin-bottom:10px;}
+#container #rightCol div.sellerhome_wine_items_list ul li ul li.product-item{ border:none; padding:0 0 5px 0; margin:0; height: 65px; overflow: hidden;}
+#container #rightCol div.sellerhome_wine_items_list ul li.left{ float:left;}
+#container #rightCol div.sellerhome_wine_items_list ul li.right{ float:right; text-align:left;}
+#container #rightCol div.sellerhome_wine_items_list ul li div.img{ width:80px; height:58px; float:left;}
+#container #rightCol div.sellerhome_wine_items_list ul li div.desc{ width:180px; float:left; margin-top:7px;}
+#container #rightCol div.sellerhome_wine_items_list ul li div.desc div.name a{ color:#4e4e4e; font-weight:bold; font-size:12px; float:left; text-decoration:none}
+#container #rightCol div.sellerhome_wine_items_list ul li div.desc div.name span{ float:right; font-weight:bold; color:#333333; position:absolute; right:0;}
+#container #rightCol div.sellerhome_wine_items_list ul li div.desc div.price-special{ padding-top:10px; color:#FF9900}
+#container #rightCol div.sellerhome_wine_items_list ul li div.add{ width:85px; float:right; margin-top:30px; }
+#container #rightCol div.sellerhome_wine_items_list ul li div.add a{text-decoration:none; color:#6b6b6b; font-size:11px;}
+#container #rightCol div.sellerhome_wine_items_list ul li div.desc-1{ width:230px; float:left; margin-top:5px;}
+
+/**
+*	Order Online
+*/
+#rightCol h1.soc-orderonline{ color:#777; font-size:1.8em; margin:10px 0; background:url(/skin/red/images/foodwine/order.jpg) no-repeat left top; padding-left:38px; line-height:29px; height:29px; float:left;width:300px;}
+#rightCol .view-passorder{ float:right; padding-left:10px; margin:25px 55px 0 0; background:url(../images/foodwine/basket_save.png) no-repeat scroll 0 0 transparent; position:relative; z-index:1000;}
+
+/**
+*	Announcement
+*/
+#rightCol h1.soc-announcement{ color:#777; font-size:1.8em; margin:10px 0; background:url(/skin/red/images/foodwine/announcement.jpg) no-repeat left top; padding-left:38px; line-height:36px; height:29px; float:left;width:300px;}
+#rightCol .announcement table td{ padding-bottom:10px;}
+
+/**
+*	Email Alerts
+*/
+#rightCol h1.soc-emailalerts{ color:#777; font-size:1.8em; margin:10px 0 20px; background:url(/skin/red/images/foodwine/emailalerts.jpg) no-repeat left top; padding-left:38px; line-height:29px; height:29px; float:left;width:300px;}
+
+/**
+*	Recipes
+*/
+#rightCol h1.soc-recipes{ color:#777; font-size:1.8em; margin:10px 0; background:url(/skin/red/images/foodwine/recipes.jpg) no-repeat left top; padding-left:38px; line-height:36px; height:29px; float:left;width:300px;}
+
+/**
+*	Flyers
+*/
+#rightCol h1.soc-flyers{ color:#777; font-size:1.8em; margin:10px 0 20px; background:url(/skin/red/images/foodwine/flyers.jpg) no-repeat left top; padding-left:38px; line-height:29px; height:29px; float:left;width:300px;}
+
+.foodwine-h3{font-size:15px; padding:4px 0; margin:0; color:#3d307f}
+#container #rightCol div.orderonline_items_list ul{margin:0; padding:0;}
+#container #rightCol div.orderonline_items_list ul li{ display:block;width:100%; margin:0; padding:0; height:auto; padding-top:12px; padding-bottom:12px; position:relative; border-bottom:1px solid #CCCCCC; cursor:pointer;}
+#container #rightCol div.orderonline_items_list ul li.select{ background-color:#EEEEEE;border-top:none; border-left:none; border-right:none}
+#container #rightCol div.orderonline_items_list ul li.current{ border-top:2px solid #3C3380;border-bottom:2px solid #3C3380; padding-top:0; cursor:default}
+#container #rightCol div.orderonline_items_list ul li span{padding-right:10px; float:left}
+#container #rightCol div.orderonline_items_list ul li span.orderid{ width:65px;}
+#container #rightCol div.orderonline_items_list ul li span.buyer-name{width:232px;}
+#container #rightCol div.orderonline_items_list ul li span.order-date{width:140px;}
+#container #rightCol div.orderonline_items_list ul li span.img{padding:3px 3px 0 9px; width:10px;}
+.orderonline_items_list input.quantity	{  width:50px; margin-bottom:5px; float:left; }
+.orderonline_items_list .table th{font-weight:bold; text-align:left; border-bottom:1px solid #CCCCCC; line-height:30px;}
+.orderonline_items_list .table td{padding:10px 0; border-bottom:1px solid #CCCCCC;vertical-align:top; }
+.orderonline_items_list a.del-item{ background:url(../images/foodwine/del_basket_item.png) no-repeat; text-decoration:none; padding-left:10px;}
+.orderonline_items_list .p-name{ float: left; width: 200px; padding-left: 10px;}
+.orderonline_items_list .p-name a{ font-weight:bold; text-decoration:none}
+
+.table-info tr{height:20px}
+.table-info tr.first{height:30px}
+.table-info .buyer-name-storng{font-size:14px; font-weight:bold}
+.buyer-info{background-color:#EEEEEE; padding:0 5px;overflow:hidden;}
+.order-done{float:right; padding:14px 105px 12px 0}
+
+
+.recipes h2, .emailalerts h2{ color:#3C3481; font-size:1.5em; margin:0; padding:0;}
+.emailalerts h3{ color:#777777; font-size:1.3em; margin:0; padding:20px 0 0; font-weight:bold}
+span.emailalerts-type{padding:0 30px 0 10px;}
+.emailalerts a.edit-stock-items{ top:-15px; position:relative; float:right;font-size:12px; line-height:9px; text-decoration:none; background:url("../images/foodwine/basket_save.png") no-repeat scroll 0 0 transparent; padding-left:12px; right:87px; z-index:1000;}
+.oper-emailalerts{ float:right; padding-left:10px; margin:0;}
+#mainForm input.send-emailalerts{margin:15px 0px 30px 0; padding:3px 0 3px 3px; float:right; border:none}
+#mainForm input.preview-emailalerts{margin:15px 0 30px 0; float:right; border:none}
+
+.recipes .repices-info{height:auto;background-color:#EEEEEE; padding:10px;}
+.recipes .repices-info ul{ margin:1em 0; padding:0;}
+.recipes .repices-info ul li{ display:block; padding:2px 0 2px 3px; width:100%; list-style:none;}
+.recipes .repices-info ul li.select{background-color:#FFFFFF; border:none;}
+.recipes .repices-info ul li .recipes-text{ padding-right:15px ;}
+.recipes .repices-info ul li .recipes-oper{ padding-right:10px ;}
+.recipes .repices-info ul li .recipes-oper-edit{ text-decoration:none;padding:0 15px;background: url(../images/foodwine/recipes-edit.jpg) no-repeat; display:none;}
+.recipes .repices-info ul li .recipes-oper-del{ background:url(../images/foodwine/del_basket_item.png) no-repeat; text-decoration:none; padding-left:13px; display:none;}
+.recipes .post-title,.emailalerts .post-title{ padding:15px 0 10px;}
+.recipes .recipe-preview{ right:124px; position:absolute; top:43px; text-decoration:none; background:url(../images/foodwine/preview-recipe.jpg) no-repeat; padding-left:20px;}
+.recipe-h2 {padding:5px 0; font-weight:bold; color:#666666}
+
+
+#container #rightCol div.emailalerts_items_list ul{margin:0; padding:0;}
+#container #rightCol div.emailalerts_items_list ul li{ display:block;width:360px; margin:0; padding:0; height:58px; padding-top:12px; padding-bottom:12px; position:relative; border-bottom:1px solid #CCCCCC;}
+#container #rightCol div.emailalerts_items_list ul li.select{ background-color:#EEEEEE;border-top:none; border-left:none; border-right:none; cursor:pointer}
+
+#container #rightCol div.emailalerts_items_list ul li.top{border-top:1px solid #CCCCCC;}
+
+#container #rightCol div.emailalerts_items_list ul li.left{ float:left;}
+#container #rightCol div.emailalerts_items_list ul li.right{ float:right; text-align:left;}
+
+#container #rightCol div.emailalerts_items_list ul li div.img{ width:80px; height:58px; float:left;}
+#container #rightCol div.emailalerts_items_list ul li div.desc{ width:170px; float:left; margin-left:12px; margin-top:7px;}
+#container #rightCol div.emailalerts_items_list ul li div.desc div.name{ color:#4e4e4e; font-weight:bold; font-size:12px;}
+#container #rightCol div.emailalerts_items_list ul li div.desc div.price{ padding-top:10px;}
+#container #rightCol div.emailalerts_items_list ul li div.add{ width:85px; float:right; margin-top:30px; }
+#container #rightCol div.emailalerts_items_list ul li div.add a{text-decoration:none; color:#6b6b6b; font-size:11px;}
+#container #rightCol div.emailalerts_items_list ul li div.add div.add_panel{ background:url(/skin/red/images/foodwine/add_to_basket/add_panel.png) no-repeat top left; width:139px; height:62px; display:none; position:absolute; z-index:322; top:35px; left:225px;}
+#container #rightCol div.emailalerts_items_list ul li div.add div.add_panel .add_to_basket{ margin-right:12px; margin-top:8px; float:right;}
+#container #rightCol div.emailalerts_items_listemailalerts_items_list ul li div.add div.add_panel .add_to_basket label{font-size:11px;}
+#container #rightCol div.emailalerts_items_list ul li div.add div.add_panel .add_opera{ vertical-align:baseline; margin-top:8px; margin-right:10px; float:right;}
+#container #rightCol div.emailalerts_items_list ul li div.add div.add_panel .add_opera input.input_add{width:35px; padding:0; border-color:#d5d5d5; border-style:solid; border-width:1px; margin-left:8px; margin-right:8px;}
+#container #rightCol div.emailalerts_items_list ul li .ck-id{ float:left; margin:0 10px;}
+

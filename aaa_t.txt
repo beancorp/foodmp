@@ -1,0 +1,8 @@
+failed
+
+
+.
+response_text=Merchant is not live
+status=failed
+response_code=-1
+result=-1

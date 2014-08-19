@@ -1,0 +1,2 @@
+<div id="booking_buttons" style="padding:5px 0 10px; height:30px;"><a id="book_online_button" style=" float:left;" href="/soc.php?cp=bookonline&StoreID={$req.info.StoreID}" title="Book Online"><img src="/skin/red/images/foodwine/menu-bookonline.jpg" /></a><a id="view_menu_button" style="float:right;" title="View Full Menu" href="/foodwine/index.php?act=product&cp=list&type=wine&StoreID={$req.info.StoreID}"><img alt="View Full Menu" src="/skin/red/images/foodwine/menu-viewfullmenu.jpg" /></a></div>
+<div class="clear"></div>

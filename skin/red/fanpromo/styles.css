@@ -1,0 +1,226 @@
+#container {
+	overflow: visible !important;
+}
+
+#header {
+	margin-bottom: 0px !important;
+}
+
+#promo_page_container {
+	width: 950px;
+	/*overflow: hidden;*/
+}
+
+#promo_page_top {
+	background-color: #d3e6ed;
+	overflow: hidden;
+}
+
+#promo_header_container {
+	margin-top: 15px;
+	height: 210px;
+}
+
+#promo_header_title {
+	background-image: url("/skin/red/fanpromo/fan_frenzy_heading.png");
+	float: left;
+	height: 127px;
+	left: -15px;
+	position: absolute;
+	width: 415px;
+	margin-top: 25px;
+}
+
+#promo_header_photos {
+	background-image: url("/skin/red/fanpromo/top_image_photos.png");
+	width: 462px;
+	height: 205px;
+	float: right;
+	margin-right: 10px;
+}
+
+#promo_header_photos2 {
+	background-image: url("/skin/red/fanpromo/top_image_photos_2.png");
+	width: 410px;
+	height: 323px;
+	float: right;
+	margin-right: 10px;
+}
+
+#promo_page_tabs {
+	min-height: 400px;
+	margin-left: 100px;
+	margin-right: 50px;
+}
+
+#promo_page_tab_header {
+	height: 50px;
+	border-bottom: 2px solid #b2d3df;
+}
+
+#promo_page_tab_header .tab_button{
+	padding-top: 0;
+	height: 50px;
+	line-height: 50px;
+}
+
+.tab_button {
+	width: 200px;
+	margin-right: 10px;
+	background-color: #FFF;
+	color: #828282;
+	font-size: 14px;
+	text-align: center;
+	cursor: pointer;
+	float: left;
+	height: 35px;
+	overflow: hidden;
+	padding-top: 15px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.tab_button:hover {
+	background-color: #478fff;
+	color: #FFF;
+	font-weight: bold;
+}
+
+.tab_button_selected {
+	background-color: #478fff !important;
+	color: #FFF !important;
+	font-weight: bold !important;
+}
+
+#promo_page_tab_content {
+	overflow: hidden;
+	min-height: 300px;
+	margin-top: 30px;
+}
+
+.tab_content {
+	display: none;
+	font-size: 14px;
+    line-height: 25px;
+	color: #000 !important;
+}
+
+.tab_content * {
+	font-size: 14px !important;
+    line-height: 25px !important;
+	color: #000 !important;
+}
+
+.tab_content strong {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.tab_content a {
+	font-size: 14px;
+}
+
+.tab_content ol li {
+	font-size: 14px;
+	line-height: 25px;
+}
+
+#promo_page_content {
+	margin-top: 25px;
+	margin-left: 50px;
+	background-color: #FFF;		
+}
+
+#promo_page_content h3 { 
+	color: #3f3586;
+	font-size: 22px;	
+}
+
+#promo_page_entry_form {
+	margin-top: 10px;
+}
+
+#promo_page_entry_form input[type="text"], #promo_page_entry_form select, #promo_page_entry_form textarea {
+	padding-bottom: 5px;
+    padding-top: 5px;
+    width: 290px;
+}
+
+.entry_field {
+	margin-bottom: 25px;
+}
+#entry_form .entry_field_text {
+	margin-bottom: 5px;
+}
+.entry_field_text {
+	font-size: 14px;
+	clear: both;
+	margin-bottom: 10px;
+	margin-top: 20px;
+}
+
+.entry_field_text label {
+	font-weight: bold;
+	padding: 0px;
+	font-size: 16px;
+	color: #555555;
+}
+
+.entry_field_text span {
+	display: inline-block;
+	padding-top: 5px;
+}
+
+.entry_field_element {
+	clear: both;
+}
+
+#entry_button {
+	cursor: pointer;
+	background-color: #f29d28;
+	padding: 10px;
+	border: 0px;
+	border-radius: 5px;
+	color: #FFF;
+}
+
+.promo_icon {
+	margin-right: 20px;
+	margin-top: 15px;
+}
+
+/* ------------------------------------  This is for crop image --------------------------------------- */
+.photo_upload_fanfrenzy .error , #promo_page_entry_form .error_form, #promo_page_entry_form .error_member_code{
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
+}
+#preview_dimension_upload input[type="text"] {
+    border: 1px solid #CCCCCC;
+    padding: 4px 8px;
+    text-align: center;
+    width: 70px;
+}
+.photo_upload_fanfrenzy .error , .photo_upload_fanfrenzy .preview_upload_fanfrenzy{
+    display: none;
+}
+.jcrop-holder {
+    display: inline-block;
+}
+
+#code_processing{
+	display:none;
+}
+
+#preview_dimension_upload .info-row{
+	margin-bottom: 10px;
+}
+
+#preview_dimension_upload .info-row .left-title{
+	float: left;
+	width: 115px;
+	line-height: 30px;
+	padding-right: 10px;
+}
+	
+
