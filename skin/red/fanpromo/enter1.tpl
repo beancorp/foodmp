@@ -1050,10 +1050,13 @@
 					        }).done(function( d ) {
                                 if (d) {
 					                if (d.retailer_name) {
-					            	    $('#retailer_name').val(d.retailer_name);
+					            	    $('#retailer_name').val(d.retailer_name);					            	    
 									    $('#retailer_id').val(d.retailer_id);
 									    $('#state_id').val(d.state_id);
 									    $('#category_id').val(d.category_id);
+									    $('#retailer_name').validationEngine('hide');
+									    $('#state_id').validationEngine('hide');
+									    $('#category_id').validationEngine('hide');
 									    if(d.category_id){
 										    $('#span_select_cat').html($('#category_id option:selected').attr("rel"));
 									    }
