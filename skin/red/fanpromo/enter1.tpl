@@ -1036,7 +1036,7 @@
 						}
 					});
 
-					$('#entry_code').change(function() {   
+					$('#entry_code').blur(function() {   
 						if ($(this).val() == '') {
 							$('#entry_code_value').empty();
 							$('#entry_code').validationEngine('hide');

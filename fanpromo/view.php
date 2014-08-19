@@ -89,6 +89,13 @@ if (!empty($_GET['image'])) {
 	
 	$photo['photo_date'] = date('d M Y', strtotime($photo['timestamp']));
 	
+	
+	//brand image
+	$tmp = explode("/", $photo["image"]);
+	$photo["brand_image"] = "uploads/{$photo["consumer_id"]}/brand_".end($tmp);
+	
+	
+	
 	$default_profile = '/images/no_profile_pic.jpg';
 	
 	$profile_pic = '/profile_images/'.$photo['consumer_id'].'.jpg';
@@ -107,6 +114,11 @@ if (!empty($_GET['image'])) {
 	
 	
 	$smarty->assign('current_user_id', $current_user_id);
+	
+	
+	
+	
+	
 	
 	
 	$grand_date_open = tab_content_by_key_name($dbcon, "grand-date-open");  //vote grand start

@@ -238,12 +238,12 @@
 		<div class="social-button">
 			<strong>Share this...</strong> <br /><br />
 			
-			<span class='st_sharethis_large' displayText='ShareThis'></span>
-			<span class='st_facebook_large' displayText='Facebook'></span>
-			<span class='st_twitter_large' displayText='Tweet'></span>
-			<span class='st_linkedin_large' displayText='LinkedIn'></span>
-			<span class='st_pinterest_large' displayText='Pinterest'></span>
-			<span class='st_email_large' displayText='Email'></span>
+			<span class='st_sharethis_large' st_url="{$smarty.const.SOC_HTTP_HOST}/fanpromo/{$photo.brand_image}" displayText='ShareThis'></span>
+			<span class='st_facebook_large' st_url="{$smarty.const.SOC_HTTP_HOST}/fanpromo/{$photo.brand_image}" displayText='Facebook'></span>
+			<span class='st_twitter_large' st_url="{$smarty.const.SOC_HTTP_HOST}/fanpromo/{$photo.brand_image}" displayText='Tweet'></span>
+			<span class='st_linkedin_large' st_url="{$smarty.const.SOC_HTTP_HOST}/fanpromo/{$photo.brand_image}" displayText='LinkedIn'></span>
+			<span class='st_pinterest_large' st_url="{$smarty.const.SOC_HTTP_HOST}/fanpromo/{$photo.brand_image}" displayText='Pinterest'></span>
+			<span class='st_email_large' st_url="{$smarty.const.SOC_HTTP_HOST}/fanpromo/{$photo.brand_image}" displayText='Email'></span>
 			
 			<!-- 
 			<img src="images/icon-face.png" alt="" width="37px">

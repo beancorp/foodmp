@@ -160,6 +160,9 @@ if (isset($_POST['code']) && $consumer_id > 0) {
                 }
 				
 				$image_name = uniqid().'.jpg';
+				$brand_name = "brand_".$image_name;
+				
+				
 				
 				$im = new Imagick($path_imagick);
 				//$im->resizeImage(615, 415, Imagick::FILTER_LANCZOS, 1);
@@ -175,6 +178,8 @@ if (isset($_POST['code']) && $consumer_id > 0) {
 				$im->setImageFormat('jpg');
 				
 				$image_path = $upload_folder.$image_name;
+				$brand_path = $upload_folder.$brand_name;
+				
 				$thumb_path = $upload_folder.'thumb_'.$image_name;
 				
 				//add water mark
@@ -183,14 +188,9 @@ if (isset($_POST['code']) && $consumer_id > 0) {
 				$final_image->newimage(618, 494, '#ffffffff');
 				$final_image->compositeimage($im, Imagick::COMPOSITE_DEFAULT, 0, 0);
 				$final_image->compositeimage($water_mark_file, Imagick::COMPOSITE_DEFAULT, 0, 441);
-				
-				
-				
-				
-				$final_image->writeImage(getcwd() . "/". $image_path);
-				
-				//$im->writeImage(getcwd() . "/". $image_path);
-				
+				$final_image->writeImage(getcwd() . "/". $brand_path);
+								
+				$im->writeImage(getcwd() . "/". $image_path);
 				$im->thumbnailImage(290, 180);
 				$im->writeImage(getcwd(). "/". $thumb_path);
 				
