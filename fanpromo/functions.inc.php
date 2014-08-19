@@ -111,7 +111,7 @@ function insert_queue_mail($dbcon, $insert_array){
 	
 	
 	$message_content = htmlspecialchars_decode($insert_array["content"]);
-	$email_template_path = getcwd(). "/../cronjob/mail_send/content_mail_".$id.".txt";
+	$email_template_path = "../cronjob/mail_send/content_mail_".$id.".txt";
 	
 	
 	$email_template_path = ROOT_DIRECTORY. "cronjob/mail_send/content_mail_".$id.".txt";

@@ -103,7 +103,7 @@ if ($result && is_array($result)) {
 		if ($bool === true){
 			$delete_sql = "DELETE FROM queue_mail WHERE id = {$row["id"]}";
 			$dbcon->execute_query($delete_sql);
-			unlink($message); //delete messsage file
+			unlink(getcwd()."/mail_send/content_mail_{$row["id"]}.txt"); //delete messsage file
 		}
 		unset($objEmail);
 	}	

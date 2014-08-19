@@ -177,8 +177,20 @@ if (isset($_POST['code']) && $consumer_id > 0) {
 				$image_path = $upload_folder.$image_name;
 				$thumb_path = $upload_folder.'thumb_'.$image_name;
 				
+				//add water mark
+				$water_mark_file = new Imagick(getcwd() . "/../images/fanfrenzy_watermark.png");				
+				$final_image = new Imagick();
+				$final_image->newimage(618, 494, '#ffffffff');
+				$final_image->compositeimage($im, Imagick::COMPOSITE_DEFAULT, 0, 0);
+				$final_image->compositeimage($water_mark_file, Imagick::COMPOSITE_DEFAULT, 0, 441);
 				
-				$im->writeImage(getcwd() . "/". $image_path);
+				
+				
+				
+				$final_image->writeImage(getcwd() . "/". $image_path);
+				
+				//$im->writeImage(getcwd() . "/". $image_path);
+				
 				$im->thumbnailImage(290, 180);
 				$im->writeImage(getcwd(). "/". $thumb_path);
 				

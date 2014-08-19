@@ -84,6 +84,7 @@ index left search1.tpl
 .cms-left ul li{display:inline; list-style:none;}
 .cms-left ul li p{ font-size:14px;}
 .cms-left ul li .name{ color:#000000; padding:5px 0 13px; display:block; line-height:18px;}
+fieldset#search{ padding: 5px 0; text-align: center;}
 </style>
 {/literal}
 {if $isSafari}
@@ -163,8 +164,10 @@ index left search1.tpl
 			{literal}
 			<style>
 				.custom-combobox {
+					float: left;
 					position: relative;
 					display: inline-block;
+					margin-bottom: 11px;
 				}
 				.custom-combobox-toggle {
 					position: absolute;
@@ -179,12 +182,31 @@ index left search1.tpl
 				.custom-combobox-input {
 					margin: 0;
 					padding: 0.3em;
-					width: 110px!important;
+					width: 108px !important;
 				}
 				.ui-autocomplete  {
 					max-height: 300px;
 					overflow-y: scroll; 
 					overflow-x: hidden;
+				}				
+				.suburb-down-arrow {
+					float: left;
+					background: url("../skin/red/images/suburb-down-arrow.png") center no-repeat;
+					width: 30px;
+					height: 26px;
+					border-top: #CCC 1px solid;
+					border-right: #CCC 1px solid;
+					border-bottom: #CCC 1px solid;
+					border-top-right-radius: 5px;
+					border-bottom-right-radius: 5px;
+					-moz-border-top-right-radius: 5px;
+					-moz-border-bottom-right-radius: 5px;
+					-webkit-border-top-right-radius: 5px;
+					-webkit-border-bottom-right-radius: 5px;
+				}
+				fieldset#search{
+					padding: 5px 0;
+					text-align: center
 				}
 			</style>
 			{/literal}
@@ -192,9 +214,10 @@ index left search1.tpl
 			
 			<label>Suburb:</label>
 			<span class="select-box">
-			<select name="suburb" id="suburb_id">
-				<option value="">All</option>
-			</select>
+				<select name="suburb" id="suburb_id">
+					<option value="">All</option>
+				</select>
+				<div class="suburb-down-arrow"></div>
 			</span>
 			
 		</li>
@@ -214,7 +237,7 @@ index left search1.tpl
 		</fieldset>
 		
 		<fieldset id="search">
-		<input type="image" class="search" src="{$smarty.const.IMAGES_URL}/skin/red/bu-searchside.gif" />
+		<input type="image" class="search" src="{$smarty.const.IMAGES_URL}/search-btn.png" style="width:auto; height: auto;" />
 		</fieldset>
 		
 	</form>
@@ -245,7 +268,7 @@ index left search1.tpl
 	{/if}
  
 	<div id="social_links">
-		<a href="https://www.facebook.com/pages/Foodmarketplace/1417039495177479" title="Facebook" style="margin-right:2px;" target="_blank"><img src="{$smarty.const.IMAGES_URL}/facebook_like.jpg" title="Facebook" alt="Facebook" height="50"/></a>
+		<a href="https://www.facebook.com/pages/Foodmarketplace/1417039495177479" title="Facebook" style="margin-right:2px;" target="_blank"><img src="{$smarty.const.IMAGES_URL}/facebook-like-area.png" title="Facebook" alt="Facebook"/></a>
 	</div>
 
 	 {if $show_signon_banner_small}

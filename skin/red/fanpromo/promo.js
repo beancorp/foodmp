@@ -10,7 +10,9 @@ function positionFooter() {
 }
 	$(document).ready(function() {
 		$('.style-select select').change(function(){
-	    	$(this).parent().find('span').html($(this).find('option:selected').text()); 
+			var text = $(this).find('option:selected').text();
+			if (text == "Australian Capital Territory") text = "Australian Capital Ter...";
+	    	$(this).parent().find('span').html(text); 
 		});
 	});
 //$(window).scroll(positionFooter).resize(positionFooter).load(positionFooter);

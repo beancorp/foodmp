@@ -111,17 +111,17 @@ function checkStateForm() {
 	{literal}
 		$(document).ready(function() {
 			$('#bookmark_link').hide();
-			
+
 			var isFirefox = typeof InstallTrigger !== 'undefined';
 			var isIE = /*@cc_on!@*/false || !!document.documentMode;
-			
+
 			if (isFirefox || isIE)  {
 				var state = $('#state_name_council_home').val();
 				var council = $('#council_id_home').val();
 				var title = "FoodMarketplace";
 				var address = "{/literal}{$smarty.const.SOC_HTTPS_HOST}{literal}foodwine/index.php?cp=home&state_name=" + state + "&council=" + council + "&x=24&y=18#list";
 				$('#bookmark_link').attr('href', address);
-				
+
 				if (isIE) {
 					$('#bookmark_link').click(function() {
 						if (window.external) {
@@ -130,7 +130,7 @@ function checkStateForm() {
 						}
 					});
 				}
-				
+
 				$('#bookmark_link').show();
 			}
 		});

@@ -88,17 +88,18 @@
 	<!-- end banner -->
 		
 	<div id="container">
+	
+		{if !$hideLeftMenu}
+				{include file=$skindir|cat:"/index_left_search1.tpl"}
+		{/if}
+	
 			{if $div == 'shop'}
 			<div id="shop">
 					<div id="seller">
 					{$siteMenu}{$itemTitle}{$content}
 					</div>
 			{elseif $div == 'list'}
-			<div id="list">
-			
-				
-			
-			
+			<div id="list">			
 				<div id="searchresults">
 				{$tmp_header}
 				{$siteMenu}{$itemTitle}{$content}
@@ -116,6 +117,11 @@
 				{$siteMenu}{$itemTitle}{$content}
 				</div>
 			{elseif $sidebar ne '0'}
+			
+			<div>
+			Anh Fan promo
+			</div>
+			
 			<div id="wrapper">
 				<div id="content" style="{$contentStyle}">
 				{$siteMenu}{$itemTitle}{$content}
@@ -128,9 +134,7 @@
 				</div>
 			{/if}
 			
-			{if !$hideLeftMenu}
-				{include file=$skindir|cat:"/index_left_search1.tpl"}
-			{/if}
+			
 			 <!-- end menu left -->
 
 			</div>
