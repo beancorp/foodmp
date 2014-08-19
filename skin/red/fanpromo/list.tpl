@@ -395,11 +395,56 @@
 					});
 				
 					$('#grand_final_nominees').click(function() {
+						alert("abc");
 						$('#promo_page_type').val(2);
 						$('#current_participants').css('text-decoration', 'underline');
 						$(this).css('text-decoration', 'none');
 						search_listing(1);
 					});
+
+
+					 $("#search_name").keypress(function(e){
+	                       if (e.which == 13) 
+	                            search_listing(1);
+	                    });
+						
+						$('#search_go').click(function() {
+							search_listing(1);					
+						});
+						
+						$('#search_sort').change(function() {
+							search_listing(1);						
+						});
+						
+						$('#search_categories').change(function() {
+							search_listing(1);
+						});
+
+						
+						$('#block-gallery-bt').on("click", function(){
+							$('#promo_page_type').val(1);
+							search_listing(1);
+					        $('#tab-nav > li').removeClass('active');
+					        $(this).addClass('active');
+					        //$('.tab-gallery').removeClass('active');
+					        $('.block-gallery').addClass('active');
+					        
+					    });
+
+						//greand final click
+				    	$('#my-gallery-bt').on("click", function(){
+				    		$('#promo_page_type').val(2);//grand
+				    		search_listing(1);
+					        $('#tab-nav > li').removeClass('active');
+					        $(this).addClass('active');
+					        //$('.tab-gallery').removeClass('active');
+					        //$('.my-gallery').addClass('active');
+					        $('.block-gallery').addClass('active');
+					    });				
+						
+						$('#retailer_location').change(function() {
+							search_listing(1);
+						});			
 				});			
 
 		{/literal}

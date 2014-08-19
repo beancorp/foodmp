@@ -148,7 +148,7 @@ function view_photos_customer() {
             if ($photo['rank'] >= 1 && $photo['rank'] <= 3) {
                 $my_entries .= '<div class="place_image place_'.$photo['rank'].'"></div>';
             }
-            $my_entries .= '<a class="fan_photo" href="/photo_'.$photo['photo_id'].'.html" target="_blank"><img src="/fanpromo/'.$photo['thumb'].'" alt=""></a>';
+            $my_entries .= '<a class="fan_photo" href="/photo_'.$photo['photo_id'].'.html"><img src="/fanpromo/'.$photo['thumb'].'" alt=""></a>';
 
             if(!empty($photo['retailer'])){   
                 $retailer_name = limit_text($photo['retailer'], 4);    
@@ -295,7 +295,7 @@ function view_photos_seller($owner=true) {
             if ($photo['rank'] >= 1 && $photo['rank'] <= 3) {
                 $my_entries .= '<div class="place_image place_'.$photo['rank'].'"></div>';
             }
-            $my_entries .= '<a class="fan_photo" href="/photo_'.$photo['photo_id'].'.html" target="_blank"><img src="/fanpromo/'.$photo['thumb'].'" alt=""></a>';
+            $my_entries .= '<a class="fan_photo" href="/photo_'.$photo['photo_id'].'.html"><img src="/fanpromo/'.$photo['thumb'].'" alt=""></a>';
             
             if(!empty($photo['retailer'])){   
                 $retailer_name = limit_text($photo['retailer'], 4);    
