@@ -24,7 +24,7 @@
 				{/if}
 				
 				
-				KKKKKK
+				
                 <div id="pid_{$product.pid}" class="moreImg_css"><img src="{$product.bimage.text}" style="width:{$product.bimage.width}px;height:{$product.bimage.height}px;"/></div><div id="pid_{$product.pid}_2" class="moreImg_arror"></div></div>
                     <div id="context" style=" width:600px;">
 						{if $product.website_name eq '' && $product.website_url neq ''} 
