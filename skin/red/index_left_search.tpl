@@ -263,7 +263,7 @@ fieldset#search{ padding: 5px 0; text-align: center;}
 		<a href="https://www.facebook.com/pages/Foodmarketplace/1417039495177479" title="Facebook" style="margin-right:2px;" target="_blank"><img src="{$smarty.const.IMAGES_URL}/facebook-like-area.png" title="Facebook" alt="Facebook"/></a>
 	</div>
 
-	 {if $show_signon_banner_small}
+	 {*if $show_signon_banner_small}
 	   <a href="{$smarty.const.SOC_HTTP_HOST}/mothernature" title="View more"><img src="{$smarty.const.SOC_HTTP_HOST}skin/red/foodwine/images/banner-small-coffs-harbour.jpg" alt="Where your profit stay in your pocket" /></a>
 	   <a href="{$smarty.const.SOC_HTTP_HOST}/Harrisedgecliff" title="View more"><img src="{$smarty.const.SOC_HTTP_HOST}skin/red/foodwine/images/banner-small-edgecliff.jpg"  alt="Where your profit stay in your pocket" /></a>
 	 {/if}
@@ -290,7 +290,7 @@ fieldset#search{ padding: 5px 0; text-align: center;}
 		<div class="cms-left" style="padding:20px 0 0;">
 		<a href="/fanpromotion"><img src="{$smarty.const.IMAGES_URL}/fan_side_banner.png" /></a>
 		</div>
-	{/if}
+	{/if*}
 {/if}
 
 {if $isstorepage}
