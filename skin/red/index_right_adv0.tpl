@@ -1,4 +1,4 @@
-<div id="sidebar2" style="border:none; background:url(../images/advert-bottom.gif) no-repeat 10000px bottom;{if $foodwinehome}padding:10px 15px 17px 0;{/if}">
+<div id="sidebar2" style="border:none; background:url(../images/advert-bottom.gif) no-repeat 10000px bottom;{if $foodwinehome}padding:10px 15px 17px 8px;{/if}">
 {if !$foodwinehome && ($state_name ne '' or $statename ne '')}
 <script language="javascript" src="/js/rotateAd.js" type="text/javascript"></script>
 	<div id="sidebar_ad">
@@ -43,11 +43,12 @@
 	{/if}
 	<!-- end left ads -->
 	<br><br>
+	
+	
 	</div>
 {else}
 	{if $sidebarContent ne ''}
 		{$sidebarContent}
-		
 	{else}
 		<!--
 		<div style="margin:10px 0 0 0;">

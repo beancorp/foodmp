@@ -42,15 +42,6 @@
 	font-weight: bold;
 	color: #3C3380;
 }
-
-h2#location {
-	width: 490px;
-	margin-bottom: 20px;
-}
-
-#sidebar{
-	padding-top: 0;
-}
 </style>
 {/literal}
 {literal}
@@ -78,14 +69,14 @@ function checkStateForm() {
   </tr>
 </table>
 <a name="list"></a>	
-<form action="/foodwine/index.php?cp=home#list" id="statesearch" class="st-connecticut" method="get" style="margin:30px 0 10px; padding: 0" onsubmit="return checkStateForm(this);">
+<form action="/foodwine/index.php?cp=home#list" id="statesearch" class="st-connecticut" method="get" style="margin:30px 0;" onsubmit="return checkStateForm(this);">
 	<input type="hidden" name="cp" value="home" />
-	<fieldset style="margin:0">
-		<h2 id="location" style="font-size:12px;">Select your {$lang.labelCouncil} area to find local retailers</h2>
-	</fieldset>
-	<div style="float:left; width: 120px; padding-left: 0; font-size:14px; font-weight: 900; color:#3c3380; margin-top: 5px;">{$council_name}</div>
-	<div style="float:right; width:375px; margin-right:10px;">
-		<fieldset class="searchlocation">
+	<div style="float:left; width: 180px; padding-top: 30px; padding-left: 8px; font-size:14px; font-weight: 900; color:#3c3380;">{$council_name} Homepage</div>
+	<div style="float:right; width:315px; margin-right:10px;">
+		<fieldset>
+			<h2 id="location" style="font-size:12px;">Select your {$lang.labelCouncil} area to find local retailers</h2>
+		</fieldset>
+		<fieldset>
 			<ol>
 				<li>
 					<select name="state_name" id="state_name_council_home" class="state" onchange="switchState(this.value, 'council_id_home')" style="width:90px;">
@@ -96,17 +87,19 @@ function checkStateForm() {
 				</li>
 				<li>
 					<span class="select-box">
-						<select name="council" class="region" id="council_id_home" style="width:195px;">
-						<option value="" title="{$lang.labelCouncil}">{$lang.labelCouncil}</option>
-						{foreach from=$req.councils item=council}
-						<option value="{$council.bu_council}" {$council.selected} title="{$council.bu_council}">{$council.bu_council}</option>
-						{/foreach}
-						</select>
+					<select name="council" class="region" id="council_id_home" style="width:195px;">
+					<option value="" title="{$lang.labelCouncil}">{$lang.labelCouncil}</option>
+					{foreach from=$req.councils item=council}
+					<option value="{$council.bu_council}" {$council.selected} title="{$council.bu_council}">{$council.bu_council}</option>
+					{/foreach}
+					</select>
 					</span>
 				</li>
 			</ol>
+		</fieldset>
+		<fieldset class="searchlocation">
 			<a href="" id="bookmark_link" rel="sidebar">Bookmark your <span>{$lang.labelCouncil} area hompage</span></a>
-			<input src="/skin/red/images/btn-search.png" type="image" style="padding:1px" />
+			<input src="/skin/red/images/bu-search.gif" type="image" />
 		</fieldset>
 	</div>
 	</form>
@@ -116,17 +109,17 @@ function checkStateForm() {
 	{literal}
 		$(document).ready(function() {
 			$('#bookmark_link').hide();
-
+			
 			var isFirefox = typeof InstallTrigger !== 'undefined';
 			var isIE = /*@cc_on!@*/false || !!document.documentMode;
-
+			
 			if (isFirefox || isIE)  {
 				var state = $('#state_name_council_home').val();
 				var council = $('#council_id_home').val();
 				var title = "FoodMarketplace";
 				var address = "{/literal}{$smarty.const.SOC_HTTPS_HOST}{literal}foodwine/index.php?cp=home&state_name=" + state + "&council=" + council + "&x=24&y=18#list";
 				$('#bookmark_link').attr('href', address);
-
+				
 				if (isIE) {
 					$('#bookmark_link').click(function() {
 						if (window.external) {
@@ -135,7 +128,7 @@ function checkStateForm() {
 						}
 					});
 				}
-
+				
 				$('#bookmark_link').show();
 			}
 		});
@@ -143,9 +136,6 @@ function checkStateForm() {
 	</script>
 	
 	<table cellpadding="0" cellspacing="0" border="0" width="525" id="food_wine_homelist">
-		<tr>
-			<td style="padding:0 0 20px;">	<div style="font-weight: bold; color: #3c3284; font-size: 18px;">Featured retailers in the {$council_name} council area</div></td>
-		</tr>
 		{foreach from=$req.ads item=ads key=k}
 			<tr style="padding:10px 0;" class="{if $k eq 0}banner_tr_first{else}banner_tr{/if}"><td>
 				{if $ads.type ne 'system'}
@@ -156,6 +146,7 @@ function checkStateForm() {
 					
 					<tr height="105">
 						<td>
+							
 							<table width="100%" border="0" cellspacing="0" cellpadding="0" height="105">
 
 								<tr height="30">

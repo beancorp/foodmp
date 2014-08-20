@@ -324,7 +324,6 @@ switch ($_REQUEST['cp']) {
             $is_set_desc = true;
 
             $smarty->assign('req', $req);
-            
             $smarty->assign('content', $smarty->fetch($tpl_search ? $tpl_search . '.tpl' : 'home.tpl'));
             //$smarty->assign('sidebar_bg', 0);
             $smarty->assign('sidebar', 1);

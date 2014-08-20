@@ -26,22 +26,15 @@ $smarty -> assign('normal_url',SOC_HTTP_HOST);
 $smarty->assign('noShowGalleryBanner', true);
 $smarty->assign('noShowTvBanner', true);
 
-$indexTemplate	=	'../'.$template_tpl;
 
+$indexTemplate	=	'../'.$template_tpl;
 		
 $StoreID = $_REQUEST['StoreID'] ? $_REQUEST['StoreID'] : ($_SESSION['StoreID'] ? $_SESSION['StoreID']:'');
 $act = $_REQUEST['act'] ? $_REQUEST['act'] : 'search';
-
 require(dirname(__FILE__) . '/' . $act . '.php');
 
+
 $smarty->assign('is_content',1);
-
-$smarty->assign('is_new_homepage', 1);
-
-//ini_set('display_errors', 1);
-//error_reporting(E_ALL);
-
-
 $search_type	=	'foodwine';
 $partBottom 	=	true;
 include('../indexPart.php');

@@ -150,6 +150,11 @@ function update_promo_grand_list($dbcon, $array_update, $photo_id){
 }
 
 function generate_fanpromo_code($dbcon, $store_id, $length = 5){
+	$exist_code = getCodeByStoreId($dbcon, $store_id);
+	if ($exist_code["code_id"])
+		return $exist_code["code"];
+	
+	
 	$characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     $randomString = '';
     
@@ -163,6 +168,11 @@ function generate_fanpromo_code($dbcon, $store_id, $length = 5){
     		$stop = true;
     		$new_code = $randomString;
     	}
+    	
+    	
+    	
+    	
+    	
     }	
     $arr = array(
 		'store_id' => $store_id,
@@ -170,6 +180,11 @@ function generate_fanpromo_code($dbcon, $store_id, $length = 5){
 	);
 	$dbcon->insert_query('promo_store_codes', $arr);
     return $new_code;	
+}
+
+function getCodeByStoreId($dbcon, $store_id){
+	$sql = "SELECT * FROM promo_store_codes WHERE store_id = {$store_id}";
+	return $dbcon->getOne($sql);
 }
 
 

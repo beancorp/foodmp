@@ -82,8 +82,6 @@
 .cms-left ul li{display:inline; list-style:none;}
 .cms-left ul li p{ font-size:14px;}
 .cms-left ul li .name{ color:#000000; padding:5px 0 13px; display:block; line-height:18px;}
-fieldset#search{ padding: 5px 0; text-align: center;}
-/*body{background: none !important;}*/
 </style>
 {/literal}
 {if $isSafari}
@@ -163,10 +161,8 @@ fieldset#search{ padding: 5px 0; text-align: center;}
 			{literal}
 			<style>
 				.custom-combobox {
-					float: left;
 					position: relative;
 					display: inline-block;
-					margin-bottom: 11px;
 				}
 				.custom-combobox-toggle {
 					position: absolute;
@@ -181,36 +177,23 @@ fieldset#search{ padding: 5px 0; text-align: center;}
 				.custom-combobox-input {
 					margin: 0;
 					padding: 0.3em;
-					width: 108px !important;
-					border: none;
+					width: 110px!important;
 				}
 				.ui-autocomplete  {
 					max-height: 300px;
 					overflow-y: scroll; 
 					overflow-x: hidden;
-				}				
-				.suburb-down-arrow {
-					float: left;
-					background: url("../skin/red/images/suburb-down-arrow.png") center no-repeat;
-					width: 29px;
-					height: 26px;
-					border-left: #CCC 1px solid;
-				}
-				fieldset#search{
-					padding: 5px 0;
-					text-align: center
 				}
 			</style>
 			{/literal}
 			{if $preselect_suburb}<script type="text/javascript">var preselect_suburb = "{$preselect_suburb}";</script>{/if}
 			
 			<label>Suburb:</label>
-			<div class="select-box" style="border: rgb(169, 169, 169) 1px solid; border-radius: 5px; -mox-border-radius: 5px; -webkit-border-radius: 5px; height: 28px">
-				<select name="suburb" id="suburb_id">
-					<option value="">All</option>
-				</select>
-				<div class="suburb-down-arrow"></div>
-			</div>
+			<span class="select-box">
+			<select name="suburb" id="suburb_id">
+				<option value="">All</option>
+			</select>
+			</span>
 			
 		</li>
 			
@@ -229,7 +212,7 @@ fieldset#search{ padding: 5px 0; text-align: center;}
 		</fieldset>
 		
 		<fieldset id="search">
-		<input type="image" class="search" src="{$smarty.const.IMAGES_URL}/search-btn.png" style="width:auto; height: auto;" />
+		<input type="image" class="search" src="{$smarty.const.IMAGES_URL}/skin/red/bu-searchside.gif" />
 		</fieldset>
 		
 	</form>
@@ -260,7 +243,7 @@ fieldset#search{ padding: 5px 0; text-align: center;}
 	{/if}
  
 	<div id="social_links">
-		<a href="https://www.facebook.com/pages/Foodmarketplace/1417039495177479" title="Facebook" style="margin-right:2px;" target="_blank"><img src="{$smarty.const.IMAGES_URL}/facebook-like-area.png" title="Facebook" alt="Facebook"/></a>
+		<a href="https://www.facebook.com/pages/Foodmarketplace/1417039495177479" title="Facebook" style="margin-right:2px;" target="_blank"><img src="{$smarty.const.IMAGES_URL}/facebook_like.jpg" title="Facebook" alt="Facebook" height="50"/></a>
 	</div>
 
 	 {if $show_signon_banner_small}
@@ -331,11 +314,11 @@ fieldset#search{ padding: 5px 0; text-align: center;}
 {/if}
 
 
-{*if $show_left_cms}
+{if $show_left_cms}
 <div class="cms-left">
 {$cms_left.aboutPage}
 </div>
-{/if*}
+{/if}
 
 <div style="width:160px; display:none" id="random_banner_left">
 {foreach from=$statePageBanners item=banner key=k}

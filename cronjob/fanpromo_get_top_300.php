@@ -83,7 +83,7 @@ $sql = "SELECT COUNT(fans.fan_id) As fan_count, (SELECT MAX(fan_id) FROM photo_p
 					AND photo.grand_final <>1
 					AND photo.store_id <> 0
 					
-					GROUP BY photo.photo_id ORDER BY fan_count DESC, last_fan_id ASC,  photo.timestamp ASC LIMIT 0, 10";
+					GROUP BY photo.photo_id ORDER BY fan_count DESC, last_fan_id ASC,  photo.timestamp ASC LIMIT 0, 300";
 			$dbcon->execute_query($sql);
 			$res = $dbcon->fetch_records(true);
 $i = 1;

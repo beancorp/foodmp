@@ -255,6 +255,10 @@
 	#promo_page_top_page a {
 		font-weight: bold;
 	}
+    
+    #wrapper a {
+        padding-left: 0px;
+    }
 	
 	.autocomplete-suggestions { border: 1px solid #999; background: #FFF; overflow: auto; }
 	.autocomplete-suggestion { cursor: pointer; padding: 2px 5px; white-space: nowrap; overflow: hidden; }

@@ -75,111 +75,40 @@
 	<script type="text/javascript">stLight.options({publisher: "e3316ed7-5941-4c4d-80f8-4a09809678c6", doNotHash: false, doNotCopy: false, hashAddressBar: false, shorten:false});</script>
 	{/literal}
 
-	{literal}
-	<style type="text/css">
-		#wrapper{
-			width: auto !important;
-		}
-
-		.main-banner{
-			float: left;
-			width: 750px;
-			background: url(../images/main-banner.png) 0 0 no-repeat #cee6f2;
-			margin-left: 24px;
-			border-radius: 10px;
-			min-height: 360px;
-		}
-
-		.main-banner-cta{
-			font-size: 19px;
-			font-family: Arial;
-			color: #3c3c3c;
-			margin-top: 175px;
-			margin-left: 30px;
-			line-height: 30px;
-		}
-
-		.main-banner-cta span{
-			color: #473b85;
-			font-weight: bold;
-			font-size: 21px;
-			margin-left: 0;
-		}
-
-		.main-banner-button{
-			background: url(../images/get_start_btn.png) 0 0 no-repeat;
-			width: 179px;
-			height: 54px;
-			margin-left: 30px;
-			margin-top: 30px;
-			cursor: pointer;
-		}
-	</style>
-	{/literal}
-
-
 	</head>
 	<body>
-	
 	<div id="fb-root"></div>
+
 	{include file=$skindir|cat:'/index_top_banner.tpl'}
 		
 	<!-- end banner -->
 		
 	<div id="container">
-	
-		{if !$hideLeftMenu}
-				{include file=$skindir|cat:"/index_left_search.tpl"}
-		{/if}
-	
 			{if $div == 'shop'}
 			<div id="shop">
 					<div id="seller">
 					{$siteMenu}{$itemTitle}{$content}
 					</div>
 			{elseif $div == 'list'}
-			<div id="list">			
+			<div id="list">
 				<div id="searchresults">
 				{$tmp_header}
 				{$siteMenu}{$itemTitle}{$content}
 				</div>
 			{elseif $div == 'list_adv'}
-			    {if !$hideLeftMenu}
-                    <div id="wrapper" style="padding-left: 24px;">
-                {else}
-                    <div id="wrapper">
-                {/if}
+			<div id="wrapper">
 				<div id="content" style="{$contentStyle}">
 				{$tmp_header}
 				{$siteMenu}{$itemTitle}{$content}
 				</div>
 			{elseif $div == 'middle'}
-			    {if !$hideLeftMenu}
-                    <div id="wrapper" style="padding-left: 24px;">
-                {else}
-                    <div id="wrapper">
-                {/if}
+			<div id="wrapper">
 				<div id="only-content">
 				{$tmp_header}
 				{$siteMenu}{$itemTitle}{$content}
 				</div>
 			{elseif $sidebar ne '0'}
-			    {if $home_page}
-			        <div class="main-banner">
-				        <div class="main-banner-cta">
-					        Earn yourself an easy <span>$1,000,000</span>
-					        <br>
-					        and have lots of fun along the way.
-				        </div>
-				        <div class="main-banner-button"></div>
-			        </div>
-                {/if}
-			
-			    {if !$hideLeftMenu}
-                    <div id="wrapper" style="padding-left: 24px;">
-                {else}
-                    <div id="wrapper">
-                {/if}
+			<div id="wrapper">
 				<div id="content" style="{$contentStyle}">
 				{$siteMenu}{$itemTitle}{$content}
 				</div>
@@ -191,7 +120,9 @@
 				</div>
 			{/if}
 			
-			
+			{if !$hideLeftMenu}
+				{include file=$skindir|cat:"/index_left_search.tpl"}
+			{/if}
 			 <!-- end menu left -->
 
 			</div>

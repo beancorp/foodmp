@@ -1,6 +1,3 @@
-skin/red/index_right_adv_statepage1.tpl
-
-
 <div id="sidebar2" style="border:none; background:url(../images/advert-bottom.gif) no-repeat 10000px bottom;">
 	<div id="random_banner_right">
 	{foreach from=$statePageBanners item=banner key=k}
