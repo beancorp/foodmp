@@ -20,13 +20,9 @@ if (!$partBottom) {
 	$keywordsList = 'flat rate selling, how to sell online, online trading post, sell goods online, sell items online, sell products online, sell stuff online, sell things online, selling online, simple selling online';
 
 	$_SESSION['logo_new'] = true;
-
-
-
 }
 else
-{
-
+{	
 	//active the menu of top navigation
 	$smarty->assign('cp', $_REQUEST["cp"]);
 
@@ -39,14 +35,13 @@ else
 	$smarty -> assign('menu_bgcolor', $menu_bgcolor);
 	$smarty -> assign('menu_bottom', $menu_bottom);
 	$smarty -> assign('is_logo', $is_logo);
-    $smarty -> assign('notRoot', $indexTemplate);
-	$smarty -> assign('home_page', true);
+	$smarty -> assign('notRoot', $indexTemplate);
 	//end of display logo or not
 
 	unset($socObj);
 	$smarty -> assign('menu_bgcolor', $menu_bgcolor);
 	$smarty -> assign('pageTitle', 'Local Food & Wine Retailers: Find Specials on Fruit, Vegetables & Wine Near You - Food Marketplace');
-	$smarty -> display(empty($indexTemplate) ? 'index.tpl' : $indexTemplate);
+	$smarty -> display(empty($indexTemplate) ? 'index1.tpl' : $indexTemplate);
 	unset($smarty,$socObj,$socbidObj);
 
 }

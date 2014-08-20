@@ -332,9 +332,9 @@ function fbLogin(utype){
 		
         {if !$hideLeftMenu}
 		{if $notRoot}
-			{include file="../index_left_search.tpl"}
+			{include file="../index_left_search1.tpl"}
 		{else}
-			{include file="index_left_search.tpl"}
+			{include file="index_left_search1.tpl"}
 		{/if}
         {/if}
 		
