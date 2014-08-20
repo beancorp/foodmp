@@ -171,7 +171,7 @@
 					        <br>
 					        and have lots of fun along the way.
 				        </div>
-				        <div class="main-banner-button"></div>
+				        <a href="/fanfrenzy"><div class="main-banner-button"></div></a>
 			        </div>
                 {/if}
 			
