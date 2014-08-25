@@ -85,7 +85,8 @@ if ($_FILES["file"]["name"]){
 	
 	$data = "";
 	//if ($_FILES['file']['size'] <= (1048576)){
-	if ($_FILES['file']['size'] <= (1048576) && $_FILES['file']['size'] > 0 && $file_type){
+	//3MB allowed
+	if ($_FILES['file']['size'] <= (1048576*3) && $_FILES['file']['size'] > 0 && $file_type){
 
 
 		$im = new Imagick($_FILES["file"]["tmp_name"]);

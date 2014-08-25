@@ -33,7 +33,7 @@ function tab_content_by_key_name($dbcon, $key_name = "") {
  * @param unknown_type $thumb_path
  * @param unknown_type $description
  */
-function insert_photo($dbcon, $store_id, $retailer_location, $consumer_id, $image_path = "", $thumb_path = "", $description = "", $state_id = 0, $category_id = 0, $retailer_name = "") {
+function insert_photo($dbcon, $store_id, $retailer_location, $consumer_id, $image_path = "", $thumb_path = "", $description = "", $state_id = 0, $category_id = 0, $retailer_name = "", $unique_id = "") {
 	$photo_record = array(
 		'store_id' => $store_id,
 		'retailer_location' => $retailer_location,
@@ -43,7 +43,8 @@ function insert_photo($dbcon, $store_id, $retailer_location, $consumer_id, $imag
 		'description' => $description,
 		'state_id' => $state_id,
 	 	'category_id'=> $category_id,
-		'retailer_name'=> $retailer_name,  
+		'retailer_name'=> $retailer_name,
+		'unique_id' => $unique_id,  
 	);
 	$dbcon->insert_query('photo_promo', $photo_record);
 	return $dbcon->lastInsertId();

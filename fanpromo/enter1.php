@@ -1,5 +1,5 @@
 <?php
-ini_set('display_errors', 1);
+ini_set('display_errors', 0);
 error_reporting(E_ALL);
 
 @session_start();
@@ -158,8 +158,9 @@ if (isset($_POST['code']) && $consumer_id > 0) {
                     mkdir($upload_dir, 0777);
                     umask($old);
                 }
-				
-				$image_name = uniqid().'.jpg';
+                
+                $unique_id = uniqid();
+                $image_name = $unique_id.'.jpg';
 				$brand_name = "brand_".$image_name;
 				
 				
@@ -169,13 +170,34 @@ if (isset($_POST['code']) && $consumer_id > 0) {
 				//$im->setImageBackgroundColor('white');
 				//$im->setCompressionQuality(100);
 				if ($_POST['x1'] > 0){
+					$x1 = (int)$_POST['x1'];
+					$y1 = (int)$_POST['y1'];
+				}else{
+					$x1 = 0;
+					$y1 = 0;
+				}
+				/*
+				if ($_POST['x1'] > 0){
 					//$im->cropImage((int)$_POST['w'], (int)$_POST['h'], (int)$_POST['x1'], (int)$_POST['y1']);
 					$im->cropImage(618, 441, (int)$_POST['x1'], (int)$_POST['y1']);
 				}else{
 					$im->cropImage(618, 441, 0, 0);
 				}
+				*/
 				
+				if ($_FILES["file"]["type"] == "image/gif"){
+					 $im = $im->coalesceImages(); 
+					foreach ($im as $frame) { 
+					  $frame->cropImage(618, 441, $x1, $y1); 
+					  $frame->thumbnailImage(618, 441); 
+					  $frame->setImagePage(618, 441, 0, 0); 
+					} 
+					$im = $im->deconstructImages(); 
+				}else{
+					$im->cropImage(618, 441, $x1, $y1);
+				}
 				$im->setImageFormat('jpg');
+				
 				
 				$image_path = $upload_folder.$image_name;
 				$brand_path = $upload_folder.$brand_name;
@@ -194,7 +216,7 @@ if (isset($_POST['code']) && $consumer_id > 0) {
 				$im->thumbnailImage(290, 180);
 				$im->writeImage(getcwd(). "/". $thumb_path);
 				
-				$photo_id = insert_photo($dbcon, $retailer_id, $_POST['retailer_location'], $consumer_id, $image_path, $thumb_path, $description, $state_id, $category_id, $retailer_name);
+				$photo_id = insert_photo($dbcon, $retailer_id, $_POST['retailer_location'], $consumer_id, $image_path, $thumb_path, $description, $state_id, $category_id, $retailer_name, $unique_id);
 				
 			
 				if ($photo_id > 0) {

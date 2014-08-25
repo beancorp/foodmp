@@ -100,7 +100,7 @@ p.txt-this-retailer a{
 	background: url(/images/btn-edit.jpg) 0 0 no-repeat;
 }
 .dt-photo-info-top span{
-	text-decoration: underline;
+	text-decoration: none;
 	font-size: 14px;
 	font-family:Arial, Helvetica, sans-serif;
 }

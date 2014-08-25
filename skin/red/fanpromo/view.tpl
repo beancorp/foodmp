@@ -151,7 +151,7 @@
 			
 			
 			{if $photo.retailer_info.store_logo.text neq "/images/79x79.jpg"}
-					<img id="dt-message-img" src="{$photo.retailer_info.store_logo.text}" alt="{$photo.bu_name}" title="{$photo.bu_name}"/></a>
+					<img id="dt-message-img" width="140px" src="{$photo.retailer_info.store_logo.text}" alt="{$photo.bu_name}" title="{$photo.bu_name}"/></a>
 			{else}
 					<img id="dt-message-img" src="{$photo.retailer_info.default_store_image}" alt="{$photo.bu_name}" title="{$photo.bu_name}"/></a>
 				{/if}
@@ -208,6 +208,9 @@
 			</div>
 			<div class="dt-photo-info-bottom">
 				{$photo.photo_date}
+				<br>
+				<br>
+				<strong>Photo ID: </strong>{$photo.unique_id}
 			</div>
 			<div class="dt-photo-info-content">
 				{$photo.description}

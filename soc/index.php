@@ -98,7 +98,7 @@ function view_photos_customer() {
             
     $res = $dbcon->getOne("SELECT COUNT(*) As count FROM photo_promo WHERE consumer_id = '".$_SESSION['StoreID']."'");
     
-    $perPage = 10;       
+    $perPage = 18;       
     $pageno    = empty($_REQUEST['p']) ? 1 :$_REQUEST['p'];
     
     $count = $res['count'];
@@ -190,9 +190,9 @@ function view_photos_customer() {
             if (!empty($info['next_p'])) {                        
                 echo '<span class="txt-next" id="list_next" ><a href="javascript:void(0)">Next ></a></span>';
             }
+             echo '</div>';  
         }
-        echo '</div>';
-        
+       
     
         echo '<script>
         
@@ -238,7 +238,7 @@ function view_photos_seller($owner=true) {
     }else{
         $res = $dbcon->getOne("SELECT COUNT(*) As count FROM photo_promo WHERE store_id = '".$_SESSION['StoreID']."' AND photo_promo.approved=1");   
     }
-    $perPage = 10;       
+    $perPage = 18;       
     $pageno    = empty($_REQUEST['p']) ? 1 :$_REQUEST['p'];
     
     $count = $res['count'];
@@ -338,8 +338,9 @@ function view_photos_seller($owner=true) {
             if (!empty($info['next_p'])) {                        
                 echo '<span class="txt-next" id="list_next" ><a href="javascript:void(0)">Next ></a></span>';
             }
+            echo '</div>'; 
         }
-        echo '</div>';
+        
         
         echo '<script>
         

@@ -255,8 +255,8 @@ function fileSelectHandler(error) {
 
             // check for file size
             
-            if (oFile.size > 1048576) {
-            	$('#button-upload').validationEngine('showPrompt', '* Your file must be less than 1MB, please select smaller one', 'red', null, true);
+            if (oFile.size > 1048576*3) {
+            	$('#button-upload').validationEngine('showPrompt', '* Your file must be less than 3MB, please select smaller one', 'red', null, true);
         //    $('.error').html('Your file must be less than 1MB, please select smaller one').show();
                 return;
             }
@@ -282,8 +282,8 @@ function fileSelectHandler(error) {
 
                     // check for file size
                     
-                    if (window.imageInfo.size > 1048576) {
-                        $('#button-upload').validationEngine('showPrompt', '* Your file must be less than 1MB, please select smaller one', 'red', null, true);
+                    if (window.imageInfo.size > 1048576 * 3) {
+                        $('#button-upload').validationEngine('showPrompt', '* Your file must be less than 3MB, please select smaller one', 'red', null, true);
                 //    $('.error').html('Your file must be less than 1MB, please select smaller one').show();
                         return;
                     }
@@ -316,7 +316,7 @@ function fileSelectHandler(error) {
                     oImage.width = nWidth;
                     oImage.height = nHeight;
                     if (imageData.w < 618 || imageData.h < 441){
-                        $('#button-upload').validationEngine('showPrompt', '*Your image must be 618 x 441', 'red', null, true);
+                        $('#button-upload').validationEngine('showPrompt', '* Your image at least must be 618 x 441', 'red', null, true);
                     } else {
                         showImage();
                     }
@@ -344,7 +344,7 @@ function fileSelectHandler(error) {
                             ns: nWidth/window.imageInfo.width
                         }
                         if (imageData.w < 618 || imageData.h < 441){
-                            $('#button-upload').validationEngine('showPrompt', '*Your image must be 618 x 441', 'red', null, true);
+                            $('#button-upload').validationEngine('showPrompt', '* Your image at least must be 618 x 441', 'red', null, true);
                             $(".loading").hide();
                             clearInterval(itv);
                         } else {
@@ -363,7 +363,7 @@ function fileSelectHandler(error) {
                 }, 1000);
             } else if (parseInt(window.imageInfo.error) === 2){
                 if (!onErrorShowing) {
-                    $('#button-upload').validationEngine('showPrompt', '* Your file must be less than 1MB, please select smaller one', 'red', null, true);
+                    $('#button-upload').validationEngine('showPrompt', '* Your file must be less than 3MB, please select smaller one', 'red', null, true);
                     onErrorShowing = true;
                 }
                 $(".loading").hide();
@@ -400,7 +400,7 @@ function validateBeforeSubmit(){
                     var imgWidth = $('#w').val();
                     var imgHeight = $('#h').val();
                     if (imgWidth < 618 || imgHeight < 441){
-                        $('#button-upload').validationEngine('showPrompt', '* Your image must be 618 x 441', 'red', null, true);
+                        $('#button-upload').validationEngine('showPrompt', '* Your image at least must be 618 x 441', 'red', null, true);
                         $return = false;
                     } else if (imgWidth > 618 || imgHeight > 441){
                         $('#button-upload').validationEngine('showPrompt', '* Please select a crop region', 'red', null, true);

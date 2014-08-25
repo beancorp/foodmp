@@ -108,18 +108,40 @@ switch ($_GET["photo_status"]){
 		$smarty->assign('status_text', "rejected");
 		break;
 	case 0:
-	default:
 		$status_display = 0; //show pending photo
 		$smarty->assign('status_text', "pending");
 		break;
+	default:
+		$status_display = 3; //show pending photo
+		$smarty->assign('status_text', "");
+		break;
 }
+$smarty->assign('photo_status', $status_display);
+
+
+
+$search_criteria = '';	
+if (!empty($_GET['search_text'])) {
+	$search_criteria = " AND (photo.unique_id LIKE '%".$_GET['search_text']."%')";
+	$smarty->assign('search_text', $_GET['search_text']);
+}
+
+$status_criteria = "";
+if ($status_display == 1 || $status_display == 2 || $status_display === 0){
+	$status_criteria = " AND photo.approved = {$status_display}";
+}
+
+
+
 
 $sql = "SELECT COUNT(*) AS count FROM (
 					SELECT photo.*, consumer.bu_name As consumer, retailer.bu_name As retailer, COUNT(fans.fan_id) As fan_count FROM photo_promo photo
 					LEFT JOIN photo_promo_fan fans ON fans.photo_id = photo.photo_id 
 					LEFT JOIN aus_soc_bu_detail consumer ON consumer.StoreID = photo.consumer_id
 					LEFT JOIN aus_soc_bu_detail retailer ON retailer.StoreID = photo.store_id
- 					WHERE photo.approved = {$status_display}
+ 					WHERE 1 
+ 					".((!empty($search_criteria)) ? $search_criteria : "")."
+ 					".((!empty($status_criteria)) ? $status_criteria : "")."
 					GROUP BY photo.photo_id ORDER BY fan_count DESC, photo.timestamp DESC)  AS tmp WHERE 1";
 					
 					
@@ -145,15 +167,17 @@ $sql = "SELECT COUNT(*) AS count FROM (
 				GROUP BY photo.photo_id ORDER BY fan_count DESC, photo.timestamp ASC LIMIT $start, $perPage";
 		*/
 		
-		$sql = "SELECT photo.*, consumer.bu_name As consumer, retailer.bu_name As retailer, COUNT(fans.fan_id) As fan_count FROM photo_promo photo
+		$sql = "SELECT photo.*, consumer.bu_name As consumer, retailer.bu_name As retailer, COUNT(fans.fan_id) As fan_count, 
+						promo_store_codes.code AS code
+				FROM photo_promo photo
 				LEFT JOIN photo_promo_fan fans ON fans.photo_id = photo.photo_id 
 				LEFT JOIN aus_soc_bu_detail consumer ON consumer.StoreID = photo.consumer_id
 				LEFT JOIN aus_soc_bu_detail retailer ON retailer.StoreID = photo.store_id
-				WHERE photo.approved = {$status_display}
+				LEFT JOIN promo_store_codes ON promo_store_codes.store_id = photo.store_id
+				WHERE 1
+				".((!empty($search_criteria)) ? $search_criteria : "")."
+ 				".((!empty($status_criteria)) ? $status_criteria : "")."
 				GROUP BY photo.photo_id ORDER BY photo.photo_id DESC, photo.timestamp ASC LIMIT $start, $perPage";
-		
-		
-		
 		
 		
 		$dbcon->execute_query($sql);

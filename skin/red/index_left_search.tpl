@@ -83,6 +83,7 @@
 .cms-left ul li p{ font-size:14px;}
 .cms-left ul li .name{ color:#000000; padding:5px 0 13px; display:block; line-height:18px;}
 fieldset#search{ padding: 5px 0; text-align: center;}
+#sidebar_banner {margin-top: 10px;}
 /*body{background: none !important;}*/
 </style>
 {/literal}
@@ -262,6 +263,8 @@ fieldset#search{ padding: 5px 0; text-align: center;}
 	<div id="social_links">
 		<a href="https://www.facebook.com/pages/Foodmarketplace/1417039495177479" title="Facebook" style="margin-right:2px;" target="_blank"><img src="{$smarty.const.IMAGES_URL}/facebook-like-area.png" title="Facebook" alt="Facebook"/></a>
 	</div>
+ 
+	
 
 	 {*if $show_signon_banner_small}
 	   <a href="{$smarty.const.SOC_HTTP_HOST}/mothernature" title="View more"><img src="{$smarty.const.SOC_HTTP_HOST}skin/red/foodwine/images/banner-small-coffs-harbour.jpg" alt="Where your profit stay in your pocket" /></a>
@@ -301,14 +304,16 @@ fieldset#search{ padding: 5px 0; text-align: center;}
 				{literal}
 					#retailer_member_code {
 						margin-right: 5px;
+						position: relative;
 					}
 					
 					#retailer_code_number {
 						position: absolute;
-						margin-top: 130px;
+						margin-top: 128px;
 						margin-left: 25px;
-						font-weight: bold;
-						color: #000;
+						color: #555;
+						text-align: center;
+						width: 119px;
 					}
 					
 					#retailer_member_code_link {
@@ -318,17 +323,49 @@ fieldset#search{ padding: 5px 0; text-align: center;}
 						position: absolute;
 						width: 170px;
 					}
+					
+					#retailer_member_code_gallery {
+						background-image: url(../images/gallery-btn.png);
+						position: absolute;
+						width: 154px;
+						height: 39px;
+						left: 8px;
+						top: 210px;
+						cursor: pointer;
+						z-index: 2;
+					}
+					
+					#retailer_member_code_competition {
+						background-image: url(../images/competition-btn.png);
+						position: absolute;
+						width: 154px;
+						height: 39px;
+						left: 8px;
+						top: 165px;
+						cursor: pointer;
+						z-index: 2;
+					}
 				{/literal}
 			</style>
 			<div id="retailer_member_code">
+				<div style="position: absolute; top: 96px; left: 14px; width: 150px; height: 15px; overflow: hidden; text-align: center">
+                	{$retailer_name}
+                </div>
 				<div id="retailer_code_number">{$promo_store_code}</div>
 				<a href="{$smarty.const.SOC_HTTP_HOST}entry?code={$promo_store_code}" id="retailer_member_code_link"></a>
-				<img src="/retailer_member_code.png" width="170px" />
+				<img src="/retailer_member_code.png" width="170px" position: />
+				<div id="retailer_member_code_gallery" onclick="window.location.href='/fanfrenzy'"></div>
+				<div id="retailer_member_code_competition" onclick="window.location.href='/entry'"></div>
 			</div>
 		{/if}
 	{*/if*}
 
 {/if}
+<div id="sidebar_banner">
+    <a href="/fanfrenzy" title="" style="margin-right:2px;" target="_blank">
+        <img src="{$smarty.const.IMAGES_URL}/4_ff_sidebar_banner.png" title="Facebook" alt="Facebook"/>
+    </a>
+</div>
 
 
 {*if $show_left_cms}

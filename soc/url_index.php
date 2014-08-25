@@ -133,7 +133,8 @@ switch($_REQUEST["cp"]) {
         $templateInfo = $socObj -> getTemplateInfo();
         $smarty -> assign('templateInfo', $templateInfo);
         $smarty -> assign('sellerhome', 1);
-        $smarty -> assign('req',	$req);
+        $smarty -> assign('req',    $req);
+        $smarty -> assign('retailer_name',	$req['info']['bu_name']);
         $smarty -> assign('pageTitle',$req['info']['bu_name']." ".$req['info']['bu_suburb']." : ".$req['info']['subAttribName'].' : Food Market Place');
         $custom_seo_keywords = TRUE;
         $smarty -> assign('keywords',$req['info']['subAttribName'].",".$req['info']['bu_suburb'].",".$req['info']['bu_state']);

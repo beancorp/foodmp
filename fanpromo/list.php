@@ -1,22 +1,7 @@
 <?php
-ini_set('display_errors', 1);
+ini_set('display_errors', 0);
 error_reporting(E_ALL);
 @session_start();
-
-$loginSuccessful = false;
-if (isset($_SERVER['PHP_AUTH_USER']) && isset($_SERVER['PHP_AUTH_PW'])){
-    $username = $_SERVER['PHP_AUTH_USER'];
-    $password = $_SERVER['PHP_AUTH_PW'];
-    if ($username == 'admin' && $password == 'KahnKazzi88'){
-        $loginSuccessful = true;
-    }
-}
-if (!$loginSuccessful){
-    header('WWW-Authenticate: Basic realm="Secret page"');
-    header('HTTP/1.0 401 Unauthorized');
-    print "Login failed!\n";
-    exit;
-}
 
 include_once ('../include/config.php');
 include_once ('../include/smartyconfig.php');
@@ -89,7 +74,7 @@ function view_photos($grand_final = false) {
 		
 		$search_criteria = '';	
 		if (!empty($_POST['search_name'])) {
-			$search_criteria = " AND ((retailer.bu_name LIKE '%".$_POST['search_name']."%') OR (consumer.bu_name LIKE '%".$_POST['search_name']."%') OR (photo.description LIKE '%".$_POST['search_name']."%'))";
+			$search_criteria = " AND ((retailer.bu_name LIKE '%".$_POST['search_name']."%') OR (consumer.bu_name LIKE '%".$_POST['search_name']."%') OR (photo.description LIKE '%".$_POST['search_name']."%') OR (photo.unique_id LIKE '%".$_POST['search_name']."%'))";
 		}
 		
 		$search_sort = '';
@@ -136,7 +121,7 @@ function view_photos($grand_final = false) {
 		
     	$res = $dbcon->getOne($sql);
     	
-    	$perPage = 9;	   
+    	$perPage = 18;	   
 		$pageno	= empty($_REQUEST['p']) ? 1 :$_REQUEST['p'];		
 		
     	$count = $res['count'];

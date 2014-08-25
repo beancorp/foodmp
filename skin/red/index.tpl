@@ -88,6 +88,7 @@
 			margin-left: 24px;
 			border-radius: 10px;
 			min-height: 360px;
+			position: relative;
 		}
 
 		.main-banner-cta{
@@ -97,6 +98,15 @@
 			margin-top: 175px;
 			margin-left: 30px;
 			line-height: 30px;
+		}
+
+		.main-banner-image{
+			background: url(../images/viewallentries_graphic.png) 0 0 no-repeat;
+			width: 315px;
+			height: 322px;
+			position: absolute;
+			top: 0px;
+			right: 37px;
 		}
 
 		.main-banner-cta span{
@@ -171,6 +181,7 @@
 					        <br>
 					        and have lots of fun along the way.
 				        </div>
+				        <a href="/fanfrenzy"><div class="main-banner-image"></div></a>				
 				        <a href="/fanfrenzy"><div class="main-banner-button"></div></a>
 			        </div>
                 {/if}

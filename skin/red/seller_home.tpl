@@ -435,16 +435,16 @@
         <div class="fan-frenzy-graphic">
             <img src="images/fan-frenzy-graphic.png" alt="">
         </div>
-        <p class="text-content-top">
+        <p class="text-content-top" style="padding-left: 34px;">
         {$fanfrenzy_text}
         </p>
-        <div class="button-top">
+        <div class="button-top" style="margin-left: 34px;">
             <div class="btn-enter"><a href="/entry">Enter Competition</a></div>
             <div class="btn-view"><a href="/fanfrenzy">View All Entries</a></div>
         </div>
         <div class="clear"></div>
         {if $display}
-            <div class="entries-for-my">
+            <div class="entries-for-my" style="margin-left: 0">
                 <ul id="tab-nav">
                     <li class="active" id="block-gallery-bt">Entries for my store</li>
                     <li>|</li>

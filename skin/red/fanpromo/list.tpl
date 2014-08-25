@@ -72,14 +72,17 @@
 	
 	.place_1 {
 		background-image: url("/skin/red/fanpromo/1st.png");
+        background-repeat: no-repeat;
 	}
 	
 	.place_2 {
 		background-image: url("/skin/red/fanpromo/2nd.png");
+        background-repeat: no-repeat;
 	}
 	
 	.place_3 {
 		background-image: url("/skin/red/fanpromo/3rd.png");
+        background-repeat: no-repeat;
 	}
 	
 	.fan_count {
@@ -122,12 +125,11 @@
 	}
 	
 	#retailer_slider_counter {
-		border-top: 2px solid #FFF;
+		border-top: 1px solid #f3f7f8;
 		margin-top: 25px;
 		padding-bottom: 30px;
 		margin-left: 50px;
 		margin-right: 50px;
-		padding-top: 15px;
 	}
 	
 	#retailer_slider_bar {
@@ -140,7 +142,14 @@
 	}
 	
 	#retailer_slider_bar_inside {
-		background-color: #5094ff;
+		background: #5296ff; /* Old browsers */
+		background: -moz-linear-gradient(top, #5296ff 0%, #4285ed 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5296ff), color-stop(100%,#4285ed)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top, #5296ff 0%,#4285ed 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top, #5296ff 0%,#4285ed 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top, #5296ff 0%,#4285ed 100%); /* IE10+ */
+		background: linear-gradient(to bottom, #5296ff 0%,#4285ed 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5296ff', endColorstr='#4285ed',GradientType=0 ); /* IE6-9 */
 		margin: 5px;
 		width: {/literal}{$bar_pixels}{literal}px;
 		height: 40px;
@@ -156,6 +165,8 @@
 	}
 	
 	#retailer_slider_top {
+        border-top: 1px solid #b2d3df;
+        padding-top: 15px;
 		overflow: hidden;
 	}
 	
@@ -264,7 +275,11 @@
 	.autocomplete-suggestion { cursor: pointer; padding: 2px 5px; white-space: nowrap; overflow: hidden; }
 	.autocomplete-selected { background: #F0F0F0; }
 	.autocomplete-suggestions strong { font-weight: normal; color: #3399FF; }
-	
+    .content {margin-top: 5px; margin-bottom: 7px}
+	.text-content-top { color: #555; font-size: 16px; line-height: 24px; }
+	#search_name { border: #DCDCDC 1px solid}
+	#search_name::-moz-focus-inner { border: 0; padding: 0;}
+	.btn-go {font-size: 16px; padding: 0 !important; border: none}
 {/literal}
 </style>
 
@@ -272,7 +287,7 @@
     <div class="header-fan-frenzy">
         <div class="fan-frenzy-logo"></div>
         <div class="fan-frenzy-graphic">
-            <img src="images/fan-frenzy-graphic.png" alt="">
+            <img src="images/fan-frenzy-graphic1.png" alt="">
         </div>
         <p class="text-content-top">{$fanfrenzy_text}</p>
         <div class="button-top">
@@ -377,9 +392,21 @@
                     $('#search_name').watermark('Keywords, Nicknames, Stores...', {useNative: false});
                     
 					var targetDate = new Date({/literal}{$grand_year}, {$grand_month}, {$grand_day}{literal});
-					$('#countdown_timer').html(countdown(targetDate).toString());  
-					setInterval(function(){  
-						$('#countdown_timer').html(countdown(targetDate).toString());  
+					var showCountdown = function(){
+						if (parseInt(countdown(targetDate).days)>0) {
+							return countdown(targetDate).days+"d "+countdown(targetDate).hours+"h "+countdown(targetDate).minutes+"m "+countdown(targetDate).seconds+"s";
+						} else if (parseInt(countdown(targetDate).hours)>0) {
+							return countdown(targetDate).hours+"h "+countdown(targetDate).minutes+"m "+countdown(targetDate).seconds+"s";
+						} else if (parseInt(countdown(targetDate).minutes)>0) {
+							return countdown(targetDate).minutes+"m "+countdown(targetDate).seconds+"s";
+						} else  {
+							return countdown(targetDate).seconds+"s";
+						}
+						
+					}
+					$('#countdown_timer').html(showCountdown());  
+					setInterval(function(){
+						$('#countdown_timer').html(showCountdown());  
 					}, 1000);
 					
 					
@@ -399,7 +426,6 @@
 					});
 				
 					$('#grand_final_nominees').click(function() {
-						alert("abc");
 						$('#promo_page_type').val(2);
 						$('#current_participants').css('text-decoration', 'underline');
 						$(this).css('text-decoration', 'none');

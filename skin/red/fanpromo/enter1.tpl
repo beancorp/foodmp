@@ -93,6 +93,15 @@
 </script>
 <style>
 	{literal}
+
+		#retailer_name{
+			font-size: 14px;
+		}
+
+		#entry_code{
+			font-size: 14px;
+		}		
+
 		#footer_top {
 			/*display: none !important;*/
 		}
@@ -157,10 +166,17 @@
 			text-transform: uppercase;
 			width: 100px;
 			float: left;
+			width: 171px;
+			background-color: #FFF;
+			border: none;
+			height: 45px;
+			background-repeat: no-repeat;
+			background-position: 0 0;
+			text-transform: none;
 		}
 		
 		.register_button {
-			background-color: #f4a02c;	
+			background-color: #f4a02c;
 			background-image: -moz-linear-gradient(center bottom , #f4a02c 30%, #ff8f05 65%);
 			border: medium none;
 			border-radius: 5px;
@@ -174,6 +190,24 @@
 			text-transform: uppercase;
 			width: 100px;
 			float: right;
+			width: 171px;
+			background-color: #FFF;
+			border: none;
+			height: 45px;
+			background-repeat: no-repeat;
+			background-position: 0 0;
+			text-transform: none;
+		}
+
+		.register_button_left {
+			background-image: url(../images/register-button-bg.png);
+		}
+
+		.register_button {
+			background-image: url(../images/login-button-bg.png);
+		}
+
+		.login_page_button{
 		}
 		
 		#email_processing {
@@ -212,7 +246,8 @@
 			float: left;
 			margin-top: 8px;
 			text-align: right;
-			width: 300px;
+			width: 351px;
+			padding-bottom: 20px;
 		}
 		
 		#register_box a {
@@ -221,7 +256,7 @@
 		
 		.registration_left {
 			float: left;
-			width: 300px;
+			width: 351px;
 		}
 		
 		.registration_divider {
@@ -250,7 +285,7 @@
 		#signup_form input[type="text"], #signup_form select {
 			color: #000;
 			padding: 5px;
-			width: 195px;
+			width: 235px;
 		}
 		
 		#signup_form input[type="checkbox"] {
@@ -259,7 +294,7 @@
 		}
 		
 		#signup_form select {
-			width: 205px;
+			width: 249px;
 		}
 		
 		#signup_form select option {
@@ -285,7 +320,7 @@
 			display: block;
 			margin-top: 6px;
 			padding: 10px;
-			width: 280px;
+			width: 330px;
 		}
 		
 		#login_box {
@@ -304,7 +339,7 @@
 		}
 
 		#login_box_content {
-			width: 300px;
+			width: 350px;
 		}
 		
 		#login_box_content label {
@@ -372,6 +407,11 @@
 			height: 250px;
 			border-left: #dcdcdc 1px solid;
 		}
+
+		#promo_header_photos{
+			background-image: url("/images/entry-top-image.png");
+			cursor: pointer;
+		}
 		
 	{/literal}
 </style>
@@ -412,7 +452,7 @@
 	<div id="promo_page_top">
 		<div id="promo_header_container">
 			<div id="promo_header_title"></div>
-			<div id="promo_header_photos"></div>
+			<div id="promo_header_photos" onclick="window.location.href='/fanfrenzy'"></div>
 		</div>
 		
 		<div id="promo_page_tabs">
@@ -431,7 +471,7 @@
 	<div id="promo_page_content">
 		{if not $logged_in}
 			<div id="login_box">
-				<h3>Enter competition</h3> <br />
+				<h3 style="margin-bottom: 0">Enter competition</h3> <br />
 				You must be logged in to enter. <br /><br />
 				{if $error}
 					<div id="error_message">
@@ -460,7 +500,7 @@
 								</ol>
 							</fieldset>
 							<fieldset class="submit">
-								<input class="register_button_left" type="button" value="Register" id="select_register"> <input class="register_button" type="submit" value="Login" name="submit">
+								<input class="register_button_left login_page_button" type="button" value="Register" id="select_register"> <input class="register_button login_page_button" type="submit" value="Login" name="submit">
 							</fieldset>
 						</div>
 					</form>
@@ -505,7 +545,7 @@
 									</li>
 									<li id="state">
 										<label>State *</label>
-										<select id="state_selection" name="state" class="validate[required]">
+										<select id="state_selection" name="state" class="validate[required]">                               
 											<option value="">[Select a State]</li>
 											{foreach from=$state_list key=k item=v}
 											   <option value="{$v.id}">{$v.description}</li>
@@ -814,6 +854,10 @@
 						{/if}
 					</div>
 					
+					<div style="clear:both">
+					Image file gif, jpeg, jpg, pjpeg, x-png and png are allowed, file size should be lower than 3MB and resolution at least should be 618 x 441<br><br>
+					<input type="checkbox" class="validate[required]" name="copyright_confirm" id="photo_checkbox" {if ($photo_id>0)} checked disabled{/if} /> &nbsp; This photo is taken by me.
+					</div>
 					
 					
 					<div class="entry_field">
@@ -957,12 +1001,11 @@
 							<label>Description</label>
 						</div>
 						<div class="entry_field_element">
-							<textarea name="entry_description" id="entry_description" class="validate[required]">{$photo.description}</textarea>
+							<textarea name="entry_description" id="entry_description" class="validate[required]" style="padding-left: 5px; padding-right: 5px; font-size: 14px">{$photo.description}</textarea>
 						</div>
 					</div>
 					
 					<input type="checkbox" class="validate[required]" name="agree_terms" id="tc_checkbox" {if ($photo_id>0)} checked disabled {/if} /> &nbsp; I agree to the <a href="/fanfrenzy_tnc.html">terms and conditions</a>. <br /><br />
-					<input type="checkbox" class="validate[required]" name="copyright_confirm" id="photo_checkbox" {if ($photo_id>0)} checked disabled{/if} /> &nbsp; This photo is taken by me. <br /><br />
 					
 					<input class="entry-btn" id="entry_button" type="button" value="Enter Competition" onclick="validateBeforeSubmit()">					
 					
