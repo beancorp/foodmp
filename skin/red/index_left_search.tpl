@@ -354,7 +354,7 @@ fieldset#search{ padding: 5px 0; text-align: center;}
 				<div id="retailer_code_number">{$promo_store_code}</div>
 				<a href="{$smarty.const.SOC_HTTP_HOST}entry?code={$promo_store_code}" id="retailer_member_code_link"></a>
 				<img src="/retailer_member_code.png" width="170px" position: />
-				<div id="retailer_member_code_gallery" onclick="window.location.href='/fanfrenzy'"></div>
+				<div id="retailer_member_code_gallery" onclick="window.location.href='{$smarty.const.SOC_HTTP_HOST}fanpromo/list_photo_retailer.php?retailer_id={$req.info.StoreID}'"></div>
 				<div id="retailer_member_code_competition" onclick="window.location.href='/entry'"></div>
 			</div>
 		{/if}
