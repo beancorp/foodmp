@@ -611,6 +611,43 @@ class adminMain extends common {
 
 		return $strResult;
 	}
+	
+	
+	/**
+	 * view record of customer
+	 *
+	 * @param int $StoreID
+	 * @return array
+	 */
+	public function profileUserView($StoreID=0){
+		$arrResult	=	null;
+		if ($StoreID) {
+			$_query = "select id,description from ".$this->table."state order by id ";
+			$this -> dbcon -> execute_query($_query);
+			$arrState = $this -> dbcon -> fetch_records(true);
+			
+
+			$_query = "select ".$this->table."bu_detail.StoreID,bu_name, bu_nickname,bu_address,bu_suburb,bu_state,bu_phone,bu_fax,bu_procode,bu_urlstring,bu_postcode,PayDate,renewalDate,lastLogin,bu_desc ,".$this->table."login.user as bu_email from ".$this->table."bu_detail ,  ".$this->table."login Where ".$this->table."bu_detail.StoreID = ".$this->table."login.StoreID AND ".$this->table."bu_detail.StoreID='$StoreID'";
+			$this -> dbcon ->execute_query($_query);
+			$arrTemp = $this -> dbcon -> fetch_records(true);
+			if (is_array($arrTemp)) {
+				$arrResult = $arrTemp[0];
+			}
+			foreach($arrState as $row){
+				if ($row["id"] == $arrResult['bu_state']){
+					$arrResult['bu_state'] = $row['description'];
+					break;
+				}
+			}
+		}
+		$phones = explode('-', $arrResult["bu_phone"]);
+        $arrResult['phone1'] = $phones[0];
+        $arrResult['phone2'] = $phones[1];	
+		return $arrResult;
+	}
+	
+	
+	
 
 }
 
@@ -917,5 +954,7 @@ function saveEwayInfo($objForm){
 
 	return $objResponse;
 }
+
+
 
 ?>

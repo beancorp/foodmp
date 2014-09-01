@@ -156,18 +156,30 @@ switch($_REQUEST["cp"]){
 		$smarty -> assign('content', $content);
 		break;
 	case 'customer':
-		$req['header']	=	$objAdminMain->lang['header'][$_REQUEST["cp"]];
-		$xajax -> registerFunction('customerGetList');
-		$xajax -> registerFunction('customerSearch');
-		$xajax -> registerFunction('customerView');
-		$xajax -> registerFunction('customerDelete');
-		$xajax -> processRequest();
-		$req['xajax_Javascript']   = $xajax -> getJavascript('/include/xajax');
-		
-		$req['list'] =	$objAdminMain -> customerGetList();
-		$smarty -> assign('req',	$req);
-		$content = $smarty -> fetch('admin_customer.tpl');
-		$smarty -> assign('content', $content);
+		if ($_REQUEST["user_id"] > 0){
+			$smarty			= &$GLOBALS['smarty'];
+			$objAdminMain 	= &$GLOBALS['objAdminMain'];
+			$req['list'] =	$objAdminMain -> profileUserView($_REQUEST["user_id"]);
+			$smarty -> assign('req',	$req);
+			$smarty-> assign('view_profile_from_url',1);
+			
+			$content = $smarty -> fetch('admin_customer_view.tpl');
+			$smarty -> assign('content', $content);
+			
+		}else{
+			$req['header']	=	$objAdminMain->lang['header'][$_REQUEST["cp"]];
+			$xajax -> registerFunction('customerGetList');
+			$xajax -> registerFunction('customerSearch');
+			$xajax -> registerFunction('customerView');
+			$xajax -> registerFunction('customerDelete');
+			$xajax -> processRequest();
+			$req['xajax_Javascript']   = $xajax -> getJavascript('/include/xajax');
+			
+			$req['list'] =	$objAdminMain -> customerGetList();
+			$smarty -> assign('req',	$req);
+			$content = $smarty -> fetch('admin_customer.tpl');
+			$smarty -> assign('content', $content);
+		}
 
 		break;
 	

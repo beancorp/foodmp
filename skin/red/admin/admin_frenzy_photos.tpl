@@ -44,7 +44,7 @@
 				<td>{$photo.unique_id}</td>
 				<td>{$photo.time_uploaded}</td>
 				<td><a class="fan_photo" href="/photo_{$photo.photo_id}.html" target="_blank"><img width="200px" src="/fanpromo/{$photo.thumb}" /></a></td>
-				<td>{$photo.consumer}</td>
+				<td><a href="/admin/?act=main&cp=customer&user_id={$photo.consumer_id}">{$photo.consumer}</a></td>
 				<td>{$photo.retailer}</td>
 				<td>{$photo.code}</td>
 				

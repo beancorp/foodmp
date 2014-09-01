@@ -9,7 +9,7 @@
 <li id="input" style="width:600px;text-align:left">{$req.list.bu_email}</li>
 
 <li id="lable" style="text-align:right">{$lang.main.lb_cus_phone}</li>
-<li id="input" style="width:600px;text-align:left">{$req.list.bu_phone}</li>
+<li id="input" style="width:600px;text-align:left">{$req.list.phone2}</li>
 
 <li id="lable" style="text-align:right">{$lang.main.lb_cus_state}</li>
 <li id="input" style="width:600px;text-align:left">{$req.list.bu_state}</li>
@@ -21,6 +21,10 @@
 <li id="input" style="width:600px;text-align:left">{$req.list.bu_postcode}</li>
 <li id="lable" style="text-align:right"> </li>
 <li id="input" style="width:600px;text-align:left">
+	{if $view_profile_from_url <> 1}
   <input name="back" type="button" class="hbutton" id="back" value="{$lang.but.back}" onClick="javascript:xajax_customerGetList($('#pageno').val(),'tabledatalist',xajax.getFormValues('mainForm'))">
+  {else}
+  <input name="back" type="button" class="hbutton" id="back" value="{$lang.but.back}" onClick="javascript:window.history.back();">
+  {/if}
 </li>
 </ul>
