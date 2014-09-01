@@ -13,6 +13,9 @@ include_once ('class.soc.php');
 include_once('../languages/'.LANGCODE.'/soc.php');
 include_once('../languages/'.LANGCODE.'/foodwine/index.php');
 
+
+
+
 $smarty->assign('about_text', tab_content($dbcon, 1));
 $smarty->assign('how_to_enter', tab_content($dbcon, 2));
 $smarty->assign('how_it_works', tab_content($dbcon, 3));
@@ -166,16 +169,30 @@ if (isset($_POST['code']) && $consumer_id > 0) {
 				
 				
 				$im = new Imagick($path_imagick);
-				//$im->resizeImage(615, 415, Imagick::FILTER_LANCZOS, 1);
-				//$im->setImageBackgroundColor('white');
-				//$im->setCompressionQuality(100);
+			
 				if ($_POST['x1'] > 0){
 					$x1 = (int)$_POST['x1'];
-					$y1 = (int)$_POST['y1'];
 				}else{
 					$x1 = 0;
+				}
+				
+				if ($_POST['y1'] > 0){
+					$y1 = (int)$_POST['y1'];
+				}else{
 					$y1 = 0;
 				}
+				
+				
+				if ($_POST["x2"] >0){
+					$crop_width = $_POST["x2"] - $x1;
+					$crop_height = $_POST["y2"] - $y1;
+				}else{
+					$crop_width = 618;
+					$crop_height = 441;
+				}
+				
+				
+				
 				/*
 				if ($_POST['x1'] > 0){
 					//$im->cropImage((int)$_POST['w'], (int)$_POST['h'], (int)$_POST['x1'], (int)$_POST['y1']);
@@ -188,15 +205,21 @@ if (isset($_POST['code']) && $consumer_id > 0) {
 				if ($_FILES["file"]["type"] == "image/gif"){
 					 $im = $im->coalesceImages(); 
 					foreach ($im as $frame) { 
-					  $frame->cropImage(618, 441, $x1, $y1); 
-					  $frame->thumbnailImage(618, 441); 
-					  $frame->setImagePage(618, 441, 0, 0); 
+					  $frame->cropImage($crop_width, $crop_height, $x1, $y1); 
+					  $frame->thumbnailImage($crop_width, $crop_height); 
+					  $frame->setImagePage($crop_width, $crop_height, 0, 0); 
 					} 
 					$im = $im->deconstructImages(); 
 				}else{
-					$im->cropImage(618, 441, $x1, $y1);
+					$im->cropImage($crop_width, $crop_height, $x1, $y1);
 				}
 				$im->setImageFormat('jpg');
+				
+				if($crop_width > 618){
+					 $im->thumbnailImage(618, 441);
+				}
+				
+				
 				
 				
 				$image_path = $upload_folder.$image_name;

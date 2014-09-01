@@ -200,14 +200,18 @@ function showImage() {
 
 function jCrop(cropWidth, cropHeight) {
     $('#preview').Jcrop({
-        minSize: [cropWidth, cropHeight], // min crop size
-        maxSize: [cropWidth, cropHeight],
-        //aspectRatio : 1, // keep aspect ratio 1:1
+    	minSize: [618, 441], // min crop size
+    	//maxSize: [618, 441],
+        //minSize: [cropWidth, cropHeight], // min crop size
+        //maxSize: [cropWidth, cropHeight],
+    	//aspectRatio : 1, // keep aspect ratio 1:1
         bgFade: true, // use fade effect
         bgOpacity: .3, // fade opacity
         onChange: updateInfo,
         onSelect: updateInfo,
-        onRelease: clearInfo
+        onRelease: clearInfo,
+        aspectRatio: 618/441,
+        setSelect:   [ 618,441, 0, 0 ],
     }, function(){
 
         // use the Jcrop API to get the real image size
