@@ -333,26 +333,28 @@
 						});
 					
 						$('#fan_frame').click(function() {
-							$.ajax({
-								url: '/photo_fan.php',
-								type: 'post',
-								data: {photo_id: '{/literal}{$photo.photo_id}{literal}'},
-								dataType: 'json',
-								success: function(response) {
-									if (!response.error) {
-										$('#fan_counter').html(response.fan_counter + ' Fans');
-									} else {
-										if (response.message == 'Must be logged in') {
-											window.location.assign("{/literal}{$smarty.const.SOC_HTTPS_HOST}soc.php?cp=login&reurl={$smarty.const.SOC_HTTPS_HOST}photo_{$photo.photo_id}.html{literal}");
-										}
-									}
-									if (response.are_you) {
-										$('#fan_frame').addClass('become_fan');
-									} else {
-										$('#fan_frame').removeClass('become_fan');
-									}
-								}						
-							});
+                            if(!$(this).hasClass('become_fan')){
+							    $.ajax({
+								    url: '/photo_fan.php',
+								    type: 'post',
+								    data: {photo_id: '{/literal}{$photo.photo_id}{literal}'},
+								    dataType: 'json',
+								    success: function(response) {
+									    if (!response.error) {
+										    $('#fan_counter').html(response.fan_counter + ' Fans');
+									    } else {
+										    if (response.message == 'Must be logged in') {
+											    window.location.assign("{/literal}{$smarty.const.SOC_HTTPS_HOST}soc.php?cp=login&reurl={$smarty.const.SOC_HTTPS_HOST}photo_{$photo.photo_id}.html{literal}");
+										    }
+									    }
+									    if (response.are_you) {
+										    $('#fan_frame').addClass('become_fan');
+									    } else {
+										    $('#fan_frame').removeClass('become_fan');
+									    }
+								    }						
+							    });
+                            }
 						});
 						
 						$.ajax({
