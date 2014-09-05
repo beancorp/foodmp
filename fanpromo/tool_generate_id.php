@@ -21,10 +21,10 @@ $dbcon->execute_query($sql);
 
 foreach ($res as $row){
 	$sql = "";
-	if (!$row["unique_id"]){
-		$sql = "UPDATE photo_promo SET unique_id = '" . uniqid() . "' WHERE photo_id = {$row["photo_id"]}";
+	//if (!$row["unique_id"]){
+		$sql = "UPDATE photo_promo SET unique_id = '" . str_pad($row["photo_id"], 10, "0", STR_PAD_LEFT) . "' WHERE photo_id = {$row["photo_id"]}";
 		$dbcon->execute_query($sql);
-	}
+	//}
 }
 echo "done";
 

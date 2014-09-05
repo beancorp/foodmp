@@ -157,7 +157,8 @@ if (!empty($_GET['image'])) {
 	}
 
 	$smarty->loadLangFile('/index'); 
-	$smarty->assign('vote_enabled', $display_vote_enable);
+    $smarty->assign('vote_enabled', $display_vote_enable);
+	$smarty->assign('fanpromo_view_page', true);
 	display_page($dbcon, $smarty, 'view.tpl', 'Fan Promo - View Detail', $_LANG);
 }
 

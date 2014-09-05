@@ -1007,9 +1007,9 @@
 					
 					<input type="checkbox" class="validate[required]" name="agree_terms" id="tc_checkbox" {if ($photo_id>0)} checked disabled {/if} /> &nbsp; I agree to the <a href="/fanfrenzy_tnc.html">terms and conditions</a>. <br /><br />
 					
-					<input class="entry-btn" id="entry_button" type="button" value="Enter Competition" onclick="validateBeforeSubmit()">					
+					<input class="entry-btn" id="entry_button" type="button" value="Submit Photo" onclick="validateBeforeSubmit()">					
 					
-					{*<input id="entry_button" type="button" name="submit" value="Enter Competition">*}
+					{*<input id="entry_button" type="button" name="submit" value="Submit Photo">*}
 					
 					<input type="hidden" id="suburb_id"/>
 			</div>

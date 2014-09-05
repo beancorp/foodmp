@@ -3,6 +3,7 @@
 include_once('../include/smartyconfig.php');
 include_once('class.login.php');
 include_once('maininc.php');
+include_once('config.php');
 include_once('functions.php');
 include_once('class.soc.php');
 
@@ -36,7 +37,11 @@ if (isset($_POST['content_page']) && isset($_POST['text_id'])) {
 		$grand_vote_open_time = strtotime($content_page);		
 		
 		if ($grand_vote_open_time < $final_time){
-			$rs = array('message' => 'Upate Fail: Grand Vote Date Start must be later or equal Grand Final Date');
+            if(CURRENCYCODE == 'AUD'){
+                $rs = array('message' => 'Upate Fail: Grand Vote Date Start must be later or equal Grand Final Date'); 
+            }else{
+                $rs = array('message' => 'Upate Fail: Grand Vote Date Start must be later or equal Fan Frenzy Final Date'); 
+            }
 			$error = true;		
 		}
 	}

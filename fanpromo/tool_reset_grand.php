@@ -1,4 +1,23 @@
-<?php
+<?php 	
+$loginSuccessful = false;
+if (isset($_SERVER['PHP_AUTH_USER']) && isset($_SERVER['PHP_AUTH_PW'])){
+    $username = $_SERVER['PHP_AUTH_USER'];
+    $password = $_SERVER['PHP_AUTH_PW'];
+    if ($username == 'admin' && $password == 'KahnKazzi88'){
+        $loginSuccessful = true;
+    }
+}
+if (!$loginSuccessful){
+    header('WWW-Authenticate: Basic realm="Secret page"');
+    header('HTTP/1.0 401 Unauthorized');
+    print "Login failed!\n";
+    exit;
+}
+
+
+ 
+
+
 ini_set('display_errors', 0);
 @session_start();
 

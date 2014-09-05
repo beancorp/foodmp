@@ -137,6 +137,31 @@
 		margin-bottom: 25px;
 		padding: 10px;
 	}
+	.btn-slide-wrap{
+		margin-bottom: 10px;
+		margin-left: 10px;
+		margin-right: 12px;
+	}
+	.btn-back-to-entries{
+		background: url(/images/btn-back-to-entries.png) no-repeat;
+		width: 153px;
+		height: 44px;
+		margin-bottom: 24px;
+		cursor: pointer;
+		float: left;
+	}
+	.btn-slide-wrap .edit-button {
+		float: right;
+		right: 0;
+		margin-top: 2px;
+		width: 100px;
+		color: #453c8d;
+		width: 58px;
+		height: 27px;
+		line-height: 27px;
+		cursor: pointer;
+		background: url(/images/btn-edit.jpg) 0 0 no-repeat;
+	}
 	
 {/literal}
 </style>
@@ -198,13 +223,17 @@
 		</div>
 	</div>
 	<div class="detail-page-side">
+		<div class="btn-slide-wrap">
+			<div class="btn-back-to-entries" id="btn-back-to-entries"></div>
+            {if $editable eq true}
+                <a href="{$smarty.const.SOC_HTTP_HOST}fanpromo/enter1.php?photo_id={$photo.photo_id}"><div class="edit-button"></div></a>
+            {/if}
+		</div>
+		<div class="clearfix"></div>
 		<div class="dt-photo-info">
 			<div class="dt-photo-info-top">
 				<img id="dt-photo-info-img" src="{$profile_picture}" alt="" width="43px">
 				<span>{$photo.consumer_info.bu_name}</span>
-                {if $editable eq true}
-				    <a href="{$smarty.const.SOC_HTTP_HOST}fanpromo/enter1.php?photo_id={$photo.photo_id}"><div class="edit-button"></div></a>
-                {/if}
 			</div>
 			<div class="dt-photo-info-bottom">
 				{$photo.photo_date}
@@ -227,7 +256,7 @@
 		{elseif $photo.grand_final == 1}
 		<div class="dt-block-1">
 			<div class="dt-block-1-title">
-				<span>Grand Finals Nominee</span>
+				<span>{if $smarty.const.CURRENCYCODE eq 'AUD'}Grand Final{else}Fan Frenzy Final{/if} Nominee</span>
 				<img id="dt-block-1-img" src="{$smarty.const.IMAGES_URL}/icon-start.png" alt="" width="46px">
 			</div>
 			<div class="dt-block-1-content">
@@ -244,7 +273,7 @@
 			<span class='st_sharethis_large' st_url="{$smarty.const.SOC_HTTP_HOST}/fanpromo/{$photo.brand_image}" displayText='ShareThis'></span>
 			<span class='st_facebook_large' st_url="{$smarty.const.SOC_HTTP_HOST}/fanpromo/{$photo.brand_image}" displayText='Facebook'></span>
 			<span class='st_twitter_large' st_url="{$smarty.const.SOC_HTTP_HOST}/fanpromo/{$photo.brand_image}" displayText='Tweet'></span>
-			<span class='st_linkedin_large' st_url="{$smarty.const.SOC_HTTP_HOST}/fanpromo/{$photo.brand_image}" displayText='LinkedIn'></span>
+			<span class='st_linkedin_large' st_image="{$smarty.const.SOC_HTTP_HOST}/fanpromo/{$photo.brand_image}" st_url="{$smarty.const.SOC_HTTP_HOST}/fanpromo/{$photo.brand_image}" displayText='LinkedIn'></span>
 			<span class='st_pinterest_large' st_url="{$smarty.const.SOC_HTTP_HOST}/fanpromo/{$photo.brand_image}" displayText='Pinterest'></span>
 			<span class='st_email_large' st_url="{$smarty.const.SOC_HTTP_HOST}/fanpromo/{$photo.brand_image}" displayText='Email'></span>
 			
@@ -331,6 +360,20 @@
 							});
 							
 						});
+
+						$('#btn-back-to-entries').click(function() {
+							{/literal} 
+								{if $photo.grand_final == 1}
+										window.location.href="/fanfrenzy?grand_tab=1";
+								{else}
+										window.location.href="/fanfrenzy";
+								{/if}
+							{literal}
+						
+											
+
+						});
+						
 					
 						$('#fan_frame').click(function() {
                             if(!$(this).hasClass('become_fan')){

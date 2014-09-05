@@ -196,7 +196,7 @@
 		height: 65px;
 		margin-top: 20px;
 		width: 880px;
-		padding: 10px 25px;
+		padding: 10px 20px;
 		margin-left: 10px;
 	}
 	
@@ -209,12 +209,19 @@
 	
 	.search_box {
 		float: left;
-		margin-right: 35px;
+		margin-right: 20px;
 	}
 	
 	.search_box input[type="text"], .search_box select {
-		width: 180px;
-		padding: 6px;
+		width: 250px;
+		padding: 5px;
+	}
+	
+	input.btn-go {
+		height: 27px;
+		line-height: 27px;
+		vertical-align: top;
+		font-weight: bold;
 	}
 	
 	.search_box label {
@@ -222,9 +229,7 @@
 		font-size: 16px;
 		display: block;
 		clear: both;
-		margin-bottom: 5px;
-		font-weight: bold;
-		
+		font-weight: bold;	
 	}
 	
 	#current_participants {
@@ -301,7 +306,7 @@
 				<div id="retailer_slider_gap">&nbsp;</div>
 				<div id="countdown">			
 					<span class="blue_writing"><span id="countdown_timer"></span></span> <br />
-					<span class="normal_writing">until the Grand Finals</span>
+					<span class="normal_writing">until the {if $smarty.const.CURRENCYCODE eq 'AUD'}Grand Final{else}Fan Frenzy Final{/if}</span>
 				</div>
                 <div id="retailer_goal">
                     <span class="blue_writing">{$retailer_count} Retailers joined</span> <br />
@@ -323,14 +328,18 @@
      <div id="promo_page_top_page">
 		<ul id="tab-nav">
 			{if $grand_final_flag == 1}
-			<li class="active" id="my-gallery-bt">Grand Final Nominees</li>
+			<li class="active" id="my-gallery-bt">{if $smarty.const.CURRENCYCODE eq 'AUD'}Grand Final{else}Fan Frenzy Final{/if} Nominees</li>
 			{else}
-            <li class="active" id="block-gallery-bt">Current Participants</li>
+            <li {if $grand_tab!=1} class="active" {/if} id="block-gallery-bt">Current Participants</li>
             <li>|</li>
-            <li id="my-gallery-bt">Grand Final Nominees</li>
+            <li {if $grand_tab==1}class="active"{/if} id="my-gallery-bt">{if $smarty.const.CURRENCYCODE eq 'AUD'}Grand Final{else}Fan Frenzy Final{/if} Nominees</li>
             {/if}
             
+            {if $grand_final_flag == 1 || $grand_tab==1}
+            <input type="hidden" id="promo_page_type" value="2" />
+            {else}
             <input type="hidden" id="promo_page_type" value="1" />
+            {/if}
         </ul>
 	</div>
 	<div class="clear"></div>
@@ -338,7 +347,7 @@
 		<div id="promo_page_top_page_search_form">
 			<div class="search_box">
 				<label for="search_name">Search</label>
-				<input type="text" placeholder="Keywords, Nicknames, Stores..." name="search_name" id="search_name" /> 
+				<input type="text" placeholder="keywords, nicknames, stores, photo IDs..." name="search_name" id="search_name" /> 
 				<input type="button" value="Go" id="search_go" class="btn-go" />
 			</div>
 			<div class="search_box">
@@ -379,7 +388,11 @@
 		</div>
 	</div>
 	<div id="promo-page-content"> 
-		{php}view_photos();{/php}
+		{if $grand_tab == 1}
+			{php}view_photos(true);{/php}
+		{else}	
+			{php}view_photos();{/php}
+		{/if}
 	</div>
 </div>
 
@@ -389,7 +402,7 @@
 		{literal}
 				$(document).ready(function() {
                 
-                    $('#search_name').watermark('Keywords, Nicknames, Stores...', {useNative: false});
+                    $('#search_name').watermark('keywords, nicknames, stores, photo IDs...', {useNative: false});
                     
 					var targetDate = new Date({/literal}{$grand_year}, {$grand_month}, {$grand_day}{literal});
 					var showCountdown = function(){

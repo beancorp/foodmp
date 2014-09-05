@@ -112,6 +112,7 @@ class login extends common  {
 		unset($_SESSION['p']);
 		unset($_SESSION['l']);
 		unset($_SESSION['msglogin']);
+		unset($_SESSION['isAdmin']);
 		setcookie('socaduser', '');
 		setcookie('socadpass', '');
 	}

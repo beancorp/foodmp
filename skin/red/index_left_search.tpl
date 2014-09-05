@@ -345,9 +345,66 @@ fieldset#search{ padding: 5px 0; text-align: center;}
 						cursor: pointer;
 						z-index: 2;
 					}
+					#retailer-member-code{
+						width: 170px;
+						background-color: #d4e6ed;
+						padding-top: 15px;
+						border-radius: 2px;
+					}
+					#retailer-member-code .logo{
+						background: url(../images/logo-retailer-member-code.png) no-repeat;
+						width: 158px;
+						height: 50px;
+						display: block;
+						margin: 0 auto;
+					}
+					#retailer-member-code .title{
+						font-size: 13px;
+						color: #3c2d87;
+						font-weight: bold;
+						text-align: center;
+						margin-top: 10px;
+					}
+					#retailer-member-code .content{
+						text-align: center;
+						margin: 3px 10px;
+					}
+					.retailer-code-numb{
+						background: url(../images/bg-retailer-member.png) no-repeat;
+						width: 153px;
+						height: 35px;
+						margin: 10px auto;
+						text-align: center;
+						line-height: 35px;
+					}
+					.retailer-member-code-competition{
+						background-image: url(../images/competition-btn.png);
+						width: 154px;
+						height: 39px;
+						margin: 0 auto;
+						cursor: pointer;
+					}
+					.retailer-member-code-gallery{
+						background: url(../images/gallery-btn.png) no-repeat;
+						width: 154px;
+						height: 39px;
+						cursor: pointer;
+						margin: 5px auto;
+						padding-bottom: 6px;
+					}
+
+
 				{/literal}
 			</style>
-			<div id="retailer_member_code">
+			<div id="retailer-member-code">
+				<div class="logo"></div>
+				<div class="title">Retailer Member Code</div>
+				<div class="content">{$retailer_name}</div>
+				<div class="retailer-code-numb">{$promo_store_code}</div>
+				<div class="retailer-member-code-competition" onclick="window.location.href='/entry'"></div>
+				<div class="retailer-member-code-gallery" onclick="window.location.href='{$smarty.const.SOC_HTTP_HOST}fanpromo/list_photo_retailer.php?retailer_id={$req.info.StoreID}'"></div>
+			</div>
+			<!-- <div id="retailer_member_code">
 				<div style="position: absolute; top: 96px; left: 14px; width: 150px; height: 15px; overflow: hidden; text-align: center">
                 	{$retailer_name}
                 </div>
@@ -356,7 +413,7 @@ fieldset#search{ padding: 5px 0; text-align: center;}
 				<img src="/retailer_member_code.png" width="170px" position: />
 				<div id="retailer_member_code_gallery" onclick="window.location.href='{$smarty.const.SOC_HTTP_HOST}fanpromo/list_photo_retailer.php?retailer_id={$req.info.StoreID}'"></div>
 				<div id="retailer_member_code_competition" onclick="window.location.href='/entry'"></div>
-			</div>
+			</div> -->
 		{/if}
 	{*/if*}
 

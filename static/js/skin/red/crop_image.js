@@ -24,8 +24,13 @@ function bytesToSize(bytes) {
 };
 
 window.code_valid = true;
+
+
+var codeMessageContent;
+
 function codeMessage(message) {
 	$('#entry_code').validationEngine('showPrompt', message, 'red', null, true);
+	codeMessageContent = message;
 }
 
 function retailerMessage(message) {
@@ -60,6 +65,7 @@ function check_code_valid(){
                 window.code_valid = true;
                 window.code_error_message = "";
                 $('#entry_code').validationEngine('hide');
+                codeMessageContent = "";
             } else {
                 //error message or whatever
                 if (d.error_code == "code")
@@ -137,6 +143,10 @@ function showKey(obj) {
 function showImage() {
     // display step 2
     $('.preview_upload_fanfrenzy').fadeIn(500);
+    //after upload image, the validation message will be recreate to update position
+    if (codeMessageContent != ""){
+    	codeMessage(codeMessageContent);
+    }
     setTimeout(function(){
         $("#upload_flag").val("1");
         if ($("#submit_flag").val() == "1") {
@@ -389,15 +399,21 @@ function validateBeforeSubmit(){
     var $return = true;
     var submitItv = setInterval(function(){
         if (!validatingCode) {
+        	var scrollPos = 0;
+        	
             $("#submit_flag").val("1");  
             var photo_id = $('#photo_id').val();
             if (photo_id == "0"){
                 if (!$("#text_box_1").val()) {
                     $('#text_box_1').validationEngine('showPrompt', '* This field is required', 'red', null, true);
+                    scrollPos = $('.photo_upload_fanfrenzy').offset().top;
+                    $(window).scrollTop(scrollPos);
                     $return = false;
                 } else if ($("#upload_flag").val() !== "1" && $("#text_box_1").val()) {     
                     $('#text_box_1').validationEngine('hide');
                     $('#button-upload').validationEngine('showPrompt', '* Please press the Upload button', 'red', null, true);
+                    scrollPos = $('.photo_upload_fanfrenzy').offset().top;
+                    $(window).scrollTop(scrollPos);                    
                     $return = false;
                 } else {
                     $('#text_box_1').validationEngine('hide');
@@ -405,9 +421,11 @@ function validateBeforeSubmit(){
                     var imgHeight = $('#h').val();
                     if (imgWidth < 618 || imgHeight < 441){
                         $('#button-upload').validationEngine('showPrompt', '* Your image at least must be 618 x 441', 'red', null, true);
+                        scrollPos = $('.photo_upload_fanfrenzy').offset().top;
                         $return = false;
                     } else if (imgWidth > 618 || imgHeight > 441){
                         $('#button-upload').validationEngine('showPrompt', '* Please select a crop region', 'red', null, true);
+                        scrollPos = $('.photo_upload_fanfrenzy').offset().top;
                         $return = false;
                     } else {
                         $('#button-upload').validationEngine('hide');
@@ -415,16 +433,36 @@ function validateBeforeSubmit(){
                     }
                 }
             }
+            
+            if (!$("#photo_checkbox").prop("checked")) {
+                $('#photo_checkbox').validationEngine('showPrompt', '* This field is required', 'red', null, true);
+                if (!scrollPos){
+                	scrollPos = $('#photo_checkbox').offset().top - 50; 
+                }
+                $return = false;
+            }
+            
+            
             if (!$("#retailer_name").val()) {
                 $('#retailer_name').validationEngine('showPrompt', '* This field is required', 'red', null, true);
+                
+                if (!scrollPos){
+                	scrollPos = $('#retailer_name').offset().top - 50; 
+                }
                 $return = false;
             }
             if (!$("#category_id").val()) {
                 $('#category_id').validationEngine('showPrompt', '* This field is required', 'red', null, true);
+                if (!scrollPos){
+                	scrollPos = $('#category_id').offset().top - 50; 
+                }
                 $return = false;
             }
             if (!$("#state_id").val()) {
                 $('#state_id').validationEngine('showPrompt', '* This field is required', 'red', null, true);
+                if (!scrollPos){
+                	scrollPos = $('#state_id').offset().top - 50; 
+                }
                 $return = false;
             }
             if (!$("#entry_description").val()) {
@@ -435,9 +473,10 @@ function validateBeforeSubmit(){
                 $('#tc_checkbox').validationEngine('showPrompt', '* This field is required', 'red', null, true);
                 $return = false;
             }
-            if (!$("#photo_checkbox").prop("checked")) {
-                $('#photo_checkbox').validationEngine('showPrompt', '* This field is required', 'red', null, true);
-                $return = false;
+            
+            
+            if ($return == false){
+            	$(window).scrollTop(scrollPos);
             }
 
             clearInterval(submitItv);

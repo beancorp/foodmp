@@ -6,6 +6,7 @@ session_start();
 include_once ('../include/smartyconfig.php');
 include_once ('class.login.php');
 include_once ('maininc.php');
+include_once('config.php'); 
 
 
 require_once 'Pager/Pager.php';
@@ -94,7 +95,11 @@ if (isset($_POST['change_status_photo']) && $_POST['change_status_photo'] == 1) 
 if (isset($_GET['grand_final'])) {
 	$finalist_sql = "UPDATE photo_promo SET grand_final = 1 WHERE photo_id = '".$_GET['grand_final']."'";
 	$dbcon->execute_query($finalist_sql);
-	$error_message .= '<div class="error_message" style="color: #00FF00;">Photo has been selected for grand final.</div>';
+    if(CURRENCYCODE == 'AUD'){
+        $error_message .= '<div class="error_message" style="color: #00FF00;">Photo has been selected for Grand Final.</div>';  
+    }else{
+        $error_message .= '<div class="error_message" style="color: #00FF00;">Photo has been selected for Fan Frenzy Final.</div>'; 
+    }
 }
 
 

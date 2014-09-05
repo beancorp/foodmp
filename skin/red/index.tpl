@@ -26,10 +26,14 @@
 	<link rel="canonical" href="{$smarty.const.SOC_HTTP_HOST}{$headerInfo.bu_urlstring}" />
 	{/if}
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    {if !$fanpromo_view_page}
 	<meta property="fb:app_id" content="{$facebook.appID}"/>
 	<meta content="{if $req.info.facelike_title}{$req.info.facelike_title}{else}Food Market Place{/if}" property="og:title">
 	<meta content="{if $req.info.facelike_image}{$req.info.facelike_image}{else}{$smarty.const.IMAGES_URL}skin/red/logo-main.png{/if}" property="og:image">
 	<meta content="{$req.info.facelike_desc}" property="og:description">
+    {else}
+    <meta content="{$smarty.const.SOC_HTTP_HOST}/fanpromo/{$photo.brand_image}" property="og:image">
+    {/if}
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=5.0" />
 	<meta name="google-site-verification" content="dHAkIMuHSon2_YaffhovdX253zJtYLlwz59aDgD0DeY" />
 	<meta name="Keywords" content="{$keywords}" />

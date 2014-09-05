@@ -243,6 +243,11 @@ if (isset($_POST['code']) && $consumer_id > 0) {
 				
 			
 				if ($photo_id > 0) {
+					
+					$array_update["unique_id"] = str_pad($photo_id, 10, "0", STR_PAD_LEFT);
+					update_photo($dbcon,$array_update, $photo_id);
+					
+					
 					//header('location: https://foodmarketplace.com.au/photo_'.$photo_id.'.html');
 					
 					/*
@@ -292,13 +297,13 @@ if (isset($_POST['code']) && $consumer_id > 0) {
 	}
 }
 
-/*
+//this is for  registering form
 $query	= "SELECT id, stateName, description FROM aus_soc_state ORDER BY description";
 $result	= $dbcon->execute_query($query);
 $state_list = $dbcon->fetch_records();
 $suburb_data = array();
 
-/*
+
 foreach($state_list as $state) {
 	$query	= "SELECT suburb_id, suburb FROM aus_soc_suburb WHERE state = '".$state['stateName']."' ORDER BY suburb ASC";
 	$result	= $dbcon->execute_query($query);
@@ -310,7 +315,7 @@ foreach($state_list as $state) {
 	$suburb_data[$state['stateName']] = $output;
 }
 
-*/
+
 
 
 

@@ -53,7 +53,7 @@ if (time() >= $grand_final_time){
 	$_SESSION["grand_final_flag"] = 0;
 	$grand_final_flag = 0;
 }
-$smarty->assign('grand_final_flag', $grand_final_flag);
+$smarty->assign('grand_final_flag', $grand_final_flag);//in grand final time
 
 //count down to Grand Finale Date
 //get month , day , year of Grand OPen
@@ -63,6 +63,11 @@ $tmp = explode("/", $grand_final_date);
 $smarty->assign('grand_month', (int)$tmp[0] - 1);
 $smarty->assign('grand_day', $tmp[1]);
 $smarty->assign('grand_year', $tmp[2]);
+
+$smarty->assign('grand_tab', (isset($_REQUEST["grand_tab"]) && $_REQUEST["grand_tab"] > 0) ? 1 : 0);
+
+
+
 
 
 function view_photos($grand_final = false) {
