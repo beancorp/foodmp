@@ -306,7 +306,7 @@
 				<div id="retailer_slider_gap">&nbsp;</div>
 				<div id="countdown">			
 					<span class="blue_writing"><span id="countdown_timer"></span></span> <br />
-					<span class="normal_writing">until the {if $smarty.const.CURRENCYCODE eq 'AUD'}Grand Final{else}Fan Frenzy Final{/if}</span>
+					<span class="normal_writing">until the {if $smarty.const.LANGCODE eq 'en-au'}Grand Final{else}Fan Frenzy Final{/if}</span>
 				</div>
                 <div id="retailer_goal">
                     <span class="blue_writing">{$retailer_count} Retailers joined</span> <br />
@@ -332,7 +332,7 @@
 			{else}
             <li {if $grand_tab!=1} class="active" {/if} id="block-gallery-bt">Current Participants</li>
             <li>|</li>
-            <li {if $grand_tab==1}class="active"{/if} id="my-gallery-bt">{if $smarty.const.CURRENCYCODE eq 'AUD'}Grand Final{else}Fan Frenzy Final{/if} Nominees</li>
+            <li {if $grand_tab==1}class="active"{/if} id="my-gallery-bt">{if $smarty.const.LANGCODE eq 'en-au'}Grand Final{else}Fan Frenzy Final{/if} Nominees</li>
             {/if}
             
             {if $grand_final_flag == 1 || $grand_tab==1}

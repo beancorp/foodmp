@@ -30,7 +30,7 @@ if (isset($_GET['delete'])) {
 if (isset($_GET['grand_final'])) {
 	$finalist_sql = "UPDATE photo_promo SET grand_final = 1 WHERE photo_id = '".$_GET['grand_final']."'";
 	$dbcon->execute_query($finalist_sql);
-    if(CURRENCYCODE == 'AUD'){
+    if(LANGCODE == 'en-au'){
         $error_message .= '<div class="error_message" style="color: #00FF00;">Photo has been selected for Grand Final.</div>'; 
     }else{
         $error_message .= '<div class="error_message" style="color: #00FF00;">Photo has been selected for Fan Frenzy Final.</div>';  

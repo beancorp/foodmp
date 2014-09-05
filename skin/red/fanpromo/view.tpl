@@ -256,7 +256,7 @@
 		{elseif $photo.grand_final == 1}
 		<div class="dt-block-1">
 			<div class="dt-block-1-title">
-				<span>{if $smarty.const.CURRENCYCODE eq 'AUD'}Grand Final{else}Fan Frenzy Final{/if} Nominee</span>
+				<span>{if $smarty.const.LANGCODE eq 'en_au'}Grand Final{else}Fan Frenzy Final{/if} Nominee</span>
 				<img id="dt-block-1-img" src="{$smarty.const.IMAGES_URL}/icon-start.png" alt="" width="46px">
 			</div>
 			<div class="dt-block-1-content">

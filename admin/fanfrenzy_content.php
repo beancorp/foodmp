@@ -37,7 +37,7 @@ if (isset($_POST['content_page']) && isset($_POST['text_id'])) {
 		$grand_vote_open_time = strtotime($content_page);		
 		
 		if ($grand_vote_open_time < $final_time){
-            if(CURRENCYCODE == 'AUD'){
+            if(LANGCODE == 'en-au'){
                 $rs = array('message' => 'Upate Fail: Grand Vote Date Start must be later or equal Grand Final Date'); 
             }else{
                 $rs = array('message' => 'Upate Fail: Grand Vote Date Start must be later or equal Fan Frenzy Final Date'); 
