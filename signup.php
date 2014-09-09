@@ -242,7 +242,7 @@ if (isset($_GET['confirmation'])) {
 	$suburb_data = array();
 	
 	foreach($state_list as $state) {
-		$query	= "SELECT suburb_id, suburb FROM aus_soc_suburb WHERE state = '".$state['stateName']."' ORDER BY suburb ASC";
+		$query	= "SELECT suburb_id, suburb FROM aus_soc_suburb WHERE state = '".$state['stateName']."' GROUP BY suburb ORDER BY suburb ASC";
 		$result	= $dbcon->execute_query($query);
 		$suburbs = $dbcon->fetch_records();
 		$output = '';
