@@ -58,6 +58,21 @@ if (!empty($_GET['image'])) {
 	
 	
 	
+	//if have no storeId but there is name of Retailer, have to reselect 
+	if (!$photo.store_id  && $photo.retailer_name && $photo["state_id"] > 0){
+		$retailer_query = "SELECT * FROM aus_soc_bu_detail WHERE bu_name = '{$photo['retailer_name']}' AND bu_state =  {$photo['state_id']}";
+		$retailer_info = $dbcon->getOne($retailer_query);
+		if ($retailer_info){
+			$photo["bu_suburb"] = $retailer_info["bu_suburb"];
+		}	
+	}
+	
+	
+	
+	
+	
+	
+	
 	$default_store_images = array(
 			1 => 'restaurants.jpg', // Restaurents
 			2 => 'liquorstores.jpg', // Liquor 

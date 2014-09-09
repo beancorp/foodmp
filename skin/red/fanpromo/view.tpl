@@ -204,7 +204,7 @@
 		<div class="dt-title">   
 			<img id="dt-warning-img" src="images/icon-error.png" alt="">
 			<span>{$photo.retailer_name}</span>
-			<span class="name-state">{$photo.stateAbbreviation}</span>
+			<span class="name-state">{if ($photo.bu_suburb)} {$photo.bu_suburb}, {/if}{$photo.stateAbbreviation}</span>
 		</div>
 		<p class="txt-this-retailer">{$add_retailer}{if $current_user_id == $photo.consumer_id}
 		<a href="/fanpromo/enter1.php?photo_id={$photo.photo_id}"/>Add Retailer Member Code</a>
