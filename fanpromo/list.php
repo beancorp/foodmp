@@ -79,7 +79,7 @@ function view_photos($grand_final = false) {
 		
 		$search_criteria = '';	
 		if (!empty($_POST['search_name'])) {
-			$search_criteria = " AND ((retailer.bu_name LIKE '%".$_POST['search_name']."%') OR (consumer.bu_name LIKE '%".$_POST['search_name']."%') OR (photo.description LIKE '%".$_POST['search_name']."%') OR (photo.unique_id LIKE '%".$_POST['search_name']."%'))";
+			$search_criteria = " AND ((retailer.bu_name LIKE '%".$_POST['search_name']."%') OR (consumer.bu_name LIKE '%".$_POST['search_name']."%') OR (photo.retailer_name LIKE '%".$_POST['search_name']."%') OR (photo.description LIKE '%".$_POST['search_name']."%') OR (photo.unique_id LIKE '%".$_POST['search_name']."%'))";
 		}
 		
 		$search_sort = '';
