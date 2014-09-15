@@ -7,6 +7,7 @@
  *     Select Top 97 to inform.   
  * 
  */
+set_time_limit(0);
 ini_set('display_errors', 0);
 error_reporting(E_ALL);
 
@@ -58,8 +59,9 @@ $sql = "Select retailer.StoreID from ".$table."bu_detail as retailer
         WHERE retailer.CustomerType = 'seller'";
 $dbcon->execute_query($sql);
 $res = $dbcon->fetch_records(true);
-
+var_dump(count($res));
 foreach ($res as $row){
+
     generate_fanpromo_code($dbcon, $row['StoreID']);
 }
 
