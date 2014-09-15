@@ -57,7 +57,7 @@ global $table;
 $sql = "Select retailer.StoreID from ".$table."bu_detail as retailer
         JOIN ".$table."login as login ON retailer.StoreID=login.StoreID  
         LEFT JOIN promo_store_codes as codes ON retailer.StoreID!=codes.store_id
-        WHERE login.attribute=5 AND login.level=1";
+        WHERE login.level=1";
 $dbcon->execute_query($sql);
 $res = $dbcon->fetch_records(true);
 
