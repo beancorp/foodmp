@@ -55,8 +55,6 @@ include_once ($new_test_site_usa_path.'/fanpromo/functions.inc.php');
 global $table;
 
 $sql = "Select retailer.StoreID from ".$table."bu_detail as retailer
-        LEFT JOIN ".$table."login as login ON retailer.StoreID=login.StoreID  
-        LEFT JOIN promo_store_codes as codes ON retailer.StoreID!=codes.store_id
         WHERE retailer.CustomerType = 'seller'";
 $dbcon->execute_query($sql);
 $res = $dbcon->fetch_records(true);
