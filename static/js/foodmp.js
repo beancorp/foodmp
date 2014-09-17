@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	/*
     $('#block-gallery-bt').on("click", function(){
         $('#tab-nav > li').removeClass('active');
         $(this).addClass('active');
@@ -14,5 +15,5 @@ $(document).ready(function() {
         $('.my-gallery').addClass('active');
         $('#promo_page_type').val(1);
     });
-
+	*/
 });
