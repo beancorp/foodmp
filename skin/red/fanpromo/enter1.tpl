@@ -567,7 +567,7 @@
 									</li>
 									<li id="postcode">
 										<label>Postcode *</label>
-										<input id="postcode_field" name="postcode" type="text" class="validate[required,custom[integer],minSize[4]]" value="{$postcode}" maxlength="4" />
+										<input id="postcode_field" name="postcode" type="text" class="validate[required,custom[integer],minSize[4]]" value="{$postcode}" maxlength="10" />
 										<!--
 										<div id="email_question" class="question" style="opacity: 0.9;">
 											<div class="tooltip_description" style="display:none">Your current postcode.</div>
