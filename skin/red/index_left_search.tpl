@@ -201,16 +201,20 @@ fieldset#search{ padding: 5px 0; text-align: center;}
 					padding: 5px 0;
 					text-align: center
 				}
+                #sidebar-select-custom .custom-combobox-input{
+                    border: 1px solid #ccc;
+                }
+                
 			</style>
 			{/literal}
 			{if $preselect_suburb}<script type="text/javascript">var preselect_suburb = "{$preselect_suburb}";</script>{/if}
 			
 			<label>Suburb:</label>
-			<div class="select-box" style="border: rgb(169, 169, 169) 1px solid; border-radius: 5px; -mox-border-radius: 5px; -webkit-border-radius: 5px; height: 28px">
+			<div class="select-box" id="sidebar-select-custom">
 				<select name="suburb" id="suburb_id">
 					<option value="">All</option>
 				</select>
-				<div class="suburb-down-arrow"></div>
+		
 			</div>
 			
 		</li>
