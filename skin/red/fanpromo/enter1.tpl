@@ -598,9 +598,14 @@
 			</div>
 			
 			<script>
-				{foreach from=$suburb_data key=k item=v}
+				{*foreach from=$suburb_data key=k item=v}
 					var {$k}_suburbs = '{$v}';
-				{/foreach}
+				{/foreach*}
+				
+				var suburb_data = {literal}{{/literal}
+								{foreach from=$suburb_data key=k item=v}
+								'{$k}': '{$v}',
+								{/foreach}{literal}}{/literal};
 				
 				{literal}
 				
@@ -643,6 +648,8 @@
 						$('#suburb_list').empty();
 						var value = $('#state_selection').val();
 						$('#suburb_list').append('<option value="">[Please Select]</option>');
+						$('#suburb_list').append(suburb_data[value]);
+						/*
 						switch (value) {
 							case '6' :
 								$('#suburb_list').append(ACT_suburbs);
@@ -669,6 +676,7 @@
 								$('#suburb_list').append(WA_suburbs);
 								break;
 						}
+						*/
 						$('#suburb').show();
 					});
 					

@@ -312,7 +312,8 @@ foreach($state_list as $state) {
 	foreach($suburbs as $suburb) {
 		$output .= '<option value="'.addslashes($suburb['suburb']).'">'.addslashes($suburb['suburb']).'</option>';
 	}
-	$suburb_data[$state['stateName']] = $output;
+	//$suburb_data[$state['stateName']] = $output;
+	$suburb_data[$state['id']] = $output;
 }
 
 
