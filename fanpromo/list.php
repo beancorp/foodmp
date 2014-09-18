@@ -338,8 +338,8 @@ if ($grand_trigger == 1){
 }
 
 
-
-$retailer_goal = 3000;
+$retailer_goal = tab_content_by_key_name($dbcon, "retailer-number");
+//$retailer_goal = 3000;
 
 $bar_size = 840;
 $one_percent = ($bar_size / 100);
@@ -353,6 +353,7 @@ if ($bar_scale < 1) {
 $pixels = ($bar_scale * $one_percent);
 $smarty->assign('bar_pixels', $pixels);
 $smarty->assign('retailer_count', $retailer_count);
+$smarty->assign('retailer_goal', $retailer_goal);
 
 //get Date For Grand Open
 

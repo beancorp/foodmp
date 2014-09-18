@@ -69,8 +69,9 @@
 	<textarea  class="input_data" id="guide"  rows="4" cols="50"/></textarea>
 	<br>
 
-	<input  class="input_data" id="datepicker" type="text"/>	
+	<input  class="input_data" type="text" id="datepicker" />	
 	<input class="input_data" type="checkbox" id="checkbox"><br>
+	<input class="input_data" type="text" id="input-text" width="150"><br>
 
 
     <div class="input_data"    id="tinyeditor_content">
@@ -134,6 +135,9 @@
                         		$('#checkbox').attr('Checked',true);
                         	else
                         		$('#checkbox').attr('Checked',false);
+						}else if (response.type_var == "input-text"){
+                        	$( "#input-text" ).show();
+                        	$( "#input-text" ).val(response.content);
                         }else{
                         	$( "#tinyeditor_content" ).show();
                         	editor = get_editor(response.content);
@@ -168,7 +172,9 @@
                 	if ($('#checkbox').is(":checked"))
                 		var content_page = 1;
                 	else
-                		var content_page = 0;            		
+                		var content_page = 0;   
+				}else if(type_var == "input-text"){
+                    var content_page = $("#input-text").val();						
                 }else{ 
                 	editor.post();
                 	var content_page = editor.t.value;

@@ -310,7 +310,7 @@
 				</div>
                 <div id="retailer_goal">
                     <span class="blue_writing">{$retailer_count} Retailers joined</span> <br />
-                    <span class="normal_writing">of 3000 goal</span>
+                    <span class="normal_writing">of {$retailer_goal} goal</span>
                 </div>
 			</div>
 			

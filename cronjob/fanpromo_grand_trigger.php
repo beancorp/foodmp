@@ -88,7 +88,8 @@ if ($today == $grand_final_time){
 			AND detail.status = 1;";
 	$res = $dbcon->getOne($sql);
 	$retailer_count = $res['retailer_count'];
-	$retailer_goal = 3000;
+	$retailer_goal = tab_content_by_key_name($dbcon, "retailer-number");
+	//$retailer_goal = 3000;
 	
 	if ($retailer_count >= $retailer_goal){
 		//update trigger
