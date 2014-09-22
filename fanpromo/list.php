@@ -277,14 +277,18 @@ function view_photos($grand_final = false) {
 				}
 				
 				$(document).ready(function() {
-					$("#list_prev").click(function() {
+					$("body").on("click", "#list_prev", function(e) {
+					 	e.preventDefault();
 						search_listing('.$info['last_p'].');
 					});
-					$("#list_next").click(function() {
+					
+					$("body").on("click", "#list_next", function(e) {
+					 	e.preventDefault();
 						search_listing('.$info['next_p'].');
 					});
 					
-					$(".search_list").click(function() {					
+					$("body").on("click", ".search_list", function(e) {
+					 	e.preventDefault();
 						search_listing($(this).attr("rel"));
 					});
 					
