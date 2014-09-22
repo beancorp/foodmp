@@ -102,7 +102,7 @@ function view_photos($grand_final = false) {
 		
 		$search_categories = '';
 		if (!empty($_POST['search_categories'])) {
-			$search_categories = " AND retailer.subAttrib = '".$_POST['search_categories']."' OR photo.category_id = '".$_POST['search_categories'] . "'";
+			$search_categories = " AND (retailer.subAttrib = '".$_POST['search_categories']."' OR photo.category_id = '".$_POST['search_categories'] . "') ";
 		}
 		
 		$search_locations = '';
