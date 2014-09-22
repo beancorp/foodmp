@@ -94,15 +94,15 @@ function view_photos($grand_final = false) {
 			}
 		}
 		if ($grand_final){
-			$search_grandfinal = "AND photo.grand_final = 1";
+			$search_grandfinal = " AND photo.grand_final = 1";
 		}else{
-			$search_grandfinal = "AND photo.grand_final <> 1";	
+			$search_grandfinal = " AND photo.grand_final <> 1";	
 		}
 		
 		
 		$search_categories = '';
 		if (!empty($_POST['search_categories'])) {
-			$search_categories = " AND retailer.subAttrib = '".$_POST['search_categories']."'";
+			$search_categories = " AND retailer.subAttrib = '".$_POST['search_categories']."' OR photo.category_id = '".$_POST['search_categories'] . "'";
 		}
 		
 		$search_locations = '';

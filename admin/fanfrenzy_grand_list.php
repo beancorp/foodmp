@@ -99,7 +99,7 @@ if ($status == 2){
 	$sql = "SELECT COUNT(*) AS count FROM promo_grand_list";
 	$res = $dbcon->getOne($sql);
     	
-    $perPage = 3;
+    $perPage = 100;
 	$count = $res['count'];
     $smarty->assign('total_photo_grand',$count);
     
@@ -167,7 +167,7 @@ if ($status == 1){
 						INNER JOIN promo_grand_list  ON promo_grand_list.photo_id = photo.photo_id
 						WHERE 1
 						AND promo_grand_list.time_winner  BETWEEN {$first_day_of_this_month} AND {$last_day_of_this_month}
-						GROUP BY photo.photo_id ORDER BY fan_count DESC, last_fan_id ASC,  photo.timestamp ASC LIMIT 0, 5";
+						GROUP BY photo.photo_id ORDER BY fan_count DESC, last_fan_id ASC,  photo.timestamp ASC LIMIT 0, 100";
 	$dbcon->execute_query($sql);
 	$res = $dbcon->fetch_records(true);
 }
