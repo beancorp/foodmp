@@ -78,7 +78,44 @@
 	<script type="text/javascript" src="https://ws.sharethis.com/button/buttons.js"></script>
 	<script type="text/javascript">stLight.options({publisher: "e3316ed7-5941-4c4d-80f8-4a09809678c6", doNotHash: false, doNotCopy: false, hashAddressBar: false, shorten:false});</script>
 	{/literal}
+    {literal}
+    <script>                                                        
+        function tipRedirect(){
+            alert("You need to be a member of \"FoodMarketplace\" to use this service. Register now, it's FREE.");
+            location.href="{/literal}{$smarty.const.SOC_HTTP_HOST}{literal}signup.php";
+        }
+          
+        function popupNewsletter()
+        {
+            window.open('{/literal}{$smarty.const.SOC_HTTP_HOST}{literal}guestSubscribe.php?sid={/literal}{$headerInfo.StoreID}&email={$smarty.session.email}{literal}','mailtofriend','height=400,width=550,scrollbars=yes,status=yes') ;
+        }
+          
+        function bookmark(){
+            var url=window.location.href;
+            var title="SOC exchange - {/literal}{$headerInfo.bu_name|regex_replace:'/\"/':'\\\"'}{literal}";
+            if ((navigator.appName == "Microsoft Internet Explorer") && (parseInt(navigator.appVersion) >= 4)) 
+            {
+                window.external.AddFavorite(url,title);
+            }else if(window.sidebar && typeof(window.sidebar.addPanel)=="function"){
+                window.sidebar.addPanel(title, url, "");
+            }else{
+                var msg = "Don\'t forget to bookmark us!";
+                if(navigator.appName == "Netscape") msg += "  (CTRL+D)";
+                alert(msg);
+            }                              
+        }
 
+        function popupw() {
+            window.open('{/literal}{$smarty.const.SOC_HTTP_HOST}{literal}subscribe.php?sid={/literal}{$headerInfo.StoreID}&email={$smarty.session.email}{literal}','mailtofriend','height=150,width=550,scrollbars=yes,status=yes') ;
+        } 
+
+        function popcontactwin(place, pid) {
+            place = typeof(place) == 'undefined' ? '' : place;
+            pid = typeof(pid) == 'undefined' ? '' : pid;
+            window.open("{/literal}{$smarty.const.SOC_HTTP_HOST}{literal}emailstore.php?url=productDispay.php&place="+place+"&pid="+pid+"&StoreID={/literal}{$headerInfo.StoreID}{literal}", "emailstore","width=600,height=360,scrollbars=yes,status=yes");
+        }   
+    </script>
+    {/literal}
 	{literal}
 	<style type="text/css">
 		#wrapper{
@@ -133,7 +170,11 @@
 
 
 	</head>
-	<body>
+	{if $onLoad ne ""} 
+       <body onload="{$onLoad}"> 
+    {else} 
+       <body> 
+    {/if}
 	
 	<div id="fb-root"></div>
 	{include file=$skindir|cat:'/index_top_banner.tpl'}

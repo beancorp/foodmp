@@ -601,11 +601,13 @@
 				{*foreach from=$suburb_data key=k item=v}
 					var {$k}_suburbs = '{$v}';
 				{/foreach*}
+
 				
-				var suburb_data = {literal}{{/literal}
+							var suburb_data = {literal}{{/literal}
 								{foreach from=$suburb_data key=k item=v}
 								'{$k}': '{$v}',
 								{/foreach}{literal}}{/literal};
+					
 				
 				{literal}
 				
@@ -864,7 +866,7 @@
 					
 					<div style="clear:both">
 					Image file gif, jpeg, jpg, pjpeg, x-png and png are allowed, file size should be lower than 3MB and resolution at least should be 618 x 441<br><br>
-					<input type="checkbox" class="validate[required]" name="copyright_confirm" id="photo_checkbox" {if ($photo_id>0)} checked disabled{/if} /> &nbsp; This photo is taken by me.
+					<input type="checkbox" class="validate[required]" name="copyright_confirm" id="photo_checkbox" {if ($photo_id>0)} checked disabled{/if} /> &nbsp; This photo is an original taken by me!
 					</div>
 					
 					
