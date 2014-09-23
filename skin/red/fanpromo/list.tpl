@@ -403,11 +403,26 @@
 				$(document).ready(function() {
                 
                     $('#search_name').watermark('keywords, nicknames, stores, photo IDs...', {useNative: false});
-                    
+					
+					var timeServerOffset = {/literal}{$time_server_offset}{literal};                    
 					var targetDate = new Date({/literal}{$grand_year}, {$grand_month}, {$grand_day}{literal});
+					
+					var today = new Date();
+					localOffset = today.getTimezoneOffset()*60; //returns the time difference between UTC time and local time, in minutes. We have to convert to second
+					different_time = timeServerOffset - (-1)*localOffset;					
+					//convert from Target Date in Server to Local Time. 
+					targetDate = new Date(targetDate - different_time*1000);
+					
+					
 					var showCountdown = function(){
+						today = new Date();						
+						msPerDay = 24 * 60 * 60 * 1000 ;
+						timeLeft = (targetDate.getTime() - today.getTime());
+						e_daysLeft = timeLeft / msPerDay;
+						daysLeft = Math.floor(e_daysLeft);
+						
 						if (parseInt(countdown(targetDate).days)>0) {
-							return countdown(targetDate).days+"d "+countdown(targetDate).hours+"h "+countdown(targetDate).minutes+"m "+countdown(targetDate).seconds+"s";
+							return daysLeft +"d "+countdown(targetDate).hours+"h "+countdown(targetDate).minutes+"m "+countdown(targetDate).seconds+"s";	
 						} else if (parseInt(countdown(targetDate).hours)>0) {
 							return countdown(targetDate).hours+"h "+countdown(targetDate).minutes+"m "+countdown(targetDate).seconds+"s";
 						} else if (parseInt(countdown(targetDate).minutes)>0) {
