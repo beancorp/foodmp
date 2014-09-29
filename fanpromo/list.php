@@ -12,7 +12,10 @@ include_once ('class.soc.php');
 include_once('../languages/'.LANGCODE.'/soc.php');
 include_once('../languages/'.LANGCODE.'/foodwine/index.php');
 
-
+//calculate timeOffset between time server and  GMT time. Used to display exactly countdown
+$date = new DateTime();
+$timeOffset = $date->getOffset();
+$smarty->assign('time_server_offset', $timeOffset);
 
 
 function limit_text($text, $limit) {
