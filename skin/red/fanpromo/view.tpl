@@ -270,14 +270,23 @@
 		<div class="social-button">
 			<strong>Share this...</strong> <br /><br />
 			
-			<span class='st_sharethis_large' st_url="{$smarty.const.SOC_HTTP_HOST}/fanpromo/{$photo.brand_image}" displayText='ShareThis'></span>
-			<span class='st_facebook_large' st_url="{$smarty.const.SOC_HTTP_HOST}/fanpromo/{$photo.brand_image}" displayText='Facebook'></span>
-			<span class='st_twitter_large' st_url="{$smarty.const.SOC_HTTP_HOST}/fanpromo/{$photo.brand_image}" displayText='Tweet'></span>
-			<span class='st_linkedin_large' st_image="{$smarty.const.SOC_HTTP_HOST}/fanpromo/{$photo.brand_image}" st_url="{$smarty.const.SOC_HTTP_HOST}/fanpromo/{$photo.brand_image}" displayText='LinkedIn'></span>
-			<span class='st_pinterest_large' st_url="{$smarty.const.SOC_HTTP_HOST}/fanpromo/{$photo.brand_image}" displayText='Pinterest'></span>
-			<span class='st_email_large' st_url="{$smarty.const.SOC_HTTP_HOST}/fanpromo/{$photo.brand_image}" displayText='Email'></span>
+			<span class='st_sharethis_large' st_title="'Fan' my photo in the chase for $1,000,000 CASH" st_summary="To 'Become a Fan' of my photo in the FoodMarketplace $1,000,000 Fan Frenzy, click here"   st_image="{$smarty.const.SOC_HTTP_HOST}fanpromo/{$photo.brand_image}"  displayText='ShareThis'></span>
+			<span class='st_facebook_large' st_title="'Fan' my photo in the chase for $1,000,000 CASH" st_summary="To 'Become a Fan' of my photo in the FoodMarketplace $1,000,000 Fan Frenzy, click here" st_image="{$smarty.const.SOC_HTTP_HOST}fanpromo/{$photo.brand_image}"  displayText='Facebook'></span>
+			<span class='st_twitter_large'  st_title="'Fan' my photo in the chase for $1,000,000 CASH" st_summary="To 'Become a Fan' of my photo in the FoodMarketplace $1,000,000 Fan Frenzy, click here" st_image="{$smarty.const.SOC_HTTP_HOST}fanpromo/{$photo.brand_image}" displayText='Tweet'></span>
+			<span class='st_linkedin_large' st_title="'Fan' my photo in the chase for $1,000,000 CASH" st_summary="To 'Become a Fan' of my photo in the FoodMarketplace $1,000,000 Fan Frenzy, click here" st_image="{$smarty.const.SOC_HTTP_HOST}fanpromo/{$photo.brand_image}"  displayText='LinkedIn'></span>
+			<span class='st_pinterest_large' st_title="'Fan' my photo in the chase for $1,000,000 CASH" st_summary="To 'Become a Fan' of my photo in the FoodMarketplace $1,000,000 Fan Frenzy, click here" st_image="{$smarty.const.SOC_HTTP_HOST}fanpromo/{$photo.brand_image}"  displayText='Pinterest'></span>
+			<span class='st_email_large' st_title="'Fan' my photo in the chase for $1,000,000 CASH" st_summary="To 'Become a Fan' of my photo in the FoodMarketplace $1,000,000 Fan Frenzy, click here" st_image="{$smarty.const.SOC_HTTP_HOST}fanpromo/{$photo.brand_image}"  displayText='Email'></span>
 			
-			<!-- 
+			
+			<!--
+			<span class='st_sharethis_large' st_title="'Fan' my photo in the chase for $1,000,000 CASH" st_summary="To 'Become a Fan' of my photo in the FoodMarketplace $1,000,000 Fan Frenzy, click here"   st_image="{$smarty.const.SOC_HTTP_HOST}fanpromo/{$photo.brand_image}" st_url="{$smarty.const.SOC_HTTP_HOST}photo_{$photo.photo_id}.html" displayText='ShareThis'></span>
+			<span class='st_facebook_large' st_title="'Fan' my photo in the chase for $1,000,000 CASH" st_summary="To 'Become a Fan' of my photo in the FoodMarketplace $1,000,000 Fan Frenzy, click here" st_image="{$smarty.const.SOC_HTTP_HOST}fanpromo/{$photo.brand_image}" st_url="{$smarty.const.SOC_HTTP_HOST}photo_{$photo.photo_id}.html" displayText='Facebook'></span>
+			<span class='st_twitter_large'  st_title="'Fan' my photo in the chase for $1,000,000 CASH" st_summary="To 'Become a Fan' of my photo in the FoodMarketplace $1,000,000 Fan Frenzy, click here" st_image="{$smarty.const.SOC_HTTP_HOST}fanpromo/{$photo.brand_image}" displayText='Tweet'></span>
+			<span class='st_linkedin_large' st_title="'Fan' my photo in the chase for $1,000,000 CASH" st_summary="To 'Become a Fan' of my photo in the FoodMarketplace $1,000,000 Fan Frenzy, click here" st_image="{$smarty.const.SOC_HTTP_HOST}fanpromo/{$photo.brand_image}" st_url="{$smarty.const.SOC_HTTP_HOST}photo_{$photo.photo_id}.html" displayText='LinkedIn'></span>
+			<span class='st_pinterest_large' st_title="'Fan' my photo in the chase for $1,000,000 CASH" st_summary="To 'Become a Fan' of my photo in the FoodMarketplace $1,000,000 Fan Frenzy, click here" st_image="{$smarty.const.SOC_HTTP_HOST}fanpromo/{$photo.brand_image}" st_url="{$smarty.const.SOC_HTTP_HOST}photo_{$photo.photo_id}.html" displayText='Pinterest'></span>
+			<span class='st_email_large' st_title="'Fan' my photo in the chase for $1,000,000 CASH" st_summary="To 'Become a Fan' of my photo in the FoodMarketplace $1,000,000 Fan Frenzy, click here" st_image="{$smarty.const.SOC_HTTP_HOST}fanpromo/{$photo.brand_image}" st_url="{$smarty.const.SOC_HTTP_HOST}photo_{$photo.photo_id}.html" displayText='Email'></span>
+			
+			 
 			<img src="images/icon-face.png" alt="" width="37px">
 			<img src="images/icon-twitter.png" alt="" width="37px">
 			<img src="images/icon-google.png" alt="" width="37px">

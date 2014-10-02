@@ -6,7 +6,7 @@
 	</br>
 	</br>
 	
-	 {$status_text} {$total_photo_grand} 
+	 {$status_text} {$total_photo_grand}
 		<table border="1">
 		<tr id = "row_{$photo.photo_id}">
 				<td>Sort</td>
@@ -41,10 +41,23 @@
 		{/foreach}
 	</table>
 	
+	</br>
+	
 	<div id="list_pagination">
 			{if $page_previous}
 			<a href="/admin/?act=fanfrenzy_grand_list&status={$status}&p={$page_previous}">Previous</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			{/if}
+			
+			{if $total_page > 1}
+				{section name=foo start=1 loop=$total_page+1}	
+					{if $current_page == $smarty.section.foo.index}
+						<b>{$smarty.section.foo.index}</b> &nbsp;&nbsp;
+					{else}
+						<a href="/admin/?act=fanfrenzy_grand_list&status={$status}&p={$smarty.section.foo.index}">{$smarty.section.foo.index}</a> &nbsp;&nbsp;
+					{/if}
+				{/section}
+			{/if}
+			
 			{if $page_next}
 			<a href="/admin/?act=fanfrenzy_grand_list&status={$status}&p={$page_next}">Next</a>
 			{/if}

@@ -1,5 +1,6 @@
 <div style="float:left">
 	<a href="{$soc_https_host}soc.php?cp=foodwine"><img src="{$smarty.const.IMAGES_URL}/foodmp_about.png" width="200" /></a>
+    <a href="{$soc_https_host}registration.php"><img style="margin-top:10px;" width="200" alt="" src="{$soc_https_host}/skin/red/images/onedollaraday.jpg" /></a>
 </div>
 {*
 <div style="float:left;">

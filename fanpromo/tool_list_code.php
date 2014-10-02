@@ -13,16 +13,17 @@ include_once('../languages/'.LANGCODE.'/foodwine/index.php');
 
 
 $sql = "SELECT promo_store_codes.*, 
-				 consumer.bu_name As consumer, consumer.bu_email AS consumer_email
-				
-				FROM promo_store_codes
+				 consumer.bu_name As consumer, consumer.bu_email AS consumer_email, consumer.bu_urlstring AS bu_urlstring
+				FROM promo_store_codes				
 				LEFT JOIN aus_soc_bu_detail consumer ON consumer.StoreID = promo_store_codes.store_id";
 
 $dbcon->execute_query($sql);
 			$res = $dbcon->fetch_records(true);
 
+$i = 1;
 foreach ($res as $row){
-	echo "Code : {$row["code"]} ---------  Store:  {$row["consumer"]}  ----- Store email:  {$row["consumer_email"]}  -----  <br>";
+	echo "{$i} -- Code : {$row["code"]} ----  Store:  {$row["consumer"]}  ----- Store email:  {$row["consumer_email"]}  -----  URL:  {$row["bu_urlstring"]} <br>";
+	$i++;
 }
 
 

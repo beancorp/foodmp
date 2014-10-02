@@ -328,11 +328,11 @@
      <div id="promo_page_top_page">
 		<ul id="tab-nav">
 			{if $grand_final_flag == 1}
-			<li class="active" id="my-gallery-bt">{if $smarty.const.CURRENCYCODE eq 'AUD'}Grand Final{else}Fan Frenzy Final{/if} Nominees</li>
+			<li class="active" id="my-gallery-bt">{if $smarty.const.LANGCODE eq 'en-au'}Grand Finalists{else}Fan Frenzy Finalists{/if}</li>
 			{else}
             <li {if $grand_tab!=1} class="active" {/if} id="block-gallery-bt">Current Participants</li>
             <li>|</li>
-            <li {if $grand_tab==1}class="active"{/if} id="my-gallery-bt">{if $smarty.const.LANGCODE eq 'en-au'}Grand Final{else}Fan Frenzy Final{/if} Nominees</li>
+            <li {if $grand_tab==1}class="active"{/if} id="my-gallery-bt">{if $smarty.const.LANGCODE eq 'en-au'}Grand Finalists{else}Fan Frenzy Finalists{/if}</li>
             {/if}
             
             {if $grand_final_flag == 1 || $grand_tab==1}
@@ -378,15 +378,15 @@
 			<div class="search_box">
 				<label for="search_sort">Sort by</label>
 				<div class="entry_field_element style-select">
-					<span class="select-1">Votes high to low</span>
+					<span class="select-1">Fans high to low</span>
         			<select  id="search_sort" name="search_sort">
-						<option value="1">Votes high to low</option>
-						<option value="2">Votes low to high</option>
+						<option value="1">Fans high to low</option>
+						<option value="2">Fans low to high</option>
 					</select>
 				</div>
 			</div>
 		</div>
-	</div>
+	</div>	
 	<div id="promo-page-content"> 
 		{if $grand_tab == 1}
 			{php}view_photos(true);{/php}
@@ -403,17 +403,18 @@
 				$(document).ready(function() {
                 
                     $('#search_name').watermark('keywords, nicknames, stores, photo IDs...', {useNative: false});
-					
-					var timeServerOffset = {/literal}{$time_server_offset}{literal};                    
+                    
+					var timeServerOffset = {/literal}{$time_server_offset}{literal};
+
 					var targetDate = new Date({/literal}{$grand_year}, {$grand_month}, {$grand_day}{literal});
 					
 					var today = new Date();
 					localOffset = today.getTimezoneOffset()*60; //returns the time difference between UTC time and local time, in minutes. We have to convert to second
-					different_time = timeServerOffset - (-1)*localOffset;					
+					different_time = timeServerOffset - (-1)*localOffset;
+					
 					//convert from Target Date in Server to Local Time. 
 					targetDate = new Date(targetDate - different_time*1000);
-					
-					
+						
 					var showCountdown = function(){
 						today = new Date();						
 						msPerDay = 24 * 60 * 60 * 1000 ;
@@ -422,7 +423,8 @@
 						daysLeft = Math.floor(e_daysLeft);
 						
 						if (parseInt(countdown(targetDate).days)>0) {
-							return daysLeft +"d "+countdown(targetDate).hours+"h "+countdown(targetDate).minutes+"m "+countdown(targetDate).seconds+"s";	
+							return daysLeft +"d "+countdown(targetDate).hours+"h "+countdown(targetDate).minutes+"m "+countdown(targetDate).seconds+"s";							
+							//return countdown(targetDate).days+"d "+countdown(targetDate).hours+"h "+countdown(targetDate).minutes+"m "+countdown(targetDate).seconds+"s";
 						} else if (parseInt(countdown(targetDate).hours)>0) {
 							return countdown(targetDate).hours+"h "+countdown(targetDate).minutes+"m "+countdown(targetDate).seconds+"s";
 						} else if (parseInt(countdown(targetDate).minutes)>0) {
@@ -430,7 +432,6 @@
 						} else  {
 							return countdown(targetDate).seconds+"s";
 						}
-						
 					}
 					$('#countdown_timer').html(showCountdown());  
 					setInterval(function(){

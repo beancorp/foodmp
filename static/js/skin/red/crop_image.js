@@ -467,10 +467,16 @@ function validateBeforeSubmit(){
             }
             if (!$("#entry_description").val()) {
                 $('#entry_description').validationEngine('showPrompt', '* This field is required', 'red', null, true);
+                if (!scrollPos){
+                	scrollPos = $('#entry_description').offset().top - 50; 
+                }
                 $return = false;
             }
             if (!$("#tc_checkbox").prop("checked")) {
                 $('#tc_checkbox').validationEngine('showPrompt', '* This field is required', 'red', null, true);
+                if (!scrollPos){
+                	scrollPos = $('#tc_checkbox').offset().top - 50; 
+                }
                 $return = false;
             }
             

@@ -422,11 +422,11 @@ fieldset#search{ padding: 5px 0; text-align: center;}
 	{*/if*}
 
 {/if}
-<div id="sidebar_banner">
+<!--<div id="sidebar_banner">
     <a href="/fanfrenzy" title="" style="margin-right:2px;" target="_blank">
         <img src="{$smarty.const.IMAGES_URL}/4_ff_sidebar_banner.png" title="Facebook" alt="Facebook"/>
     </a>
-</div>
+</div> -->
 
 
 {*if $show_left_cms}

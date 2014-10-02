@@ -142,7 +142,11 @@ function view_photos_customer() {
                 $my_entries .= '<div class="item-row">';
             }
             
-            $date_uploaded = date('d.m.Y', strtotime($photo['timestamp']));
+            if(LANGCODE == 'en-us'){
+                $date_uploaded = date('F d, Y', strtotime($photo['timestamp']));
+            }else{
+                $date_uploaded = date('d.m.Y', strtotime($photo['timestamp']));     
+            }
             $my_entries .= '<div class="block-1">';
             
             if ($photo['rank'] >= 1 && $photo['rank'] <= 3) {
@@ -289,7 +293,11 @@ function view_photos_seller($owner=true) {
             if (($i % 2) == 1){
                 $my_entries .= '<div class="item-row">';
             }
-            $date_uploaded = date('d.m.Y', strtotime($photo['timestamp']));
+            if(LANGCODE == 'en-us'){
+                $date_uploaded = date('F d, Y', strtotime($photo['timestamp']));
+            }else{
+                $date_uploaded = date('d.m.Y', strtotime($photo['timestamp']));     
+            }
             $my_entries .= '<div class="block-1">';
             
             if ($photo['rank'] >= 1 && $photo['rank'] <= 3) {
@@ -532,6 +540,7 @@ switch($setCP){
 		$smarty -> assign('content', $content);
 		$smarty->assign('is_content',1);
         $smarty->assign('hide_race_banner',1);
+        $smarty->assign('foodwine_home', true);
 		break;
 
 	case 'foodwinetips':

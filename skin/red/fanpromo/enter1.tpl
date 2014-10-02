@@ -432,8 +432,9 @@
 		$('#entry_form').validationEngine('attach', {scroll: false});
 		
 		$('#select_register').click(function() {
-			$('#login_box').hide();
-			$('#signup_box').show();
+            location.href = './soc.php?cp=register';
+			//$('#login_box').hide();
+			//$('#signup_box').show();
 		});
 		
 		$('#select_login').click(function() {

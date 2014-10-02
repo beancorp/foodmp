@@ -1,4 +1,5 @@
 <?php
+//submit photo
 ini_set('display_errors', 0);
 error_reporting(E_ALL);
 
@@ -22,6 +23,7 @@ $smarty->assign('how_it_works', tab_content($dbcon, 3));
 
 
 $consumer_id = $_SESSION['StoreID'];
+
 //Work out the email domain from the http host.
 $emaildomain = substr(SOC_HTTP_HOST,strpos(SOC_HTTP_HOST,':')+3,-1);
 
@@ -44,7 +46,7 @@ if ($photo_id > 0){
 $error_message = "";
 
 
-if (isset($_POST['code']) && $consumer_id > 0) {
+if (!empty($_POST) && $consumer_id > 0) {
 	$retailer_code = trim($_POST['code']);
 	$retailer_id = trim($_POST['retailer_id']);
 	$state_id = trim($_POST['state_id']);
@@ -277,7 +279,7 @@ if (isset($_POST['code']) && $consumer_id > 0) {
 					//mail to admin
 					$mail_param = array();
 					
-					$email_admin = tab_content($dbcon, 19);
+					$email_admin = tab_content_by_key_name($dbcon, "email-admin");
 					$mail_param["mail_to"] = $email_admin; //mail admin
 					$mail_param["subject"] = "New Fanpromo Create";
 					$email_template =  get_email_template_by_key_name($dbcon, "email_new_entry");
@@ -286,12 +288,14 @@ if (isset($_POST['code']) && $consumer_id > 0) {
 					$message = str_replace("##link_new_entry##", nl2br($new_link), $mail_template); //Replace
 					$mail_param["content"] = $message;
 					
-					
-					
-					
-					
 					insert_queue_mail($dbcon, $mail_param);
-					header('location:'. SOC_HTTP_HOST . 'fanpromo/thank_you.php');
+					
+					if($_SESSION['level'] == "2") {
+						header('location:'. SOC_HTTP_HOST ."soc.php?cp=buyerhome");
+					}else{
+						header('location:'. SOC_HTTP_HOST ."soc.php?cp=sellerhome");
+					}
+					//header('location:'. SOC_HTTP_HOST . 'fanpromo/thank_you.php');
 				}
 		}
 	}

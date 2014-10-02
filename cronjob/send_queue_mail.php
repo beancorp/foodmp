@@ -100,11 +100,11 @@ if ($result && is_array($result)) {
 		
 		
 		$bool = $objEmail -> send($arrParams,$new_test_site_usa_path.'/skin/red/email_simple.tpl');
-		//if ($bool === true){
+//		if ($bool === true){
 			$delete_sql = "DELETE FROM queue_mail WHERE id = {$row["id"]}";
 			$dbcon->execute_query($delete_sql);
 			unlink(getcwd()."/mail_send/content_mail_{$row["id"]}.txt"); //delete messsage file
-		//}
+//		}
 		unset($objEmail);
 	}	
 }

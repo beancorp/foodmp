@@ -397,19 +397,11 @@ switch ($step) {
 				if ($dbcon->insert_record("aus_soc_bu_detail", $arrSettingStore)) {
 					$StoreID = $dbcon->lastInsertId();
 					
-					//generate code
-					include_once 'fanpromo/functions.inc.php';
-					generate_fanpromo_code($dbcon, $StoreID);
-					
 					if (($_POST['subattr5'] == 1) || 
 						($_POST['subattr5'] == 7) || 
 						($_POST['subattr5'] == 8) || 
 						($_POST['subattr5'] == 9) ||
-						($_POST['subattr5'] == 10)) {
-							
-							
-					
-							
+						($_POST['subattr5'] == 10)) {							
 							
 					
 						$dbcon->execute_query("INSERT INTO aus_soc_product_category_foodwine (`fid`, `order`, `StoreID`, `category_name`) VALUES(2, 1, ".$StoreID.", 'Appetisers');");
@@ -638,6 +630,7 @@ switch ($step) {
 					if ($_POST['bu_password']) $arrSettingLogin['password'] = crypt($_POST['bu_password'],getSalt());
 					
 					if ($dbcon->insert_record("aus_soc_login", $arrSettingLogin)) {
+						//generate code for Photo Fan Frenzy
 						$UserID					=	$dbcon->lastInsertId();
 						$_SESSION['UserID']		=	$UserID;
 						$_SESSION['UserName']	=	$_POST['bu_name'];
@@ -649,6 +642,7 @@ switch ($step) {
 						$_SESSION['attribute']	=	$_POST['attribute'];
 						$_SESSION['subAttrib']	=	$_POST['subattr5'];
 						$_SESSION['email']		= 	$_POST['bu_user'];
+						
 						
 						if ($_SESSION['attribute'] == 5) {
 						
@@ -1200,6 +1194,14 @@ switch ($step) {
 							'paid'			=> time(),
 							'renewalDate' 	=> mktime(0, 0, 0, date("m"), date("d"),   date("Y")+1)
 						);
+						
+						
+						//generate fanpromo code
+						include_once 'fanpromo/functions.inc.php';
+						generate_fanpromo_code($dbcon, $_SESSION['StoreID']);
+					
+						
+						
 						
 						if ($dbcon->update_record("aus_soc_bu_detail", $arrSetting, $strCondition)) {						
 							exit(json_encode(array('status'=>'true','tn'=>$eway->getTrxnNumber(),'jumpPath'=>(($_SESSION['level'] == 3) ? 'soc.php?cp=listinghome' : 'soc.php?cp=sellerhome'))));

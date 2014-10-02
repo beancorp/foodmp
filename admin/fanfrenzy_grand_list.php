@@ -35,36 +35,24 @@ if (isset($_POST['sent_mail']) && $_POST['sent_mail'] == 1) {
 	insert_grand_table($dbcon, $insert_array);
 	*/
 	
-	//sent mail to user
-	switch ($_REQUEST['sort_number']){
-		case 1:
+	//sent mail to user	
+	if ($_REQUEST['sort_number'] == 1){
 			$email_template =  get_email_template_by_key_name($dbcon, "email_to_top1");
-			break;
-		case 2:
-			$email_template =  get_email_template_by_key_name($dbcon, "email_to_top2");
-			break;
-		case 3:
-			$email_template =  get_email_template_by_key_name($dbcon, "email_to_top3");
-			break;
-		default:
-			 $email_template =  get_email_template_by_key_name($dbcon, "email_to_top97");
-			break;
-		
+	}elseif ($_REQUEST['sort_number'] == 2){
+		$email_template =  get_email_template_by_key_name($dbcon, "email_to_top2");
+	}elseif ($_REQUEST['sort_number'] == 3){		
+		$email_template =  get_email_template_by_key_name($dbcon, "email_to_top3");
+	}elseif ($_REQUEST['sort_number'] > 3  && $_REQUEST['sort_number'] < 101){
+		$email_template =  get_email_template_by_key_name($dbcon, "email_to_top97");
+	}else{
+		$email_template =  get_email_template_by_key_name($dbcon, "email_to_top101_300");
 	}
-	
 	$mail_template = file_get_contents(ROOT_DIRECTORY. "skin/email_template/template_mail_{$email_template["id"]}.txt");
 	
-	
-	//$message = str_replace("##username##", nl2br($_REQUEST['consumer_name']), $email_template["content"]); //Replace
-	$message = str_replace("##username##", nl2br($_REQUEST['consumer_name']), $mail_template); //get from TXT file, not DB
-	
+	$message = str_replace("##username##", nl2br($_REQUEST['consumer_name']), $mail_template); //get from TXT file, not DB	
 	$arr["mail_to"] = $_REQUEST['consumer_email'];
 	$arr['subject'] = "Congratulation";
-	
-	
-	
 	$arr["content"] = $message;
-	
 	insert_queue_mail($dbcon, $arr);
 	
 	
@@ -78,7 +66,7 @@ if (isset($_POST['sent_mail']) && $_POST['sent_mail'] == 1) {
 switch ($_GET["status"]){
 	case 1:
 		$status = 1;  //show top 100 of this month
-		$smarty->assign('status_text', "Top 100 OF This Month");
+		$smarty->assign('status_text', "Top 300 OF This Month");
 		break;
 	case 2:
 		$status = 2; //show full list
@@ -87,11 +75,19 @@ switch ($_GET["status"]){
 	case 0:
 	default:
 		$status = 1; //get Top 100 of this month
-		$smarty->assign('status_text', "Top 100 OF This Month");
+		$smarty->assign('status_text', "Top 300 OF This Month");
 		break;
 }
 
 $pageno	= empty($_GET['p']) ? 1 :$_GET['p'];
+$smarty->assign('current_page',$pageno);
+
+
+
+$perPage = 100;
+
+$start	= ($pageno-1) * $perPage;		
+$end = $start + $perPage;
 
 
 if ($status == 2){
@@ -99,13 +95,12 @@ if ($status == 2){
 	$sql = "SELECT COUNT(*) AS count FROM promo_grand_list";
 	$res = $dbcon->getOne($sql);
     	
-    $perPage = 100;
+    
 	$count = $res['count'];
     $smarty->assign('total_photo_grand',$count);
     
     
-	$start	= ($pageno-1) * $perPage;		
-	$end = $start + $perPage;
+	
 	
 	
 	$sql = "SELECT photo.*, consumer.bu_name As consumer, retailer.bu_name As retailer, 
@@ -123,37 +118,21 @@ if ($status == 2){
 	
 	$dbcon->execute_query($sql);
 	$res = $dbcon->fetch_records(true);
-	
-	$last_p = ($pageno - 1) > 0 ? ($pageno - 1) : 0;
-	$next_p = ($pageno * $perPage < $count) ? ($pageno + 1) : 0;
-	
-	$info = array(
-			'last_p' => $last_p,
-			'next_p' => $next_p,
-			'list' => $res
-	);
-	
-	
-	
-	if (!empty($info['last_p'])) {
-		$smarty->assign('page_previous', $last_p);
-	}	
-	
-	if (!empty($info['next_p'])) {
-			$smarty->assign('page_next', $next_p);
-	}
-	
-	
-	
 }
 
-if ($status == 1){
-	$pageno = 1;
-	
-	
+//get Top 300 of This Month
+if ($status == 1){	
 	//default select 100 in month (current ly 10) 
 	$last_day_of_this_month = mktime(23, 59,59,  date('m'),date('t'), date('Y'));
 	$first_day_of_this_month = mktime(0, 0,0, date('m'), 1, date('Y'));
+	
+	//get Total
+	$sql = "SELECT COUNT(*) AS count FROM promo_grand_list WHERE 
+						promo_grand_list.time_winner  BETWEEN {$first_day_of_this_month} AND {$last_day_of_this_month}";
+
+	$res = $dbcon->getOne($sql);
+	$count = $res['count'];
+	
 	
 	$sql = "SELECT promo_grand_list.count_vote As fan_count,promo_grand_list.sort_number,
 					(SELECT MAX(fan_id) FROM photo_promo_fan WHERE photo_id = photo.photo_id) AS last_fan_id ,
@@ -167,9 +146,30 @@ if ($status == 1){
 						INNER JOIN promo_grand_list  ON promo_grand_list.photo_id = photo.photo_id
 						WHERE 1
 						AND promo_grand_list.time_winner  BETWEEN {$first_day_of_this_month} AND {$last_day_of_this_month}
-						GROUP BY photo.photo_id ORDER BY fan_count DESC, last_fan_id ASC,  photo.timestamp ASC LIMIT 0, 100";
+						GROUP BY photo.photo_id ORDER BY fan_count DESC, last_fan_id ASC,  photo.timestamp ASC LIMIT $start, $perPage";
 	$dbcon->execute_query($sql);
 	$res = $dbcon->fetch_records(true);
+}
+
+$last_p = ($pageno - 1) > 0 ? ($pageno - 1) : 0;
+$next_p = ($pageno * $perPage < $count) ? ($pageno + 1) : 0;
+
+$info = array(
+		'last_p' => $last_p,
+		'next_p' => $next_p,
+		'list' => $res
+);	
+
+$total_page = ceil($count/$perPage);
+$smarty->assign('total_page', $total_page);
+
+
+if (!empty($info['last_p'])) {
+	$smarty->assign('page_previous', $last_p);
+}	
+
+if (!empty($info['next_p'])) {
+		$smarty->assign('page_next', $next_p);
 }
 
 

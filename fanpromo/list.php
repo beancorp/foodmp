@@ -12,7 +12,8 @@ include_once ('class.soc.php');
 include_once('../languages/'.LANGCODE.'/soc.php');
 include_once('../languages/'.LANGCODE.'/foodwine/index.php');
 
-//calculate timeOffset between time server and  GMT time. Used to display exactly countdown
+
+//calculate timeOffset between time server and  GMT time
 $date = new DateTime();
 $timeOffset = $date->getOffset();
 $smarty->assign('time_server_offset', $timeOffset);
@@ -189,7 +190,12 @@ function view_photos($grand_final = false) {
 				echo '<div class="item-row">';
 			}
 		
-			$date_uploaded = date('d.m.Y', strtotime($photo['timestamp']));
+			
+            if(LANGCODE == 'en-us'){
+                $date_uploaded = date('F d, Y', strtotime($photo['timestamp']));
+            }else{
+                $date_uploaded = date('d.m.Y', strtotime($photo['timestamp']));     
+            }
 			echo '<div class="promo_thumb">';
 			
 			if (empty($search_criteria)) {				
@@ -213,7 +219,7 @@ function view_photos($grand_final = false) {
             }else{
                 echo '<div class="content">'.$retailer_name.'</div>';   
             }
-			echo '<span>'.$date_uploaded.'</span>';
+            echo '<span>'.$date_uploaded.'</span>';    
 			echo '</div>';			//end div block-left
 			
 			echo '<div class="block-right">
@@ -280,6 +286,7 @@ function view_photos($grand_final = false) {
 				}
 				
 				$(document).ready(function() {
+				
 					$("body").on("click", "#list_prev", function(e) {
 					 	e.preventDefault();
 						search_listing('.$info['last_p'].');

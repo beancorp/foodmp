@@ -1,7 +1,7 @@
 {if $hide_template}
 	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-	<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
-		<head>
+	<html xmlns="http://www.w3.org/1999/xhtml">
+		<head prefix="og: http://ogp.me/ns#">
 			<link type="text/css" href="{$smarty.const.STATIC_URL}css/skin/red/all.css" rel="stylesheet" media="screen" />
 			<link type="text/css" href="{$smarty.const.STATIC_URL}static/css/skin/red/validationEngine.jquery.css" rel="stylesheet" media="screen" />
 			<!--[if lt IE 7]><script defer type="text/javascript" src="{$smarty.const.SOC_HTTP_HOST}skin/red/js/pngfix.js"></script><![endif]-->
@@ -19,20 +19,26 @@
 	</html>
 {else}
 	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-	<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
-	<head>
+	<html xmlns="http://www.w3.org/1999/xhtml">
+	<head  prefix="og: http://ogp.me/ns#">
 	<title>{$pageTitle}</title>
 	{if $cp eq "blog"}
 	<link rel="canonical" href="{$smarty.const.SOC_HTTP_HOST}{$headerInfo.bu_urlstring}" />
 	{/if}
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta property="fb:app_id" content="{$facebook.appID}"/>
     {if !$fanpromo_view_page}
-	<meta property="fb:app_id" content="{$facebook.appID}"/>
 	<meta content="{if $req.info.facelike_title}{$req.info.facelike_title}{else}Food Market Place{/if}" property="og:title">
 	<meta content="{if $req.info.facelike_image}{$req.info.facelike_image}{else}{$smarty.const.IMAGES_URL}skin/red/logo-main.png{/if}" property="og:image">
 	<meta content="{$req.info.facelike_desc}" property="og:description">
     {else}
     <meta content="{$smarty.const.SOC_HTTP_HOST}/fanpromo/{$photo.brand_image}" property="og:image">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:title" content="Fan' my photo in the chase for $1,000,000 CASH"/>
+    <meta property="og:description" content="To 'Become a Fan' of my photo in the FoodMarketplace $1,000,000 Fan Frenzy, click here"/>
+    
+    
+    
     {/if}
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=5.0" />
 	<meta name="google-site-verification" content="dHAkIMuHSon2_YaffhovdX253zJtYLlwz59aDgD0DeY" />

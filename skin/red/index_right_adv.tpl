@@ -1,5 +1,5 @@
 <div id="sidebar2" style="border:none; background:url(../images/advert-bottom.gif) no-repeat 10000px bottom;{if $foodwinehome}padding:10px 15px 17px 0;{/if}">
-{if !$foodwinehome && ($state_name ne '' or $statename ne '')}
+{if !$foodwinehome && ($state_name ne '' or $statename ne '')}  
 <script language="javascript" src="/js/rotateAd.js" type="text/javascript"></script>
 	<div id="sidebar_ad">
 	<script type="text/javascript">
@@ -44,11 +44,11 @@
 	<!-- end left ads -->
 	<br><br>
 	</div>
-{else}
-	{if $sidebarContent ne ''}
+{else}    
+	{if $sidebarContent ne ''}  
 		{$sidebarContent}
 		
-	{else}
+	{else} 
 		<!--
 		<div style="margin:10px 0 0 0;">
         <map style="padding-top:10px;" id="map_foodwine_reg" name="map_foodwine_reg">
@@ -61,10 +61,11 @@
 		
 		{if $wishlistabout_right_image eq 'yes'}
 		<a href="soc.php?cp=wishlistSample"><img src="/skin/red/images/wishlistabout_right_banner.png" height="206" width="192" alt="View Some Wish Lists" title="View Some Wish Lists"/></a>
+		{elseif $home_page eq true or $foodwine_home eq true}
+		<a href="{$soc_https_host}registration.php"><img alt="" src="{$soc_https_host}/skin/red/images/onedollaraday.jpg" /></a>
 		{else}
-		<!--<a href="/soc.php?cp=cms"><img src="/skin/red/images/banner/testimonial_banner.jpg" alt="Testimonial" title="Testimonial" border="0" /></a>-->
-		
-		{/if}
+        <!--<a href="/soc.php?cp=cms"><img src="/skin/red/images/banner/testimonial_banner.jpg" alt="Testimonial" title="Testimonial" border="0" /></a>-->
+        {/if}
 		
 		</div>
 		<br><p></p>
