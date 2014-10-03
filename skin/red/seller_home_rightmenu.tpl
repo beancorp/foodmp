@@ -88,7 +88,7 @@ windowOnload(function(){
                             {else}
                             <li class="order"><a href="/foodwine/?act=book&StoreID={$smarty.session.StoreID}">Online Booking</a><span class="new-order">{if $req.new_online_book_num > 0}{$req.new_online_book_num}{/if}</span></li>
                             {/if}
-                            <li class="referrals"><a href="/soc.php?cp=ref_email">Referral Template</a></li>
+                            <!--<li class="referrals"><a href="/soc.php?cp=ref_email">Referral Template</a></li>-->
                             <li class="flyers"><a href="/foodwine/?act=flyers">Flyers</a></li>
 							{if $req.info.sold_status eq 1}
                             <li class="flyers"><a href="/foodwine/?act=clickandcollect"><span>Flyers <br />Click & Collect</span></a></li>
@@ -107,7 +107,7 @@ windowOnload(function(){
                             <li class="send"><a href="/soc.php?act=invitations">Send Invitations</a></li>
                             <li class="gallery"><a href="/soc.php?act=gallery">Photo gallery</a></li>
                             <li class="history"><a href="/soc.php?cp=purchase">Transaction history</a></li>
-                            <li class="referrals"><a href="/soc.php?cp=ref_email">Referral Template</a></li>
+                            <!--<li class="referrals"><a href="/soc.php?cp=ref_email">Referral Template</a></li>-->
                             <li class="emailalerts"><a href="/soc.php?cp=inbox&opt=1" style="color:red">{if $smarty.session.attribute eq '3'&& $smarty.session.subAttrib eq '1'}Applicants{else}Responses{/if}</a></li>
                          {elseif $smarty.session.attribute eq 3 && $smarty.session.subAttrib eq 3}
                          	<li class="home"><a href="/{$req.website_name}">Admin home</a></li>
@@ -129,7 +129,7 @@ windowOnload(function(){
                             <li class="send"><a href="/soc.php?act=invitations">Send Invitations</a></li>
                             <li class="gallery"><a href="/soc.php?act=gallery">Photo gallery</a></li>
                             <li class="history"><a href="/soc.php?cp=purchase">Transaction history</a></li>
-                            <li class="referrals"><a href="/soc.php?cp=ref_email">Referral Template</a></li>
+                            <!--<li class="referrals"><a href="/soc.php?cp=ref_email">Referral Template</a></li>-->
                         {/if}
                     </ul>
 

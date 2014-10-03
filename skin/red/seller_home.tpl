@@ -328,7 +328,7 @@
 							
 							<div><a href="/soc.php?cp=protection">Seller Protection</a>
 							
-								<a style="margin-left: 29px;" href="/foodwine/?act=fanpromotion"><img src="/images/help_us_icon.png" style="vertical-align:text-top;" /></a>
+								<!--<a style="margin-left: 29px;" href="/foodwine/?act=fanpromotion"><img src="/images/help_us_icon.png" style="vertical-align:text-top;" /></a>-->
 							</div>
 							
 							

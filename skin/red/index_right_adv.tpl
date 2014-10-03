@@ -61,7 +61,7 @@
 		
 		{if $wishlistabout_right_image eq 'yes'}
 		<a href="soc.php?cp=wishlistSample"><img src="/skin/red/images/wishlistabout_right_banner.png" height="206" width="192" alt="View Some Wish Lists" title="View Some Wish Lists"/></a>
-		{elseif $home_page eq true or $foodwine_home eq true}
+		{elseif $foodwine_home eq true}    
 		<a href="{$soc_https_host}registration.php"><img alt="" src="{$soc_https_host}/skin/red/images/onedollaraday.jpg" /></a>
 		{else}
         <!--<a href="/soc.php?cp=cms"><img src="/skin/red/images/banner/testimonial_banner.jpg" alt="Testimonial" title="Testimonial" border="0" /></a>-->
