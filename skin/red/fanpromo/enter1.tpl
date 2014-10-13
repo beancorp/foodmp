@@ -27,9 +27,9 @@
 	var t = null;
 	window.fbAsyncInit = function () {
 		FB.init({
-			appId: facebook_appID,
+			appId: facebook_appID,			 
+			cookie: true,
 			status: !0,
-			cookie: !1,
 			xfbml: !1,
 			oauth: !0
 		}), FB.Event.subscribe("auth.login", function (e) {
@@ -43,17 +43,19 @@
 			})
 		})
 	}
+
 	
 	function fb_login(){
 		FB.login(function(response) {
 			if (response.authResponse) {
-				console.log('Welcome!  Fetching your information.... ');
+				//console.log('Welcome!  Fetching your information.... ');
 				//console.log(response); // dump complete info
 				access_token = response.authResponse.accessToken; //get access token
 				user_id = response.authResponse.userID; //get FB UID
 				FB.api('/me', function(response) {
 					user_email = response.email; //get user email
 					// you can store this data into your database
+					window.location.href = '/login.php?use=fb_login&utype=fb_login&reurl='+ '/entry';
 				});
 			} else {
 				//user hit cancel button
