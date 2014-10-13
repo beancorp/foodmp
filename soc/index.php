@@ -213,7 +213,7 @@ function view_photos_customer() {
                     });
                 }
                 
-                $(document).ready(function() {
+                $(document).ready(function() {                                  
                     $("#list_prev").click(function() {
                         view_photos_customer('.$info['last_p'].');
                     });
@@ -1517,7 +1517,7 @@ switch($setCP){
 		$smarty->assign('itemTitle', $socObj->getTextItemTitle('Contact Us', 2));
 		$smarty->assign('sidebar', 0);
 
-                $type = array('Advertising', 'Report Seller', 'General Enquiry', 'Suggestion/Feedback', 'Technical Support', 'Admin');
+                $type = array('Advertising', 'Report Seller', 'General Enquiry', 'Suggestion', 'Technical Support', 'Admin');
 		if (!empty($_POST)){
                         if (strtolower($_POST['validation'])!=strtolower($_SESSION['authnum'])){
 				$smarty->assign('msg',"Validation Code is invalid.");

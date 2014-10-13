@@ -128,9 +128,9 @@ function checkForm()
 			<tr>
 				<td>&nbsp; </td>
 				<td class="tip2">
-				<p class="bigger"><em style="color:#74ace1; text-decoration:underline;">FoodMarketplace</em></p>
-				3 Barrack Street <br />
-				Sydney  NSW 2000 <br />
+				<p class="bigger"><em style="color:#74ace1; text-decoration:underline;"></em></p>
+				<img src="./images/logo-new.png" alt="">
+                <span style="display: block; width: 170px; margin-top: 10px; line-height: 20px; class="txt-for-media">For Media Inquiries, contact Eileen Koch at 310.441.1000 or email <a style="color:#1c1bea;text-decoration: underline;" href="mailto:eileen@ekcpr.com">eileen@ekcpr.com</a>. Please visit <a style="color:#1c1bea;text-decoration: underline;" target="_blank" href="http://www.EKCPR.com">www.EKCPR.com</a>.</span>
 				</td>
 			</tr>
 		</table>		
