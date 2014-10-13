@@ -119,13 +119,22 @@
 <div class="payment_box">
 	<!-- Begin eWAY Linking Code -->
 	<div id="eWAYBlock">
+		<!-- 
 		<div style="text-align:center;">
 			<a href="http://www.eway.com.au/secure-site-seal?i=12&s=3&pid=324ea25e-8336-4eba-97cd-77b1f85f7b26" title="eWAY Payment Gateway" target="_blank">
 				<img alt="eWAY Payment Gateway" src="https://www.eway.com.au/developer/payment-code/verified-seal.ashx?img=12&size=3&pid=324ea25e-8336-4eba-97cd-77b1f85f7b26" />
 			</a>
 		</div>
 		<div style="text-align:center;">
+		
+			EWAY_gateway.tpl
 			<a style="color: #CECECE;" target="_blank" href="http://www.eway.com.au/?pid=324ea25e-8336-4eba-97cd-77b1f85f7b26" title="eWAY Payment Gateway">eWAY Payment Gateway</a>
+		</div>
+		 -->
+		<div class="eway-block-new">
+			<img alt="" src="/images/mastercard.png">
+			<img alt="" src="/images/visa.png">
+			<p>Your credit card is being processed directly from your browser to a secured payment gateway that meets <a href="https://www.pcisecuritystandards.org/organization_info/index.php">Tier-1 of the PCI DSS</a> criteria. This means you are experiencing similar levels of data security to that of the biggest banks in the world.</p>
 		</div>
 	</div>
 	<!-- End eWAY Linking Code -->

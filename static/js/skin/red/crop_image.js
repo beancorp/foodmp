@@ -150,7 +150,7 @@ function showImage() {
     setTimeout(function(){
         $("#upload_flag").val("1");
         if ($("#submit_flag").val() == "1") {
-            validateBeforeSubmit();
+            validateBeforeSubmit(false); //not scroll message
         }
     }, 100);
 
@@ -395,7 +395,9 @@ function fileSelectHandler(error) {
     }
 }
 
-function validateBeforeSubmit(){
+function validateBeforeSubmit(run_scroll){
+	run_scroll = typeof run_scroll !== 'undefined' ? run_scroll : true;
+	
     var $return = true;
     var submitItv = setInterval(function(){
         if (!validatingCode) {
@@ -481,7 +483,7 @@ function validateBeforeSubmit(){
             }
             
             
-            if ($return == false){
+            if ($return == false && run_scroll == true ){
             	$(window).scrollTop(scrollPos);
             }
 

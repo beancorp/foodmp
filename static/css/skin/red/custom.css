@@ -222,3 +222,17 @@ ul#logos3 li 		{ padding:0 0 8px 0; margin:0; width:180px;}
 	background: -o-linear-gradient(top, #7ABCFF 0%,#60ABF8 44%,#4096EE 100%);
 	background: -ms-linear-gradient(top, #7ABCFF 0%,#60ABF8 44%,#4096EE 100%);
 }
+.eway-block-new{
+	margin: 0px 32px;
+}
+.eway-block-new img{
+	float: left;
+	margin-left: 5px;
+}
+.eway-block-new p{
+	margin-left: 210px;
+	line-height: 20px;
+}
+.eway-block-new p a{
+	color: #2b1d75;
+}
