@@ -2711,19 +2711,11 @@ class socClass extends common  {
 			// send email
 			$store_name = getStoreURLNameById($StoreID);
 			$url_name = clean_url_name($store_name);
-			if(get_magic_quotes_gpc()){
-				$toname = stripcslashes($_REQUEST['from_name']);
-				$from = stripcslashes($_REQUEST['from']);
-				$to = stripcslashes($_REQUEST['to']);
-				$sender = stripcslashes($_REQUEST['sender']);
-				$message = stripcslashes($_REQUEST['message']);
-			}else{
-				$toname = $_REQUEST['from_name'];
-				$from = $_REQUEST['from'];
-				$to = $_REQUEST['to'];
-				$sender = $_REQUEST['sender'];
-				$message = $_REQUEST['message'];
-			}
+			$toname = stripcslashes($_REQUEST['from_name']);
+			$from = stripcslashes($_REQUEST['from']);
+			$to = stripcslashes($_REQUEST['to']);
+			$sender = stripcslashes($_REQUEST['sender']);
+			$message = stripcslashes($_REQUEST['message']);
 			$infomation = $this->getStoreInfo($StoreID,$pid);
 			//if ($_REQUEST['format']=='html'){
 //				$message = "Dear $toname,<br><br>".nl2br($message);
