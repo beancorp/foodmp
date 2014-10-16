@@ -2725,33 +2725,44 @@ class socClass extends common  {
 				$message = $_REQUEST['message'];
 			}
 			$infomation = $this->getStoreInfo($StoreID,$pid);
-			if ($_REQUEST['format']=='html'){
-				$message = "Dear $toname,<br><br>".nl2br($message);
-				$message.= "<br><br> Following is the link to the website:";
-				$message .="<table width=100% cellspacing=4>";
-				if($infomation['Images']!="" || 1){
-					$message .= "<tr><td rowspan=4 width='100' align=center valign=top><img src='".$normal_url."/".($infomation['Images']?$infomation['Images']:'images/79x79.jpg')."' width=81 /></td></tr>";
-				}
-				if($infomation['url_item_name']){
-					$message.= "<tr><td align=left><a href='{$normal_url}/{$infomation['bu_urlstring']}/{$infomation['url_item_name']}'>".htmlspecialchars($infomation['item_name'])."</a></td></tr>";
-				}
-				$message.= "<tr><td>" . truncate($infomation['description'], 90) . "</td></tr>";
-				$message.= "<tr><td><a href='{$normal_url}/{$infomation['bu_urlstring']}'>".$infomation['bu_name']."</a></td>";
-				$message.= "</tr></table>";
-				$message .= "<br><br>Sincerely,<br>$sender";
-			}else{
-				$message = "Dear $toname,\n\n".$message;
-				$message.= "\n\n Following is the link to the website:\n";
-				$message.= "{$infomation['url_item_name']}\n";
-				$message.= truncate($infomation['description'], 90) . "\n";
-				$message.= $infomation['bu_name']."\n";
-				$message.= "\nSincerely,\n$sender";
-			}
+			//if ($_REQUEST['format']=='html'){
+//				$message = "Dear $toname,<br><br>".nl2br($message);
+//				$message.= "<br><br> Following is the link to the website:";
+//				$message .="<table width=100% cellspacing=4>";
+//				if($infomation['Images']!="" || 1){
+//					$message .= "<tr><td rowspan=4 width='100' align=center valign=top><img src='".$normal_url."/".($infomation['Images']?$infomation['Images']:'images/79x79.jpg')."' width=81 /></td></tr>";
+//				}
+//				if($infomation['url_item_name']){
+//					$message.= "<tr><td align=left><a href='{$normal_url}/{$infomation['bu_urlstring']}/{$infomation['url_item_name']}'>".htmlspecialchars($infomation['item_name'])."</a></td></tr>";
+//				}
+//				$message.= "<tr><td>" . truncate($infomation['description'], 90) . "</td></tr>";
+//				$message.= "<tr><td><a href='{$normal_url}/{$infomation['bu_urlstring']}'>".$infomation['bu_name']."</a></td>";
+//				$message.= "</tr></table>";
+//				$message .= "<br><br>Sincerely,<br>$sender";
+//			}else{
+//				$message = "Dear $toname,\n\n".$message;
+//				$message.= "\n\n Following is the link to the website:\n";
+//				$message.= "{$infomation['url_item_name']}\n";
+//				$message.= truncate($infomation['description'], 90) . "\n";
+//				$message.= $infomation['bu_name']."\n";
+//				$message.= "\nSincerely,\n$sender";
+//			}
+
+            if ($_REQUEST['format']=='html'){
+                $message = "Hi $toname,<br/><br/>".nl2br($message);
+                $message.= "<br/><br/>Please cllick on this link: <a style='color:red' href='{$normal_url}{$infomation['bu_urlstring']}'>".$infomation['bu_name']."</a> to visit a great business.";
+                $message .= "<br/><br/>Sincerely,<br>$sender";
+            }else{
+                $message = "Hi $toname,\n\n".$message;
+                $message.= "\n\nPlease cllick on this link: {$normal_url}{$infomation['bu_urlstring']} to visit a great business.\n";
+                $message.= "\nSincerely,\n$sender";
+            }            
+            
 			$header = "From: $sender <$from>\n";
 			$header.= "Content-type: text/".$_REQUEST['format']."\n";
 			$subject = "Your friend $sender invite you to visit socexchange.com.au";
 			if($toname){$to = $toname." <$to>";	}
-			$result = @mail($to,$subject,  getEmailTemplate($message),fixEOL($header));
+			$result = @mail($to,$subject,  getFanfrenzyEmailTemplate($message),fixEOL($header));
 			if ($result){
 				return array('msg'=>'Email sent successfully','StoreID'=>$StoreID,'pid'=>$_REQUEST['pid']);
 			}else{

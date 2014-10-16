@@ -59,7 +59,7 @@ if (time() >= $grand_final_time){
 }
 $smarty->assign('grand_final_flag', $grand_final_flag);//in grand final time
 
-//count down to Grand Finale Date
+//count down to Grand Finale Date.   The Grand Finale Date start from 00h:00m:00s of the date
 //get month , day , year of Grand OPen
 $tmp = explode("/", $grand_final_date);
 
@@ -201,6 +201,8 @@ function view_photos($grand_final = false) {
 			if (empty($search_criteria)) {				
 				if ($photo['rank'] >= 1 && $photo['rank'] <= 3) {					
 					echo '<div class="place_image place_'.$photo['rank'].'">&nbsp;</div>';
+				}else{
+					echo '<span class="place_image place_ranking">'.$photo['rank'].'<sup>th</sup></span>';
 				}
 			}
 			

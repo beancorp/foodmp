@@ -270,11 +270,14 @@
 		<div class="social-button">
 			<strong>Share this...</strong> <br /><br />
 			
-			<span class='st_sharethis_large' st_title="'Fan' my photo in the chase for $1,000,000 CASH" st_summary="To 'Become a Fan' of my photo in the FoodMarketplace $1,000,000 Fan Frenzy, click here"   st_image="{$smarty.const.SOC_HTTP_HOST}fanpromo/{$photo.brand_image}"  displayText='ShareThis'></span>
-			<span class='st_facebook_large' st_title="'Fan' my photo in the chase for $1,000,000 CASH" st_summary="To 'Become a Fan' of my photo in the FoodMarketplace $1,000,000 Fan Frenzy, click here" st_image="{$smarty.const.SOC_HTTP_HOST}fanpromo/{$photo.brand_image}"  displayText='Facebook'></span>
+		
+			
+			
+			<a id="ref_fb"  href="javascript:void(0)"  onclick="FBShareOp();"><img src="/images/share_facebook_32.png" alt=""/></a>
 			<span class='st_twitter_large'  st_title="'Fan' my photo in the chase for $1,000,000 CASH" st_summary="To 'Become a Fan' of my photo in the FoodMarketplace $1,000,000 Fan Frenzy, click here" st_image="{$smarty.const.SOC_HTTP_HOST}fanpromo/{$photo.brand_image}" displayText='Tweet'></span>
 			<span class='st_linkedin_large' st_title="'Fan' my photo in the chase for $1,000,000 CASH" st_summary="To 'Become a Fan' of my photo in the FoodMarketplace $1,000,000 Fan Frenzy, click here" st_image="{$smarty.const.SOC_HTTP_HOST}fanpromo/{$photo.brand_image}"  displayText='LinkedIn'></span>
 			<span class='st_pinterest_large' st_title="'Fan' my photo in the chase for $1,000,000 CASH" st_summary="To 'Become a Fan' of my photo in the FoodMarketplace $1,000,000 Fan Frenzy, click here" st_image="{$smarty.const.SOC_HTTP_HOST}fanpromo/{$photo.brand_image}"  displayText='Pinterest'></span>
+			<span class='st_sharethis_large' st_title="'Fan' my photo in the chase for $1,000,000 CASH" st_summary="To 'Become a 'Fan' of my photo in the FoodMarketplace $1,000,000 Fan Frenzy, click here"   st_image="{$smarty.const.SOC_HTTP_HOST}fanpromo/{$photo.brand_image}"  displayText='ShareThis'></span>
 			<span class='st_email_large' st_title="'Fan' my photo in the chase for $1,000,000 CASH" st_summary="To 'Become a Fan' of my photo in the FoodMarketplace $1,000,000 Fan Frenzy, click here" st_image="{$smarty.const.SOC_HTTP_HOST}fanpromo/{$photo.brand_image}"  displayText='Email'></span>
 			
 			
@@ -294,6 +297,25 @@
 			<img src="images/icon-mail.png" alt="" width="37px">
 			 -->
 		</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				 
+		
+		
+		
+		
+		 
+		 
+		
+		
+		
 	</div>
 </div>
 
@@ -350,6 +372,40 @@
 
 
 {literal}
+<script>
+window.fbAsyncInit = function () {
+	FB.init({
+		appId: facebook_appID,
+		status: true,
+		xbml: true
+	});
+}
+
+
+
+function FBShareOp(){
+	var product_name   = 	"{/literal}{$share_title}{literal}";
+	var description	   =	"{/literal}{$share_description}{literal}";
+	var share_image	   =	"{/literal}{$share_image}{literal}";
+	var share_url	   =	"{/literal}{$share_url}{literal}";	
+    var share_capt     =    "{/literal}{$share_title}{literal}";
+    FB.ui({
+        method: 'feed',
+        name: product_name,
+        link: share_url,
+        picture: share_image,
+        caption: share_capt,
+        description: description
+
+    }, function(response) {
+        if(response && response.post_id){}
+        else{}
+    });
+
+}
+</script>
+
+
 				<script>
 					$(document).ready(function() {
 						$('#rotate_photo').click(function() {
@@ -367,7 +423,6 @@
 									}
 								}
 							});
-							
 						});
 
 						$('#btn-back-to-entries').click(function() {
@@ -378,9 +433,6 @@
 										window.location.href="/fanfrenzy";
 								{/if}
 							{literal}
-						
-											
-
 						});
 						
 					
@@ -422,7 +474,9 @@
 									$('#fan_frame').removeClass('become_fan');
 								}
 							}						
-						});					
+						});
+
+											
 					});			
 				</script>
 {/literal}

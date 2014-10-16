@@ -96,7 +96,7 @@ function view_photos_customer() {
     }
     global $dbcon;
             
-    $res = $dbcon->getOne("SELECT COUNT(*) As count FROM photo_promo WHERE consumer_id = '".$_SESSION['StoreID']."'");
+    $res = $dbcon->getOne("SELECT COUNT(*) As count FROM photo_promo WHERE consumer_id = '".$_SESSION['StoreID']."' AND approved <> 2");
     
     $perPage = 18;       
     $pageno    = empty($_REQUEST['p']) ? 1 :$_REQUEST['p'];
@@ -113,6 +113,7 @@ function view_photos_customer() {
             LEFT JOIN aus_soc_bu_detail consumer ON consumer.StoreID = photo.consumer_id
             LEFT JOIN aus_soc_bu_detail retailer ON retailer.StoreID = photo.store_id
             WHERE photo.consumer_id = '".$_SESSION['StoreID']."'
+            AND photo.approved <> 2
             GROUP BY photo.photo_id ORDER BY fan_count DESC, photo.timestamp ASC
             LIMIT $start, $perPage";
     
@@ -238,7 +239,7 @@ function view_photos_seller($owner=true) {
     }
     global $dbcon;
     if($owner){        
-        $res = $dbcon->getOne("SELECT COUNT(*) As count FROM photo_promo WHERE consumer_id = '".$_SESSION['StoreID']."'");
+        $res = $dbcon->getOne("SELECT COUNT(*) As count FROM photo_promo WHERE consumer_id = '".$_SESSION['StoreID']."' AND photo_promo.approved <> 2");
     }else{
         $res = $dbcon->getOne("SELECT COUNT(*) As count FROM photo_promo WHERE store_id = '".$_SESSION['StoreID']."' AND photo_promo.approved=1");   
     }
@@ -258,6 +259,7 @@ function view_photos_seller($owner=true) {
             LEFT JOIN aus_soc_bu_detail consumer ON consumer.StoreID = photo.consumer_id
             LEFT JOIN aus_soc_bu_detail retailer ON retailer.StoreID = photo.store_id
             WHERE photo.consumer_id = '".$_SESSION['StoreID']."'
+            AND photo.approved <> 2
             GROUP BY photo.photo_id ORDER BY fan_count DESC, photo.timestamp ASC
             LIMIT $start, $perPage";
     }else{      
@@ -3874,13 +3876,10 @@ switch($setCP){
 		
 		$smarty->assign('renewal_date', date('dS F Y', strtotime(str_replace('/', '-', $req['detail']['renewalDate']))));
 		
-        $smarty->assign('req', $req);
-
         //GET FANFRENZY
         include_once ('fanpromo/functions.inc.php');      
         $smarty -> assign('fanfrenzy_text', tab_content($dbcon, 4));
-        $req = $socObj->getBuyerHome($sid);
-        $smarty  -> assign('req', $req); 
+        $smarty->assign('req', $req);
         
         $res_owner = $dbcon->getOne("SELECT COUNT(*) As count FROM photo_promo WHERE consumer_id = '".$_SESSION['StoreID']."'"); 
         $res_retailer = $dbcon->getOne("SELECT COUNT(*) As count FROM photo_promo WHERE store_id = '".$_SESSION['StoreID']."'"); 

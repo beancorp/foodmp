@@ -37,7 +37,7 @@ if (!empty($_GET['image'])) {
 	$photo = $dbcon->getOne($photo_query);
        
 	if(!$_SESSION['isAdmin']){  
-        if (!$photo["photo_id"] || (!$photo["approved"] && $current_user_id != $photo["consumer_id"])){
+        if (!$photo["photo_id"] || (!$photo["approved"] && $current_user_id != $photo["consumer_id"])   || $photo["approved"] == 2 ){
             header('location:'. SOC_HTTP_HOST . 'soc.php?cp=error404');
             exit();
         }      
@@ -174,6 +174,13 @@ if (!empty($_GET['image'])) {
 	$smarty->loadLangFile('/index'); 
     $smarty->assign('vote_enabled', $display_vote_enable);
 	$smarty->assign('fanpromo_view_page', true);
+	
+	
+	$smarty->assign('share_description', "To 'Become a 'Fan' of my photo in the FoodMarketplace $1,000,000 Fan Frenzy, click here");
+	$smarty->assign('share_title', "'Fan' my photo in the chase for $1,000,000 CASH");
+	$smarty->assign('share_image', SOC_HTTP_HOST . "fanpromo/".$photo["brand_image"]);
+	$smarty->assign('share_url', SOC_HTTP_HOST . "photo_".$photo["photo_id"]. ".html");
+	
 	display_page($dbcon, $smarty, 'view.tpl', 'Fan Promo - View Detail', $_LANG);
 }
 

@@ -37,9 +37,16 @@ if (isset($_GET['delete'])) {
 }
 
 if (isset($_POST['change_status_photo']) && $_POST['change_status_photo'] == 1) {
-	$sql = "UPDATE photo_promo SET approved =". $_REQUEST['status_value'] . " WHERE photo_id = '".$_REQUEST['photo_id']."'";
-	$rs = $dbcon->execute_query($sql);
 	
+	if ($_REQUEST["bulk_update"] == 1){
+		$photo_ids_str = implode("," , $_REQUEST["photo_ids"]);
+		$photo_ids = $_REQUEST["photo_ids"];
+		$sql = "UPDATE photo_promo SET approved =". $_REQUEST['status_value'] . " WHERE photo_id IN (".$photo_ids_str.")";		
+	}else{
+		$sql = "UPDATE photo_promo SET approved =". $_REQUEST['status_value'] . " WHERE photo_id = '".$_REQUEST['photo_id']."'";
+		$photo_ids[] = $_REQUEST['photo_id'];
+	}
+	$rs = $dbcon->execute_query($sql);	
 	
 	if ($_POST['status_value'] == 1){
 			$email_template =  get_email_template_by_key_name($dbcon, "email_approved");
@@ -50,44 +57,18 @@ if (isset($_POST['change_status_photo']) && $_POST['change_status_photo'] == 1) 
 	}
 	$mail_template = file_get_contents(ROOT_DIRECTORY. "skin/email_template/template_mail_{$email_template["id"]}.txt");
 	
-	
-	
-	$photo_info = getFranzyPhoto($dbcon, $_REQUEST['photo_id']);
-	$consumer_info = getStoreInfoByStoreId($dbcon, $photo_info["consumer_id"]);
-	
-	//$message = str_replace("##username##", nl2br($consumer_info['bu_nickname']), $email_template["content"]); //Replace
-	$message = str_replace("##username##", nl2br($consumer_info['bu_nickname']), $mail_template); //Replace
-	$arr["mail_to"] = $consumer_info['bu_email'];
-	$arr['subject'] = "Information about your entry Fan Frenzy";
-	$arr["content"] = $message;
-	
-	insert_queue_mail($dbcon, $arr);
-	
-	
-	/*
-	$email = $_SESSION["email"];				
-	$headers  = 'MIME-Version: 1.0' . "\r\n";
-	$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-	$headers .= 'From: FoodMarketplace <no-reply@'.$emaildomain.'>' . "\r\n";
-	$message = 'Hi '.ucwords($_SESSION["NickName"]) ;
-	
-	$sql = "SELECT aus_soc_login.* FROM aus_soc_login 
-				LEFT JOIN photo_promo ON photo_promo.store_id =  aus_soc_login.StoreID 
-				WHERE photo_promo.photo_id = {$_REQUEST['photo_id']}";
-	if ($_POST['status_value'] == 1){
-		$message .= "<br/><br/>Your photo is approved";
+	foreach($photo_ids as $photo_id){
+		$photo_info = getFranzyPhoto($dbcon, $photo_id);
+		$consumer_info = getStoreInfoByStoreId($dbcon, $photo_info["consumer_id"]);
+		$message = str_replace("##username##", nl2br($consumer_info['bu_nickname']), $mail_template); //Replace
+		$arr["mail_to"] = $consumer_info['bu_email'];
+		$arr['subject'] = "Information about your entry Fan Frenzy";
+		$arr["content"] = $message;
+		
+		error_reporting(E_ALL);
+		ini_set("display_error",1);
+		insert_queue_mail($dbcon, $arr);
 	}
-	if ($_POST['status_value'] == 2){
-		$message .= "<br/><br/>Your photo is rejected";
-	}
-	
-	$message .= "<br /><br /> Kind regards, <br /> FoodMarketplace.";
-	mail($email, 'Email Verification', $message, $headers);
-	*/
-	
-	
-	
-	
 	exit();
 }
 
@@ -152,7 +133,7 @@ $sql = "SELECT COUNT(*) AS count FROM (
 					
     	$res = $dbcon->getOne($sql);
     	
-    	$perPage = 3;	   
+    	$perPage = 50;	   
 		$pageno	= empty($_GET['p']) ? 1 :$_GET['p'];
     	$count = $res['count'];
     	$smarty->assign('total_photo',$count);
@@ -286,7 +267,7 @@ if (isset($_POST['action']) && $_POST['action'] == 'list') {
 	exit();
 }
                                 
-$smarty->assign('photo_status_value', array(0,1,2));
+$smarty->assign('photo_status_value', array(-1,1,2));
 $smarty->assign('photo_status_label', array('-Select Status-','Approved','Rejected'));
 $smarty->assign('photos', $photos);
 $smarty->assign('listing', $output);

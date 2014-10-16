@@ -70,6 +70,28 @@
 		position: absolute;
 	}
 	
+	.place_ranking {
+		background: rgba(238, 244, 244, 0.9);
+		text-align: center;
+		line-height: 36px;
+		color: #393371;
+		font-weight: bold;
+		font-size: 18px;
+		margin-left: 13px;
+		margin-top: 9px;
+		height: 36px;
+		width: auto;
+		padding: 0 9px;
+	}
+	
+	.place_ranking sup{
+		color: #393371;
+		font-weight: bold;
+		font-size: 10px;
+	}
+	
+	
+	
 	.place_1 {
 		background-image: url("/skin/red/fanpromo/1st.png");
         background-repeat: no-repeat;

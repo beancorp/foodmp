@@ -1853,6 +1853,28 @@ function getEmailTemplate($templateContent='', $param=array())
 
 }
 
+
+/**
+ * get email template of add header and footer
+ *
+ * @param <string> $templateContent template content
+ * @param <array> $param
+ */
+function getFanfrenzyEmailTemplate($templateContent='', $param=array())
+{
+    $templateName = dirname(__FILE__) . '/../skin/red/email_template/email_fanfrenzy.tpl';
+
+    global $smarty;
+    $req = array('emailContents'=>$templateContent);
+    if(!empty($param)) {
+        $req = array_merge($req, $param);
+    }
+    $smarty->assign('req', $req);
+
+    return $smarty->fetch($templateName);
+
+}
+
 /**
  * send email
  */

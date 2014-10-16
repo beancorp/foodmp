@@ -14,6 +14,25 @@
 	<input type="hidden" value="photos" name="act">
 	<input type="submit" value="Submit">
 	</form>
+
+	</br>
+	</br>	
+	
+	<select name="bulk_status" id="bulk_status">
+		<option value="-1" selected="selected">Bulk Actions</option>
+		{if $photo_status <> 1}
+		<option value="1">Approved</option>
+		{/if}
+		
+		{if $photo_status <> 2}
+		<option value="2">Reject</option>
+		{/if}
+	</select>
+	<input type="submit" name="" id="bulk_update" class="button action" value="Apply">
+	
+	
+	
+	
 				
 	
 	<!-- 
@@ -30,6 +49,7 @@
 	Total: {$total_photo} {$status_text} photos found
 		<table border="1">
 		<tr>
+				<td>Select</td>
 				<td>Photo Unique ID</td>
 				<td>Date Entered</td>
 				<td>Photo</td>
@@ -41,6 +61,9 @@
 			</tr>
 		{foreach from=$photos item=photo}
 			<tr>
+				<td align="center">
+					<input type="checkbox" id="photo_ids[]" name="photo_ids[]" value="{$photo.photo_id}" class="input-none-border">
+				</td>
 				<td>{$photo.unique_id}</td>
 				<td>{$photo.time_uploaded}</td>
 				<td><a class="fan_photo" href="/photo_{$photo.photo_id}.html" target="_blank"><img width="200px" src="/fanpromo/{$photo.thumb}" /></a></td>
@@ -82,6 +105,11 @@
 				$( ".change_status_photo" ).click(function() {
 			  		var photo_id = $(this).attr('rel');
 			  		var status_value = $( "#status_select_" + photo_id ).val();
+
+			  		if (status_value == -1){
+			  			alert("Please select action");
+				  		return false;
+			  		}
 			  		
 			  		$.ajax({
 			  			type: "POST",
@@ -92,10 +120,42 @@
 				  	        alert("status updated");
 				  	        location.reload();
 				  	    },
-			  		
 			  		});
 			  		
 				});		
+
+
+
+				$( "#bulk_update" ).click(function() {
+			  		var status_value = $( "#bulk_status").val();
+			  		if (status_value == -1){
+				  		alert("Please select action");
+				  		return false;
+			  		}
+
+			  		var photo_ids = jQuery('input:checked[name="photo_ids[]"]').map(function(){return $(this).val();}).get();
+
+			  		if (typeof photo_ids == 'undefined' || photo_ids.length < 1) {
+			  			alert("Please select photo");
+				  		return false;
+				  	}
+			  		
+			  		$.ajax({
+			  			type: "POST",
+				  		url: '/admin/photos.php',
+				  		data: {change_status_photo : 1, photo_ids: photo_ids, status_value: status_value, bulk_update: 1},
+				  		success: function(data, textStatus, jqXHR)
+				  	    {
+				  	        alert("status updated");
+				  	        location.reload();
+				  	    },
+			  		});
+			  		
+				});		
+
+
+
+				
 			} catch(err) {
 				alert(err.message);
 			}
