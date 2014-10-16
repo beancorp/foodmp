@@ -2761,7 +2761,7 @@ class socClass extends common  {
 			$header = "From: $sender <$from>\n";
 			$header.= "Content-type: text/".$_REQUEST['format']."\n";
 			$subject = "Your friend $sender invite you to visit socexchange.com.au";
-			if($toname){$to = $toname." <$to>";	}
+//			if($toname){$to = $toname." <$to>";	}
 			$result = @mail($to,$subject,  getFanfrenzyEmailTemplate($message),fixEOL($header));
 			if ($result){
 				return array('msg'=>'Email sent successfully','StoreID'=>$StoreID,'pid'=>$_REQUEST['pid']);
