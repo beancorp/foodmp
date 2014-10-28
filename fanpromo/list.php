@@ -202,7 +202,15 @@ function view_photos($grand_final = false) {
 				if ($photo['rank'] >= 1 && $photo['rank'] <= 3) {					
 					echo '<div class="place_image place_'.$photo['rank'].'">&nbsp;</div>';
 				}else{
-					echo '<span class="place_image place_ranking">'.$photo['rank'].'<sup>th</sup></span>';
+					if ($photo['rank'] % 10 == 1){
+						echo '<span class="place_image place_ranking">'.$photo['rank'].'<sup>st</sup></span>';
+					}elseif ($photo['rank'] % 10 == 2){
+						echo '<span class="place_image place_ranking">'.$photo['rank'].'<sup>nd</sup></span>';
+					}elseif ($photo['rank'] % 10 == 3){
+						echo '<span class="place_image place_ranking">'.$photo['rank'].'<sup>rd</sup></span>';
+					}else{
+						echo '<span class="place_image place_ranking">'.$photo['rank'].'<sup>th</sup></span>';
+					}
 				}
 			}
 			

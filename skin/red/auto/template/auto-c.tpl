@@ -8,7 +8,7 @@ Nifty("div#seller-infonew","big bl");
 }
 </script>
 {/literal}
-<div id="seller">
+<div id="seller" class="auto-c">
 {include file='auto/template/auto-display-product-summary.tpl'}
 </div>
 <div id="products">

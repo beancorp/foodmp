@@ -1,4 +1,4 @@
-	<div id="seller">
+	<div id="seller" class="tmp-shop-summary">
 	{if $req.template.TemplateName eq 'tmp-n-b' && $req.template.MainImg.actual_width >0}
 	<div id="store_logo" align="left"><img src="{$smarty.const.SOC_HTTP_HOST}{$req.template.MainImg.name}" {$req.template.MainImg.width_attribute} {$req.template.MainImg.height_attribute} style="border:solid 0px #ddd; margin:0px 0px 10px 0px; " /></div>{/if}
 		{if $sellerhome eq "1" && $req.info.youtubevideo neq ""}

@@ -5,7 +5,7 @@
 <div style="width:755px; margin-bottom:5px;"><img src="{$req.images.mainImage.1.bname.text}" width="{$req.images.mainImage.1.bname.width}" height="{$req.images.mainImage.1.bname.height}"/></div>
 {/if}
 
-<div id="seller">
+<div id="seller" class="estate-b">
 {include file='estate/template/estate-summary.tpl'}
 </div>
 <div id="products">

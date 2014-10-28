@@ -309,7 +309,7 @@
     <div class="header-fan-frenzy">
         <div class="fan-frenzy-logo"></div>
         <div class="fan-frenzy-graphic">
-        	<img id="dt-message-img"  src="{$retailer_info.store_logo.text}" alt="{$retailer.bu_name}" title="{$retailer.bu_name}"/></a>
+        	<img id="dt-message-img"  src="{$logo_retailer}" alt="{$retailer.bu_name}" title="{$retailer.bu_name}" width="243" height="162"/></a>
         	<a href="{$smarty.const.SOC_HTTP_HOST}{$retailer.bu_urlstring}">Back To Store</a>
         </div>
         <p class="text-content-top">{$retailer.bu_name}</p>

@@ -1,6 +1,6 @@
 {include_php file='include/jssppopup.php'}
 
-<div id="seller">
+<div id="seller" class="template-e">
 {if $req.template.LogoDisplay eq '1'}
   {if $req.images.mainImage.2.bname.text neq '/images/242x201.jpg'}
 	  <div id="store_logo" align="center" style="width:242px;padding:0">

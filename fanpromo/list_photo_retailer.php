@@ -66,23 +66,68 @@ $default_store_images = array(
 			8 => 'fastfood.jpg', // Fast food
 			9 => 'cafes.jpg', // Cafe
 			10 => 'juicebars.jpg' // Juice
+		);	
+		
+$default_logo = array(
+			1 => 'default_restaurants.jpg', // Restaurents
+			8 => 'default_fastfood.jpg',
+			0 => 'default_logo.jpg',
 		);
+
+$tpl_query	= "select * from aus_soc_template_details where StoreID='$retailer_id'";
+$tpl = $dbcon->getOne($tpl_query,true);
+$tpl_type = $tpl["tpl_type"];
 	
 $objUI = new uploadImages();
-$val['images'] = $objUI->getDisplayImage('', $retailer_id, 0, -1, -1, $res["subAttrib"]);
 
 
-$image2 = $val['images']['mainImage'][2]['bname']['text'];
-$val['images']['mainImage'][2]['bname']['text'] = $image2 == '/images/243x100.jpg' ? '/images/79x79.jpg' : $image2;
+if ($tpl_type > 1){
+	$val['images'] = $objUI->getDisplayImage('', $retailer_id, 0, -1, -1, $tpl_type);
+
+	if ($res["attribute"] == 5){ //foodwine
+		$logo =  $val['images']['mainImage'][2]['bname']['text'];
+	}else{
+		$logo =  $val['images']['mainImage'][0]['bname']['text'];
+	}
+	$val['store_logo'] = $objUI->getDefaultImage($val['images']['mainImage'][2]['bname']['text'], true, 6, 4, 15);
+	$val['store_logo_big'] = $objUI->getDefaultImage($val['images']['mainImage'][2]['bname']['text'], true, 6, 4, 9);
+	$val['store_search_result_logo'] = $objUI->getDefaultImage($val['images']['mainImage'][5]['bname']['text'], true, 6, 4, 15);
+	$val['store_search_result_logo_big'] = $objUI->getDefaultImage($val['images']['mainImage'][5]['bname']['text'], true, 6, 4, 9);
+}else{
+	$logo = $tpl["MainImg"];
+}
 
 
-$val['store_logo'] = $objUI->getDefaultImage($val['images']['mainImage'][2]['bname']['text'], true, 6, 4, 15);
-$val['store_logo_big'] = $objUI->getDefaultImage($val['images']['mainImage'][2]['bname']['text'], true, 6, 4, 9);
-$val['store_search_result_logo'] = $objUI->getDefaultImage($val['images']['mainImage'][5]['bname']['text'], true, 6, 4, 15);
-$val['store_search_result_logo_big'] = $objUI->getDefaultImage($val['images']['mainImage'][5]['bname']['text'], true, 6, 4, 9);
-$val['default_store_image'] = IMAGES_URL.'/foodwine/category_icon/default/'.$default_store_images[$photo['subAttrib']];
+
+if (strpos($logo, "upload")  === false ){
+	if ($res["subAttrib"] == 1 || $res["subAttrib"] == 8){
+		$val['default_logo'] = SOC_HTTP_HOST. 'template_images/'.$default_logo[$res["subAttrib"]];	
+	}else{
+		$val['default_logo'] = SOC_HTTP_HOST. 'template_images/'.$default_logo[0];
+	}
+}else{
+	$val['default_logo'] = SOC_HTTP_HOST. $logo;
+}
+
+
+
 $retailer_info = $val;
 $smarty->assign('retailer_info', $retailer_info);
+
+
+
+/*
+if (strpos($val['images']['mainImage'][2]['bname']['text'], "upload")  === false){
+	
+}else{
+	$logo_retailer = $retailer_info["store_logo"]["text"];
+}
+*/
+
+$logo_retailer = $val['default_logo'];
+
+$smarty->assign('logo_retailer', $logo_retailer);
+
 
 
 
