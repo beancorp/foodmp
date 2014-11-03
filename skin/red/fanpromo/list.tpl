@@ -444,7 +444,7 @@
 						e_daysLeft = timeLeft / msPerDay;
 						daysLeft = Math.floor(e_daysLeft);
 						
-						if (parseInt(countdown(targetDate).days)>0) {
+						if (parseInt(daysLeft)>0) {
 							return daysLeft +"d "+countdown(targetDate).hours+"h "+countdown(targetDate).minutes+"m "+countdown(targetDate).seconds+"s";							
 							//return countdown(targetDate).days+"d "+countdown(targetDate).hours+"h "+countdown(targetDate).minutes+"m "+countdown(targetDate).seconds+"s";
 						} else if (parseInt(countdown(targetDate).hours)>0) {
