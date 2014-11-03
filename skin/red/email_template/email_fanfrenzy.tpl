@@ -50,7 +50,7 @@
                     <img src="{$smarty.const.SOC_HTTP_HOST}skin/red/images/email_referer/trans.gif" height="42" width="660"/>
                 </td>
                 <td width="139" style="background-color:#f3f3f5;">
-                    <a href="{if $smarty.const.LANGCODE eq 'en_au'}http://foodmarketplace.com.au{else}http://foodmarketplace.com{/if}" style="text-decoration: none;color: #4f467b;font-weight: bold;">{if $smarty.const.LANGCODE eq 'en_au'}foodmarketplace.com.au{else}foodmarketplace.com{/if}</a>
+                    <a href="{if $smarty.const.LANGCODE eq 'en-au'}http://foodmarketplace.com.au{else}http://foodmarketplace.com{/if}" style="text-decoration: none;color: #4f467b;font-weight: bold;">{if $smarty.const.LANGCODE eq 'en-au'}foodmarketplace.com.au{else}foodmarketplace.com{/if}</a>
                 </td>
                 <td width="40" height="42" style="background-color:#f3f3f5;">
                     <img src="{$smarty.const.SOC_HTTP_HOST}skin/red/images/email_referer/trans.gif" height="42" width="40"/>
