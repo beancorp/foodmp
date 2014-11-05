@@ -174,6 +174,22 @@
 			margin-top: 30px;
 			cursor: pointer;
 		}
+		
+		@media only screen and (max-width: 767px){
+			#main-banner-mobile img{
+				width: 320px;
+				height: auto;
+			}
+		}
+		#main-banner-mobile img{
+			margin-left: 24px;
+			margin-bottom: 15px;
+		}
+		
+		#main-banner-mobile{
+			display: none;
+			
+		}
 	</style>
 	{/literal}
 
@@ -229,7 +245,7 @@
 				</div>
 			{elseif $sidebar ne '0'}
 			    {if $home_page}
-			        <div class="main-banner">
+			        <div class="main-banner" id="main-banner">
 				        <div class="main-banner-cta">
 					        Earn yourself an easy <span>$1,000,000</span>
 					        <br>
@@ -237,6 +253,10 @@
 				        </div>
 				        <a href="/fanfrenzy"><div class="main-banner-image"></div></a>				
 				        <a href="/fanfrenzy"><div class="main-banner-button"></div></a>
+			        </div>
+					
+					 <div class="main-banner-mobile" id = "main-banner-mobile">
+			        	<a href="/fanfrenzy"><img src="../images/mobile_banner.jpg" /></a>
 			        </div>
                 {/if}
 			

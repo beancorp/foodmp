@@ -16,4 +16,15 @@ $(document).ready(function() {
         $('#promo_page_type').val(1);
     });
 	
+	 $(window).resize(function(){
+    	 if($(window).width() < 767 ){
+    		 $("#main-banner-mobile").show();
+    		 $("#main-banner").hide();
+    	 }else{
+    		 $("#main-banner").show();
+    		 $("#main-banner-mobile").hide();
+
+    	 }
+    });	 
+	
 });
