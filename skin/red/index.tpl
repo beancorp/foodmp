@@ -181,16 +181,19 @@
 				height: auto;
 			}
 			#main-banner-mobile{
-				display: block;
+				display: block !important;
 			
 			}
 			#main-banner{
 				display: none;
 			}
+			#slides{
+				display: none;
+			}
 		}
 		#main-banner-mobile img{
 			margin-left: 24px;
-			margin-bottom: 15px;
+			margin-bottom: 5px;
 		}
 		
 		#main-banner-mobile{
