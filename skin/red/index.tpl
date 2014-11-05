@@ -180,6 +180,13 @@
 				width: 320px;
 				height: auto;
 			}
+			#main-banner-mobile{
+				display: block;
+			
+			}
+			#main-banner{
+				display: none;
+			}
 		}
 		#main-banner-mobile img{
 			margin-left: 24px;
