@@ -1,6 +1,6 @@
 	<div class="menu_tab">
-		<a href="/admin/?act=fanfrenzy_grand_list&status=1">Nominees For This Month </a> |
-		<a href="/admin/?act=fanfrenzy_grand_list&status=2">Nominees For Grand </a> 
+		<a href="/admin/?act=fanfrenzy_grand_list&status=1">Nominees For Grand (Last Month) </a> |
+		<a href="/admin/?act=fanfrenzy_grand_list&status=2">Nominees For Grand (Full List)</a> 
 	</div>
 	</br>
 	</br>
