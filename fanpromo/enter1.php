@@ -269,7 +269,16 @@ if (!empty($_POST) && $consumer_id > 0) {
 					
 					//get template from txt
 					$mail_template = file_get_contents(ROOT_DIRECTORY. "skin/email_template/template_mail_{$email_template["id"]}.txt");
-					$message = str_replace("##username##", nl2br(ucwords($_SESSION["NickName"])), $mail_template); //Replace
+					
+					if (!$_SESSION["NickName"]){
+						$consumer_info = getStoreInfoByStoreId($dbcon, $consumer_id);
+						if ($consumer_info["bu_nickname"]){
+							$_SESSION["NickName"] = $consumer_info["bu_nickname"]; 
+						}else{
+							$_SESSION["NickName"] = $consumer_info["bu_name"];
+						}
+					}					
+					$message = str_replace("##username##", ucwords($_SESSION["NickName"]), $mail_template); //Replace
 					
 					
 					$mail_param["content"] = $message;
