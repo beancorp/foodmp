@@ -110,3 +110,6 @@ if ($result && is_array($result)) {
 }
 echo "sent mail done";
 
+$sql =  "DELETE  FROM promo_grand_list WHERE photo_id IN (SELECT photo_id FROM photo_promo WHERE approved  = 2)";
+$dbcon->execute_query($sql);
+
