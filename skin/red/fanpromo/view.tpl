@@ -217,10 +217,11 @@
 		<a id="rotate_photo">Rotate Photo</a>
 		{/if*}
 		
-		
+		{if ($smarty.const.LANGCODE <> "en-au")}
 		<div id="photo_comments">
 			<div class="fb-comments" data-href="{$smarty.const.SOC_HTTP_HOST}fanpromo/view.php?image={$photo.photo_id}" data-width="615" data-numposts="5" data-colorscheme="light"></div>
 		</div>
+		{/if}
 	</div>
 	<div class="detail-page-side">
 		<div class="btn-slide-wrap">
