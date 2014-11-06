@@ -106,6 +106,27 @@ if (isset($_GET['confirmation'])) {
 						$_SESSION['StoreID'] = $user_data['StoreID'];
 						$_SESSION['email']	= $user_data['user'];
 						
+						$detail_query = "SELECT detail.*, country.country_name FROM aus_soc_bu_detail detail left join aus_soc_country country on detail.bu_country=country.country_id WHERE StoreID = '$_SESSION[StoreID]'";
+						$detail_result = mysql_query($detail_query);
+						if (mysql_num_rows($detail_result) == 1) {
+							
+							$detail_row = mysql_fetch_assoc($detail_result);   
+							$_SESSION['attribute']	=	$detail_row['attribute'];
+							$_SESSION['subAttrib']	=	$detail_row['subAttrib'];
+							$_SESSION['ispayfee']	= 	$detail_row['ispayfee'];
+							$_SESSION['outerEmail']	=	$detail_row['outerEmail'];
+							$_SESSION['UserName']	=	$detail_row['bu_name'];
+							$_SESSION['urlstring']  =   $detail_row['bu_urlstring'];
+							$_SESSION['PostCode']	=	$detail_row['bu_postcode'];
+							$_SESSION['State']		=	getStateByName($detail_row['bu_state']);
+							$_SESSION['NickName']	=	Input::StripString($detail_row['bu_nickname']);
+							$_SESSION['Suburb']		=	$detail_row['bu_suburb'];
+                            $_SESSION['Country']    =    $detail_row['bu_country'];
+							$_SESSION['CountryName']	=	$detail_row['country_name'];
+							$_SESSION['TemplateID']	=	'';
+							$_SESSION['TemplateName']	= '';
+						}
+						
 						header("Location:/soc.php?cp=buyerhome");
 						exit;						
 					} else {
