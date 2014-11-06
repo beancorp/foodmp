@@ -126,9 +126,11 @@ if ($status == 1){
 	$last_day_of_this_month = mktime(23, 59,59,  date('m'),date('t'), date('Y'));
 	$first_day_of_this_month = mktime(0, 0,0, date('m'), 1, date('Y'));
 	
+	$first_day_of_last_month = mktime(0, 0, 0, date("m")-1, 1, date("Y"));
+	
 	//get Total
 	$sql = "SELECT COUNT(*) AS count FROM promo_grand_list WHERE 
-						promo_grand_list.time_winner  BETWEEN {$first_day_of_this_month} AND {$last_day_of_this_month}";
+						promo_grand_list.time_winner  > {$first_day_of_last_month}";
 
 	$res = $dbcon->getOne($sql);
 	$count = $res['count'];
@@ -145,7 +147,7 @@ if ($status == 1){
 						LEFT JOIN aus_soc_bu_detail retailer ON retailer.StoreID = photo.store_id
 						INNER JOIN promo_grand_list  ON promo_grand_list.photo_id = photo.photo_id
 						WHERE 1
-						AND promo_grand_list.time_winner  BETWEEN {$first_day_of_this_month} AND {$last_day_of_this_month}
+						AND promo_grand_list.time_winner  > {$first_day_of_last_month}
 						GROUP BY photo.photo_id ORDER BY fan_count DESC, last_fan_id ASC,  photo.timestamp ASC LIMIT $start, $perPage";
 	$dbcon->execute_query($sql);
 	$res = $dbcon->fetch_records(true);
