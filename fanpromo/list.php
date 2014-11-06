@@ -380,7 +380,8 @@ $smarty->assign('retailer_count', $retailer_count);
 $smarty->assign('retailer_goal', $retailer_goal);
 
 //get Date For Grand Open
-
+$smarty->assign('page_name', "list_photo_fanpromo");
+$smarty->assign('hide_responsive', true);
 
 
 

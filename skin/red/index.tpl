@@ -40,7 +40,10 @@
     
     
     {/if}
+	{if ($page_name <> "list_photo_fanpromo")}
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=5.0" />
+	{/if}
+	
 	<meta name="google-site-verification" content="dHAkIMuHSon2_YaffhovdX253zJtYLlwz59aDgD0DeY" />
 	<meta name="Keywords" content="{$keywords}" />
 	<meta name="Description" content="{$description}" />
@@ -266,7 +269,7 @@
 			        </div>
 					
 					 <div class="main-banner-mobile" id = "main-banner-mobile">
-			        	<a href="/fanfrenzy"><img src="../images/mobile_banner.jpg" /></a>
+			        	<a href="/fanfrenzy" target="_blank"><img src="../images/mobile_banner.jpg" /></a>
 			        </div>
                 {/if}
 			
