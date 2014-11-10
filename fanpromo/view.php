@@ -181,6 +181,9 @@ if (!empty($_GET['image'])) {
 	$smarty->assign('share_image', SOC_HTTP_HOST . "fanpromo/".$photo["brand_image"]);
 	$smarty->assign('share_url', SOC_HTTP_HOST . "photo_".$photo["photo_id"]. ".html");
 	
+	$smarty->assign('page_group', "fanpromo");
+	$smarty->assign('hide_responsive', true);
+	
 	display_page($dbcon, $smarty, 'view.tpl', 'Fan Promo - View Detail', $_LANG);
 }
 
