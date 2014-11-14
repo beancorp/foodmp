@@ -402,5 +402,8 @@ if($photo["photo_id"] && isset($_SESSION['isAdmin'])){
 }
 $smarty->assign('redirect_url', SOC_HTTP_HOST . 'entry');
 
+$smarty->assign('page_group', "fanpromo");
+$smarty->assign('hide_responsive', true);
+
 display_page($dbcon, $smarty, 'enter1.tpl', 'Fan Promo - Enter', $_LANG);
 ?>
