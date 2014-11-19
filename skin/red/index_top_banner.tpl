@@ -53,16 +53,21 @@
 					<div class="navigation_link">
 						<a href="{$smarty.const.SOC_HTTP_HOST}" title="Home">Home</a>
 					</div>
-					<div class="navigation_link" style="margin-left: 40px;">
+					<div class="navigation_link" style="margin-left: 30px;">
 						<a href="{$smarty.const.SOC_HTTP_HOST}soc.php?cp=about" {if $cp eq 'about'}class="about_active"{else}class="about"{/if} title="About Us">About Us</a>
 					</div>
-					<div class="navigation_link" style="float: right;">
+					<div class="navigation_link" style="float: left; margin-left: 30px;">
 						<a href="{$smarty.const.SOC_HTTP_HOST}soc.php?cp=newfaq" {if $cp eq 'newfaq' or $cp eq 'faqinfo'}class="selling_active"{else}class="selling"{/if} title="Help">Help</a>
 					</div>
+                    <div class="social-icon" style="float: left; margin-left: 30px; margin-top: -2px;">
+                        <a href="https://www.facebook.com/FoodMarketplaceOfficial" style="text-decoration:none;"><img src="./skin/red/images/icon-face.png" alt=""></a>
+                        <a href="https://twitter.com/foodmarketplace" style="text-decoration:none;"><img src="./skin/red/images/icon-twitter.png" style="margin-left: 10px; cursor: pointer;" alt=""> </a>
+                        <a href="http://instagram.com/foodmarketplaceofficial" style="text-decoration:none;"><img src="./skin/red/images/icon-instagram.png" style="margin-left: 10px; cursor: pointer;" alt=""></a> 
+                    </div>
 				</div>
 				
 				<div style="clear: both;">
-					<div id="header_buttons">
+					<div id="header_buttons" style="float: right;">
 						{if $session.UserID ne ''}
 							<a href="{$smarty.const.SOC_HTTPS_HOST}soc.php?cp=sellerhome" style="float:left;" class="header_button" id="myadmin">My Panel</a>
 							<a href="{$smarty.const.SOC_HTTPS_HOST}logout.php" style="float:right;" class="header_button" id="logout">Logout</a>
