@@ -679,6 +679,8 @@ switch($setCP){
 		$_SESSION['logo_new'] = true;
 		$smarty->assign('is_content',1);
         $smarty->assign('hide_race_banner',1);
+		$smarty->assign('page_group', "fanpromo");
+		$smarty->assign('hide_responsive', true);
 		$content =	$smarty -> fetch('about.tpl');
 		$smarty -> assign('content', $content);
 		break;
