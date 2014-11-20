@@ -4,6 +4,7 @@
 error_reporting(E_ERROR);
 ini_set('display_errors', 1);
 
+include_once ('../include/config.php');
 include_once "main.php";
 
 
