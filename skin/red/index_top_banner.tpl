@@ -60,9 +60,9 @@
 						<a href="{$smarty.const.SOC_HTTP_HOST}soc.php?cp=newfaq" {if $cp eq 'newfaq' or $cp eq 'faqinfo'}class="selling_active"{else}class="selling"{/if} title="Help">Help</a>
 					</div>
                     <div class="social-icon" style="float: left; margin-left: 30px; margin-top: -2px;">
-                        <a target="_blank" href="https://www.facebook.com/FoodMarketplaceOfficial" style="text-decoration:none;"><img src="./skin/red/images/icon-face.png" alt=""></a>
-                        <a target="_blank" href="https://twitter.com/foodmarketplace" style="text-decoration:none;"><img src="./skin/red/images/icon-twitter.png" style="margin-left: 10px; cursor: pointer;" alt=""> </a>
-                        <a target="_blank" href="http://instagram.com/foodmarketplaceofficial" style="text-decoration:none;"><img src="./skin/red/images/icon-instagram.png" style="margin-left: 10px; cursor: pointer;" alt=""></a> 
+                        <a target="_blank" href="https://www.facebook.com/FoodMarketplaceOfficial" style="text-decoration:none;"><img src="{$smarty.const.SOC_HTTP_HOST}skin/red/images/icon-face.png" alt=""></a>
+                        <a target="_blank" href="https://twitter.com/foodmarketplace" style="text-decoration:none;"><img src="{$smarty.const.SOC_HTTP_HOST}skin/red/images/icon-twitter.png" style="margin-left: 10px; cursor: pointer;" alt=""> </a>
+                        <a target="_blank" href="http://instagram.com/foodmarketplaceofficial" style="text-decoration:none;"><img src="{$smarty.const.SOC_HTTP_HOST}skin/red/images/icon-instagram.png" style="margin-left: 10px; cursor: pointer;" alt=""></a> 
                     </div>
 				</div>
 				
