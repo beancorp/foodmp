@@ -4,6 +4,7 @@
 error_reporting(E_ERROR);
 ini_set('display_errors', 1);
 
+include_once ('../include/config.php');
 include_once "main.php";
 
 
@@ -213,7 +214,7 @@ function share_photo(){
 	    $message .= "<p>".trim ($_REQUEST["message"])."</p>";
 		$headers  = 'MIME-Version: 1.0' . "\r\n";
 		$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-		$headers .= 'From: FoodMarketplace <no-reply@'.$emaildomain.'>' . "\r\n";
+		$headers .= 'From: FoodMarketplace <FanFrenzy@'.$emaildomain.'>' . "\r\n";
 		mail($email_to, "Your friend {$email_from} share you a photo from Food Market Place", $message, $headers);
 		$rs = array("message" => "Share successfull", "error_code" =>0);
 	}
