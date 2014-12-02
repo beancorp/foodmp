@@ -49,7 +49,8 @@
         </div>
         <div id="head-main-menu">
             {if not $race_page}
-                <div id="navigation_links">
+				{if $hide_navigation == false}
+                <div id="navigation_links">					
                     <div class="navigation_link">
                         <a href="{$smarty.const.SOC_HTTP_HOST}" title="Home">Home</a>
                     </div>
@@ -65,6 +66,7 @@
                         <a target="_blank" href="http://instagram.com/foodmarketplaceofficial" style="text-decoration:none;"><img src="{$smarty.const.SOC_HTTP_HOST}skin/red/images/icon-instagram.png" style="margin-left: 5px; cursor: pointer;" alt=""></a> 
                     </div>
                 </div>
+				{/if}
                 
                 <div style="clear: both;">
                     <div id="header_buttons" style="float: right;">
