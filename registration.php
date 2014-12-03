@@ -1095,7 +1095,7 @@ switch ($step) {
 			$smarty->assign('sidebar', 0);
 			$smarty->assign('is_website',1);
 			$smarty->assign('isstorepage',1);
-			$smarty->assign('hide_navigation',true);
+			$smarty->assign('hide_navigation',1);
 			$_SESSION['logo_old'] = true;
 		}
 		break;

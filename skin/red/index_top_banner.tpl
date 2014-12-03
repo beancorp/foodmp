@@ -49,7 +49,7 @@
         </div>
         <div id="head-main-menu">
             {if not $race_page}
-				{if $hide_navigation == false}
+				{if $hide_navigation <> 1}
                 <div id="navigation_links">					
                     <div class="navigation_link">
                         <a href="{$smarty.const.SOC_HTTP_HOST}" title="Home">Home</a>
@@ -69,7 +69,7 @@
 				{/if}
                 
                 <div style="clear: both;">
-                    <div id="header_buttons" style="float: right; {if $hide_navigation == false}margin-top: 10px;{/if}">
+                    <div id="header_buttons" style="float: right; {if $hide_navigation == 1}margin-top: 35px;{/if}">
                         {if $session.UserID ne ''}
                             <a href="{$smarty.const.SOC_HTTPS_HOST}soc.php?cp=sellerhome" style="float:left;" class="header_button" id="myadmin">My Panel</a>
                             <a href="{$smarty.const.SOC_HTTPS_HOST}logout.php" style="float:right;" class="header_button" id="logout">Logout</a>
