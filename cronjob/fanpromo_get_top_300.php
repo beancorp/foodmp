@@ -66,6 +66,16 @@ if(DATAFORMAT_DB=="%m/%d/%Y"){
 $current_time = time();
 $advance_time = $current_time + 7 * 24 * 3600;
 
+/*
+  30/4/2015  <  Grand Finale Date < Grand Vote Open < Grand Vote Close.
+*/
+
+$thirty_april_2015 = mktime(0,0,0,4,30,2015);  //select 300 run every month only after 30 April 2015
+if ($current_time < $thirty_april_2015){
+	exit;
+}
+
+
 //Auto
 
 /*****  Begin Auto  *****/
