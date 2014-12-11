@@ -29,9 +29,9 @@ $code = getCodeByStoreId($dbcon, $store_id);
 //$stylesheet = file_get_contents($target_dir.'flyer_store/flyer.css');
 
 if (LANGCODE == "en-au"){
-	$url = $retailer_info["bu_urlstring"]."foodmp.com.au";
+	$url = $retailer_info["bu_urlstring"].".foodmp.com.au";
 }else{
-	$url = $retailer_info["bu_urlstring"]."foodmp.com";
+	$url = $retailer_info["bu_urlstring"].".foodmp.com";
 }
 
 
@@ -90,7 +90,7 @@ $html = '
 	font-size: 25px;
 	padding-bottom: 200px;
 	display: block;
-	margin-bottom: 10px;
+	margin: 0 auto;
 }
 
 .image{
