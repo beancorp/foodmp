@@ -398,6 +398,30 @@
 <div class="clear"></div>
 <div class="clearBoth"></div>
 
+{literal}
+<script>
+$(document).ready(function() {
+	$('body').on('click', '#download_flyer', function(e) {
+			//$("#waiting_download").html("<img src='/images/loading.gif' alt='Loading.......'>");
+		 e.preventDefault();
+		$.ajax({
+			url: "/fanpromo/check_flyer.php",
+			type: "POST",
+			data: {store_id: {/literal}{$smarty.session.StoreID}{literal}} 					
+		}).done(function(data) {
+			//$("#waiting_download").html("");
+			window.location.href='/flyer_images/flyer_store/flyer_{/literal}{$smarty.session.StoreID}{literal}.pdf';
+		});		
+	});		
+});		
+</script>
+{/literal}
+<div class="flyer-banner">
+	<div class="logo-flyer"></div>
+	<div class="text-banner">Display / hand-out your Fan Frenzy details to your customers. Let them promote your business to family & friends.</div>
+	<div class="btn-print-now" id="download_flyer">Print Now <span id="waiting_download"></span></div>
+</div>
+
 {*<div class="block-admin">
     <h3>Welcome to your Admin</h3>
     <div class="content-user-block">

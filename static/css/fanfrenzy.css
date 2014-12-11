@@ -371,3 +371,41 @@ span.active{
 	margin: 0;
 	width: 941px;
 }
+
+.flyer-banner{
+	background: url(/images/flyer-bg-banner.jpg) repeat-y;
+	width: 691px;
+	height: 122px;
+}
+.flyer-banner .logo-flyer{
+	margin-top: 13px;
+	margin-left: 17px;
+	background: url(/images/flyer-logo.png) no-repeat;
+	width: 171px;
+	height: 109px;
+	float: left;
+	
+}
+.text-banner{
+	font-size : 14px;
+	padding-top: 37px;
+	margin-right 25px;
+	color: #55555a;
+	width: 270px;
+	float: left;
+	margin-left: 10px;
+}
+.btn-print-now{
+	background: url(/images/flyer-bg-btn.png) no-repeat;
+	width: 190px;
+	height: 52px;
+	float: left;
+	font-size: 19px;
+	color: #ffffff;
+	font-weight: bold;
+	text-align: center;
+	line-height: 52px;
+	margin-top: 32px;
+	margin-left: 15px;
+	cursor: pointer;
+}
