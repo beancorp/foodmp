@@ -410,7 +410,7 @@ $(document).ready(function() {
 			data: {store_id: {/literal}{$smarty.session.StoreID}{literal}} 					
 		}).done(function(data) {
 			//$("#waiting_download").html("");
-			window.location.href='/flyer_images/flyer_store/flyer_{/literal}{$smarty.session.StoreID}{literal}.pdf';
+			window.location.href='/fanpromo/flyer_store/flyer_{/literal}{$smarty.session.StoreID}{literal}.pdf';
 		});		
 	});		
 });		

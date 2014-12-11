@@ -97,7 +97,7 @@ $html = '
 		<div class="content" >
 		
 		
-			<img class="image" style="vertical-align: top" src="'. SOC_HTTP_HOST. '/flyer_images/flyer_store/flyer_us.png" width="500"  />
+			<img class="image" style="vertical-align: top" src="'. SOC_HTTP_HOST. '/fanpromo/flyer_store/flyer_us.png" width="500"  />
 			<h2>'.$retailer_info["bu_name"].'</h2>
 			<div class="divider"></div>
 			<h3>Retailer Member Code</h3>
