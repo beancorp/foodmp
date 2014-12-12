@@ -110,7 +110,7 @@ $html = '
 		<div class="content" >
 		
 		
-			<img class="image" style="vertical-align: top" src="'. SOC_HTTP_HOST. '/fanpromo/flyer_store/flyer_us.png" width="650"  />
+			<img class="image" style="vertical-align: top" src="'. SOC_HTTP_HOST. '/fanpromo/flyer_store/'.$image_name.'" width="650"  />
 			<br>
 			<br>
 			<br>
