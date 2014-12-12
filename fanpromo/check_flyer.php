@@ -119,6 +119,8 @@ $html = '
 			<br>
 			<br>
 			<br>			
+			<br>
+			<br>
 			<div class="link_url">'.  $url . '
 			</div>
 		</div>
