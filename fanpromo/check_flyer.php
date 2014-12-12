@@ -110,10 +110,7 @@ $html = '
 			<h2>'.$retailer_info["bu_name"].'</h2>
 			<div class="divider"></div>
 			<h3>Retailer Member Code</h3>
-			<br>
-			<br>
-			<br>
-			<br>
+			<br>		
 			<div class="btn-text">'.$code["code"].'</div>
 			<br>
 			<br>

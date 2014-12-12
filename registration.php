@@ -277,6 +277,8 @@ switch ($step) {
 			$own_website = (isset($_POST['own_website']) && $_POST['own_website'] == 1);
 			
 			if ($isUpdate) {
+				//delete flyer fanpromo
+				unlink(dirname(__FILE__) . "/fanpromo/flyer_store/flyer_{$_SESSION['StoreID']}.pdf");
 				
 				if ($socstoreObj->sellerSave($isUpdate)) {
 				

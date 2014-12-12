@@ -87,3 +87,8 @@ RewriteRule ^index.html foodwine/index.php?cp=home [L]
 RewriteRule ^index.php foodwine/index.php?cp=home [L]
 
 ErrorDocument 404 /soc.php?cp=error404
+
+<FilesMatch "\.(?i:pdf)$">
+  ForceType application/octet-stream
+  Header set Content-Disposition attachment
+</FilesMatch>
