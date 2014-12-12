@@ -30,8 +30,10 @@ $code = getCodeByStoreId($dbcon, $store_id);
 
 if (LANGCODE == "en-au"){
 	$url = $retailer_info["bu_urlstring"].".foodmarketplace.com.au";
+	$image_name = "flyer_au.png";
 }else{
 	$url = $retailer_info["bu_urlstring"].".foodmarketplace.com";
+	$image_name = "flyer_us.png";
 }
 
 
