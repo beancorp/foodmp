@@ -51,7 +51,7 @@ $html = '
 }
 .content h2{
 	font-weight: normal;
-	font-size: 25px;
+	font-size: 35px;
 	color: #58595b;
 	text-transform: capitalize;
 }
@@ -63,11 +63,11 @@ $html = '
 }
 .content h3{
 	color: #58595b;
-	font-size: 32px;
+	font-size: 28px;
 	margin-bottom: 25px;
 }
 .btn-text{
-	width: 440px;
+	width: 400px;
 	height: 100px;
 	background-color: #ffffff;
 	margin: 0px auto 0px;
@@ -75,7 +75,7 @@ $html = '
 	text-transform: uppercase;
 	color: #58595b;
 	
-	font-size: 40px;
+	font-size: 50px;
 	line-height: 100px;
 	border: 3px solid #d1d3d4;
 	margin-bottom: 200px;
@@ -83,7 +83,7 @@ $html = '
 .content a{
 	color: #5b5095;
 	text-decoration: none;
-	font-size: 50px;
+	font-size: 55x;
 	padding-bottom: 50px;
 	display: block;
 }
@@ -91,7 +91,7 @@ $html = '
 .link_url{
 	color: #5b5095;
 	text-decoration: none;
-	font-size: 32px;
+	font-size: 40px;
 	padding-bottom: 200px;
 	display: block;
 	margin: 0 auto;
