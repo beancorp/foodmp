@@ -91,7 +91,7 @@ $html = '
 .link_url{
 	color: #5b5095;
 	text-decoration: none;
-	font-size: 40px;
+	font-size: 35px;
 	padding-bottom: 200px;
 	display: block;
 	margin: 0 auto;
@@ -126,7 +126,7 @@ $html = '
 			<br>			
 			<br>
 			<br>
-			<div class="link_url">'.  $url . '
+			<div class="link_url">'.  strtolower($url) . '
 			</div>
 		</div>
 		
