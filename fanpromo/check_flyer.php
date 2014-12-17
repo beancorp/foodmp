@@ -32,7 +32,7 @@ if (LANGCODE == "en-au"){
 	$url = $retailer_info["bu_urlstring"].".foodmp.com.au";
 	$image_name = "flyer_au.png";
 }else{
-	$url = $retailer_info["bu_urlstring"].".foodmpus.com";
+	$url = $retailer_info["bu_urlstring"].".fmpus.com";
 	$image_name = "flyer_us.png";
 }
 
