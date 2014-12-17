@@ -29,10 +29,10 @@ $code = getCodeByStoreId($dbcon, $store_id);
 //$stylesheet = file_get_contents($target_dir.'flyer_store/flyer.css');
 
 if (LANGCODE == "en-au"){
-	$url = $retailer_info["bu_urlstring"].".foodmarketplace.com.au";
+	$url = $retailer_info["bu_urlstring"].".foodmp.com.au";
 	$image_name = "flyer_au.png";
 }else{
-	$url = $retailer_info["bu_urlstring"].".foodmarketplace.com";
+	$url = $retailer_info["bu_urlstring"].".foodmpus.com";
 	$image_name = "flyer_us.png";
 }
 
