@@ -320,7 +320,7 @@ switch ($_REQUEST['cp']) {
             $req = array_merge($req, $socObj->displayPageFromCMS(102));
             $smarty->assign('pageTitle', 'Local Food & Wine Retailers: Find Specials on Fruit, Vegetables & Wine Near You: SOC Exchange Australia');
             $smarty->assign('keywords', $keywordsList);
-            $smarty->assign('description', 'SOC exchange Food & Wine where you can find local food and Wine retailers near you.');
+            $smarty->assign('description', 'Food Marketplace Food & Wine where you can find local food and Wine retailers near you.');
             $is_set_desc = true;
 
             $smarty->assign('req', $req);
