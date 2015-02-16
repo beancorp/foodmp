@@ -144,7 +144,16 @@ function checkStateForm() {
 	
 	<table cellpadding="0" cellspacing="0" border="0" width="525" id="food_wine_homelist">
 		<tr>
-			<td style="padding:0 0 20px;">	<div style="font-weight: bold; color: #3c3284; font-size: 18px;">Featured retailers in the {$council_name} area</div></td>
+			<td style="padding:0 0 20px;">	
+				<div style="font-weight: bold; color: #3c3284; font-size: 18px;">
+					{if ($smarty.const.LANGCODE <> "en-au")} 
+						Featured retailers in the {$council_name} area
+					{else}
+						Featured retailers in the {$council_name} Council area
+					{/if}
+				</div>
+				</div>
+			</td>
 		</tr>
 		{foreach from=$req.ads item=ads key=k}
 			<tr style="padding:10px 0;" class="{if $k eq 0}banner_tr_first{else}banner_tr{/if}"><td>
