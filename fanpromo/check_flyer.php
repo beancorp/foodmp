@@ -11,7 +11,7 @@ include_once ('class.soc.php');
 $store_id = $_REQUEST["store_id"];
 $code = getCodeByStoreId($dbcon, $store_id);
 $target_dir = getcwd()."/../fanpromo/";
-$target_file = $target_dir . "flyer_store/flyer_{$store_id}.pdf";
+$target_file = $target_dir . "flyer_store/flyer_{$store_id}_{$code["code"]}.pdf";
 
 if (file_exists (  $target_file ) && $code["code"]) exit;
 

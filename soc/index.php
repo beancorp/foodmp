@@ -3890,6 +3890,10 @@ switch($setCP){
         }else{
             $smarty->assign('display', false);    
         }
+		//get promotion_code
+        $code = getCodeByStoreId($dbcon, $_SESSION['StoreID']);
+        $smarty -> assign('fanfrenzy_code', $code["code"]);
+		
 		$content = $smarty->fetch('seller_home.tpl');
 		if ($_SESSION['attribute'] == 5) {
 			$smarty->assign('noShowGalleryBanner', true);
