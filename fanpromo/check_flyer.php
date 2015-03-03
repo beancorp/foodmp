@@ -2,29 +2,27 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 @session_start();
-
-
-$store_id = $_REQUEST["store_id"];
-
-$target_dir = getcwd()."/../fanpromo/";
-
-
-$target_file = $target_dir . "flyer_store/flyer_{$store_id}.pdf";
-
-if (file_exists (  $target_file )) exit;
-
-
 include_once ('../include/config.php');
 include_once ('../include/smartyconfig.php');
 include_once ('functions.inc.php');
 include_once ('maininc.php');
 include_once ('class.soc.php');
 
+$store_id = $_REQUEST["store_id"];
+$code = getCodeByStoreId($dbcon, $store_id);
+$target_dir = getcwd()."/../fanpromo/";
+$target_file = $target_dir . "flyer_store/flyer_{$store_id}.pdf";
+
+if (file_exists (  $target_file ) && $code["code"]) exit;
+
+
+
+
 $flyer_pdf = $target_dir . "flyer.pdf";
 
 
 $retailer_info = getStoreInfoByStoreId($dbcon, $store_id);
-$code = getCodeByStoreId($dbcon, $store_id);
+
 
 //$stylesheet = file_get_contents($target_dir.'flyer_store/flyer.css');
 
