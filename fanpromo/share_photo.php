@@ -209,13 +209,13 @@ function share_photo(){
 	}
 	if ($error == false){
 		$emaildomain = substr(SOC_HTTP_HOST,strpos(SOC_HTTP_HOST,':')+3,-1);
-		$subject = "Your friend share you a photo";
+		$subject = "Your friend is sharing a photo from FoodMarketplace";
 	    $message = "<p>To 'Become a 'Fan' of this photo in the FoodMarketplace $1,000,000 Fan Frenzy, click here:   <a href='{$_REQUEST["share_url"]}'>{$_REQUEST["share_url"]}</a></p>";
 	    $message .= "<p>".trim ($_REQUEST["message"])."</p>";
 		$headers  = 'MIME-Version: 1.0' . "\r\n";
 		$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 		$headers .= 'From: FoodMarketplace <FanFrenzy@'.$emaildomain.'>' . "\r\n";
-		mail($email_to, "Your friend {$email_from} share you a photo from Food Market Place", $message, $headers);
+		mail($email_to, "Your friend {$email_from} is sharing a photo from Food Market Place", $message, $headers);
 		$rs = array("message" => "Share successfull", "error_code" =>0);
 	}
 	return $rs;
