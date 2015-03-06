@@ -80,13 +80,15 @@
 	{if ! isset($hide_responsive)}
 		<link type="text/css" href="{$smarty.const.STATIC_URL}css/skin/red/responsive.css" rel="stylesheet" media="all" />
 	{/if}
-	<!-- 
-	<script type="text/javascript" src="{$smarty.const.STATIC_URL}js/sharethis_buttons.js"></script>
-	 -->
+	
+   <!-- <script type="text/javascript" src="{$smarty.const.STATIC_URL}js/sharethis_buttons.js"></script>-->
+	<script type="text/javascript" src="https://ws.sharethis.com/button/buttons.js"></script>
+	
+	
 	{literal}
 	<script type="text/javascript">var switchTo5x=true;</script>
 	 
-	<script type="text/javascript" src="https://ws.sharethis.com/button/buttons.js"></script>
+	
 	
 	<script type="text/javascript">stLight.options({publisher: "e3316ed7-5941-4c4d-80f8-4a09809678c6", doNotHash: false, doNotCopy: false, hashAddressBar: false, shorten:false});</script>
 	{/literal}
