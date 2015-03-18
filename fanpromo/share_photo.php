@@ -200,26 +200,26 @@ if (isset($_POST) && $_POST["share"]){
 
 <?php 
 function share_photo(){
-    $email_to = filter_var( $_REQUEST["to_email"], FILTER_VALIDATE_EMAIL );
-    //$message = trim ($_REQUEST["message"]);
-    
-    if ($email_to == false){
-        $error = true;
-        $rs = array("message" => "Invalid Email", "error_code" => 2, "email_to"=> $email_to, "email_from" => $email_from);
-    }
-    if ($error == false){
-        $emaildomain = substr(SOC_HTTP_HOST,strpos(SOC_HTTP_HOST,':')+3,-1);
-        $subject = "Your friend is sharing a photo from FoodMarketplace";
-        $message = "<p>To 'Become a Fan' of this photo in the FoodMarketplace $1,000,000 Fan Frenzy, click here:   <a href='{$_REQUEST["share_url"]}'>{$_REQUEST["share_url"]}</a></p>";
-        $message .= "<p>".trim ($_REQUEST["message"])."</p>";
-        $headers  = 'MIME-Version: 1.0' . "\r\n";
-        $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-        $headers .= 'From: FoodMarketplace <FanFrenzy@'.$emaildomain.'>' . "\r\n";
-        mail($email_to, "Your friend {$email_from} is sharing a photo from FoodMarketPlace", $message, $headers);
-        $rs = array("message" => "Share successfull", "error_code" =>0);
-    }
-    return $rs;
-    
+
+	$email_to = filter_var( $_REQUEST["to_email"], FILTER_VALIDATE_EMAIL );
+	//$message = trim ($_REQUEST["message"]);
+	
+	if ($email_to == false){
+		$error = true;
+		$rs = array("message" => "Invalid Email", "error_code" => 2, "email_to"=> $email_to, "email_from" => $email_from);
+	}
+	if ($error == false){
+		$emaildomain = substr(SOC_HTTP_HOST,strpos(SOC_HTTP_HOST,':')+3,-1);
+	    $message = "<p>To 'Become a Fan' of this photo in the FoodMarketplace $1,000,000 Fan Frenzy, click here:   <a href='{$_REQUEST["share_url"]}'>{$_REQUEST["share_url"]}</a></p>";
+	    $message .= "<p>".trim ($_REQUEST["message"])."</p>";
+		$headers  = 'MIME-Version: 1.0' . "\r\n";
+		$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+		$headers .= 'From: FoodMarketplace <FanFrenzy@'.$emaildomain.'>' . "\r\n";
+		mail($email_to, "Your friend {$email_from} is sharing a photo from FoodMarketPlace", $message, $headers);
+		$rs = array("message" => "Share successfull", "error_code" =>0);
+	}
+	return $rs;
+	
 }
 ?>
 
