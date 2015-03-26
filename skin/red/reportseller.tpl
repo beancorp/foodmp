@@ -138,9 +138,6 @@ function checkForm()
 			<tr>
 				<td>&nbsp; </td>
 			  <td class="tip2"><p class="bigger"><em style="color:#74ace1; text-decoration:underline;">{$smarty.const.SITENAME}</em></p>
-                P.O.Box 472<br />
-                Double Bay, NSW 2028<br />
-                Australia<br/>
 				Email Address: <a style="color:#74ace1;" href="mailto:reportseller@{$smarty.const.EMAIL_DOMAIN}">reportseller@{$smarty.const.EMAIL_DOMAIN}</a></td>
 			</tr>
 		</table>

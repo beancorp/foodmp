@@ -215,7 +215,7 @@ function share_photo(){
 		$headers  = 'MIME-Version: 1.0' . "\r\n";
 		$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 		$headers .= 'From: FoodMarketplace <FanFrenzy@'.$emaildomain.'>' . "\r\n";
-		mail($email_to, "Your friend {$email_from} is sharing a photo from FoodMarketPlace", $message, $headers);
+		mail($email_to, "Your friend {$email_from} is sharing a photo from FoodMarketplace", $message, $headers);
 		$rs = array("message" => "Share successfull", "error_code" =>0);
 	}
 	return $rs;
