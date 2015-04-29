@@ -40,10 +40,10 @@
     
     
     {/if}
-	{if ($page_group <> "fanpromo")}
+    
+    {if ($page_group <> "fanpromo")}
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=5.0" />
 	{/if}
-	
 	<meta name="google-site-verification" content="dHAkIMuHSon2_YaffhovdX253zJtYLlwz59aDgD0DeY" />
 	<meta name="Keywords" content="{$keywords}" />
 	<meta name="Description" content="{$description}" />
@@ -80,21 +80,26 @@
 	{if ! isset($hide_responsive)}
 		<link type="text/css" href="{$smarty.const.STATIC_URL}css/skin/red/responsive.css" rel="stylesheet" media="all" />
 	{/if}
-	
-   <!-- <script type="text/javascript" src="{$smarty.const.STATIC_URL}js/sharethis_buttons.js"></script>-->
+
+        <!-- <script type="text/javascript" src="{$smarty.const.STATIC_URL}js/sharethis_buttons.js"></script>-->
 	<script type="text/javascript" src="https://ws.sharethis.com/button/buttons.js"></script>
-	
-	
 	{literal}
 	<script type="text/javascript">var switchTo5x=true;</script>
-	 
-	
-	
+	<!-- 
+	<script type="text/javascript" src="https://ws.sharethis.com/button/buttons.js"></script>
+	 -->
 	<script type="text/javascript">stLight.options({publisher: "e3316ed7-5941-4c4d-80f8-4a09809678c6", doNotHash: false, doNotCopy: false, hashAddressBar: false, shorten:false});</script>
 	{/literal}
 	
     {literal}
-    <script>                                                        
+    <script>            
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-62187849-1', 'auto');
+          ga('send', 'pageview');                                            
         function tipRedirect(){
             alert("You need to be a member of \"FoodMarketplace\" to use this service. Register now, it's FREE.");
             location.href="{/literal}{$smarty.const.SOC_HTTP_HOST}{literal}signup.php";
@@ -192,10 +197,12 @@
 			}
 			#main-banner{
 				display: none;
+				
 			}
 			#slides{
 				display: none;
 			}
+			
 		}
 		#main-banner-mobile img{
 			margin-left: 24px;
@@ -270,10 +277,12 @@
 				        <a href="/fanfrenzy"><div class="main-banner-image"></div></a>				
 				        <a href="/fanfrenzy"><div class="main-banner-button"></div></a>
 			        </div>
-					
-					 <div class="main-banner-mobile" id = "main-banner-mobile">
+			        
+			        <div class="main-banner-mobile" id = "main-banner-mobile">
 			        	<a href="/fanfrenzy" target="_blank"><img src="../images/mobile_banner.jpg" /></a>
 			        </div>
+			        
+			        
                 {/if}
 			
 			    {if !$hideLeftMenu}
