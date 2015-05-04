@@ -90,16 +90,22 @@
 	 -->
 	<script type="text/javascript">stLight.options({publisher: "e3316ed7-5941-4c4d-80f8-4a09809678c6", doNotHash: false, doNotCopy: false, hashAddressBar: false, shorten:false});</script>
 	{/literal}
-	
+	{if $smarty.const.LANGCODE eq 'en-au'}
     {literal}
-    <script>            
+    <script>         
          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
           })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
           ga('create', 'UA-62187849-1', 'auto');
-          ga('send', 'pageview');                                            
+          ga('send', 'pageview'); 
+    </script>
+    {/literal}  
+    {else}{/if}  
+    {literal}
+    <script>   
+                                               
         function tipRedirect(){
             alert("You need to be a member of \"FoodMarketplace\" to use this service. Register now, it's FREE.");
             location.href="{/literal}{$smarty.const.SOC_HTTP_HOST}{literal}signup.php";
@@ -270,7 +276,7 @@
 			    {if $home_page}
 			        <div class="main-banner" id="main-banner">
 				        <div class="main-banner-cta">
-					        Earn yourself an easy <span>$1,000,000</span>
+					        Join the race for <span>$1,000,000</span>
 					        <br>
 					        and have lots of fun along the way.
 				        </div>
