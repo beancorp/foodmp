@@ -126,7 +126,7 @@ a.red:hover{ text-decoration: underline;}
 					</div>
 				</form>
 				<div style="position:absolute; right:70px; top:124px; width: 165px;">
-					<div id="fb-login-button" data-scope="email,user_checkins" class="fb-login-button">Login with Facebook</div>
+					<div id="fb-login-button" data-scope="email" class="fb-login-button">Login with Facebook</div>
 				</div>
 			</div>
 		</div>
