@@ -92,25 +92,7 @@
 	{/literal}
 	{if $smarty.const.LANGCODE eq 'en-au'}
     {literal}
-    <script>         
-         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-          ga('create', 'UA-62187849-1', 'auto');
-          ga('send', 'pageview'); 
-    </script>
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-63924235-1', 'auto');
-        ga('send', 'pageview');
-
-    </script>
     {/literal}  
     {else}{/if}  
     {literal}
@@ -150,6 +132,15 @@
             pid = typeof(pid) == 'undefined' ? '' : pid;
             window.open("{/literal}{$smarty.const.SOC_HTTP_HOST}{literal}emailstore.php?url=productDispay.php&place="+place+"&pid="+pid+"&StoreID={/literal}{$headerInfo.StoreID}{literal}", "emailstore","width=600,height=360,scrollbars=yes,status=yes");
         }   
+    </script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-62187849-1', 'auto');
+        ga('send', 'pageview');
     </script>
     {/literal}
 	{literal}
