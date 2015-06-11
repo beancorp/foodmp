@@ -717,7 +717,14 @@ abstract class BaseFacebook
       return 0;
     }
   }
-
+  public function getUserDetailsFromAccessToken() {
+        try {
+            $user_info = $this->api('/me');
+            return $user_info;
+        } catch (FacebookApiException $e) {
+            return 0;
+        }
+    }
   /**
    * Returns the access token that should be used for logged out
    * users when no authorization code is available.
