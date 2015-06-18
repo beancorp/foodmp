@@ -168,8 +168,11 @@
 
 <div class="detail-page-container">
 	<div class="detail-page-view">
+        <p class="testimonial">
+            {$photo.testimonial}
+        </p>
 		<div class="dt-image">
-			<img id="promo_photo_image" src="/fanpromo/{$photo.image}" alt="{$photo.description}">
+			<img id="promo_photo_image" src="/fanpromo/{$photo.image}" alt="{$photo.description} {$photo.testimonial}">
 		</div>
 		{if $photo.store_id}
 		<div class="dt-title-message">

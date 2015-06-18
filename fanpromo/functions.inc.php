@@ -33,7 +33,7 @@ function tab_content_by_key_name($dbcon, $key_name = "") {
  * @param unknown_type $thumb_path
  * @param unknown_type $description
  */
-function insert_photo($dbcon, $store_id, $retailer_location, $consumer_id, $image_path = "", $thumb_path = "", $description = "", $state_id = 0, $category_id = 0, $retailer_name = "", $unique_id = "") {
+function insert_photo($dbcon, $store_id, $retailer_location, $consumer_id, $image_path = "", $thumb_path = "", $description = "", $state_id = 0, $category_id = 0, $retailer_name = "", $unique_id = "",$testimonial="") {
 	$photo_record = array(
 		'store_id' => $store_id,
 		'retailer_location' => $retailer_location,
@@ -44,7 +44,8 @@ function insert_photo($dbcon, $store_id, $retailer_location, $consumer_id, $imag
 		'state_id' => $state_id,
 	 	'category_id'=> $category_id,
 		'retailer_name'=> $retailer_name,
-		'unique_id' => $unique_id,  
+		'unique_id' => $unique_id,
+        'testimonial' => $testimonial,
 	);
 	$dbcon->insert_query('photo_promo', $photo_record);
 	return $dbcon->lastInsertId();
@@ -102,7 +103,7 @@ function getFranzyPhoto($dbcon, $photo_id){
 function getPhotoByUserAndRetailer($dbcon, $user_id, $store_id){
 	$photo_query = "SELECT photo_promo.*
 					FROM photo_promo
-					WHERE consumer_id = {$user_id} AND store_id = {$store_id}";
+					WHERE consumer_id = {$user_id} AND store_id = {$store_id} AND approved <> 2 ";
 	return  $dbcon->getOne($photo_query);
 }
 

@@ -47,13 +47,14 @@ $error_message = "";
 
 
 if (!empty($_POST) && $consumer_id > 0) {
+
 	$retailer_code = trim($_POST['code']);
 	$retailer_id = trim($_POST['retailer_id']);
 	$state_id = trim($_POST['state_id']);
 	$category_id = trim($_POST['category_id']);
 	$description = trim ($_POST['entry_description']);
 	$retailer_name = trim($_POST['retailer_name']);
-	
+    $testimonial  = trim ($_POST['entry_testimonial']);
 	
 	if (!$retailer_code)
 		$retailer_id = 0;
@@ -101,6 +102,7 @@ if (!empty($_POST) && $consumer_id > 0) {
 										"state_id" => $state_id,
 										"category_id" => $category_id,
 										"retailer_name" => $retailer_name,
+                                        "testimonial " => $testimonial,
 									);
 			}
 			update_photo($dbcon,$array_update, $photo_id);
@@ -241,7 +243,7 @@ if (!empty($_POST) && $consumer_id > 0) {
 				$im->thumbnailImage(290, 180);
 				$im->writeImage(getcwd(). "/". $thumb_path);
 				
-				$photo_id = insert_photo($dbcon, $retailer_id, $_POST['retailer_location'], $consumer_id, $image_path, $thumb_path, $description, $state_id, $category_id, $retailer_name, $unique_id);
+				$photo_id = insert_photo($dbcon, $retailer_id, $_POST['retailer_location'], $consumer_id, $image_path, $thumb_path, $description, $state_id, $category_id, $retailer_name, $unique_id,$testimonial);
 				
 			
 				if ($photo_id > 0) {

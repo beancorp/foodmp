@@ -55,6 +55,7 @@
 				<td>Photo</td>
 				<td>Username</td>
 				<td>Retailer</td>
+                <td>Testimonial </td>
 				<td>Code</td>
 				<td>Status</td>
 				<td>Action</td>
@@ -69,6 +70,7 @@
 				<td><a class="fan_photo" href="/photo_{$photo.photo_id}.html" target="_blank"><img width="200px" src="/fanpromo/{$photo.thumb}" /></a></td>
 				<td><a href="/admin/?act=main&cp=customer&user_id={$photo.consumer_id}">{$photo.consumer}</a></td>
 				<td>{$photo.retailer}</td>
+                <td>{$photo.testimonial }</td>
 				<td>{$photo.code}</td>
 				
 				<td>
