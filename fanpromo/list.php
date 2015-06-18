@@ -98,11 +98,11 @@ function view_photos($grand_final = false) {
 					break;
                 case 3:
                     $search_sort = ' DESC';
-                    $search_sort_by_date = ' ASC';
+                    $search_sort_by_date = ' DESC';
                     break;
                 case 4:
                     $search_sort = ' DESC';
-                    $search_sort_by_date = ' DESC';
+                    $search_sort_by_date = ' ASC';
                     break;
 			}
 		}
