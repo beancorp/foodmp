@@ -1014,13 +1014,20 @@
 							<label>Description</label>
 						</div>
 						<div class="entry_field_element">
-							<textarea name="entry_description" id="entry_description" class="validate[required]" style="padding-left: 5px; padding-right: 5px; font-size: 14px">{$photo.description}</textarea>
+							<textarea name="entry_description" id="entry_description" class="validate[required]" style="padding-left: 5px; padding-right: 5px; font-size: 14px" maxlength="160">{$photo.description}</textarea>
 						</div>
 					</div>
-					
+                        <div class="entry_field">
+                            <div class="entry_field_text">
+                                <label>Testimonial </label>
+                            </div>
+                            <div class="entry_field_element">
+                                <textarea name="entry_testimonial" id="entry_testimonial" class="validate[required]" style="padding-left: 5px; padding-right: 5px; font-size: 14px" maxlength="160">{$photo.testimonial}</textarea>
+                            </div>
+                        </div>
 					<input type="checkbox" class="validate[required]" name="agree_terms" id="tc_checkbox" {if ($photo_id>0)} checked disabled {/if} /> &nbsp; I agree to the <a href="/fanfrenzy_tnc.html">terms and conditions</a>. <br /><br />
 					
-					<input class="entry-btn" id="entry_button" type="button" value="Submit Photo" onclick="validateBeforeSubmit()">					
+					<input class="entry-btn" id="entry_button" type="button" value="Submit Entry" onclick="validateBeforeSubmit()">
 					
 					{*<input id="entry_button" type="button" name="submit" value="Submit Photo">*}
 					
