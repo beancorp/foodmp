@@ -175,8 +175,8 @@ if (!empty($_GET['image'])) {
     $smarty->assign('vote_enabled', $display_vote_enable);
 	$smarty->assign('fanpromo_view_page', true);
 	
-	
-	$smarty->assign('share_description', "To 'Become a 'Fan' of my photo in the FoodMarketplace $1,000,000 Fan Frenzy, click here");
+	$shareDes = $photo["testimonial"]?$photo["testimonial"]:"To 'Become a 'Fan' of my photo in the FoodMarketplace $1,000,000 Fan Frenzy, click here";
+	$smarty->assign('share_description', $shareDes);
 	$smarty->assign('share_title', "'Fan' my photo in the chase for $1,000,000 CASH");
 	$smarty->assign('share_image', SOC_HTTP_HOST . "fanpromo/".$photo["brand_image"]);
 	$smarty->assign('share_url', SOC_HTTP_HOST . "photo_".$photo["photo_id"]. ".html");
