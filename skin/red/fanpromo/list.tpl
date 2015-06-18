@@ -353,8 +353,6 @@
 			<li class="active" id="my-gallery-bt">{if $smarty.const.LANGCODE eq 'en-au'}Grand Finalists{else}Fan Frenzy Finalists{/if}</li>
 			{else}
             <li {if $grand_tab!=1} class="active" {/if} id="block-gallery-bt">Current Participants</li>
-            <li>|</li>
-            <li {if $grand_tab==1}class="active"{/if} id="my-gallery-bt">{if $smarty.const.LANGCODE eq 'en-au'}Grand Finalists{else}Fan Frenzy Finalists{/if}</li>
             {/if}
             
             {if $grand_final_flag == 1 || $grand_tab==1}
@@ -404,6 +402,8 @@
         			<select  id="search_sort" name="search_sort">
 						<option value="1">Fans high to low</option>
 						<option value="2">Fans low to high</option>
+                        <option value="3">Latest</option>
+                        <option value="4">Earliest</option>
 					</select>
 				</div>
 			</div>

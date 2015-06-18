@@ -87,6 +87,7 @@ function view_photos($grand_final = false) {
 		}
 		
 		$search_sort = '';
+        $search_sort_by_date = '';
 		if (isset($_POST['search_sort'])) {
 			switch ($_POST['search_sort']) {
 				case 1:
@@ -95,6 +96,14 @@ function view_photos($grand_final = false) {
 				case 2:
 					$search_sort = ' ASC';
 					break;
+                case 3:
+                    $search_sort = ' DESC';
+                    $search_sort_by_date = ' ASC';
+                    break;
+                case 4:
+                    $search_sort = ' DESC';
+                    $search_sort_by_date = ' DESC';
+                    break;
 			}
 		}
 		if ($grand_final){
@@ -113,8 +122,17 @@ function view_photos($grand_final = false) {
 		if (!empty($_POST['search_locations'])) {
 			$search_locations = " AND photo.state_id = '".$_POST['search_locations']."'";
 		}
-		
-		
+
+        $groupBy = '';
+
+        if($_POST['search_sort'] <= 2 )
+        {
+            $groupBy .= "fan_count ".((!empty($search_sort)) ? $search_sort : 'DESC').", last_fan_id ASC, photo.timestamp ".((!empty($search_sort_by_date)) ? $search_sort_by_date : 'ASC');
+        }
+        else {
+            $groupBy .= "photo.timestamp ".((!empty($search_sort_by_date)) ? $search_sort_by_date : 'ASC').",fan_count ".((!empty($search_sort)) ? $search_sort : 'DESC,last_fan_id ASC') ;
+        }
+
 		$sql = "SELECT COUNT(*) AS count FROM (
 					SELECT photo.*, consumer.bu_name As consumer, retailer.bu_name As retailer, COUNT(fans.fan_id) As fan_count FROM photo_promo photo
 					LEFT JOIN photo_promo_fan fans ON fans.photo_id = photo.photo_id 
@@ -126,7 +144,7 @@ function view_photos($grand_final = false) {
 					".((!empty($search_criteria)) ? $search_criteria : "")."
 					".((!empty($search_categories)) ? $search_categories : "")."
 					".((!empty($search_locations)) ? $search_locations : "")."
-					GROUP BY photo.photo_id ORDER BY fan_count ".((!empty($search_sort)) ? $search_sort : 'DESC').", photo.timestamp DESC)  AS tmp WHERE 1";
+					GROUP BY photo.photo_id ORDER BY fan_count ".((!empty($search_sort)) ? $search_sort : 'DESC').", photo.timestamp ".((!empty($search_sort_by_date)) ? $search_sort_by_date : 'DESC').")  AS tmp WHERE 1";
 		
     	$res = $dbcon->getOne($sql);
     	
@@ -157,7 +175,7 @@ function view_photos($grand_final = false) {
 					".((!empty($search_criteria)) ? $search_criteria : "")."
 					".((!empty($search_categories)) ? $search_categories : "")."
 					".((!empty($search_locations)) ? $search_locations : "")."
-					GROUP BY photo.photo_id ORDER BY fan_count ".((!empty($search_sort)) ? $search_sort : 'DESC').", last_fan_id ASC, photo.timestamp ASC LIMIT $start, $perPage";		
+					GROUP BY photo.photo_id ORDER BY ".$groupBy." LIMIT $start, $perPage";
 			$dbcon->execute_query($sql);
 			$res = $dbcon->fetch_records(true);
 		}
@@ -198,7 +216,7 @@ function view_photos($grand_final = false) {
             }
 			echo '<div class="promo_thumb">';
 			
-			if (empty($search_criteria)) {				
+			if ($_REQUEST['search_categories']=='' && $_REQUEST['retailer_location']=='' && $_POST['search_sort'] <= 2 ) {
 				if ($photo['rank'] >= 1 && $photo['rank'] <= 3) {					
 					echo '<div class="place_image place_'.$photo['rank'].'">&nbsp;</div>';
 				}else{

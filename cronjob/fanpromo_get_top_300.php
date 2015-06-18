@@ -1,4 +1,5 @@
 <?php
+die;
 /**
  * This Cron will run once per month on the last day of each month. 
  * It will : 
