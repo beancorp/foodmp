@@ -474,6 +474,13 @@ function validateBeforeSubmit(run_scroll){
                 }
                 $return = false;
             }
+            if (!$("#entry_testimonial").val()) {
+                $('#entry_testimonial').validationEngine('showPrompt', '* This field is required', 'red', null, true);
+                if (!scrollPos){
+                    scrollPos = $('#entry_description').offset().top - 50;
+                }
+                $return = false;
+            }
             if (!$("#tc_checkbox").prop("checked")) {
                 $('#tc_checkbox').validationEngine('showPrompt', '* This field is required', 'red', null, true);
                 if (!scrollPos){

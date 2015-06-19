@@ -285,7 +285,7 @@
 			{if $smarty.const.LANGCODE eq 'en-au'}
                 <!-- <span class='st_sharethis_large' st_title="'Fan' my photo in the chase for $1,000,000 CASH" st_summary="To 'Become a 'Fan' of my photo in the FoodMarketplace $1,000,000 Fan Frenzy, click here"   st_image="{$smarty.const.SOC_HTTP_HOST}fanpromo/{$photo.brand_image}"  displayText='ShareThis'></span> -->
             {else}
-                <span class='st_sharethis_large' st_title="'Fan' my photo in the chase for $1,000,000 CASH" st_summary="To 'Become a 'Fan' of my photo in the FoodMarketplace $1,000,000 Fan Frenzy, click here"   st_image="{$smarty.const.SOC_HTTP_HOST}fanpromo/{$photo.brand_image}"  displayText='ShareThis'></span>
+                <span class='st_sharethis_large' st_title="'Fan' my photo in the chase for $1,000,000 CASH" st_summary="{$photo.testimonial}"   st_image="{$smarty.const.SOC_HTTP_HOST}fanpromo/{$photo.brand_image}"  displayText='ShareThis'></span>
             {/if}
 			
 			
