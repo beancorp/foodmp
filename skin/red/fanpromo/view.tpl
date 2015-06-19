@@ -273,12 +273,23 @@
 		<div class="clear"></div>
 		<div class="social-button">
 			<strong>Share this...</strong> <br /><br />
-			
-		
+
+            {php}
+                $firstlen = strlen("'Fan' my photo in the chase for $1,000,000 CASH ");
+
+                $lastString =  ' http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'].' via @sharethis';
+                $lastlen = strlen($lastString);
+                $testimonial = $this->get_template_vars('photo');
+                $testimonial = $testimonial['testimonial'];
+                $lastchar = 159 - ($firstlen+$lastlen);
+                $testimonialCut =  substr($testimonial,0,$lastchar);
+                $finalString = "'Fan' my photo in the chase for $1,000,000 CASH ".$testimonialCut;
+                $this->assign('finalString',$finalString);
+            {/php}
 			
 			
 			<a id="ref_fb"  href="javascript:void(0)"  onclick="FBShareOp();"><img src="/images/share_facebook_32.png" alt=""/></a>
-			<span class='st_twitter_large'  st_title="'Fan' my photo in the chase for $1,000,000 CASH" st_summary="{$photo.testimonial}" st_image="{$smarty.const.SOC_HTTP_HOST}fanpromo/{$photo.brand_image}" displayText='Tweet'></span>
+			<span class='st_twitter_large'  st_title="'{$finalString}" st_summary="{$photo.testimonial}" st_image="{$smarty.const.SOC_HTTP_HOST}fanpromo/{$photo.brand_image}" displayText='Tweet'></span>
 			<span class='st_linkedin_large' st_title="'Fan' my photo in the chase for $1,000,000 CASH" st_summary="{$photo.testimonial}" st_image="{$smarty.const.SOC_HTTP_HOST}fanpromo/{$photo.brand_image}"  displayText='LinkedIn'></span>
 			<span class='st_pinterest_large' st_title="'Fan' my photo in the chase for $1,000,000 CASH" st_summary="{$photo.testimonial}" st_image="{$smarty.const.SOC_HTTP_HOST}fanpromo/{$photo.brand_image}"  displayText='Pinterest'></span>
             
@@ -291,7 +302,7 @@
 			
 			<!-- <span class='st_email_large' st_title="'Fan' my photo in the chase for $1,000,000 CASH" st_summary="To 'Become a Fan' of my photo in the FoodMarketplace $1,000,000 Fan Frenzy, click here" st_image="{$smarty.const.SOC_HTTP_HOST}fanpromo/{$photo.brand_image}"  displayText='Email'></span>
 			 -->
-			<a class="share_email_popup" href="{$smarty.const.SOC_HTTP_HOST}fanpromo/share_photo.php?photo_id={$photo.photo_id}&share_url={$share_url}&brand_image={$smarty.const.SOC_HTTP_HOST}fanpromo/{$photo.brand_image}" ><img src="/images/share_email_32.png" alt=""/></a>
+			<a class="share_email_popup" href="{$smarty.const.SOC_HTTP_HOST}fanpromo/share_photo.php?photo_id={$photo.photo_id}&share_url={$share_url}&brand_image={$smarty.const.SOC_HTTP_HOST}fanpromo/{$photo.brand_image}&mes={$photo.testimonial}" ><img src="/images/share_email_32.png" alt=""/></a>
 			
 			
 			<!--
