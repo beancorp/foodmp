@@ -189,7 +189,7 @@ if (isset($_POST) && $_POST["share"]){
             To Email
              <input type="text" id="to_email" name="to_email" class="input">
             Message
-            <textarea rows="5" cols="45" name="message"><?php echo $_REQUEST["mes"]?></textarea>
+            <textarea rows="5" cols="45" name="message"><?php echo $_REQUEST["mes"].' '.$_REQUEST["share_url"]; ?></textarea>
             <input type="hidden" id="photop_id" name="photop_id" value="<?php echo $_REQUEST["photo_id"]?>">
             <input type="hidden" id="brand_image" name="brand_image" value="<?php echo $_REQUEST["brand_image"]?>">
             <input type="hidden" id="share_url" name="share_url" value="<?php echo $_REQUEST["share_url"]?>">

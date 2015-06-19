@@ -282,14 +282,21 @@
                 $testimonial = $this->get_template_vars('photo');
                 $testimonial = $testimonial['testimonial'];
                 $lastchar = 159 - ($firstlen+$lastlen);
-                $testimonialCut =  substr($testimonial,0,$lastchar);
+                if(strlen($testimonial) > $lastchar){
+                    $lastchar = (99 + $lastlen) - ($firstlen+$lastlen);
+                    $testimonialCut =  substr($testimonial,0,$lastchar).'...';
+                }
+                else {
+                    $lastchar = 159 - ($firstlen+$lastlen);
+                    $testimonialCut =  substr($testimonial,0,$lastchar);
+                }
                 $finalString = "'Fan' my photo in the chase for $1,000,000 CASH ".$testimonialCut;
                 $this->assign('finalString',$finalString);
             {/php}
 			
 			
 			<a id="ref_fb"  href="javascript:void(0)"  onclick="FBShareOp();"><img src="/images/share_facebook_32.png" alt=""/></a>
-			<span class='st_twitter_large'  st_title="'{$finalString}" st_summary="{$photo.testimonial}" st_image="{$smarty.const.SOC_HTTP_HOST}fanpromo/{$photo.brand_image}" displayText='Tweet'></span>
+			<span class='st_twitter_large'  st_title="{$finalString}" st_summary="{$photo.testimonial}" st_image="{$smarty.const.SOC_HTTP_HOST}fanpromo/{$photo.brand_image}" displayText='Tweet'></span>
 			<span class='st_linkedin_large' st_title="'Fan' my photo in the chase for $1,000,000 CASH" st_summary="{$photo.testimonial}" st_image="{$smarty.const.SOC_HTTP_HOST}fanpromo/{$photo.brand_image}"  displayText='LinkedIn'></span>
 			<span class='st_pinterest_large' st_title="'Fan' my photo in the chase for $1,000,000 CASH" st_summary="{$photo.testimonial}" st_image="{$smarty.const.SOC_HTTP_HOST}fanpromo/{$photo.brand_image}"  displayText='Pinterest'></span>
             
