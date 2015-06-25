@@ -402,8 +402,8 @@
         			<select  id="search_sort" name="search_sort">
 						<option value="1">Fans high to low</option>
 						<option value="2">Fans low to high</option>
-                        <option value="3">Latest</option>
-                        <option value="4">Earliest</option>
+                        <option value="3">Latest on Page 1</option>
+                        <option value="4">Earliest on Page 1</option>
 					</select>
 				</div>
 			</div>

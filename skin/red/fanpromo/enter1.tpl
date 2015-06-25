@@ -1009,7 +1009,7 @@
 					
 					
 					
-					<div class="entry_field">
+					<div class="entry_field" style="display: none;">
 						<div class="entry_field_text">
 							<label>Description</label>
 						</div>
@@ -1019,10 +1019,11 @@
 					</div>
                         <div class="entry_field">
                             <div class="entry_field_text">
-                                <label>Testimonial </label>
+                                <label>Testimonial 25 words or less  </label>(maximum 160 characters including spaces)
                             </div>
                             <div class="entry_field_element">
-                                <textarea name="entry_testimonial" id="entry_testimonial" class="validate[required]" style="padding-left: 5px; padding-right: 5px; font-size: 14px" maxlength="160">{$photo.testimonial}</textarea>
+                                <textarea name="entry_testimonial" id="entry_testimonial" class="validate[required]" style="padding-left: 5px; padding-right: 5px; font-size: 14px;  width: 100%;
+  font-size: 20px;" maxlength="160">{$photo.testimonial}</textarea>
                             </div>
                         </div>
 					<input type="checkbox" class="validate[required]" name="agree_terms" id="tc_checkbox" {if ($photo_id>0)} checked disabled {/if} /> &nbsp; I agree to the <a href="/fanfrenzy_tnc.html">terms and conditions</a>. <br /><br />
