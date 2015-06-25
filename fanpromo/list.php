@@ -124,13 +124,17 @@ function view_photos($grand_final = false) {
 		}
 
         $groupBy = '';
-
-        if($_POST['search_sort'] <= 2 )
-        {
-            $groupBy .= "fan_count ".((!empty($search_sort)) ? $search_sort : 'DESC').", last_fan_id ASC, photo.timestamp ".((!empty($search_sort_by_date)) ? $search_sort_by_date : 'ASC');
+        if(isset($_POST['search_sort'] )){
+            if($_POST['search_sort'] <= 2 )
+            {
+                $groupBy .= "fan_count ".((!empty($search_sort)) ? $search_sort : 'DESC').", last_fan_id ASC, photo.timestamp ".((!empty($search_sort_by_date)) ? $search_sort_by_date : 'ASC');
+            }
+            else {
+                $groupBy .= "photo.timestamp ".((!empty($search_sort_by_date)) ? $search_sort_by_date : 'ASC').",fan_count ".((!empty($search_sort)) ? $search_sort : 'DESC,last_fan_id ASC') ;
+            }
         }
         else {
-            $groupBy .= "photo.timestamp ".((!empty($search_sort_by_date)) ? $search_sort_by_date : 'ASC').",fan_count ".((!empty($search_sort)) ? $search_sort : 'DESC,last_fan_id ASC') ;
+            $groupBy .= "photo.timestamp ".((!empty($search_sort_by_date)) ? $search_sort_by_date : 'DESC').",fan_count ".((!empty($search_sort)) ? $search_sort : 'DESC,last_fan_id ASC') ;
         }
 
 		$sql = "SELECT COUNT(*) AS count FROM (
@@ -144,7 +148,7 @@ function view_photos($grand_final = false) {
 					".((!empty($search_criteria)) ? $search_criteria : "")."
 					".((!empty($search_categories)) ? $search_categories : "")."
 					".((!empty($search_locations)) ? $search_locations : "")."
-					GROUP BY photo.photo_id ORDER BY fan_count ".((!empty($search_sort)) ? $search_sort : 'DESC').", photo.timestamp ".((!empty($search_sort_by_date)) ? $search_sort_by_date : 'DESC').")  AS tmp WHERE 1";
+					GROUP BY photo.timestamp ".((!empty($search_sort_by_date)) ? $search_sort_by_date : 'DESC').", photo.photo_id ORDER BY fan_count ".((!empty($search_sort)) ? $search_sort : 'DESC').")  AS tmp WHERE 1";
 		
     	$res = $dbcon->getOne($sql);
     	
@@ -216,7 +220,7 @@ function view_photos($grand_final = false) {
             }
 			echo '<div class="promo_thumb">';
 			
-			if ($_REQUEST['search_categories']=='' && $_REQUEST['retailer_location']=='' && $_POST['search_sort'] <= 2 ) {
+			if ($_REQUEST['search_categories']=='' && $_REQUEST['retailer_location']=='' && $_POST['search_sort'] <= 2 && isset($_REQUEST['search_sort']) ) {
 				if ($photo['rank'] >= 1 && $photo['rank'] <= 3) {					
 					echo '<div class="place_image place_'.$photo['rank'].'">&nbsp;</div>';
 				}else{

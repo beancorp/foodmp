@@ -398,12 +398,12 @@
 			<div class="search_box">
 				<label for="search_sort">Sort by</label>
 				<div class="entry_field_element style-select">
-					<span class="select-1">Fans high to low</span>
+					<span class="select-1">Latest on Page 1</span>
         			<select  id="search_sort" name="search_sort">
-						<option value="1">Fans high to low</option>
-						<option value="2">Fans low to high</option>
-                        <option value="3">Latest on Page 1</option>
+                        <option value="3" >Latest on Page 1</option>
                         <option value="4">Earliest on Page 1</option>
+                        <option value="1">Fans high to low</option>
+                        <option value="2">Fans low to high</option>
 					</select>
 				</div>
 			</div>
