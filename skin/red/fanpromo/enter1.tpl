@@ -1022,7 +1022,7 @@
                                 <label>Testimonial 25 words or less  </label>(maximum 160 characters including spaces)
                             </div>
                             <div class="entry_field_element">
-                                <textarea name="entry_testimonial" id="entry_testimonial" class="validate[required]" style="padding-left: 5px; padding-right: 5px; font-size: 14px;  width: 100%;
+                                <textarea name="entry_testimonial" id="entry_testimonial" class="validate[required]" style="padding-left: 5px; padding-right: 5px; font-size: 14px;  width: 77%%;
   font-size: 20px;" maxlength="160">{$photo.testimonial}</textarea>
                             </div>
                         </div>

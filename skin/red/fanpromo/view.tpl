@@ -245,9 +245,9 @@
 				<br>
 				<strong>Photo ID: </strong>{$photo.unique_id}
 			</div>
-			<div class="dt-photo-info-content">
-				{$photo.description}
-			</div>
+			{*<div class="dt-photo-info-content">*}
+				{*{$photo.description}*}
+			{*</div>*}
 		</div>
 		
 		{if $vote_enabled == 1}
