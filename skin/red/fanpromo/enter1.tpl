@@ -1014,7 +1014,7 @@
 							<label>Description</label>
 						</div>
 						<div class="entry_field_element">
-							<textarea name="entry_description" id="entry_description" style="padding-left: 5px; padding-right: 5px; font-size: 14px" maxlength="160">{$photo.description}</textarea>
+							<textarea name="entry_description" id="entry_description" style="padding-left: 5px; padding-right: 5px; font-size: 14px" maxlength="160">&npsb;</textarea>
 						</div>
 					</div>
                         <div class="entry_field">
